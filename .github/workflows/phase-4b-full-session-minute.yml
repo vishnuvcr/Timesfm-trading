@@ -1,0 +1,31 @@
+name: Phase 4B full-session minute source validation
+
+on:
+  push:
+    branches: [phase-4b-intraday-validation]
+  workflow_dispatch:
+
+jobs:
+  validate-minute-source:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Fetch Phase 2 EOD raw cache
+        run: |
+          git fetch origin phase-2-data
+          git checkout origin/phase-2-data -- data/cache/equities/tejhq_nse
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run full-session validation
+        run: |
+          python scripts/validate_intraday_source_full_p4b.py             --eod-dir data/cache/equities/tejhq_nse             --output p4b_intraday_validation_full
+      - name: Upload validation
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase4b-full-session-minute-validation
+          path: p4b_intraday_validation_full/
