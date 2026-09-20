@@ -14,6 +14,13 @@ class RiskLimits:
     max_participation: float = 0.10
 
 
+def interval_uncertainty(lower_quantile: float, upper_quantile: float) -> float:
+    """Return half-width of a forecast interval as a scalar uncertainty measure."""
+    if not (upper_quantile >= lower_quantile):
+        return 0.0
+    return 0.5 * (upper_quantile - lower_quantile)
+
+
 def uncertainty_adjusted_size(
     *,
     expected_edge: float,

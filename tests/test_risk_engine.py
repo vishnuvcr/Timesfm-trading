@@ -1,4 +1,9 @@
-from src.trading.risk import passes_edge_gate, passes_license_gate, uncertainty_adjusted_size
+from src.trading.risk import (
+    interval_uncertainty,
+    passes_edge_gate,
+    passes_license_gate,
+    uncertainty_adjusted_size,
+)
 
 
 def test_edge_gate_rejects_non_positive_net_edge() -> None:
@@ -24,3 +29,8 @@ def test_timesfm3_is_allowed_for_non_executing_simulation() -> None:
 def test_timesfm25_can_be_used_as_research_benchmark() -> None:
     assert passes_license_gate("research_only", "timesfm-2.5-pytorch", "simulation")
     assert not passes_license_gate("research_only", "timesfm-2.5-pytorch", "live")
+
+
+def test_interval_uncertainty_is_half_width_and_rejects_crossed_bounds() -> None:
+    assert interval_uncertainty(0.90, 1.10) == 0.10
+    assert interval_uncertainty(1.10, 0.90) == 0.0

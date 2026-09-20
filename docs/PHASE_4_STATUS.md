@@ -14,6 +14,7 @@ TimesFM 3.0 remains the primary model for strategy research. This branch builds 
 
 - Canonical trade-decision schema.
 - Uncertainty-adjusted position sizing primitive.
+- Quantile-interval-to-uncertainty adapter for simulation sizing, motivated by the Phase 3 P1 interval-width/movement result.
 - Cost-hurdle gate.
 - License gate distinguishing research-only simulation from live/production use.
 - Shared forecast-envelope and cost-aware signal primitives for scalping, intraday, BTST and swing research.
