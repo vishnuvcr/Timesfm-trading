@@ -97,3 +97,18 @@ No strategy has passed a final empirical promotion gate. No live/paper execution
 The current evidence still does **not** establish standalone directional TimesFM alpha. The most defensible research hypothesis remains to use forecast distribution/uncertainty as a conditioning variable around an independently specified stock-selection or market-structure signal, and test the combination against identical no-TimesFM controls.
 
 The individual-stock lane is now operational at the EOD bootstrap level, so the next scientific step is to reconcile corporate actions/identifier history and run the same frozen forecast matrix across a PIT stock cross-section before any strategy promotion.
+
+
+## Phase 2 stock-lane checkpoint — 2026-09-20
+
+The official NSE hosted-runner blocker remains unchanged for the primary index route, but the individual-stock research lane has advanced materially.
+
+- 30-name raw EOD stock cache: green.
+- Corporate-action cache: green.
+- TejHQ back-adjusted stock cache: green.
+- TejHQ point-in-time liquidity-universe cache: green.
+- Independent Yahoo/yfinance cross-check on RELIANCE, TCS, HDFCBANK, INFY and SBIN: green.
+- Cross-check overlap: approximately 3,738–4,110 trading dates per symbol.
+- In that five-name bootstrap, at least 99.7% of overlapping daily raw-close returns differed by no more than 0.10 percentage points between the two sources.
+
+This does not make the bootstrap a final unbiased universe. Final stock evidence still requires frozen PIT eligibility, identifier continuity and holdout separation.
