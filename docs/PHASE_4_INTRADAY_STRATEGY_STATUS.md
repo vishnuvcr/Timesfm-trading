@@ -31,3 +31,8 @@ Running the predeclared 15/30/60-minute TimesFM-vs-VWAP experiment with the vali
 ## Inference optimization — 2026-09-20
 
 The first matrix implementation is computationally expensive because it invokes TimesFM once per origin. A second workflow batches eight origins (up to 80 stock contexts) per model call while keeping the exact same horizon, origin, fold, baseline, cost and promotion protocol. This is an engineering optimization only.
+
+
+## Batched execution marker — 2026-09-20
+
+Run the identical predeclared matrix using batched model calls.
