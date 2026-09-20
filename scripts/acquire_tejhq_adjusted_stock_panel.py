@@ -10,7 +10,7 @@ from pathlib import Path
 import pandas as pd
 
 HF_BASE = "https://huggingface.co/datasets/tejhq/indian-markets/resolve/main"
-PRICE_COLUMNS = [
+PRICE_COLUMNS = [  # adjusted-price acquisition protocol v1
     "date", "symbol", "isin", "name", "open", "high", "low", "close",
     "volume", "turnover", "adj_factor_cumulative", "adj_close"
 ]
