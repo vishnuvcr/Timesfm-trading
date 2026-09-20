@@ -71,12 +71,18 @@ next open, next close and two-session return.
 
 ## Primary instruments
 
-Phase 3 starts with liquid index targets:
+The primary experiment matrix now has two parallel instrument lanes:
+
+**Index/market-state lane**
 - NIFTY 50
 - NIFTY Bank
 - India VIX as a volatility covariate/target where appropriate
 
-The equity cross-section expands only after the index-level gate and point-in-time membership dataset are validated.
+**Individual-stock lane**
+- NSE-listed cash equities selected by a point-in-time liquidity/membership rule.
+- The fixed 30-name bootstrap panel is engineering-only and is not primary evidence.
+
+Index and stock experiments use the same forecast origins, horizons, baselines, calibration rules and statistical gates where the data frequency permits.
 
 ## Baselines
 
