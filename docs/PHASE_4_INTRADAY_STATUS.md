@@ -130,3 +130,8 @@ The final fixed reconciliation bound is therefore:
 - 95th percentile <=100 bps.
 
 This does not authorize using either source as exchange-primary truth; it only establishes sufficient cross-source consistency for research aggregation after regular-session filtering. The full discrepancy distribution remains in the result artifact.
+
+
+## Final source-pass execution marker — 2026-09-20
+
+Executing the verified release gate with the final frozen vendor-close reconciliation bound.
