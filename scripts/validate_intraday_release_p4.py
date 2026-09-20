@@ -107,6 +107,8 @@ def analyze(symbol: str, rows: list[dict], eod: dict[str, float], action_dates: 
             if not ((t.hour > 9 or (t.hour == 9 and t.minute >= 15)) and
                     (t.hour < 15 or (t.hour == 15 and t.minute <= 30))):
                 outside_rows += 1
+                if not (t.hour == 15 and t.minute == 30):
+                    outside_bad_rows += 1
                 if len(outside_examples) < 10:
                     outside_examples.append(t.isoformat())
         # Expect regular session through 15:29; a 15:30 bar is not required.
@@ -165,6 +167,7 @@ def analyze(symbol: str, rows: list[dict], eod: dict[str, float], action_dates: 
         "zero_volume_rows": zero_vol,
         "zero_volume_fraction": zero_vol / len(rows) if rows else math.nan,
         "outside_session_rows": outside_rows,
+        "outside_bad_rows": outside_bad_rows,
         "outside_examples": outside_examples,
         "days": len(by_day),
         "complete_session_days": len(complete_days),
@@ -206,8 +209,7 @@ def main():
             fail.append("duplicate_timestamps")
         if r["invalid_ohlc_rows"] != 0:
             fail.append("invalid_ohlc_rows")
-        bad_outside = [x for x in r["outside_examples"] if "T15:30:00+05:30" not in x]
-        if bad_outside:
+        if r["outside_bad_rows"] != 0:
             fail.append("outside_session_rows")
         if r["complete_session_days"] == 0:
             fail.append("no_complete_session_days")
