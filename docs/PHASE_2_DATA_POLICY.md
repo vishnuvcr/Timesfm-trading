@@ -56,3 +56,8 @@ The phase passes only when:
 - a manifest can be validated without network access;
 - a synthetic leakage test catches a deliberately future-dated feature;
 - no restricted raw file is accidentally committed to the public repo.
+
+
+## Derivatives format transition
+
+The historical F&O ingestion layer must branch by trade date at the NSE UDiFF transition on 2024-07-08. Before that date, legacy F&O bhavcopy archives use the `foDDMMMYYYYbhav.csv.zip` convention; from 2024-07-08, UDiFF common bhavcopy files use the `BhavCopy_NSE_FO_0_0_0_YYYYMMDD_F_0000.csv.zip` convention. This parser transition is independently documented in the community F&O archive and should be cross-checked against NSE's own report metadata before production ingestion. 
