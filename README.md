@@ -30,6 +30,8 @@ Google's current official documentation says TimesFM 3.0 adds native multivariat
 
 ## License gate
 
+Commercial-license tracking issue: https://github.com/vishnuvcr/Timesfm-trading/issues/4
+
 See [TimesFM 3.0 license gate](docs/LICENSE_GATE.md). The research lane and production/trading lane are now deliberately separated.
 
 ## Phase 1 result
