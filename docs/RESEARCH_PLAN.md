@@ -2,7 +2,7 @@
 
 ## Objective
 
-Build and validate a consistent TimesFM-enabled NSE trading pipeline across scalping, intraday, BTST, swing and options strategies.
+Build and scientifically validate a consistent TimesFM 3.0-enabled NSE research pipeline for deriving and evaluating trading-strategy hypotheses across scalping, intraday, BTST, swing and options domains. The project is explicitly non-executing: it will not place trades or operate a revenue-generating strategy.
 
 ## Model policy
 
@@ -10,14 +10,19 @@ Build and validate a consistent TimesFM-enabled NSE trading pipeline across scal
 
 ### Critical license gate
 
-Google's current TimesFM 3.0 pretrained-weight license grants use only for Non-Commercial Purposes. The license defines that term to exclude commercial gain, production deployment, revenue generation and use of outputs in commercial decision-making; it also prohibits use of the model or its outputs for commercial or production purposes. Therefore:
+Google's current TimesFM 3.0 pretrained-weight license grants use only for Non-Commercial Purposes. The license defines that term to exclude commercial gain, production deployment, revenue generation and use of outputs in commercial decision-making; it also prohibits use of the model or its outputs for commercial or production purposes. Accordingly, the current project scope is deliberately constrained to:
+- non-commercial scientific research and reproducible forecasting evaluation;
+- strategy-hypothesis generation and falsification;
+- simulated/cost-aware backtesting and statistical inference;
+- manuscript, figures, tables and research artifacts.
 
-- TimesFM 3.0 can be used for qualifying academic/non-commercial evaluation and reproducible forecasting research.
-- TimesFM 3.0 must **not** be used to select, optimize, or operate a revenue-generating trading strategy under the current pretrained-weight license.
-- Before 3.0 outputs are used in a production or profit-seeking trading decision, obtain an appropriate commercial license from Google or use weights/model components with suitable commercial rights.
-- The research repository keeps the 3.0 lane because it is scientifically valuable, but the promotion gate explicitly blocks 3.0-derived trading decisions until the license gate is cleared.
+The project will **not**:
+- place real trades or connect a broker for execution;
+- operate a production trading system;
+- use 3.0 outputs for commercial decision-making, paid services, client deliverables or revenue generation;
+- claim that a simulated strategy is deployable merely because it passes a research backtest.
 
-This is a licensing constraint, not a technical objection to TimesFM 3.0.
+This is a research-governance interpretation, not legal advice. The license must be reviewed again if the project's purpose or distribution changes.
 
 ### Hypotheses
 - H1: TimesFM 3.0 forecasts add statistically useful information on NSE after rigorous PIT validation.
@@ -25,7 +30,7 @@ This is a licensing constraint, not a technical objection to TimesFM 3.0.
 - H3: Even when directional skill is weak, 3.0 uncertainty/volatility can improve scientific understanding of risk forecasting.
 - H4: Any deployable trading edge must survive point-in-time validation, realistic costs and multiple market regimes.
 - H5: 2.5 and 3.0 should be compared on identical frozen datasets, horizons and forecast origins.
-- H6: A 3.0 research result should be transferable to a separately licensed production model only if the transfer itself is scientifically demonstrated.
+- H6: A simulated 3.0-derived strategy result should be treated as a research finding, not a deployment recommendation.
 
 ## Phase 0 — governance and reproducibility
 
@@ -56,12 +61,12 @@ Metrics: forecast error, excess direction, rank IC, quantile coverage, calibrati
 
 **No 3.0 forecast output from this phase may be promoted into a revenue-generating trading decision until the license gate is cleared.**
 
-## Phase 4 — cash equity
+## Phase 4 — cash equity strategy research
 
-Use the common strategy engine. For trading decisions, use a commercially permitted model lane.
+Use the common strategy engine to derive and falsify simulated strategy hypotheses.
 
 ### Scalping
-Test only liquid instruments/time windows with credible intraday data and fill assumptions. Candidate 3.0 results remain scientific/evaluation only unless licensed.
+Test only liquid instruments/time windows with credible intraday data and fill assumptions. 3.0 remains the primary research model.
 
 ### Intraday
 Test trend, mean-reversion, breakout, volatility expansion, opening-range and VWAP timing.
@@ -80,7 +85,7 @@ Test delta-controlled directional structures, debit spreads, calendars/diagonals
 
 Benchmark against the option market's own implied forecast. Do not infer option profitability from underlying forecast accuracy.
 
-3.0 may be used for non-commercial scientific evaluation; trading promotion requires a licensed production model.
+3.0 remains the primary scientific model; outputs remain non-executing research artifacts.
 
 ## Phase 6 — regimes/external information
 
@@ -90,11 +95,11 @@ Condition tests on trend/range, India VIX, stress, expiry week, event days, FII/
 
 Use rolling/expanding walk-forward, nested tuning, realistic and stressed costs, slippage sensitivity, turnover/participation caps, tax/financing treatment, bootstrap/paired tests, FDR, year/regime breakdowns and capacity stress.
 
-## Phase 8 — paper/live readiness
+## Phase 8 — simulation readiness and monitoring
 
-Paper execution, audit trail, kill switches, model/data drift monitors, broker/API failure handling and reconciliation.
+Build a non-executing paper/simulation harness with audit trails, reproducibility checks, data/model drift monitors, kill-switch logic for simulations, and reconciliation of simulated fills.
 
-**3.0 deployment gate:** production/live trading using Google's pretrained 3.0 weights is blocked until explicit commercial permission/license is obtained. Otherwise, transfer the validated signal design to a commercially permitted model and revalidate end-to-end.
+No broker order placement or live execution is part of this phase under the current research scope.
 
 ## Phase 9 — manuscript/release
 
@@ -103,3 +108,7 @@ Complete manuscript with abstract, introduction, literature, questions, aims/obj
 ## Stop rule
 
 The program ends after Phase 9. Within each phase, weak branches stop at their gate rather than creating endless variants.
+
+## Scope-change trigger
+
+A future decision to trade, deploy, sell, provide client-facing signals, connect a broker for execution, or otherwise use 3.0 outputs in commercial decision-making is a material scope change and requires a license review plus a fresh end-to-end validation plan.

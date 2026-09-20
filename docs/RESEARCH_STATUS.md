@@ -2,6 +2,17 @@
 
 Updated: 2026-09-20 IST
 
+## Scope decision — 2026-09-20
+**Confirmed:** TimesFM 3.0 stays the primary model for all phases because this project is research for deriving and testing a trading strategy, not actually trading.
+
+The scope is now explicitly **non-executing scientific research**:
+- strategy hypotheses may be generated and falsified;
+- full cost/slippage/tax-aware simulated backtests are allowed;
+- no broker execution, production deployment, client-facing trading decision or revenue-generating use is part of the project;
+- TimesFM 2.5 is a benchmark/ablation model only.
+
+The current official 3.0 license permits qualifying non-commercial research/evaluation but excludes commercial/production use and commercial decision-making, so the repository treats this boundary as a hard governance control. citeturn341680search0
+
 ## Phase 0 — Governance
 **Complete for bootstrap.**
 
@@ -9,8 +20,8 @@ Updated: 2026-09-20 IST
 **Complete / protocol frozen.**
 
 Model decision:
-- TimesFM 3.0 primary scientific/evaluation model.
-- TimesFM 2.5 benchmark and current trading/production research lane unless 3.0 commercial rights are obtained.
+- TimesFM 3.0 primary scientific/evaluation model throughout the research.
+- TimesFM 2.5 benchmark/ablation only.
 - Direct direction is only one hypothesis; uncertainty, volatility, multivariate inputs and causal covariates are explicit research targets.
 - The current 3.0 pretrained-weight license is a hard gate: 3.0 outputs cannot be used to select/optimize/operate a revenue-generating trading strategy without commercial permission. See [LICENSE_GATE](LICENSE_GATE.md).
 
@@ -69,7 +80,7 @@ The dated 2026 cost model is frozen in [docs/COST_MODEL.md](docs/COST_MODEL.md);
 ## Phase 4 onward
 **Planned.**
 
-No live strategy has passed a research gate.
+No live or paper order execution is planned. No strategy has passed a research gate.
 
 
 ## Review checkpoints
@@ -84,4 +95,4 @@ The official 3.0 license is more restrictive than the earlier project notes impl
 
 ## License checkpoint
 
-Open issue #4 tracks commercial permission for TimesFM 3.0 before any profit-seeking trading decision uses its pretrained outputs.
+Open issue #4 remains the future commercial-permission tracker. It is not a blocker for the current non-executing research scope, but becomes a hard blocker if project scope ever changes to commercial/production use.

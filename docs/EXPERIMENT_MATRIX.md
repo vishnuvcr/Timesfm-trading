@@ -2,15 +2,15 @@
 
 ## Primary research question
 
-Does TimesFM 3.0 add statistically and economically useful information to an NSE trading pipeline after realistic execution costs?
+Does TimesFM 3.0 add statistically and economically useful information to an NSE strategy-research pipeline after realistic execution-cost simulation, without relying on leakage or selection bias?
 
 ## Aims
 
 1. Quantify TimesFM 3.0 forecast skill by horizon and target.
 2. Determine whether native multivariate inputs and causal covariates add incremental value.
 3. Measure uncertainty calibration and volatility information.
-4. Translate only surviving information into cash, BTST, swing and options strategies.
-5. Establish a reproducible cost-aware promotion gate.
+4. Translate surviving information into testable cash, BTST, swing and options strategy hypotheses for simulation.
+5. Establish a reproducible cost-aware research gate without executing trades.
 
 ## Primary endpoints
 
@@ -107,12 +107,14 @@ A forecast component enters strategy research only when:
 3. quantile calibration is acceptable and stable;
 4. the result is not concentrated in one fold/regime without a documented mechanism.
 
-A trading strategy enters paper research only when it:
+A strategy hypothesis advances to full simulated validation only when it:
 1. is net positive under the frozen realistic cost model;
 2. survives cost and slippage stress;
 3. is robust across multiple walk-forward folds;
 4. has no material look-ahead/survivorship error;
-5. has operationally acceptable turnover, liquidity and drawdown.
+5. has operationally plausible turnover, liquidity and drawdown.
+
+Passing this gate does **not** authorize live trading; it means only that the research result is eligible for manuscript-level discussion.
 
 ## Search-space stop rule
 

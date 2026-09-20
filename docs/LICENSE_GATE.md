@@ -8,14 +8,14 @@ The license defines Non-Commercial Purpose as testing, evaluation or research no
 
 ## Project consequence
 
-Because this project is intended to develop an NSE trading system that may generate trading returns, we do not treat 3.0 pretrained outputs as cleared for a profit-seeking trading decision under the current license.
+The project has been deliberately scoped as **non-executing scientific research**. Under that scope:
+- 3.0 remains the primary research/evaluation model;
+- 3.0 may be used for forecasting evaluation, strategy-hypothesis generation, simulated/cost-aware backtesting, statistical analysis and manuscript preparation, provided the work remains within the license's Non-Commercial Purpose;
+- simulated strategy results are research findings, not commercial trading decisions;
+- no broker order placement, production system, paid service, client deliverable or revenue-generating use of 3.0 outputs is permitted within this project;
+- TimesFM 2.5 is retained only as a benchmark/ablation model.
 
-Therefore:
-- 3.0 remains the primary scientific/evaluation model.
-- 3.0 may be used for qualifying non-commercial forecasting research.
-- 3.0 outputs are not promoted into a revenue-generating trading rule unless explicit commercial permission/license is obtained.
-- The production research lane currently uses TimesFM 2.5 or another separately licensed model.
-- If Google grants commercial rights later, the 3.0-derived strategy must be revalidated end-to-end under the licensed setup.
+This does not provide a legal opinion about any external future use. The license should be reviewed whenever the project purpose, audience, distribution model or downstream use changes.
 
 ## What this gate does not mean
 
@@ -25,6 +25,6 @@ The source repository's code is Apache-2.0, but that does not override the separ
 
 ## Review trigger
 
-Re-check this file before any trading-strategy optimization using 3.0, paper/live bridge, client-facing research or decision service, distribution of 3.0-derived outputs, or commercial fine-tuning/distillation.
+Re-check this file before any broker execution, production deployment, client-facing research, paid service, revenue-generating use, commercial model derivative, or other commercial decision-making using 3.0 outputs.
 
 This is a research governance control, not legal advice.

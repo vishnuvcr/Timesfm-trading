@@ -10,15 +10,16 @@ This repository implements the research workflow for TimesFM trading research on
 - Every execution outcome is recorded in experiment/status logs.
 - Every error is recorded in docs/ERROR_LOG.md with date, stage, symptom, root cause (when known), fix and regression control.
 - README.md is updated with phase status and links.
-- No research conclusion is promoted to paper/live trading without a reproducible walk-forward result and cost-aware validation.
+- No research conclusion is promoted to a live or revenue-generating system; this project is strictly for non-executing scientific strategy research and simulation.
 - Do not store secrets in Git; use GitHub Actions secrets or local environment variables.
 
 ## Model policy
-- TimesFM 3.0 is the primary scientific research/evaluation model.
-- TimesFM 2.5 is the benchmark and current production/trading research lane unless and until 3.0 commercial rights are obtained.
+- TimesFM 3.0 is the primary scientific research/evaluation model for the entire project.
+- TimesFM 2.5 is retained only as a benchmark/ablation and fallback comparison model; it is not a production lane in the current research scope.
 - Record exact model repository, commit/version, configuration and model hash in every run manifest.
 - Treat the current TimesFM 3.0 pretrained-weight license as a hard non-commercial/non-production gate.
-- Do not use 3.0 outputs to select, optimize, recommend, or operate a revenue-generating trading strategy unless licensing is explicitly cleared.
+- The project may use 3.0 for qualifying non-commercial forecasting research, strategy-hypothesis generation, simulated/cost-aware backtesting and manuscript analysis, provided results are not used for commercial decision-making, client deliverables, paid products/services, production systems or revenue-generating activity.
+- Do not execute trades, connect a broker for order placement, publish a deployment recommendation, or use 3.0 outputs to make a revenue-generating decision within this project.
 - Research experiments involving 3.0 must record the license state in the run manifest.
 - Do not infer that 3.0's stronger general forecasting benchmarks imply trading alpha.
 

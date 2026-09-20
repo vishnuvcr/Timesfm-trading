@@ -16,29 +16,29 @@ Research program to evaluate Google TimesFM for a reproducible NSE trading pipel
 | 4 | Strategy research: scalping/intraday/BTST/swing | Planned |
 | 5 | Options research + IV/OI/Greeks | Planned |
 | 6 | Cross-market/regime/news/corporate-action features | Planned |
-| 7 | Cost/slippage/tax-aware walk-forward backtests | Planned |
-| 8 | Paper-trading/live readiness + monitoring | Planned |
+| 7 | Cost/slippage/tax-aware walk-forward simulation | Planned |
+| 8 | Simulation readiness + monitoring | Planned |
 | 9 | Final manuscript + reproducible release | Planned |
 
 All ten phase branches exist and have manual GitHub Actions entry points.
 
 ## Core model decision
 
-**TimesFM 3.0 is the primary scientific/evaluation model.** TimesFM 2.5 remains the benchmark and current trading/production research lane unless 3.0 commercial rights are obtained.
+**TimesFM 3.0 is the primary scientific/evaluation model for the entire project.** TimesFM 2.5 is retained only as a benchmark/ablation model.
 
-Google's current official documentation says TimesFM 3.0 adds native multivariate forecasting and flexible past-only and past-and-future covariate support. The source code in the main TimesFM repository is Apache-2.0, but the pretrained 3.0 weights are distributed under a separate TimesFM Non-Commercial License v1.0. That license permits only qualifying non-commercial/non-production use. It explicitly excludes revenue-generating activity and commercial decision-making and its restrictions extend to model outputs. Therefore this project blocks using pretrained 3.0 outputs to select, optimize or operate a profit-seeking trading strategy until appropriate commercial rights are obtained. citeturn670140view0 citeturn498629view0turn388765search3
+Google's current official documentation says TimesFM 3.0 adds native multivariate forecasting and flexible past-only and past-and-future covariate support. The project is intentionally **research-only and non-executing**. We will derive and test strategy hypotheses, perform cost/slippage-aware simulations, and quantify uncertainty, but we will not place trades, connect a broker for execution, operate a production strategy, or use TimesFM 3.0 outputs for commercial decision-making within this project. citeturn670140view0 citeturn498629view0turn388765search3
 
 ## License gate
 
 Commercial-license tracking issue: https://github.com/vishnuvcr/Timesfm-trading/issues/4
 
-See [TimesFM 3.0 license gate](docs/LICENSE_GATE.md). The research lane and production/trading lane are now deliberately separated.
+See [TimesFM 3.0 license gate](docs/LICENSE_GATE.md). Under the current scope, the issue is a future-scope tracker rather than a blocker for non-executing scientific research.
 
 ## Phase 1 result
 
 The protocol is frozen around a gate-first sequence:
 
-**3.0 forecast → calibration → multivariate/covariate conditioning → net economic edge → execution feasibility → risk/sizing → promotion**
+**3.0 forecast → calibration → multivariate/covariate conditioning → net simulated economic edge → execution simulation → risk/sizing → manuscript-level promotion**
 
 Direct directional forecasting is not assumed to be the only useful output. Volatility, uncertainty, regime filters, execution timing and option-implied-versus-forecast range remain first-class hypotheses.
 
@@ -105,8 +105,8 @@ The data lake will cover NSE cash equity, NIFTY-family indices, futures/options,
 
 ## Execution realism
 
-Paytm Money is the primary broker cost reference for the project. Current official material is reconciled by effective date; backtests model brokerage, exchange/statutory charges, taxes, spread, slippage, impact, financing and instrument-specific settlement.
+Paytm Money is the primary broker cost reference for the project. These costs are used only in **simulated execution and economic-value analysis**; there is no broker order routing in the project. Current official material is reconciled by effective date; simulations model brokerage, exchange/statutory charges, taxes, spread, slippage, impact, financing and instrument-specific settlement.
 
 ## Important limitation
 
-No live trading claim is made. The repository currently contains a frozen research protocol and active data/model engineering, not a validated trading strategy.
+No live trading claim is made. The repository contains a frozen research protocol, active data/model engineering, and a non-executing strategy research pipeline—not a validated trading strategy or a deployment system.
