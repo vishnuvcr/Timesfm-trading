@@ -13,3 +13,12 @@
 - No live strategy has been approved.
 
 Private chain-of-thought is not copied here; this log records observable decisions and outcomes.
+
+
+## 2026-09-20 — Phase 6.1 regime-conditioned stock result
+
+The next planned experiment tested TimesFM only as an incremental residual around a 20-session momentum control, with predeclared market-state, liquidity and post-corporate-action conditioning. Rebalance-level permutation tests and Benjamini-Hochberg FDR were used.
+
+No predeclared regime produced statistically supported residual rank information. The risk-on overlay was slightly better than momentum before costs but underperformed after 0.25% and 0.50% one-way stress.
+
+**Decision:** stop adding stock strategy variants. The individual-stock EOD research lane has reached a negative promotion conclusion; move to final audit/manuscript and document data-gated future research rather than continue specification search.
