@@ -114,3 +114,15 @@ This is now treated as a **negative result for standalone stock TimesFM forecast
 The first explicit individual-stock strategy experiment is complete and synchronized into main. Across 30 bootstrap stocks and 32 non-overlapping five-session rebalances, the independent 20-session momentum control had mean rank IC +0.0138, TimesFM had -0.0237, and the 50/50 hybrid had -0.0151. Under the lowest tested proportional-cost stress, TimesFM-only net total return was about -26.6%, versus -15.2% for momentum and -21.8% for the hybrid.
 
 This is an exploratory negative result, not the final Phase 7 walk-forward verdict. The research now tests only whether TimesFM contributes incremental conditional information after regime, liquidity, event and market-state controls.
+
+
+## Individual-stock strategy conclusion — 2026-09-20
+
+Three layers of stock evidence were completed:
+- TimesFM-only stock ranking;
+- TimesFM plus independent momentum controls;
+- nested regime-conditioned TimesFM-minus-momentum residual.
+
+The four-fold forecast robustness test covered 4,800 stock origins. The final nested strategy test used prior-fold-only regime thresholds and failed against the momentum control at every tested cost scenario. No daily individual-stock TimesFM strategy is validated.
+
+See [Individual-stock TimesFM gate conclusion](docs/INDIVIDUAL_STOCK_TIMESFM_GATE_CONCLUSION.md).
