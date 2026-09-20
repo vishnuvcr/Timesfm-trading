@@ -4,7 +4,9 @@ import csv
 import json
 from datetime import datetime
 from pathlib import Path
-from urllib.request import Request, urlopen
+
+import cloudscraper
+
 
 ENDPOINT = "https://www.niftyindices.com/Backpage.aspx/getHistoricaldatatabletoString"
 INDEX_NAME = "NIFTY 50"
@@ -12,25 +14,50 @@ START_DATE = "01-Jan-2000"
 END_DATE = "18-Sep-2026"
 
 
+def _session():
+    scraper = cloudscraper.create_scraper(
+        browser={"browser": "chrome", "platform": "windows", "mobile": False}
+    )
+    scraper.headers.update(
+        {
+            "Content-Type": "application/json; charset=utf-8",
+            "Accept": "application/json, text/javascript, */*; q=0.01",
+            "Accept-Language": "en-US,en;q=0.9",
+            "Origin": "https://www.niftyindices.com",
+            "Referer": "https://www.niftyindices.com/reports/historical-data",
+            "X-Requested-With": "XMLHttpRequest",
+        }
+    )
+    return scraper
+
+
 def fetch_rows(name: str = INDEX_NAME, start_date: str = START_DATE, end_date: str = END_DATE) -> list[dict[str, str]]:
     cinfo = (
         f"{{'name':'{name}','startDate':'{start_date}',"
         f"'endDate':'{end_date}','indexName':'{name}'}}"
     )
-    payload = json.dumps({"cinfo": cinfo}).encode("utf-8")
-    headers = {
-        "Content-Type": "application/json; charset=UTF-8",
-        "X-Requested-With": "XMLHttpRequest",
-        "Referer": "https://www.niftyindices.com/reports/historical-data",
-        "User-Agent": "Mozilla/5.0 (compatible; TimesFM-NSE-research/1.0)",
-    }
-    req = Request(ENDPOINT, data=payload, headers=headers, method="POST")
-    with urlopen(req, timeout=60) as response:
-        body = json.loads(response.read().decode("utf-8"))
+    payload = {"cinfo": cinfo}
+    session = _session()
+
+    # Prime the Cloudflare/session challenge before the POST.
+    session.get(
+        "https://www.niftyindices.com/reports/historical-data",
+        timeout=30,
+    )
+    response = session.post(ENDPOINT, json=payload, timeout=60)
+
+    try:
+        body = response.json()
+    except ValueError as exc:
+        preview = response.text[:500].replace("\n", " ")
+        raise RuntimeError(
+            f"historical endpoint returned non-JSON HTTP {response.status_code}: {preview}"
+        ) from exc
+
     raw = body.get("d", "")
     rows = json.loads(raw) if isinstance(raw, str) else raw
     if not rows:
-        raise RuntimeError("NIFTY 50 historical endpoint returned no rows")
+        raise RuntimeError(f"NIFTY 50 historical endpoint returned no rows: {body}")
     return rows
 
 
