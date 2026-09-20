@@ -13,7 +13,7 @@ jobs:
           python-version: "3.12"
       - name: Install pinned TimesFM 3 environment
         run: python -m pip install --upgrade pip && python -m pip install -r requirements-research.txt
-      - name: Run adapter unit tests
-        run: python -m pytest -q tests/test_timesfm3_adapter.py
+      - name: Run statistics and adapter unit tests
+        run: python -m pytest -q tests/test_timesfm3_adapter.py tests/test_forecast_metrics.py
       - name: Run TimesFM 3.0 synthetic multivariate smoke test
         run: python scripts/smoke_timesfm3.py
