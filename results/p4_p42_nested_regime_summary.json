@@ -1,0 +1,23 @@
+{
+  "run_id": 35524516653,
+  "artifact_id": 10609740180,
+  "lane": "P4.2_nested_regime_conditioned_timesfm_incremental_test",
+  "rule": "20-session breadth determines a low-breadth regime using only prior folds; rank residual = z(TimesFM 5-session forecast) - z(20-session momentum); select top six only in low-breadth regime",
+  "test_folds": [2,3,4],
+  "rebalances_per_fold": 8,
+  "stocks": 30,
+  "total_test_rebalances": 24,
+  "used_rebalances": 13,
+  "cost_scenarios": [0.00125,0.0025,0.00375,0.005],
+  "results": [
+    {"signal":"momentum","one_way_cost_rate":0.00125,"net_total_return":-0.05204225510843585},
+    {"signal":"residual","one_way_cost_rate":0.00125,"net_total_return":-0.10022336870027582},
+    {"signal":"momentum","one_way_cost_rate":0.0025,"net_total_return":-0.07715137631007485},
+    {"signal":"residual","one_way_cost_rate":0.0025,"net_total_return":-0.12223816508740126},
+    {"signal":"momentum","one_way_cost_rate":0.00375,"net_total_return":-0.10163626096409539},
+    {"signal":"residual","one_way_cost_rate":0.00375,"net_total_return":-0.1437469198628808},
+    {"signal":"momentum","one_way_cost_rate":0.005,"net_total_return":-0.1255114377548271},
+    {"signal":"residual","one_way_cost_rate":0.005,"net_total_return":-0.16476053449741657}
+  ],
+  "interpretation":"The incremental TimesFM residual lost to the independently specified momentum control at every cost scenario. The conditional idea is therefore rejected for promotion. This closes the current daily individual-stock TimesFM overlay gate; no strategy is validated."
+}
