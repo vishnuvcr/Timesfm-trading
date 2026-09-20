@@ -78,10 +78,17 @@ The common trading engine is documented in [docs/TRADING_PIPELINE_SPEC.md](docs/
 
 The dated 2026 cost model is frozen in [docs/COST_MODEL.md](docs/COST_MODEL.md); current NSE STT and Paytm Money F&O/RMS assumptions are versioned by effective date.
 
-## Phase 4 onward
-**Planned.**
+## Phase 4 — Strategy research
+**Engineering bootstrap complete; empirical testing blocked by frozen P0 data and Phase 3 forecast gate.**
 
-No live or paper order execution is planned. No strategy has passed a research gate.
+Phase 4 now includes non-executing shared research rules for cost hurdles, uncertainty-adjusted sizing and volatility-targeted exposure. Phase 4 CI run 35 passed.
+
+## Phase 5 — Options
+**Protocol/engineering bootstrap in progress; empirical testing blocked by authorized historical option data.**
+
+Phase 5 now includes a formal implied-move benchmark, residual-vs-cost gate and defined-risk spread accounting. The first options CI run exposed a floating-point fixture issue; it was corrected and the next CI run is in progress.
+
+No live or paper order execution is planned. No strategy has passed an empirical research gate.
 
 
 ## Review checkpoints

@@ -27,3 +27,13 @@ The user explicitly selected TimesFM 3.0. The plan is changed to make 3.0 the pr
 ## 2026-09-20 — license boundary correction
 
 A direct read of the official TimesFM 3.0 Non-Commercial License shows a stricter boundary than earlier project notes: Non-Commercial Purpose excludes commercial gain, revenue generation and commercial decision-making, and the restrictions extend to model Outputs. The research plan is corrected so 3.0 remains the primary scientific/evaluation lane, while 3.0-derived trading decisions remain blocked until commercial rights are obtained. TimesFM 2.5 remains the current trading/production research lane.
+
+
+## 2026-09-20 — implementation progress after scope confirmation
+
+**Observable outcomes**
+- Phase 3 unit/statistics CI became green after correcting MAE/RMSE fixtures; no real forecast result exists yet.
+- Phase 2 CI became green after fixing an unterminated string literal in the manifest validator; the remaining gate is acquisition of the first frozen P0 datasets.
+- Phase 4 added non-executing research primitives for cost hurdles, uncertainty-adjusted sizing, volatility-targeted exposure and a simulation-aware model/license gate; CI passed.
+- Phase 5 added implied-movement benchmarking, residual-vs-cost gating and defined-risk debit-spread accounting. The first CI run found a floating-point fixture assertion; it was changed to approximate comparison and the corrected CI run is being verified.
+- Draft PR #5 was opened for the Phase 5 engineering bootstrap.

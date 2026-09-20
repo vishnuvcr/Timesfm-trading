@@ -13,8 +13,8 @@ Research program to evaluate Google TimesFM for a reproducible NSE trading pipel
 | 1 | Literature + evidence review | **Complete / protocol frozen** |
 | 2 | NSE data lake and point-in-time controls | **In progress** |
 | 3 | TimesFM 3.0 baseline/gate by horizon | **Engineering + unit-test gate green; real forecast blocked by P0 data acquisition** |
-| 4 | Strategy research: scalping/intraday/BTST/swing | Planned |
-| 5 | Options research + IV/OI/Greeks | Planned |
+| 4 | Strategy research: scalping/intraday/BTST/swing | **Engineering bootstrap complete; empirical gate blocked by P0/Phase 3** |
+| 5 | Options research + IV/OI/Greeks | **Protocol/engineering bootstrap in progress; empirical gate blocked by authorized options data** |
 | 6 | Cross-market/regime/news/corporate-action features | Planned |
 | 7 | Cost/slippage/tax-aware walk-forward simulation | Planned |
 | 8 | Simulation readiness + monitoring | Planned |
@@ -98,6 +98,8 @@ Phase 3 unit/statistics CI is green; the actual statistical forecast gate remain
 - [Phase 3 branch status](https://github.com/vishnuvcr/Timesfm-trading/blob/phase-3-timesfm-gate/docs/PHASE_3_STATUS.md)
 - [Draft PR #1 — Phase 2](https://github.com/vishnuvcr/Timesfm-trading/pull/1)
 - [Draft PR #2 — Phase 3](https://github.com/vishnuvcr/Timesfm-trading/pull/2)
+- [Draft PR #3 — Phase 4](https://github.com/vishnuvcr/Timesfm-trading/pull/3)
+- [Draft PR #5 — Phase 5](https://github.com/vishnuvcr/Timesfm-trading/pull/5)
 
 ## Market data scope
 
