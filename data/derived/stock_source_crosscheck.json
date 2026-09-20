@@ -1,0 +1,79 @@
+{
+  "version": "2026-09-20.stock-source-crosscheck-1",
+  "symbols": [
+    "RELIANCE",
+    "TCS",
+    "HDFCBANK",
+    "INFY",
+    "SBIN"
+  ],
+  "source": "vishnun0027/indian-market-historical-ohlcv",
+  "results": [
+    {
+      "symbol": "RELIANCE",
+      "tejhq_rows": 4117,
+      "yahoo_rows": 7711,
+      "overlap_rows": 4110,
+      "overlap_start": "2010-01-04",
+      "overlap_end": "2026-09-18",
+      "median_abs_close_pct_diff": 1.187387595011836,
+      "p95_abs_close_pct_diff": 3.3747752397452033,
+      "max_abs_close_pct_diff": 3.3805779937373104,
+      "share_close_within_0_10pct": 0.1121654501216545,
+      "source_note": "Yahoo/yfinance dataset is an independent cross-check; no raw cross-check file is committed."
+    },
+    {
+      "symbol": "TCS",
+      "tejhq_rows": 4117,
+      "yahoo_rows": 5987,
+      "overlap_rows": 4110,
+      "overlap_start": "2010-01-04",
+      "overlap_end": "2026-09-18",
+      "median_abs_close_pct_diff": 0.9999999067318218,
+      "p95_abs_close_pct_diff": 1.000000077574613,
+      "max_abs_close_pct_diff": 1.0081584392550988,
+      "share_close_within_0_10pct": 0.49562043795620436,
+      "source_note": "Yahoo/yfinance dataset is an independent cross-check; no raw cross-check file is committed."
+    },
+    {
+      "symbol": "HDFCBANK",
+      "tejhq_rows": 4117,
+      "yahoo_rows": 7714,
+      "overlap_rows": 4110,
+      "overlap_start": "2010-01-04",
+      "overlap_end": "2026-09-18",
+      "median_abs_close_pct_diff": 2.9999998974292605,
+      "p95_abs_close_pct_diff": 18.999999945374316,
+      "max_abs_close_pct_diff": 19.00000104667044,
+      "share_close_within_0_10pct": 0.06277372262773723,
+      "source_note": "Yahoo/yfinance dataset is an independent cross-check; no raw cross-check file is committed."
+    },
+    {
+      "symbol": "INFY",
+      "tejhq_rows": 3744,
+      "yahoo_rows": 7714,
+      "overlap_rows": 3738,
+      "overlap_start": "2011-06-29",
+      "overlap_end": "2026-09-18",
+      "median_abs_close_pct_diff": 3.8063706880959854e-08,
+      "p95_abs_close_pct_diff": 7.000000166912368,
+      "max_abs_close_pct_diff": 7.000000378806264,
+      "share_close_within_0_10pct": 0.5275548421615838,
+      "source_note": "Yahoo/yfinance dataset is an independent cross-check; no raw cross-check file is committed."
+    },
+    {
+      "symbol": "SBIN",
+      "tejhq_rows": 4117,
+      "yahoo_rows": 7712,
+      "overlap_rows": 4110,
+      "overlap_start": "2010-01-04",
+      "overlap_end": "2026-09-18",
+      "median_abs_close_pct_diff": 2.8777453217024508e-08,
+      "p95_abs_close_pct_diff": 9.000000251798046,
+      "max_abs_close_pct_diff": 9.000000571679838,
+      "share_close_within_0_10pct": 0.7065693430656934,
+      "source_note": "Yahoo/yfinance dataset is an independent cross-check; no raw cross-check file is committed."
+    }
+  ],
+  "raw_crosscheck_files_committed": false
+}
