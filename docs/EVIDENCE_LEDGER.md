@@ -111,7 +111,7 @@ Evidence grade: C — exploratory secondary-data result.
 
 Relevance: validates the end-to-end TimesFM 3.0 forecast, quantile and statistical pipeline and suggests level-error improvement can coexist with weak directional excess.
 
-Limitations: secondary dataset with no explicit upstream license file; historical window ends 2021-01-25; only one target/horizon/input family; post-hoc inference; no transaction-cost strategy test; not primary NSE P0 evidence; no promotion value.
+Limitations: secondary dataset with no explicit upstream license file; historical window ends 2021-01-25; only one target/horizon/input family; post-hoc inference; no transaction-cost strategy test; not primary NSE P0 evidence; no promotion value. Exploratory uncertainty analysis found q10-q90 width Spearman rho approximately 0.350 with subsequent absolute five-session movement and a roughly 2.32x highest-vs-lowest width-quartile mean-movement ratio; hypothesis-generating only.
 
 ## E13 — TimesFM 3.0 secondary-data multivariate/covariate ablation
 
