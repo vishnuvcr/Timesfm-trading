@@ -65,7 +65,7 @@ The 3.0 branch includes:
 The existing NIFTY P1 results remain exploratory C-grade evidence. The new stock cache opens an additional bootstrap lane, but it does not replace the requirement for PIT-clean primary/independent validation before final claims.
 
 ## Phase 4 — Strategy research
-**Phase 4.1 individual-stock TimesFM overlay tested; simple TimesFM-only and hybrid selection hypotheses rejected in the exploratory gate. Next: conditional/incremental stock information under regime/liquidity/event controls.**
+**Daily individual-stock TimesFM overlay gate closed after Phase 4.1 and nested Phase 4.2 tests. No tested daily TimesFM stock-selection mechanism survived chronological, baseline and cost-aware gates.**
 
 Individual stocks are first-class instruments. Current strategy hypotheses include:
 - single-stock forecast overlays;
@@ -172,3 +172,26 @@ Cross-sectional diagnostics:
 At the lowest proportional cost stress, net total returns over the sparse test were approximately -15.2% momentum, -26.6% TimesFM-only, -21.8% hybrid and -7.3% equal-weight universe. These are exploratory results, not final Phase 7 evidence, but they are sufficient to reject the simple TimesFM stock-selection overlays for further promotion.
 
 The next stock research experiment should therefore test incremental TimesFM information only after regime, liquidity, event and market-state conditioning, with the same no-TimesFM control.
+
+
+## Phase 4.2 synchronized result — 2026-09-20
+
+The nested regime-conditioned individual-stock experiment completed successfully (workflow 35524516653; artifact 10609740180).
+
+Rule:
+- 20-session stock breadth;
+- low-breadth threshold learned only from prior folds;
+- TimesFM 5-session forecast rank residualized against 20-session momentum;
+- top six names traded only in the low-breadth regime;
+- folds 2–4 used as the test sequence;
+- no test-fold parameter selection.
+
+Net total return:
+- 0.125% one-way: momentum -5.20%, residual -10.02%;
+- 0.25%: momentum -7.72%, residual -12.22%;
+- 0.375%: momentum -10.16%, residual -14.37%;
+- 0.50%: momentum -12.55%, residual -16.48%.
+
+The incremental TimesFM residual lost to the independent momentum control at every cost level. The daily stock TimesFM overlay gate is therefore closed. No stock strategy is validated.
+
+See [individual-stock TimesFM gate conclusion](docs/INDIVIDUAL_STOCK_TIMESFM_GATE_CONCLUSION.md).
