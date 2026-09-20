@@ -44,3 +44,10 @@ The 10-session TimesFM ranking is retained as a **single frozen candidate** for 
 Phase 6.1's previously completed stock regime-residual experiment did not provide statistical/economic support for that different mechanism, so it is not being reopened.
 
 The candidate is not a validated or production strategy. The next gate is a post-selection, 2023+ holdout with the date-versioned cash-equity fee model, explicit brokerage/statutory charges, spread/slippage stress, turnover, capacity, drawdown, year/regime breakdown and multiple-testing-aware inference.
+
+
+## Superseded by Phase 7 — 2026-09-20
+
+The 10-session TimesFM ranking identified here as an exploratory candidate was subsequently tested once, without retuning, on the predefined 2023+ Phase 7 post-selection holdout.
+
+It failed against the 20-session momentum control at zero and all additional slippage stresses. Therefore this Phase 4B document should be read as the exploratory candidate-stage conclusion only; the current final decision is recorded in `docs/FINAL_RESEARCH_CONCLUSION.md`.
