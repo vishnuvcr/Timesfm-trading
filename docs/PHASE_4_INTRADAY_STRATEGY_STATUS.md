@@ -21,3 +21,8 @@ All ten symbols passed the frozen source-integrity rules.
 ## Next gate
 
 Run the 15/30/60-minute development/holdout experiment exactly as defined. If a development cell survives, fold 4 remains an untouched holdout.
+
+
+## Matrix execution marker — 2026-09-20
+
+Running the predeclared 15/30/60-minute TimesFM-vs-VWAP experiment with the validated ten-stock minute release.
