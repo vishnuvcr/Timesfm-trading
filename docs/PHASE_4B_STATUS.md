@@ -120,3 +120,12 @@ All 30 cached bootstrap symbols were PIT-eligible at all 32 rebalances, so the P
 The fold-level TimesFM-minus-momentum differences were positive in three of four chronological folds at every cost level. Exact four-fold sign-flip p=0.3125 one-sided.
 
 **Gate result:** pass as a *candidate for Phase 7 holdout*, not as a final validated strategy. The PIT exercise is limited by the 30-stock bootstrap universe because all 30 names are present in the cached panel.
+
+
+## Final resolution after Phase 7 — 2026-09-20
+
+The 10-session candidate that survived the exploratory Phase 4B and cached PIT gates has now failed the post-selection Phase 7 holdout.
+
+This supersedes the earlier Phase 4B candidate-only conclusion. The candidate is closed and must not be retuned on the completed holdout.
+
+See `docs/PHASE_7_TIMESFM10_HOLDOUT.md` and `docs/FINAL_RESEARCH_CONCLUSION.md`.
