@@ -546,6 +546,11 @@ def main():
                 all_covars.extend(covars)
                 spans.append((fold, idx, usable, start))
             if variant == "global":
+                if not all_covars:
+                    raise RuntimeError("global variant produced no covariate tensors")
+                for cov in all_covars:
+                    if cov.shape != (11, CONTEXT):
+                        raise RuntimeError(f"invalid TimesFM 3.0 covariate shape {cov.shape}; expected (11, {CONTEXT})")
                 outputs = model.predict_batch(
                     all_contexts,
                     horizon=1,
