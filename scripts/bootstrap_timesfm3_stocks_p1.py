@@ -10,7 +10,7 @@ import numpy as np
 from src.model.timesfm3_adapter import TimesFM3Adapter
 from src.stats.forecast_metrics import mae, rmse, spearman_rank_ic
 
-CONTEXT = 128
+CONTEXT = 128  # stock bootstrap execution marker v1
 HORIZON = 5
 ORIGINS = 40
 DEFAULT_SYMBOLS = [
