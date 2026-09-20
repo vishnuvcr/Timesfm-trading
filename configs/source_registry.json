@@ -1,0 +1,152 @@
+{
+  "version": "2026-09-20.phase2",
+  "timezone": "Asia/Kolkata",
+  "sources": [
+    {
+      "id": "nse_cm_security_daily",
+      "domain": "equity_eod",
+      "source": "NSE India",
+      "url": "https://www.nseindia.com/report-detail/eq_security",
+      "cadence": "daily",
+      "pit_required": true,
+      "coverage_goal": "cash-equity OHLCV, VWAP, traded quantity, turnover, trade count",
+      "storage": "tier_c_or_permitted_snapshot",
+      "priority": "P0",
+      "notes": "Security-wise archives and current report are official NSE data."
+    },
+    {
+      "id": "nse_historical_equity",
+      "domain": "equity_eod_history",
+      "source": "NSE India",
+      "url": "https://www.nseindia.com/static/resources/historical-reports-capital-market-daily-monthly-archives",
+      "cadence": "historical_archive",
+      "pit_required": true,
+      "coverage_goal": "security price-volume archives, indices, India VIX and related daily reports",
+      "storage": "tier_c_or_permitted_snapshot",
+      "priority": "P0"
+    },
+    {
+      "id": "nse_fo_udiff",
+      "domain": "derivatives_eod",
+      "source": "NSE India",
+      "url": "https://www.nseindia.com/all-reports-derivatives",
+      "cadence": "daily",
+      "pit_required": true,
+      "coverage_goal": "F&O UDiFF common bhavcopy, participant OI/volume, FII derivatives statistics, settlement and contract reports",
+      "storage": "tier_c_or_permitted_snapshot",
+      "priority": "P0"
+    },
+    {
+      "id": "nse_option_chain",
+      "domain": "options_snapshot",
+      "source": "NSE India",
+      "url": "https://www.nseindia.com/option-chain",
+      "cadence": "intraday_snapshot",
+      "pit_required": true,
+      "coverage_goal": "bid/ask, LTP, OI, change OI, volume, IV and strike/expiry mapping",
+      "storage": "tier_c_or_permitted_snapshot",
+      "priority": "P0",
+      "notes": "The public option-chain page is not treated as a historical redistribution source; licensed historical data is preferred."
+    },
+    {
+      "id": "nse_indiavix",
+      "domain": "volatility",
+      "source": "NSE India",
+      "url": "https://www.nseindia.com/static/products-services/indices-indiavix-index",
+      "cadence": "daily",
+      "pit_required": true,
+      "coverage_goal": "India VIX history and methodology metadata",
+      "storage": "tier_c_or_permitted_snapshot",
+      "priority": "P0"
+    },
+    {
+      "id": "nse_fii_dii",
+      "domain": "flows",
+      "source": "NSE India",
+      "url": "https://www.nseindia.com/reports/fii-dii/",
+      "cadence": "daily",
+      "pit_required": true,
+      "coverage_goal": "FII/FPI and DII buy/sell/net values, preserving provisional/final vintages",
+      "storage": "tier_a_derived_or_permitted",
+      "priority": "P1"
+    },
+    {
+      "id": "nse_corporate_actions",
+      "domain": "corporate_actions",
+      "source": "NSE India",
+      "url": "https://www.nseindia.com/static/investor-relations/corporate-actions",
+      "cadence": "event",
+      "pit_required": true,
+      "coverage_goal": "dividend, split, bonus, rights and other actions with announcement/ex/record dates",
+      "storage": "tier_a_metadata_or_permitted",
+      "priority": "P0"
+    },
+    {
+      "id": "nse_corporate_filings",
+      "domain": "events_news",
+      "source": "NSE India",
+      "url": "https://www.nseindia.com/companies-listing/corporate-filings-actions",
+      "cadence": "event",
+      "pit_required": true,
+      "coverage_goal": "announcements, board meetings and corporate action filings with broadcast timestamps",
+      "storage": "tier_c_or_permitted_snapshot",
+      "priority": "P1"
+    },
+    {
+      "id": "nse_historical_paid",
+      "domain": "intraday_trade_order",
+      "source": "NSE Data & Analytics",
+      "url": "https://www.nseindia.com/static/market-data/eod-historical-data-subscription",
+      "cadence": "licensed_history",
+      "pit_required": true,
+      "coverage_goal": "historical order/trade and EOD CM/F&O data for scalping/execution studies",
+      "storage": "tier_c_private_licensed",
+      "priority": "P0",
+      "notes": "Required for credible high-frequency execution research; do not replace with a daily proxy."
+    },
+    {
+      "id": "nse_indices",
+      "domain": "index_data",
+      "source": "NSE Indices",
+      "url": "https://www.nseindia.com/static/nse-indices/index-data-subscription",
+      "cadence": "daily",
+      "pit_required": true,
+      "coverage_goal": "index levels, constituents, weights and historical index products",
+      "storage": "tier_c_or_permitted_snapshot",
+      "priority": "P0"
+    },
+    {
+      "id": "nseix_gift",
+      "domain": "global_cross_market",
+      "source": "NSE IX",
+      "url": "https://www.nseix.com/markets/trading/tradinghours",
+      "cadence": "intraday",
+      "pit_required": true,
+      "coverage_goal": "GIFT NIFTY market hours and, where licensed, historical contract data",
+      "storage": "tier_c_or_permitted_snapshot",
+      "priority": "P1"
+    },
+    {
+      "id": "bse_eod",
+      "domain": "bse_cross_exchange",
+      "source": "BSE India",
+      "url": "https://www.bseindia.com/",
+      "cadence": "daily",
+      "pit_required": true,
+      "coverage_goal": "BSE bhavcopy and cross-exchange daily validation",
+      "storage": "tier_c_or_permitted_snapshot",
+      "priority": "P1"
+    },
+    {
+      "id": "paytm_money",
+      "domain": "execution_costs",
+      "source": "Paytm Money",
+      "url": "https://www.paytmmoney.com/stocks/brokerage-calculator",
+      "cadence": "effective_date",
+      "pit_required": true,
+      "coverage_goal": "brokerage, platform/depository/other published charges and effective-date tariff",
+      "storage": "tier_a_metadata",
+      "priority": "P0"
+    }
+  ]
+}
