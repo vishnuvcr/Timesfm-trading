@@ -105,3 +105,19 @@ The combined conclusion is now stronger than the earlier provisional hypothesis:
 The repository therefore closes the current daily stock overlay gate rather than generating more thresholds or simple combinations. Future stock work requires a material protocol amendment, new authorized/PIT-clean data, or a genuinely different economic mechanism such as event-conditioned or stock-vs-sector residual forecasting.
 
 See [Individual-stock TimesFM gate conclusion](INDIVIDUAL_STOCK_TIMESFM_GATE_CONCLUSION.md).
+
+
+## Resolution after Phase 7 — 2026-09-20
+
+The provisional hypotheses in this file are now superseded by the completed individual-stock sequence.
+
+The only Phase 4B candidate retained for downstream testing was the 10-session TimesFM cross-sectional ranking. Its frozen 2023+ Phase 7 holdout failed against the independent momentum control at every tested slippage stress, including zero additional slippage:
+- 0.00%: TimesFM +3.72% vs momentum +67.97%;
+- 0.125%: -7.93% vs +47.20%;
+- 0.25%: -18.30% vs +28.96%;
+- 0.375%: -27.52% vs +12.94%;
+- 0.50%: -35.72% vs -1.12%.
+
+The current research conclusion is therefore that no individual-stock TimesFM 3.0 strategy has passed the promotion gate. The earlier uncertainty-sizing hypothesis should not be treated as a validated fallback.
+
+See [Final research conclusion](FINAL_RESEARCH_CONCLUSION.md) and [Phase 7 holdout](PHASE_7_TIMESFM10_HOLDOUT.md).
