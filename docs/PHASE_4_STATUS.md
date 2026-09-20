@@ -81,3 +81,24 @@ No test-fold parameter selection is permitted. This is the final conditional sto
 
 ## 2026-09-20 — [p42-regime] execution trigger
 The dedicated Phase 4.2 workflow is configured with both manual dispatch and the documented push marker. A marker commit is used to execute the frozen nested walk-forward experiment.
+
+
+## 2026-09-20 — Phase 4.2 result and stock-overlay gate closure
+
+Workflow 35524516653 completed successfully (artifact 10609740180). The frozen nested rule was evaluated on folds 2–4: the low-breadth threshold was learned only from earlier folds; the TimesFM-minus-momentum rank residual was used only in the low-breadth regime; top six stocks were selected; no test-fold tuning was performed.
+
+At 0.125% one-way proportional cost, the nested momentum control returned -5.20% and the TimesFM residual -10.02% over the 24 test rebalances. At 0.25% the results were -7.72% and -12.22%; at 0.375%, -10.16% and -14.37%; at 0.50%, -12.55% and -16.48%.
+
+The residual strategy therefore lost to the independent momentum control at every tested cost level. This closes the current daily individual-stock TimesFM overlay gate.
+
+### Phase 4 stock conclusion
+
+The project has now tested:
+1. standalone TimesFM stock ranking;
+2. simple TimesFM + momentum hybrid;
+3. momentum-gated TimesFM;
+4. a nested regime-conditioned TimesFM-minus-momentum residual.
+
+None survived the declared empirical gates. No daily individual-stock TimesFM strategy is validated.
+
+Further Phase 4 variants should not be generated merely to search for a positive result. Any future stock strategy must be materially different in economic mechanism or use a newly authorized/PIT-clean data layer, with a logged protocol amendment before testing.
