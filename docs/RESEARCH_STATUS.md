@@ -141,3 +141,20 @@ A source-quality flag remains for TATAMOTORS, whose cached adjusted series ends 
 ## Updated next gate
 
 The next empirical stock step is a multi-fold stock forecast matrix on a frozen PIT universe, with explicit baseline selection and the existing economic-cost gate. High-frequency/scalping claims remain gated on the newly identified 1-minute source validation and execution-quality checks.
+
+
+## Phase 3 P1.1 robustness checkpoint — 2026-09-20
+
+The four-fold stock robustness extension completed successfully (workflow 35523375234; artifact 10608933929). It evaluated 30 stocks across four chronological folds with 40 origins per fold, for 4,800 stock-level forecast origins.
+
+Aggregate:
+- mean log-MAE difference (TimesFM minus persistence): +0.001144;
+- mean log-RMSE difference: +0.001470;
+- mean five-session return-MAE difference: +0.001885;
+- mean directional excess: -2.90 percentage points;
+- 13/30 stocks had non-negative mean directional excess;
+- no stock had a negative mean MAE difference across all four folds;
+- mean interval-width/absolute-movement Spearman rho: +0.091.
+
+The initial recent-origin result (+11.1 percentage points directional excess) therefore does not survive chronological broadening. The current Phase 3 inference is that TimesFM 3.0 has not demonstrated incremental stock-level directional skill against the persistence benchmark, and the earlier uncertainty-sizing hypothesis remains unproven.
+
