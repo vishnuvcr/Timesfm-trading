@@ -12,7 +12,7 @@ from src.stats.forecast_metrics import (
 def test_basic_forecast_metrics() -> None:
     actual = np.array([1.0, 2.0, 3.0])
     forecast = np.array([1.0, 2.5, 2.0])
-    assert np.isclose(mae(actual, forecast), 1 / 3)
+    assert np.isclose(mae(actual, forecast), 0.5)
     assert np.isclose(rmse(actual, forecast), np.sqrt(0.25 / 3))
 
 
