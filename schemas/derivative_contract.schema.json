@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Canonical derivative contract",
+  "type": "object",
+  "required": ["contract_id","instrument_id","contract_type","listing_timestamp","expiry","source_id"],
+  "properties": {
+    "contract_id":{"type":"string"},
+    "instrument_id":{"type":"string"},
+    "contract_type":{"enum":["INDEX_FUTURE","STOCK_FUTURE","INDEX_OPTION","STOCK_OPTION"]},
+    "listing_timestamp":{"type":"string","format":"date-time"},
+    "expiry":{"type":"string","format":"date"},
+    "strike":{"type":["number","null"]},
+    "option_type":{"type":["string","null"],"enum":["CE","PE",null]},
+    "lot_size":{"type":["number","null"],"minimum":0},
+    "tick_size":{"type":["number","null"],"minimum":0},
+    "last_trading_timestamp":{"type":["string","null"],"format":"date-time"},
+    "settlement_type":{"type":["string","null"]},
+    "source_id":{"type":"string"}
+  }
+}
