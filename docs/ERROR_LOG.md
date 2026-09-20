@@ -9,3 +9,5 @@
 | 2026-09-20 | Research design | Initial plan treated TimesFM 3.0 as evaluation-only for the research stage. | Research scope was narrower than the user's requested model. | Verified current official 3.0 license/README; promoted 3.0 to primary research model and retained 2.5 as benchmark/fallback. | 
 
 | 2026-09-20 | Phase 3 statistics | Local pytest initially failed because the repository `src` package was not on the test import path. | Unit tests could not collect. | Added `src/__init__.py` and made the manual workflow use `PYTHONPATH=.` before pytest. |
+
+| 2026-09-20 | Phase 7 holdout | The frozen 10-session TimesFM candidate passed bootstrap/PIT candidate gates but failed the 2023+ post-selection holdout versus 20-session momentum at zero and all additional slippage stresses. | Current individual-stock candidate is rejected; no validated stock TimesFM strategy remains. | Close the stock candidate and prohibit additional specification search on the completed holdout. |
