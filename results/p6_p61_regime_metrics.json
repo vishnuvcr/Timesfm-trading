@@ -1,0 +1,11 @@
+[
+  {"regime":"all","rebalances":32,"residual_rank_ic":-0.002992084991891502,"p":0.935032483758121,"fdr_q":0.935032483758121,"mean_top6_residual_minus_momentum":-0.0011268220841884613},
+  {"regime":"risk_on","rebalances":19,"residual_rank_ic":-0.04541559005873818,"p":0.3963018490754623,"fdr_q":0.7794102948525737,"mean_top6_residual_minus_momentum":0.00026326639610424403},
+  {"regime":"stress","rebalances":0,"residual_rank_ic":null,"p":null,"fdr_q":null,"mean_top6_residual_minus_momentum":null},
+  {"regime":"high_vol","rebalances":0,"residual_rank_ic":null,"p":null,"fdr_q":null,"mean_top6_residual_minus_momentum":null},
+  {"regime":"low_vol","rebalances":32,"residual_rank_ic":-0.002992084991891502,"p":0.9335332333833083,"fdr_q":0.935032483758121,"mean_top6_residual_minus_momentum":-0.0011268220841884613},
+  {"regime":"breadth_high","rebalances":23,"residual_rank_ic":-0.02800431385368793,"p":0.5567216391804098,"fdr_q":0.7794102948525737,"mean_top6_residual_minus_momentum":0.0009382868158644525},
+  {"regime":"breadth_low","rebalances":9,"residual_rank_ic":0.060928055432699385,"p":0.4387806096951524,"fdr_q":0.7794102948525737,"mean_top6_residual_minus_momentum":-0.006404322606545909},
+  {"regime":"trend_up","rebalances":20,"residual_rank_ic":-0.037875202712664015,"p":0.45577211394302847,"fdr_q":0.7794102948525737,"mean_top6_residual_minus_momentum":-0.00040333817402521746},
+  {"regime":"trend_down","rebalances":12,"residual_rank_ic":0.05514644454272937,"p":0.42478760619690153,"fdr_q":0.7794102948525737,"mean_top6_residual_minus_momentum":-0.002332628601127201}
+]
