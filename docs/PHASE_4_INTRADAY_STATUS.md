@@ -135,3 +135,11 @@ This does not authorize using either source as exchange-primary truth; it only e
 ## Final source-pass execution marker — 2026-09-20
 
 Executing the verified release gate with the final frozen vendor-close reconciliation bound.
+
+
+## Ten-stock validation expansion — 2026-09-20
+
+The source-gate diagnostic universe is now fixed at ten liquid F&O underlyings:
+RELIANCE, TCS, HDFCBANK, INFY, ICICIBANK, SBIN, ITC, BHARTIARTL, LT, AXISBANK.
+
+The same acceptance rules apply unchanged. No result from the five-name pilot is being treated as final source validation.
