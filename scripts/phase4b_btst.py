@@ -237,37 +237,44 @@ def find_header_and_parse_flow(path: Path):
         return {}, status
 
 
-def build_features(global_dir: Path, signal_day: str):
-    nifty = daily_returns(read_price_csv(global_dir / "Nifty 50 Historical Data.csv"))
-    nikkei = daily_returns(read_price_csv(global_dir / "Nikkei 225 Historical Data.csv"))
-    hang = daily_returns(read_price_csv(global_dir / "Hang Seng Historical Data.csv"))
-    sp = daily_returns(read_price_csv(global_dir / "S&P 500 Historical Data.csv"))
-    dax = daily_returns(read_price_csv(global_dir / "DAX Historical Data.csv"))
-    brent = daily_returns(read_price_csv(global_dir / "Brent Oil Futures Historical Data.csv"))
-    gold = daily_returns(read_price_csv(global_dir / "Gold Futures Historical Data.csv"))
-    dxy = daily_returns(read_price_csv(global_dir / "US Dollar Index Historical Data.csv"))
-
-    values = {
-        "nifty_same_day": same_or_previous_available(nifty, signal_day),
-        "nikkei_same_day": same_or_previous_available(nikkei, signal_day),
-        "hang_same_day": same_or_previous_available(hang, signal_day),
-        "sp500_prev_day": previous_available(sp, signal_day),
-        "dax_prev_day": previous_available(dax, signal_day),
-        "brent_prev_day": previous_available(brent, signal_day),
-        "gold_prev_day": previous_available(gold, signal_day),
-        "dxy_prev_day": previous_available(dxy, signal_day),
+def load_global_feature_maps(global_dir: Path):
+    names = {
+        "nifty": "Nifty 50 Historical Data.csv",
+        "nikkei": "Nikkei 225 Historical Data.csv",
+        "hang": "Hang Seng Historical Data.csv",
+        "sp500": "S&P 500 Historical Data.csv",
+        "dax": "DAX Historical Data.csv",
+        "brent": "Brent Oil Futures Historical Data.csv",
+        "gold": "Gold Futures Historical Data.csv",
+        "dxy": "US Dollar Index Historical Data.csv",
     }
-    return values
+    return {
+        key: daily_returns(read_price_csv(global_dir / filename))
+        for key, filename in names.items()
+    }
 
 
-def make_covariate_matrix(days, data_by_symbol, global_dir, flow_map, use_flows, signal_idx, symbol):
+def feature_row(feature_maps, signal_day):
+    return {
+        "nifty_same_day": same_or_previous_available(feature_maps["nifty"], signal_day),
+        "nikkei_same_day": same_or_previous_available(feature_maps["nikkei"], signal_day),
+        "hang_same_day": same_or_previous_available(feature_maps["hang"], signal_day),
+        "sp500_prev_day": previous_available(feature_maps["sp500"], signal_day),
+        "dax_prev_day": previous_available(feature_maps["dax"], signal_day),
+        "brent_prev_day": previous_available(feature_maps["brent"], signal_day),
+        "gold_prev_day": previous_available(feature_maps["gold"], signal_day),
+        "dxy_prev_day": previous_available(feature_maps["dxy"], signal_day),
+    }
+
+
+def make_covariate_matrix(days, data_by_symbol, feature_maps, flow_map, use_flows, signal_idx, symbol):
     rows = []
     for idx in range(max(0, signal_idx - CONTEXT + 1), signal_idx + 1):
         day = days[idx]
         close_return = data_by_symbol[symbol]["close_return"][idx]
         breadth = float(data_by_symbol["breadth"][idx])
         rv20 = float(data_by_symbol["rv20"][idx])
-        features = build_features(global_dir, day)
+        features = feature_row(feature_maps, day)
         row = [
             features["nifty_same_day"],
             features["nikkei_same_day"],
@@ -469,6 +476,7 @@ def main():
 
     global_dir = Path(args.global_dir)
     actions_dir = Path(args.actions_dir)
+    feature_maps = load_global_feature_maps(global_dir)
     flow_map, flow_status = find_header_and_parse_flow(Path(args.fii_dii)) if args.fii_dii else ({}, {"parsed": False, "reason": "not supplied"})
 
     with zipfile.ZipFile(args.zip) as zf:
@@ -516,7 +524,7 @@ def main():
                             make_covariate_matrix(
                                 common_days,
                                 stock,
-                                global_dir,
+                                feature_maps,
                                 flow_map,
                                 False,
                                 idx,
