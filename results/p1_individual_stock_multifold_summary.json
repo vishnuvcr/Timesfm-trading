@@ -1,0 +1,31 @@
+{
+  "run_id": 35523375234,
+  "artifact_id": 10608933929,
+  "lane": "P1.1_exploratory_individual_stock_multifold",
+  "model": "timesfm-3.0-pytorch",
+  "stocks": 30,
+  "folds": 4,
+  "origins_per_fold": 40,
+  "total_stock_origins": 4800,
+  "mean_stock_log_mae_diff_timesfm_minus_persistence": 0.0011442548731962837,
+  "mean_stock_log_rmse_diff_timesfm_minus_persistence": 0.0014704389066650101,
+  "mean_stock_return_mae_diff_timesfm_minus_persistence": 0.0018845016260941826,
+  "mean_stock_directional_excess": -0.02895833333333333,
+  "mean_stock_interval_rho": 0.09125859912445278,
+  "stocks_with_nonnegative_mean_directional_excess": 13,
+  "stocks_with_mean_mae_improvement": 0,
+  "cluster_bootstrap_95ci": {
+    "mean_log_mae_diff": [0.00094481, 0.00135764],
+    "mean_log_rmse_diff": [0.00119621, 0.00177786],
+    "mean_return_mae_diff": [0.00150569, 0.00228030],
+    "mean_directional_excess": [-0.04938021, -0.00958333],
+    "mean_interval_rho": [0.06867667, 0.11470935]
+  },
+  "fold_means": {
+    "fold_1": {"mae_diff": 0.00122305, "rmse_diff": 0.00148706, "return_mae_diff": 0.00214677, "directional_excess": -0.10166667, "interval_rho": 0.06459662},
+    "fold_2": {"mae_diff": 0.00135321, "rmse_diff": 0.00160391, "return_mae_diff": 0.00213524, "directional_excess": -0.02000000, "interval_rho": 0.08455285},
+    "fold_3": {"mae_diff": 0.00073825, "rmse_diff": 0.00112187, "return_mae_diff": 0.00110600, "directional_excess": 0.01416667, "interval_rho": 0.17425891},
+    "fold_4": {"mae_diff": 0.00126251, "rmse_diff": 0.00166891, "return_mae_diff": 0.00215000, "directional_excess": -0.00833333, "interval_rho": 0.04162602}
+  },
+  "interpretation": "Exploratory chronological-fold robustness test. TimesFM is worse than persistence on point error in all 30 stock-level mean metrics; mean directional excess is negative overall and only 13/30 stocks are nonnegative. The interval-width relationship is mildly positive on average, but this is not enough for a strategy claim and is inconsistent in magnitude with the earlier NIFTY result. No cost-aware strategy promotion."
+}
