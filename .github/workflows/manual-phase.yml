@@ -1,6 +1,8 @@
 name: Phase 2 data
 
 on:
+  push:
+    branches: [phase-2-data]
   workflow_dispatch:
 
 jobs:
@@ -16,6 +18,6 @@ jobs:
       - name: Validate source registry
         run: python -m json.tool configs/source_registry.json >/dev/null
       - name: Validate dataset manifests
-        run: python src/data/validate_manifest.py
+        run: PYTHONPATH=. python src/data/validate_manifest.py
       - name: Run data-layer tests
-        run: python -m pytest -q
+        run: PYTHONPATH=. python -m pytest -q
