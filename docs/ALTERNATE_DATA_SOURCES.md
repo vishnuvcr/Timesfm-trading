@@ -75,3 +75,21 @@ This is preferable to applying a simplistic split-only correction because divide
 ## Independent cross-check
 
 The five-name Yahoo/yfinance-derived Hugging Face cross-check is executed by a separate manual/push workflow. It is a validation source, not the primary series. Absolute price-level differences can be material under different corporate-action conventions; the cross-check therefore reports both level divergence and daily return-path agreement. The first five-name run passed with >=99.7% of overlapping daily raw-close returns within 0.10 percentage points.
+
+
+## Additional stock/intraday sources
+
+### TickerTruth NSE security master
+A CC-BY-4.0 reference dataset normalizes NSE equity symbols, ISINs, listing dates and active/delisted status. It states that its source is the NSE public equity master and is refreshed nightly.
+
+**Role:** identifier continuity and survivorship/delisting cross-check. It is not used as the primary price series.
+
+### Indian stock minute dataset
+The MIT-licensed `xxparthparekhxx/indian-stock-market-minute-data` dataset contains roughly 713 million minute observations for more than 2,500 NSE stocks/indices over 2022–2026.
+
+**Role:** P1 intraday/scalping exploratory lane. Because minute-bar provenance, corporate-action treatment, timestamp normalization and execution semantics differ from the EOD pipeline, it must pass a separate intraday data-quality gate before any cost-aware inference.
+
+### NSE-OHLCV-Data
+The `Dr-Kitz28/NSE-OHLCV-Data` GitHub repository provides daily and hourly stock OHLCV and states academic/research use.
+
+**Role:** P2 hourly/daily cross-check only until license and provenance are frozen.
