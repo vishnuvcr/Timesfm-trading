@@ -80,3 +80,10 @@ The individual-stock empirical sequence is complete under the project's declared
 No TimesFM 3.0 stock strategy passed promotion. The final repository release therefore records a negative scientific conclusion rather than continuing specification search. Phase 9 manuscript and final-conclusion artifacts were validated by GitHub Actions and synchronized into main.
 
 No live/paper execution is enabled.
+
+
+## 2026-09-20 — Phase 4B superseded the earlier stock stop
+
+The earlier daily-stock empirical stop was followed by the predeclared multifrequency continuation. The 10-session TimesFM cross-sectional ranking passed the cached PIT candidate gate and is now frozen for a Phase 7 post-selection holdout.
+
+This is not an authorization to reopen arbitrary TimesFM variants. The single candidate is the only stock mechanism moving forward.
