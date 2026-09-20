@@ -1,0 +1,21 @@
+{
+  "dataset": "xxparthparekhxx/indian-stock-market-minute-data",
+  "probe_symbol": "20MICRONS",
+  "observed_rows": 200,
+  "matched_rows": 200,
+  "schema": [
+    "symbol",
+    "timestamp",
+    "open",
+    "high",
+    "low",
+    "close",
+    "volume",
+    "oi"
+  ],
+  "validation_status": "pass",
+  "duplicate_timestamps": 0,
+  "invalid_ohlc_rows": 0,
+  "zero_volume_rows_in_probe": 35,
+  "note": "Structural source-integrity probe only; not exchange-primary or execution/fill validation."
+}
