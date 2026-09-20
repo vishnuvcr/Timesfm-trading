@@ -1,0 +1,19 @@
+name: Phase 9 manuscript release
+
+on:
+  push:
+    branches: [phase-9-manuscript]
+  workflow_dispatch:
+
+jobs:
+  manuscript-validation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate manuscript and required release files
+        run: |
+          test -s manuscript/TimesFM_NSE_Research_Manuscript.md
+          test -s docs/FINAL_RESEARCH_CONCLUSION.md
+          test -s docs/PHASE_9_STATUS.md
+          grep -q "No validated TimesFM 3.0 individual-stock trading strategy" manuscript/TimesFM_NSE_Research_Manuscript.md
+          grep -q "No validated TimesFM 3.0 individual-stock trading strategy" docs/FINAL_RESEARCH_CONCLUSION.md
