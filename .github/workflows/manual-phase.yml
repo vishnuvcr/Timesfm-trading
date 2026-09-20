@@ -1,6 +1,7 @@
 name: Phase 4 equity
 
 on:
+  pull_request:
   push:
     branches: [phase-4-equity]
   workflow_dispatch:
