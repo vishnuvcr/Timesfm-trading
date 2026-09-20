@@ -34,3 +34,10 @@ Those are future preregistered research tracks, not unfinished reasons to keep s
 The program now stops the individual-stock empirical search and moves to release. New hypotheses must begin from a new preregistered branch and untouched holdout rather than reuse the completed test windows.
 
 No live or paper trading path is enabled.
+
+
+## Supersession notice — 2026-09-20
+
+This file records the pre-Phase-4B final conclusion. It is **superseded for current research status** by Phase 4B's frozen 10-session individual-stock TimesFM ranking candidate.
+
+The candidate has passed the cached PIT eligibility check but has not yet passed the Phase 7 post-selection holdout. Do not treat this document as the final current conclusion until Phase 7 is completed.
