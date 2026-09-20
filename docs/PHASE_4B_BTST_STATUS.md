@@ -36,3 +36,7 @@ Validate date parsing, common-session alignment, timestamp-safe feature availabi
 
 ## Experiment state
 No BTST strategy result exists yet. No holdout has been opened.
+
+## Frozen BTST execution marker — 2026-09-21
+
+Running the predeclared close-to-next-open BTST matrix on the validated ten-stock universe with timestamp-safe global features, corporate-action exclusions, delivery/STT/DP costs, and fixed four-fold development/holdout rules.
