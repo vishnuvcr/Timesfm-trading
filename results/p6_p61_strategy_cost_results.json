@@ -1,0 +1,14 @@
+[
+  {"strategy":"momentum","one_way_cost":0.0,"net_total_return":0.35000068094978776},
+  {"strategy":"residual_overlay_risk_on","one_way_cost":0.0,"net_total_return":0.35793737357658717},
+  {"strategy":"stress_residual_overlay","one_way_cost":0.0,"net_total_return":0.35000068094978776},
+  {"strategy":"hybrid","one_way_cost":0.0,"net_total_return":0.3451707443996803},
+  {"strategy":"momentum","one_way_cost":0.0025,"net_total_return":0.22245419836594116},
+  {"strategy":"residual_overlay_risk_on","one_way_cost":0.0025,"net_total_return":0.20931136802888006},
+  {"strategy":"stress_residual_overlay","one_way_cost":0.0025,"net_total_return":0.22245419836594116},
+  {"strategy":"hybrid","one_way_cost":0.0025,"net_total_return":0.20987370087473822},
+  {"strategy":"momentum","one_way_cost":0.005,"net_total_return":0.10657257779201235},
+  {"strategy":"residual_overlay_risk_on","one_way_cost":0.005,"net_total_return":0.076459851274578},
+  {"strategy":"stress_residual_overlay","one_way_cost":0.005,"net_total_return":0.10657257779201235},
+  {"strategy":"hybrid","one_way_cost":0.005,"net_total_return":0.08776672971362931}
+]
