@@ -7,10 +7,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 DATASET = "xxparthparekhxx/indian-stock-market-minute-data"
-SYMBOLS = {
-    "RELIANCE", "TCS", "HDFCBANK", "INFY", "ICICIBANK",
-    "SBIN", "ITC", "BHARTIARTL", "LT", "AXISBANK",
-}
+PROBE_SYMBOL = "20MICRONS"
 EXPECTED_START = "09:15"
 EXPECTED_END = "15:29"
 
@@ -36,12 +33,12 @@ def main() -> None:
         if schema is None:
             schema = sorted(row.keys())
         symbol = str(row.get("symbol", "")).upper()
-        if symbol in SYMBOLS:
+        if symbol == PROBE_SYMBOL:
             matched += 1
             per_symbol[symbol].append(row)
             if len(sample_rows) < 20:
                 sample_rows.append(row)
-            if sum(len(v) for v in per_symbol.values()) >= 2_000:
+            if len(per_symbol[PROBE_SYMBOL]) >= 2_000:
                 break
         if observed >= args.rows:
             break
@@ -89,7 +86,7 @@ def main() -> None:
         "observed_stream_rows_until_match_stop": observed,
         "matched_rows": matched,
         "schema": schema,
-        "symbols_requested": sorted(SYMBOLS),
+        "probe_symbol": PROBE_SYMBOL,
         "symbol_stats": symbol_stats,
         "sample_rows": sample_rows[:5],
         "declared_session_reference": {
