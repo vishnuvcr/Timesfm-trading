@@ -83,6 +83,29 @@ jobs:
           name: nse-fo-sample-${{ inputs.acquire_fo_date }}
           path: private_data/
 
+  probe-static-nse-index-archive:
+    if: github.event_name == 'push' && contains(github.event.head_commit.message, '[probe-static-index]')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Probe static NSE index archive
+        run: |
+          curl --fail --location --silent --show-error             "https://nsearchives.nseindia.com/content/indices/ind_close_all_17042026.csv"             -o /tmp/ind_close_all_17042026.csv
+          python - <<'PY'
+          import csv
+          from pathlib import Path
+          p = Path("/tmp/ind_close_all_17042026.csv")
+          rows = list(csv.DictReader(p.open(encoding="utf-8-sig", newline="")))
+          nifty = [r for r in rows if r.get("Index Name") == "NIFTY 50"]
+          if not nifty:
+              raise SystemExit(f"NIFTY 50 not found; columns={rows[0].keys() if rows else []}")
+          r = nifty[0]
+          print(r)
+          for key in ("Open Index Value", "High Index Value", "Low Index Value", "Closing Index Value"):
+              if float(r[key]) <= 0:
+                  raise SystemExit(f"bad {key}: {r[key]}")
+          PY
+
   probe-official-p0-api:
     if: github.event_name == 'push' && contains(github.event.head_commit.message, '[probe-p0-api]')
     runs-on: ubuntu-latest
