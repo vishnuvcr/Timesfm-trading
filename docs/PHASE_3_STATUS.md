@@ -18,7 +18,7 @@ Engineering bootstrap only. Statistical forecast gate has not started.
 - manual GitHub Actions smoke-test workflow.
 
 ## P1 exploratory bootstrap
-An explicitly non-promotional P1 bootstrap lane has been added. It uses the public NIFTY 50 total-return series only to exercise the end-to-end TimesFM 3.0 forecasting, quantile and metric pipeline. It cannot promote a trading result because it is not the frozen primary price/OHLC P0 dataset.
+An explicitly non-promotional P1 bootstrap lane has been added. Because the official NIFTY Indices application endpoint returns HTML to GitHub Actions runners, the bootstrap uses a fixed secondary Google Finance-derived NIFTY 50 snapshot identified by upstream commit/blob SHA. The input is cached in GitHub Actions but not redistributed into this repository because the upstream repository has no explicit license file. It exercises the end-to-end TimesFM 3.0 forecasting, quantile and metric pipeline. It cannot promote a trading result because it is not the frozen primary price/OHLC P0 dataset.
 
 ## Experimental gate remains blocked
 The real forecast experiment cannot be declared valid until Phase 2 supplies a frozen, point-in-time P0 dataset and the Phase 2 leakage, calendar, contract and option-integrity tests pass.
