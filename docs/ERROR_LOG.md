@@ -36,3 +36,7 @@
 
 | 2026-09-20 | Phase 4.2 nested regime result | A low-breadth TimesFM-minus-momentum residual appeared favorable only when the regime threshold was viewed with full-sample information. | That construction risked hindsight/selection bias. | Re-ran with a strict nested threshold learned only from prior folds; the residual lost to momentum at every tested cost scenario. |
 | 2026-09-20 | Phase 4 daily stock gate | Standalone TimesFM ranking, simple hybrid, momentum-gated TimesFM and nested regime-conditioned residual all failed their declared gates. | No daily individual-stock TimesFM strategy is validated. | Closed the current daily stock overlay lane and logged the result as the final Phase 4 daily-stock conclusion. |
+
+
+| 2026-09-20 | Phase 9 release | Final manuscript creation initially hit a repository-write string-quoting error; no content was lost. | Release write stopped before GitHub commit. | Rewrote the manuscript artifact with plain-text path names and tilde-fenced diagrams; Phase 9 validation then passed. |
+| 2026-09-20 | Research stop | The predeclared stock strategy gates did not produce a promotable TimesFM 3.0 strategy. | Additional unlogged threshold/variant searching would violate the project stop rule. | Closed the current individual-stock empirical search and moved to final manuscript/release; future variants require a new preregistered branch and holdout. |
