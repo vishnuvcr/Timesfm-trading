@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+# v2 execution marker: cross-check workflow should run automatically on this branch.
+
 import argparse
 import json
 import subprocess
