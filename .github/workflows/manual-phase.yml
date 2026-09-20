@@ -117,3 +117,40 @@ jobs:
         run: python -m pip install --upgrade pip && python -m pip install -r requirements-research.txt
       - name: Run TimesFM 3.0 synthetic multivariate smoke test
         run: python scripts/smoke_timesfm3.py
+
+ 
+  p1-individual-stock-bootstrap:
+    if: github.event_name == 'push' && contains(github.event.head_commit.message, '[stock-p1]')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Fetch Phase 2 adjusted stock cache
+        run: |
+          git fetch origin phase-2-data
+          git checkout origin/phase-2-data -- configs/equity_research_universe.json data/cache/equities/tejhq_nse_adjusted
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+          cache-dependency-path: requirements-research.txt
+      - name: Cache TimesFM 3.0 model files
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: timesfm3-hf-${{ runner.os }}-3.0.2
+      - name: Install pinned TimesFM 3 environment
+        run: python -m pip install -r requirements-research.txt
+      - name: Run individual-stock exploratory bootstrap
+        run: |
+          PYTHONPATH=. python scripts/bootstrap_timesfm3_stocks_p1.py \
+            --data-dir data/cache/equities/tejhq_nse_adjusted \
+            --symbols "RELIANCE,TCS,HDFCBANK,INFY,ICICIBANK,SBIN,ITC,BHARTIARTL,LT,AXISBANK,KOTAKBANK,HINDUNILVR,MARUTI,SUNPHARMA,BAJFINANCE,ASIANPAINT,TITAN,HCLTECH,WIPRO,ULTRACEMCO,NESTLEIND,M&M,NTPC,ONGC,POWERGRID,TATAMOTORS,TATASTEEL,ADANIENT,CIPLA,DRREDDY"
+      - name: Upload stock bootstrap results
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase3-p1-individual-stock-bootstrap
+          path: p3_stock_results/
