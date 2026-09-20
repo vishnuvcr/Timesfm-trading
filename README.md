@@ -130,7 +130,7 @@ See [Individual-stock TimesFM gate conclusion](docs/INDIVIDUAL_STOCK_TIMESFM_GAT
 
 ## Final research release
 
-The individual-stock empirical research has reached the declared stop rule. No TimesFM 3.0 stock strategy passed the complete promotion gate.
+The earlier daily individual-stock stop was superseded by the predeclared Phase 4B multifrequency continuation. The current 10-session TimesFM stock-ranking candidate has passed the bootstrap/PIT candidate gates but has not yet completed the Phase 7 post-selection holdout.
 
 Key evidence:
 - four-fold stock robustness: TimesFM remained worse than persistence on point-error aggregates;
@@ -143,3 +143,16 @@ Key evidence:
 [Phase 9 status](docs/PHASE_9_STATUS.md)
 
 The project remains research-only and non-executing.
+
+
+## Current Phase 4B/Phase 7 state — 2026-09-20
+
+A frozen Phase 4B swing matrix tested individual stocks at 2, 5, 10 and 20 sessions. The 10-session TimesFM cross-sectional ranking was the only candidate ahead of the 20-session momentum control across all declared proportional-cost stresses. A cached PIT rerun left all 30 bootstrap names eligible at the tested dates, so the portfolio result was unchanged.
+
+The candidate is **not yet a validated or production strategy**. It is frozen for the Phase 7 post-selection holdout with dated cash-equity fees, statutory charges, brokerage/DP costs, slippage/impact stress, turnover, capacity, drawdown, year/regime breakdown and multiple-testing-aware inference.
+
+[Phase 4B conclusion](docs/PHASE_4B_CONCLUSION.md)  
+[Phase 4B status](docs/PHASE_4B_STATUS.md)  
+[Phase 4B frozen matrix](docs/PHASE_4B_EXPERIMENT_MATRIX.md)
+
+The earlier Phase 9 manuscript/final-conclusion artifacts are now provisional/historical until this downstream candidate gate is resolved.
