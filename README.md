@@ -24,9 +24,13 @@ All ten phase branches exist and have manual GitHub Actions entry points.
 
 ## Core model decision
 
-**TimesFM 3.0 is the primary research model.** TimesFM 2.5 remains the benchmark/ablation/fallback model.
+**TimesFM 3.0 is the primary scientific/evaluation model.** TimesFM 2.5 remains the benchmark and current trading/production research lane unless 3.0 commercial rights are obtained.
 
-Google's current official documentation says TimesFM 3.0 adds native multivariate forecasting and flexible past-only and past-and-future covariate support. The source code in the main TimesFM repository is Apache-2.0, but the pretrained 3.0 weights are distributed under a separate TimesFM Non-Commercial License v1.0. That license permits qualifying testing, evaluation and research; commercial or production use of the pretrained weights requires separate permission/license from Google. citeturn498629view0turn388765search3
+Google's current official documentation says TimesFM 3.0 adds native multivariate forecasting and flexible past-only and past-and-future covariate support. The source code in the main TimesFM repository is Apache-2.0, but the pretrained 3.0 weights are distributed under a separate TimesFM Non-Commercial License v1.0. That license permits only qualifying non-commercial/non-production use. It explicitly excludes revenue-generating activity and commercial decision-making and its restrictions extend to model outputs. Therefore this project blocks using pretrained 3.0 outputs to select, optimize or operate a profit-seeking trading strategy until appropriate commercial rights are obtained. citeturn670140view0 citeturn498629view0turn388765search3
+
+## License gate
+
+See [TimesFM 3.0 license gate](docs/LICENSE_GATE.md). The research lane and production/trading lane are now deliberately separated.
 
 ## Phase 1 result
 
