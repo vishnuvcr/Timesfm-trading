@@ -126,3 +126,15 @@ Three layers of stock evidence were completed:
 The four-fold forecast robustness test covered 4,800 stock origins. The final nested strategy test used prior-fold-only regime thresholds and failed against the momentum control at every tested cost scenario. No daily individual-stock TimesFM strategy is validated.
 
 See [Individual-stock TimesFM gate conclusion](docs/INDIVIDUAL_STOCK_TIMESFM_GATE_CONCLUSION.md).
+
+
+## Phase 4B active — 2026-09-20
+
+Phase 4B now has a frozen multifrequency stock matrix on the dedicated `phase-4b-stock-multifrequency` branch. The immediate swing lane tests 2, 5, 10 and 20 sessions with TimesFM 3.0 versus a 20-session momentum control and a predeclared uncertainty-scaled momentum mechanism. Genuine BTST/intraday/scalping remains gated on validation of the candidate 1-minute source.
+
+See:
+- `docs/PHASE_4B_STATUS.md`
+- `docs/PHASE_4B_EXPERIMENT_MATRIX.md`
+- `scripts/stock_timesfm_swing_p4b.py`
+- `scripts/validate_intraday_source_p4b.py`
+- `.github/workflows/phase-4b-stock-multifrequency.yml`
