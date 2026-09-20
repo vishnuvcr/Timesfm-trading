@@ -113,3 +113,11 @@ Paytm Money is the primary broker cost reference for the project. These costs ar
 ## Important limitation
 
 No live trading claim is made. The repository contains a frozen research protocol, active data/model engineering, and a non-executing strategy research pipeline—not a validated trading strategy or a deployment system.
+
+
+## Current research conclusion
+
+- [Provisional research conclusion and strategy hypothesis](docs/PROVISIONAL_RESEARCH_CONCLUSION.md)
+- [P1 TimesFM 3.0 forecast result](../phase-3-timesfm-gate/docs/P1_BOOTSTRAP_RESULT.md)
+- [P1 multivariate/covariate ablation](../phase-3-timesfm-gate/docs/P1_MULTIVARIATE_ABLATION.md)
+- [Official NSE data-access blocker — Issue #6](https://github.com/vishnuvcr/Timesfm-trading/issues/6)
