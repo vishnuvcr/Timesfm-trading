@@ -6,7 +6,7 @@ Updated: 2026-09-20 IST
 TimesFM 3.0 is the primary model for the full project. Phase 3 results are restricted to non-commercial research/evaluation and may feed simulated strategy research, but no broker execution or commercial decision-making is permitted.
 
 ## Status
-Engineering bootstrap only. Statistical forecast gate has not started.
+Engineering bootstrap plus exploratory stock forecast gate complete. The primary/PIT statistical gate remains blocked because the official hosted-runner NSE route is still unavailable and the 30-name panel is explicitly bootstrap-only.
 
 ## Implemented
 - official TimesFM 3.0 PyTorch checkpoint pinned in the research environment;
@@ -85,5 +85,23 @@ A 30-stock exploratory TimesFM 3.0 lane is now wired to consume the Phase 2 TejH
 
 The first execution attempt failed before forecasting because of a Python string-literal syntax error in the new stock script. The error was corrected and a syntax-check step was added before the model run. The rerun is the active exploratory gate. No strategy promotion is attached to this job.
 
-## 2026-09-20 — repaired stock bootstrap rerun requested
-A new push commit containing the marker `[stock-p1]` is being used to execute the repaired 30-stock bootstrap. The workflow will first fetch the Phase 2 adjusted cache, run `py_compile`, then execute the frozen 128-session/5-session/40-origin stock evaluation and upload its per-stock and aggregate results. Any failure is to be logged before the next phase transition.
+## 2026-09-20 — individual-stock exploratory result
+The repaired 30-stock TimesFM 3.0 bootstrap completed successfully in workflow run `35522976491`; artifact `10608372793` was uploaded and the per-stock results are stored in `results/p1_individual_stock_bootstrap.csv` and `results/p1_individual_stock_bootstrap_summary.json`.
+
+Configuration: fixed 30-name bootstrap, adjusted close, context 128, 5-session horizon, 40 recent chronological origins per stock.
+
+Observed aggregate results:
+- mean log MAE: 0.018675 TimesFM vs 0.017629 persistence;
+- mean log RMSE: 0.027242 vs 0.025726;
+- only 3/30 stocks improved MAE and 3/30 improved RMSE;
+- mean five-session directional accuracy 50.83% versus mean positive-return base rate 39.75%, with 25/30 stocks showing positive stock-level directional excess;
+- only 5/30 improved five-session return MAE;
+- mean q10–q90 interval-width Spearman correlation with subsequent absolute five-session movement was -0.121, with 9 positive and 21 negative stock-level correlations.
+
+A descriptive cluster bootstrap over the 30 stock-level metrics gave 95% intervals showing positive TimesFM-minus-persistence error differences for MAE/RMSE/return-MAE and a negative interval-width/movement correlation. These resamples do not replace origin-level inference and do not establish a tradable edge.
+
+Interpretation: the stock sample does not support TimesFM 3.0 as a better point-forecast model than persistence on average. The directional excess is an exploratory lead only; it has not been benchmarked against an independently specified stock-selection signal, multiple-testing corrected, walk-forward validated across historical folds, or cost-tested. The uncertainty/interval-width hypothesis from the earlier secondary NIFTY sample does not reproduce here and is therefore not promoted as a stock-sizing signal.
+
+Known data-quality flag: `TATAMOTORS.csv` in the adjusted bootstrap ends on 2025-10-23 while most names extend to 2026-09-18. This is logged as a stock-source/identifier continuity issue to resolve before final PIT evidence.
+
+No strategy is promoted from this exploratory run.
