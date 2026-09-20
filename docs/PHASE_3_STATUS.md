@@ -43,3 +43,17 @@ The four input families will be evaluated on identical forecast origins and froz
 - economic value after the frozen cost model
 
 No strategy is promoted from Phase 3 on raw forecast accuracy alone.
+
+
+## Statistical infrastructure added
+
+The phase now contains deterministic NumPy-only implementations for:
+- MAE/RMSE;
+- base-rate-honest directional excess accuracy;
+- cross-sectional rank IC;
+- pinball loss and interval coverage;
+- Newey-West variance and one-sided Diebold-Mariano statistic;
+- moving/block bootstrap confidence intervals;
+- Benjamini-Hochberg FDR adjustment.
+
+These are reusable research primitives, not results. The workflow runs their unit tests before the model smoke test.
