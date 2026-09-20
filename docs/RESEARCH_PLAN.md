@@ -127,3 +127,10 @@ After the daily individual-stock TimesFM overlay gate closed, the research scope
 The 10-session cross-sectional TimesFM ranking survived the bootstrap and cached PIT gates as a single candidate. It is now frozen for a post-selection Phase 7 holdout with exact cash-equity statutory/broker costs and slippage stress.
 
 This amendment supersedes the earlier Phase 9 final-stop wording. Phase 9 manuscript/release remains deferred until the frozen candidate is resolved by the downstream cost-aware gate.
+
+
+## Phase 7 resolution — 2026-09-20
+
+The Phase 4B 10-session candidate failed the post-selection 2023+ cost-aware holdout. Phase 9 is therefore reinstated as the final manuscript/release phase. No additional individual-stock TimesFM specification search is permitted on the completed holdout.
+
+Options, licensed intraday/execution research and other materially different economic mechanisms remain future research tracks and require new preregistered branches/holdouts.
