@@ -42,3 +42,16 @@
 A secondary-data NIFTY 50 bootstrap showed lower point forecast error than persistence but directional accuracy below the positive-return base rate. The multivariate ablation produced mixed results. These remain C-grade exploratory evidence only.
 
 Private chain-of-thought is not copied here; this log records observable decisions, tool/data outcomes, errors and repository changes.
+
+
+## 2026-09-20 — alternate-source stock validation result
+
+**Observable outcome:** The independent Yahoo/yfinance-derived Hugging Face source was not used as a silent replacement for TejHQ. Instead, five-name cross-checks were run. Raw levels showed adjustment-method differences, but daily return paths were highly consistent; at least 99.7% of overlapping daily raw-close returns differed by no more than 0.10 percentage points for the tested names.
+
+**Decision:** Stock research will validate return paths and corporate-action methodology separately from absolute price-level equality, and will use the TejHQ adjusted-price/PIT-universe trees for the main bootstrap.
+
+## 2026-09-20 — adjusted stock/PIT data result
+
+**Observable outcome:** The TejHQ adjusted-price and point-in-time universe workflow completed successfully. The repository now has adjusted individual-stock series and a monthly PIT liquidity universe for the 30-name bootstrap, in addition to raw prices and corporate actions.
+
+**Next gate:** freeze final PIT universe rules and identifier continuity, then extend the TimesFM forecast matrix from indices to individual stocks before economic strategy promotion.
