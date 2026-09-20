@@ -90,3 +90,18 @@ The evidence now supports a **negative result for standalone TimesFM 3.0 stock f
 The remaining scientific opportunity is not to keep searching for a TimesFM-only direction rule. It is to test whether TimesFM adds incremental information to an independently specified stock-selection or market-structure signal after PIT universe construction, corporate-action reconciliation, multiple-testing correction and full economic costs.
 
 No stock strategy is currently validated.
+
+
+## Daily individual-stock strategy gate closure — 2026-09-20
+
+The Phase 4 daily stock strategy lane is now closed after two sequential tests.
+
+First, the simple stock-selection test compared 20-session cross-sectional momentum, TimesFM 5-session forecast ranking, a 50/50 hybrid and a momentum-gated TimesFM variant. TimesFM had lower mean rank IC than momentum and produced more negative net returns under the tested cost scenarios.
+
+Second, a nested regime-conditioned residual test used only prior-fold information to define a low-breadth regime and compared the TimesFM-minus-momentum residual with the same momentum control. The residual lost to momentum at every one-way cost scenario from 0.125% to 0.50%.
+
+The combined conclusion is now stronger than the earlier provisional hypothesis: **no tested daily individual-stock TimesFM mechanism has demonstrated incremental economic value over the declared stock-selection baseline on the current research panel.**
+
+The repository therefore closes the current daily stock overlay gate rather than generating more thresholds or simple combinations. Future stock work requires a material protocol amendment, new authorized/PIT-clean data, or a genuinely different economic mechanism such as event-conditioned or stock-vs-sector residual forecasting.
+
+See [Individual-stock TimesFM gate conclusion](INDIVIDUAL_STOCK_TIMESFM_GATE_CONCLUSION.md).
