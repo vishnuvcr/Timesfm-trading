@@ -47,3 +47,21 @@ Predeclared regimes:
 The TimesFM component is residualized cross-sectionally against momentum before rank testing. Significance uses rebalance-level permutation testing and Benjamini-Hochberg FDR across the predeclared regime cells. This avoids treating stock observations within the same rebalance as independent evidence.
 
 The experiment remains exploratory because the 30-name universe is not final PIT evidence and Phase 7's dated full cost engine is not yet applied.
+
+
+## 2026-09-20 — Phase 6.1 result
+
+Workflow 35524645761 completed successfully and uploaded artifact 10609451021.
+
+Across 30 stocks and 32 common rebalances:
+- unconditional TimesFM residual rank IC: -0.0030, permutation p=0.935, FDR q=0.935;
+- risk-on residual rank IC: -0.0454, p=0.396, FDR q=0.779;
+- breadth-low residual rank IC: +0.0609, p=0.439, FDR q=0.779;
+- trend-down residual rank IC: +0.0551, p=0.425, FDR q=0.779;
+- no predeclared cell achieved statistical support after rebalance-level permutation testing and FDR.
+
+The risk-on residual overlay produced a slightly higher zero-cost total return than momentum (35.79% vs 35.00%), but this advantage reversed after a 0.25% one-way proportional cost stress (20.93% vs 22.25%) and widened at 0.50% stress (7.65% vs 10.66%).
+
+The stress/high-vol cells were under-populated in this sparse 32-rebalance design, so they are reported as untested rather than interpreted as null evidence.
+
+**Decision:** no Phase 6 regime-conditioned TimesFM strategy is promoted. The research stop rule is now reached for the individual-stock EOD strategy lane: all tested standalone, hybrid and regime-conditioned TimesFM stock hypotheses failed a statistical/economic promotion gate.
