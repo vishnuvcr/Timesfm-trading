@@ -335,12 +335,9 @@ def main() -> None:
         w.writeheader()
         for r in rows:
             w.writerow({**{k:r[k] for k in fields[:-1]}, "eligible_count": int(np.sum(r["eligible"]))})
-    (out / "regime_metrics.json").write_text(json.dumps(metrics, indent=2) + "
-", encoding="utf-8")
-    (out / "strategy_results.json").write_text(json.dumps(strategy_rows, indent=2) + "
-", encoding="utf-8")
-    (out / "fold_strategy_returns.json").write_text(json.dumps(fold_strategy_returns, indent=2) + "
-", encoding="utf-8")
+    (out / "regime_metrics.json").write_text(json.dumps(metrics, indent=2) + "\n", encoding="utf-8")
+    (out / "strategy_results.json").write_text(json.dumps(strategy_rows, indent=2) + "\n", encoding="utf-8")
+    (out / "fold_strategy_returns.json").write_text(json.dumps(fold_strategy_returns, indent=2) + "\n", encoding="utf-8")
     (out / "summary.json").write_text(json.dumps({
         "lane":"P6.2_10d_timesfm_regime_conditioning",
         "horizon":HORIZON,"stocks":len(symbols),"folds":FOLDS,"origins_per_fold":ORIGINS_PER_FOLD,
@@ -348,8 +345,7 @@ def main() -> None:
         "event_rule":"exclude names with an ex-date in preceding 5 trading sessions",
         "liquidity_rule":"top 20 of 30 by trailing 20-session turnover at origin",
         "note":"Exploratory. Final promotion requires PIT universe reconciliation and Phase 7 effective-date cost/slippage/capacity validation.",
-    }, indent=2) + "
-", encoding="utf-8")
+    }, indent=2) + "\n", encoding="utf-8")
     print(json.dumps({"regime_metrics":metrics,"strategy_results":strategy_rows}, indent=2))
 
 

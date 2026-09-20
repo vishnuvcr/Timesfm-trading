@@ -22,3 +22,7 @@ The next planned experiment tested TimesFM only as an incremental residual aroun
 No predeclared regime produced statistically supported residual rank information. The risk-on overlay was slightly better than momentum before costs but underperformed after 0.25% and 0.50% one-way stress.
 
 **Decision:** stop adding stock strategy variants. The individual-stock EOD research lane has reached a negative promotion conclusion; move to final audit/manuscript and document data-gated future research rather than continue specification search.
+
+## 2026-09-20 — Phase 6.2 syntax correction
+
+The first 10-session regime-conditioning workflow failed at py_compile because the generated script had malformed JSON-write newline literals. No model inference ran. The source has been corrected using line-based reconstruction; the failure and tooling correction are recorded in the error log.
