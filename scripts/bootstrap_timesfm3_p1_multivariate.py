@@ -34,7 +34,7 @@ def load(path: Path) -> dict[str, float]:
     with path.open(encoding="utf-8", newline="") as fh:
         reader = csv.DictReader(fh)
         for row in reader:
-            d = datetime.strptime(row["Date"], "%m/%d/%Y").date().isoformat()
+            d = datetime.strptime(row["Date"].split()[0], "%m/%d/%Y").date().isoformat()
             close = float(row["Close"])
             if close > 0:
                 out[d] = close
