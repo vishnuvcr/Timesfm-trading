@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Effective-date trading fee manifest",
+  "type": "object",
+  "required": ["effective_date", "valuation_as_of", "sources", "nse_stt", "paytm_money", "research_rules"],
+  "properties": {
+    "effective_date": {"type": "string", "format": "date"},
+    "valuation_as_of": {"type": "string", "format": "date"},
+    "sources": {"type": "object"},
+    "nse_stt": {"type": "object"},
+    "paytm_money": {"type": "object"},
+    "research_rules": {"type": "object"}
+  }
+}
