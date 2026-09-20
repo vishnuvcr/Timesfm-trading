@@ -43,3 +43,22 @@ The experiment uses the common history of the 30-name bootstrap, four chronologi
 
 This is a research-only, non-executing TimesFM 3.0 simulation. It cannot promote a live strategy.
 
+
+
+## 2026-09-20 — Phase 4.1 result
+
+Workflow 35523966952 completed successfully (artifact 10609283452). The test used the common history of 30 bootstrap stocks, four chronological folds, eight non-overlapping 5-session rebalances per fold (32 total), top-six long-only selection, and explicit brokerage/DP plus proportional cost stress.
+
+Cross-sectional result:
+- momentum 20-session mean rank IC: +0.0138;
+- TimesFM 5-session forecast mean rank IC: -0.0237;
+- 50/50 hybrid mean rank IC: -0.0151;
+- TimesFM top-six excess return versus equal-weight universe: -0.00554 per 5-session period on average;
+- hybrid top-six excess: -0.00359;
+- TimesFM versus momentum top-six excess differential: -0.00416.
+
+At the lowest proportional cost scenario tested (0.125% one-way), net total return over the sparse 32-rebalance test was -26.6% for TimesFM-only, -21.8% for the hybrid, and -15.2% for the momentum control. The equal-weight universe control was -7.3%. Results became more negative as costs were stressed to 0.50% one-way.
+
+Interpretation: this is a negative Phase 4.1 result for standalone TimesFM stock selection and for the tested simple hybrid overlay. The test is sparse and uses stress-cost assumptions rather than the final effective-date fee engine, so it is not a final economic verdict. It is sufficient to reject promotion of these two simple stock overlays into the next strategy gate.
+
+Next Phase 4 research question: test whether TimesFM can add **incremental conditional information** to a stronger, independently specified stock-selection signal only after regime/liquidity/event conditioning, rather than using the raw TimesFM forecast as the selector.
