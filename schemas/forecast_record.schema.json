@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TimesFM forecast record",
+  "type": "object",
+  "required": ["run_id","model_id","checkpoint","origin_timestamp","instrument_id","horizon_steps","context_length","target_definition","forecast_p50","quantile_levels","forecast_quantiles"],
+  "properties": {
+    "run_id": {"type": "string"},
+    "model_id": {"type": "string"},
+    "checkpoint": {"type": "string"},
+    "weights_sha256": {"type": ["string","null"]},
+    "origin_timestamp": {"type": "string", "format": "date-time"},
+    "instrument_id": {"type": "string"},
+    "horizon_steps": {"type": "integer", "minimum": 1},
+    "context_length": {"type": "integer", "minimum": 1},
+    "target_definition": {"type": "string"},
+    "target_unit": {"type": "string"},
+    "forecast_p50": {"type": "array"},
+    "quantile_levels": {"type": "array"},
+    "forecast_quantiles": {"type": "array"},
+    "feature_manifest_sha256": {"type": ["string","null"]},
+    "data_vintage": {"type": ["string","null"]}
+  }
+}
