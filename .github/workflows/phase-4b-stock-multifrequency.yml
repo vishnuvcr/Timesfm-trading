@@ -1,0 +1,70 @@
+name: Phase 4B stock multifrequency research
+
+on:
+  push:
+    branches: [phase-4b-stock-multifrequency]
+  workflow_dispatch:
+
+jobs:
+  validate-intraday-source:
+    if: github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[p4b-swing]')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install source-validation dependencies
+        run: python -m pip install --disable-pip-version-check requests==2.32.4
+      - name: Validate candidate 1-minute source
+        run: python scripts/validate_intraday_source_p4b.py --pages 2 --output p4b_intraday_validation
+      - name: Upload intraday validation
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase4b-intraday-source-validation
+          path: p4b_intraday_validation/
+
+  swing-bootstrap:
+    if: github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[p4b-swing]')
+    needs: validate-intraday-source
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Fetch Phase 2 adjusted stock cache
+        run: |
+          git fetch origin phase-2-data
+          git checkout origin/phase-2-data -- configs/equity_research_universe.json data/cache/equities/tejhq_nse_adjusted
+      - name: Fetch tested TimesFM 3.0 adapter and dependencies
+        run: |
+          git fetch origin phase-3-timesfm-gate
+          git checkout origin/phase-3-timesfm-gate -- src/model requirements-research.txt
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements-research.txt
+      - name: Cache TimesFM 3.0 model files
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: timesfm3-hf-3.0.2-${{ runner.os }}
+      - name: Install pinned research environment
+        run: python -m pip install -r requirements-research.txt
+      - name: Syntax check
+        run: python -m py_compile scripts/stock_timesfm_swing_p4b.py scripts/validate_intraday_source_p4b.py
+      - name: Run swing matrix
+        run: |
+          PYTHONPATH=. python scripts/stock_timesfm_swing_p4b.py --data-dir data/cache/equities/tejhq_nse_adjusted --output p4b_swing_results
+      - name: Upload swing results
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase4b-stock-swing-results
+          path: p4b_swing_results/
