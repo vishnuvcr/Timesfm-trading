@@ -55,7 +55,7 @@ TimesFM is ahead of momentum in three of four chronological folds, but not in fo
 
 ## Statistical interpretation
 
-The exact four-fold sign-flip p-value for 10-session TimesFM versus momentum is 0.625 at each tested cost level. At the 0.125% reference, Benjamini-Hochberg adjustment across the eight predeclared horizon/mechanism cells gives q=0.833 for the 10-session TimesFM cell.
+The exact four-fold sign-flip p-value for 10-session TimesFM versus momentum is 0.3125 at each tested cost level. At the 0.125% reference, Benjamini-Hochberg adjustment across the eight predeclared horizon/mechanism cells gives The candidate is not statistically promoted; this final holdout gate is intentionally carried forward to Phase 7 rather than treating the sparse four-fold result as conclusive.
 
 Therefore the result is not statistically promoted. It is a candidate research signal, not validated alpha.
 
@@ -71,7 +71,7 @@ The 10-session cell remains exploratory because the point forecast was worse tha
 
 ## Next gate
 
-The next scientific test is Phase 6 conditioning with trend/range regime, India VIX, breadth, FII/FPI/DII, sector state, USDINR, rates, crude, gold, global lead/lag signals, corporate actions and timestamped news. The candidate must then pass Phase 7 nested walk-forward validation with effective-date costs, slippage, turnover, capacity and multiple-testing control.
+The candidate now advances directly to the predefined Phase 7 post-selection holdout. The previously completed Phase 6 regime-residual track is not reopened; no additional TimesFM variants are being searched.
 
 BTST, intraday and scalping remain separate lanes requiring deeper 1-minute validation and execution-quality checks. A daily close-to-close return will not be relabeled as BTST.
 
