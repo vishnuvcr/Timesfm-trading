@@ -1,0 +1,63 @@
+{
+  "run_id": 35527120722,
+  "artifact_id": 10609469293,
+  "lane": "phase_4b_pit_10d_validation",
+  "horizon_sessions": 10,
+  "folds": 4,
+  "origins_per_fold": 8,
+  "rebalance_count": 32,
+  "mean_pit_eligible_stocks": 30,
+  "min_pit_eligible_stocks": 30,
+  "max_pit_eligible_stocks": 30,
+  "net_total_return_by_one_way_cost": {
+    "0.00125": {
+      "timesfm": 0.2021144863,
+      "momentum": 0.0973508666,
+      "difference": 0.1047636197
+    },
+    "0.00250": {
+      "timesfm": 0.1469608799,
+      "momentum": 0.0481620108,
+      "difference": 0.0987988691
+    },
+    "0.00375": {
+      "timesfm": 0.0942558879,
+      "momentum": 0.0011070161,
+      "difference": 0.0931488718
+    },
+    "0.00500": {
+      "timesfm": 0.0438944277,
+      "momentum": -0.0439036111,
+      "difference": 0.0877980388
+    }
+  },
+  "fold_return_differences_timesfm_minus_momentum": {
+    "0.00125": [
+      -0.0440400787,
+      0.0228562479,
+      0.1070833428,
+      0.0208629304
+    ],
+    "0.00250": [
+      -0.0431473179,
+      0.0213584121,
+      0.1060108567,
+      0.0201134163
+    ],
+    "0.00375": [
+      -0.042267615,
+      0.0198894738,
+      0.104947495,
+      0.0193740397
+    ],
+    "0.00500": [
+      -0.0414008217,
+      0.0184490534,
+      0.1038931937,
+      0.01864471
+    ]
+  },
+  "exact_four_fold_signflip_p_one_sided": 0.3125,
+  "interpretation": "PIT timestamps did not alter the 30-name bootstrap eligibility; this is not final broad-universe PIT evidence.",
+  "status": "candidate_only"
+}
