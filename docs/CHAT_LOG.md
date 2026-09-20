@@ -80,3 +80,9 @@ The next work should not search arbitrary TimesFM thresholds for a positive resu
 **Method gate:** BTST is not proxied by a daily close-to-close return. Next-session open/close data must be available and validated before genuine BTST claims are tested.
 
 **Current external evidence:** the candidate minute dataset publishes UTC timestamped OHLCV/OI fields and reports 2022–2026 1-minute coverage; NSE documents regular equity trading 09:15–15:30. These support a validation plan, not yet a promotion to exchange-primary evidence. citeturn461402search0turn437184search0
+
+## 2026-09-20 — Phase 4B CI correction
+
+**Observed failure:** Phase 4B workflow run 35525131467 failed in `setup-python` because the source-validation job requested pip caching without a requirements file. The dependent swing job was skipped.
+
+**Fix:** disabled pip caching for the source-only job; retained dependency caching in the TimesFM swing job. The failure is logged in `docs/ERROR_LOG.md`.
