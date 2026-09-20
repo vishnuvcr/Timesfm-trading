@@ -30,3 +30,10 @@ Do not assume 3.0 direction is alpha. Test:
 - economic value after execution costs
 
 Forecast quality, strategy quality and execution quality remain separate gates.
+
+
+## New 3.0 options evidence — September 2026
+
+A pre-registered September 2026 study tested TimesFM-3 on the SPY implied-volatility surface at 1- and 5-day horizons against random walk, AR(1), log-HAR, PCA-VAR and the market's own forward-variance-implied forecast. The study found that TimesFM configurations were competitive in forecast-loss terms, but recalibration removed much of the short-horizon advantage and the market's forward-variance forecast outperformed all models at ATM nodes. A residual signal remained on 25-delta wings, but the study stopped before an economic/fill test. This is strong methodological evidence for our options design, not evidence of a deployable NSE options edge. citeturn290367search0
+
+**Protocol consequence:** Phase 5 will benchmark TimesFM 3.0 not only against statistical volatility models but also against the option market's own implied/forward-variance forecast. Any economic strategy must be tested after calibration, bid/ask, theta/vega/gamma effects and realistic fills.
