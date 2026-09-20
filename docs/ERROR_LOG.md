@@ -17,3 +17,5 @@
 | 2026-09-20 | Phase 3 P1 workflow wiring | Run 54 successfully loaded the new local-input script but the workflow still invoked it without `--input`. | P1 bootstrap stopped before reading the cached secondary dataset. | Replaced the Phase 3 workflow with the explicit cached-input command and pinned script invocation. |
 
 | 2026-09-20 | Phase 3 P1 inference | TimesFM 3.0 univariate quantiles were returned as shape `(5, 9)` rather than the multivariate `(series, horizon, 9)` shape assumed by the bootstrap. | Inference completed but result processing stopped before metrics were written. | Added explicit handling for both univariate `(horizon, 9)` and multivariate `(series, horizon, 9)` quantile layouts; next P1 run will verify. |
+
+| 2026-09-20 | Phase 3 P1 result | Corrected TimesFM 3.0 exploratory run 56 completed successfully on the secondary NIFTY 50 snapshot. | Pipeline now produces forecast metrics and artifacts; primary NSE evidence remains unavailable. | Recorded the result as C-grade exploratory evidence only; no strategy promotion. |

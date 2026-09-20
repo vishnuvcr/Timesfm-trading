@@ -1,0 +1,55 @@
+{
+  "lane": "P1_exploratory_bootstrap",
+  "workflow_run": 35519506774,
+  "artifact_digest": "sha256:edb05776d161930dabbe18e743346acc11b9676aae6cf932b1a6cd850687b4bb",
+  "model": "timesfm-3.0-pytorch",
+  "package": "timesfm[torch]==3.0.2",
+  "dataset_role": "secondary_non_promotional",
+  "source_repo": "Gajapathy-Selvaraj/Stock_Market_Datasets_NSE",
+  "source_file": "NIFTY_50(INDEX)from2000.csv",
+  "source_commit": "c73de0e6c9acca1330a19cd41ee3d7dbd5100260",
+  "source_blob": "fc51a9331ee2b72c430724d5e0bdd0237f91103a",
+  "source_sha256": "dc1e1dfc99bbe20a85d1f00d8ee2493870dab6ff3a8780f27972bfd09c2a10fa",
+  "rows": 5058,
+  "date_start": "2000-01-03",
+  "date_end": "2021-01-25",
+  "origins": 80,
+  "origin_start": "2020-09-23",
+  "origin_end": "2021-01-18",
+  "context": 128,
+  "horizon": 5,
+  "log_level_mae": {
+    "timesfm": 0.01309925079345703,
+    "persistence": 0.015167067050933838,
+    "relative_improvement_pct": 13.633593433276816
+  },
+  "log_level_rmse": {
+    "timesfm": 0.016492242280891165,
+    "persistence": 0.019553785022012188,
+    "relative_improvement_pct": 15.657033856486438
+  },
+  "five_day_return_mae": {
+    "timesfm": 0.018485760688781737,
+    "persistence": 0.02129143476486206,
+    "relative_improvement_pct": 13.17747773724774
+  },
+  "directional_accuracy": {
+    "timesfm": 0.7,
+    "base_rate": 0.75,
+    "excess_points": -0.05
+  },
+  "q10_q90_coverage": 0.7875,
+  "exploratory_hac_loss_test": {
+    "loss_difference_timesfm_minus_persistence": -0.002067816400000031,
+    "nw_lag": 4,
+    "nw_se": 0.0009866412867288298,
+    "t_stat": -2.0958137752939514,
+    "one_sided_p": 0.018049356943480754,
+    "moving_block_bootstrap_block_length": 5,
+    "moving_block_bootstrap_ci95": [
+      -0.0041589138249999245,
+      -0.00029435475000009
+    ]
+  },
+  "interpretation": "P1 pipeline result only. 3.0 reduced level forecast error versus persistence in this secondary snapshot, but directional accuracy was below the base rate. The result is not primary NSE evidence and is not eligible for strategy promotion."
+}

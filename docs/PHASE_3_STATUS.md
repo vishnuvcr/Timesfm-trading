@@ -20,6 +20,11 @@ Engineering bootstrap only. Statistical forecast gate has not started.
 ## P1 exploratory bootstrap
 An explicitly non-promotional P1 bootstrap lane has been added. Because the official NIFTY Indices application endpoint returns HTML to GitHub Actions runners, the bootstrap uses a fixed secondary Google Finance-derived NIFTY 50 snapshot identified by upstream commit/blob SHA. The input is cached in GitHub Actions but not redistributed into this repository because the upstream repository has no explicit license file. It exercises the end-to-end TimesFM 3.0 forecasting, quantile and metric pipeline. It cannot promote a trading result because it is not the frozen primary price/OHLC P0 dataset.
 
+## P1 result — pipeline validation only
+Recorded in [P1 bootstrap result](P1_BOOTSTRAP_RESULT.md) and `results/p1_bootstrap_timesfm3.json`.
+
+Observed on the secondary snapshot: log-level MAE 0.01310 vs persistence 0.01517 (-13.63%), RMSE 0.01649 vs 0.01955 (-15.66%), five-day return MAE 0.01849 vs 0.02129 (-13.18%). Directional accuracy was 70.0% versus a 75.0% positive-return base rate, so directional excess was -5.0 percentage points. q10–q90 coverage was 78.75%. An exploratory lag-4 HAC paired-loss test gave t = -2.10, one-sided p ≈ 0.018; moving-block bootstrap (block 5) 95% CI [-0.00416, -0.00029]. These are secondary-data exploratory statistics, not the primary P0 gate.
+
 ## Experimental gate remains blocked
 The real forecast experiment cannot be declared valid until Phase 2 supplies a frozen, point-in-time P0 dataset and the Phase 2 leakage, calendar, contract and option-integrity tests pass.
 
