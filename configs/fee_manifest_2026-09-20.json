@@ -6,7 +6,10 @@
     "nse_levies": "https://www.nseindia.com/static/invest/first-time-investor-sebi-turnover-fees-stt-other-levies",
     "paytm_fno_faq": "https://www.paytmmoney.com/stocks/customer/fno-faq/onboarding-and-kyc/account-segment-activation/how-to-activate-fo-from-mobile-app-web",
     "paytm_squareoff": "https://www.paytmmoney.com/stocks/customer/fno-faq/risk-management/square-off/what-is-intraday-auto-square-off",
-    "paytm_overnight": "https://www.paytmmoney.com/stocks/customer/fno-faq/trading/order-placement/what-is-overnight-order-type"
+    "paytm_overnight": "https://www.paytmmoney.com/stocks/customer/fno-faq/trading/order-placement/what-is-overnight-order-type",
+    "paytm_stock_delivery": "https://www.paytmmoney.com/blog/brokerage-charges-increase-from-25th-aug-23-existing-users-will-continue-on-old-brokerage-charges/",
+    "paytm_dp": "https://www.paytmmoney.com/blog/paytm-money-pricing-update-revised-charges-effective-1st-october/",
+    "nse_transaction_charges_2026": "https://nsearchives.nseindia.com/content/circulars/FA73061.pdf"
   },
   "nse_stt": {
     "option_sale_rate": 0.0015,
@@ -21,15 +24,30 @@
     "cash_intraday_sale_rate": 0.00025
   },
   "paytm_money": {
-    "fno_brokerage_per_unique_executed_order_inr": 10.0,
-    "intraday_squareoff_charge_per_order_inr": 50.0,
+    "fno_brokerage_per_unique_executed_order_inr": 10,
+    "intraday_squareoff_charge_per_order_inr": 50,
     "intraday_auto_squareoff_window": "last_15_minutes",
-    "mtm_squareoff_threshold_of_initial_margin": 0.75
+    "mtm_squareoff_threshold_of_initial_margin": 0.75,
+    "cash_delivery_reference": {
+      "brokerage_per_executed_order_inr": 20,
+      "delivery_sale_dp_inr": 13.5,
+      "classification": "reference_stress_not_contract_note_reconstruction"
+    }
   },
   "research_rules": {
     "fees_are_effective_date_versioned": true,
     "partial_fills_count_as_execution_events": true,
     "option_slippage_is_contract_level": true,
     "underlying_slippage_is_not_option_slippage": true
+  },
+  "nse_cash_delivery": {
+    "exchange_plus_ipft_rate_per_side": 0.0000307,
+    "exchange_plus_ipft_rupees_per_crore_per_side": 307,
+    "sebi_turnover_rate": 0.000001,
+    "sebi_turnover_rupees_per_crore": 10,
+    "stt_buy_rate": 0.001,
+    "stt_sell_rate": 0.001,
+    "stamp_buy_rate": 0.00015,
+    "gst_rate_on_brokerage_exchange_sebi": 0.18
   }
 }
