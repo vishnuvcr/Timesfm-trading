@@ -77,3 +77,7 @@ The exploratory low-breadth residual idea was re-expressed as a strict nested wa
 - evaluate on folds 2–4 under four explicit one-way cost scenarios.
 
 No test-fold parameter selection is permitted. This is the final conditional stock-overlay gate for this phase unless a material protocol change is documented.
+
+
+## 2026-09-20 — [p42-regime] execution trigger
+The dedicated Phase 4.2 workflow is configured with both manual dispatch and the documented push marker. A marker commit is used to execute the frozen nested walk-forward experiment.
