@@ -11,7 +11,7 @@ Research program to evaluate Google TimesFM for a reproducible Indian-market tra
 | 0 | Governance, reproducibility, repo bootstrap | **Complete** |
 | 1 | Literature + evidence review | **Complete / protocol frozen** |
 | 2 | NSE/BSE data lake + PIT controls | **Validation green; official NSE hosted-runner routes blocked; alternate individual-stock EOD lane green** |
-| 3 | TimesFM 3.0 forecast gates | **Engineering green; NIFTY P0 blocked; repaired 30-stock bootstrap executing on phase-3 branch** |
+| 3 | TimesFM 3.0 forecast gates | **Engineering green; NIFTY P0 blocked; 30-stock recent-window bootstrap and four-fold robustness extension complete; no stock alpha promoted** |
 | 4 | Individual-stock + index strategy research | **Engineering bootstrap complete; empirical gate open only after stock data-quality/forecast/cost gates** |
 | 5 | Options + IV/OI/Greeks | **Protocol/engineering bootstrap complete; empirical gate blocked by authorized historical option data** |
 | 6 | Regimes/cross-market/news/corporate actions | **Engineering track active; empirical promotion downstream of data gates** |
@@ -99,4 +99,11 @@ Paytm Money remains the reference brokerage/RMS source for simulation. Models mu
 
 The alternate stock lane is now green through raw prices, corporate actions, adjusted prices and PIT liquidity metadata. The independent source check found large level differences in some names, but those differences were consistent with adjustment conventions; overlapping daily raw-close return paths were extremely close in the five-name bootstrap, with at least 99.7% of daily return differences within 0.10 percentage points.
 
-The current next stock-level gate is to freeze the PIT universe/identifier rules, complete the TimesFM 3.0 stock forecast matrix, and only then move surviving signals into cost-aware strategy simulation.
+The current next stock-level gate is to freeze the PIT universe/identifier rules and test incremental TimesFM information around an independently specified stock-selection baseline. The exploratory TimesFM-only direction hypothesis did not survive chronological robustness, so no direction/uncertainty strategy is promoted. High-frequency claims remain gated on intraday-source and execution-quality validation.
+
+
+## Latest stock research result — 2026-09-20
+
+The repaired 30-stock TimesFM 3.0 bootstrap completed successfully, followed by a four-fold chronological robustness extension covering 4,800 stock-level forecast origins. The recent-window bootstrap showed +11.1 percentage points mean directional excess, but the broader four-fold test reversed this to -2.9 percentage points. TimesFM was worse than persistence on point-error aggregates in both tests, and no stock had a negative mean MAE difference across all four folds.
+
+This is now treated as a **negative result for standalone stock TimesFM forecasting against persistence on the bootstrap**. The next empirical question is incremental value around an independent stock-selection/market-structure signal, with PIT controls and full cost/slippage modeling.
