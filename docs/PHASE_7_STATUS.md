@@ -41,3 +41,31 @@ A single post-selection candidate is now registered for the final cost-aware hol
 - capacity, year/regime and block-aware inference diagnostics.
 
 No tuning or alternative TimesFM variants are permitted in this holdout. The Phase 4B candidate remains research-only and non-executing.
+
+
+## Final Phase 7 holdout result — 2026-09-20
+
+Workflow 35527715462 / artifact 10610571439 completed the frozen post-selection holdout.
+
+Holdout:
+- 91 non-overlapping 10-session rebalances from 2023-01-02 through 2026-09-03;
+- mean PIT-eligible names 29.76, minimum 29, maximum 30;
+- fixed TimesFM 3.0 10-session ranking, top six, no tuning;
+- 20-session momentum control;
+- dated cash-equity statutory/broker/DP model;
+- one-way slippage/impact stress 0%, 0.125%, 0.25%, 0.375%, 0.50%;
+- position drift and explicit final liquidation.
+
+Net total return:
+- 0% extra slippage: TimesFM +3.72% vs momentum +67.97%;
+- 0.125%: TimesFM -7.93% vs momentum +47.20%;
+- 0.25%: -18.30% vs +28.96%;
+- 0.375%: -27.52% vs +12.94%;
+- 0.50%: -35.72% vs -1.12%.
+
+TimesFM was below momentum at every stress level. At the maximum stress, TimesFM maximum drawdown was -41.46% versus -23.80% for momentum; periodized Sharpe was -0.736 versus +0.059.
+
+Paired block inference was negative for TimesFM at every cost level. The one-sided block-signflip p-values ranged from 0.972 to 0.984. Maximum simulated trade participation was only about 0.014% of trailing turnover, so capacity was not the binding explanation.
+
+**Decision:** reject and close the single frozen Phase 4B stock candidate. No current individual-stock TimesFM strategy is validated. No additional TimesFM threshold, horizon, hybrid or regime search is permitted on the completed stock holdout.
+
