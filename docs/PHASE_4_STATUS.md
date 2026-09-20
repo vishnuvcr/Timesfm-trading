@@ -4,7 +4,7 @@ Updated: 2026-09-20 IST\n\n## Scope expansion — individual stocks\n\nIndividua
 
 ## Status
 
-**Research-engineering bootstrap in progress.** Empirical strategy testing is blocked until Phase 2 produces a frozen P0 dataset and Phase 3 completes its real forecast gate.
+**Daily individual-stock TimesFM strategy gate closed.** Phase 4.1 and nested Phase 4.2 tests are complete; no tested daily TimesFM stock-selection mechanism survived the declared chronological, baseline and cost-aware gates. Intraday/scalping and event/market-state studies remain separate gates.
 
 ## Scope
 
@@ -62,3 +62,12 @@ At the lowest proportional cost scenario tested (0.125% one-way), net total retu
 Interpretation: this is a negative Phase 4.1 result for standalone TimesFM stock selection and for the tested simple hybrid overlay. The test is sparse and uses stress-cost assumptions rather than the final effective-date fee engine, so it is not a final economic verdict. It is sufficient to reject promotion of these two simple stock overlays into the next strategy gate.
 
 Next Phase 4 research question: test whether TimesFM can add **incremental conditional information** to a stronger, independently specified stock-selection signal only after regime/liquidity/event conditioning, rather than using the raw TimesFM forecast as the selector.
+
+
+## 2026-09-20 — synchronized Phase 4.2 result
+
+The nested regime-conditioned experiment (workflow 35524516653, artifact 10609740180) used prior-fold-only breadth thresholds and a TimesFM-minus-momentum residual. It was tested on folds 2–4 across 30 stocks and 24 rebalances.
+
+At 0.125% one-way cost, momentum returned -5.20% and the residual -10.02%; at 0.25%, -7.72% versus -12.22%; at 0.375%, -10.16% versus -14.37%; at 0.50%, -12.55% versus -16.48%.
+
+Decision: close the current daily stock TimesFM overlay gate. No daily individual-stock TimesFM strategy is validated.
