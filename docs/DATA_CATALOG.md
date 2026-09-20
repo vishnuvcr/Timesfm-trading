@@ -73,3 +73,16 @@ Important raw data is cached once where redistribution terms allow it; workflows
 ## Known hard blocker
 
 The hosted GitHub Actions runner has tested three distinct official NSE historical routes without receiving usable data. That access-layer problem is recorded in issue #6. It does not justify treating alternate datasets as official-primary by assertion; evidence hierarchy and cross-checks remain mandatory.
+
+
+## 2026-09-20 stock bootstrap result
+
+The alternate lane now contains three linked layers for the 30-name bootstrap:
+
+1. raw EOD OHLCV/turnover;
+2. separate corporate actions;
+3. back-adjusted prices with cumulative adjustment factors.
+
+It also contains a filtered point-in-time liquid-universe table with monthly rebalance dates, validity intervals, rank and trailing 63-day turnover. This is the data structure intended for stock-level selection without survivorship-biased current-name filtering.
+
+An independent Yahoo/yfinance-derived source was tested on five names. Raw price levels sometimes differed materially, consistent with distinct corporate-action adjustment conventions, while daily return paths were extremely close in the bootstrap sample. The cross-check summary is stored at `data/derived/stock_source_crosscheck.json`.
