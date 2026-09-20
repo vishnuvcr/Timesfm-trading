@@ -11,7 +11,7 @@ Research program to evaluate Google TimesFM for a reproducible Indian-market tra
 | 0 | Governance, reproducibility, repo bootstrap | **Complete** |
 | 1 | Literature + evidence review | **Complete / protocol frozen** |
 | 2 | NSE/BSE data lake + PIT controls | **Validation green; official NSE hosted-runner routes blocked; alternate individual-stock EOD lane green** |
-| 3 | TimesFM 3.0 forecast gates | **Engineering green; NIFTY P0 blocked; stock bootstrap extension now available** |
+| 3 | TimesFM 3.0 forecast gates | **Engineering green; NIFTY P0 blocked; repaired 30-stock bootstrap executing on phase-3 branch** |
 | 4 | Individual-stock + index strategy research | **Engineering bootstrap complete; empirical gate open only after stock data-quality/forecast/cost gates** |
 | 5 | Options + IV/OI/Greeks | **Protocol/engineering bootstrap complete; empirical gate blocked by authorized historical option data** |
 | 6 | Regimes/cross-market/news/corporate actions | **Engineering track active; empirical promotion downstream of data gates** |
@@ -42,9 +42,15 @@ The repository now has:
 - a manual/push GitHub Actions acquisition workflow;
 - a documented independent cross-check source;
 - back-adjusted stock prices and a filtered point-in-time liquidity-universe table;
-- a return-path cross-check summary for five liquid names. 
+- a return-path cross-check summary for five liquid names.
 
 The current cache is **bootstrap evidence**, not a final claim of PIT/survivorship-safe stock performance. Individual-stock empirical testing must still reconcile identifier history, corporate actions, point-in-time universe membership and execution costs.
+
+## Source expansion after the blocker
+
+The alternate-source search has now been widened beyond daily EOD feeds. A published Hugging Face 1-minute NSE dataset reports roughly 715 million rows across 2,500+ stocks/indices for 2022–2026 and is marked MIT; this is being treated as a **candidate intraday/scalping cross-check**, not as exchange-primary truth. A separate CC-BY-4.0 Hugging Face hourly dataset covers NIFTY/Bank NIFTY/India VIX and futures for 2017–2021 and is being retained for historical intraday methodology cross-checks. Older Kaggle NSE panels and GitHub hourly/daily archives remain benchmark/diagnostic sources until provenance, licensing, PIT and adjustment rules are frozen.
+
+See the [expanded alternate data-source policy](docs/ALTERNATE_DATA_SOURCES.md) for the source hierarchy and promotion rules.
 
 ## Individual stocks are first-class strategy instruments
 
@@ -89,10 +95,8 @@ Paytm Money remains the reference brokerage/RMS source for simulation. Models mu
 - [Chat/decision log](docs/CHAT_LOG.md)
 - [Official NSE access blocker — Issue #6](https://github.com/vishnuvcr/Timesfm-trading/issues/6)
 
-
 ## Stock-data validation checkpoint
 
 The alternate stock lane is now green through raw prices, corporate actions, adjusted prices and PIT liquidity metadata. The independent source check found large level differences in some names, but those differences were consistent with adjustment conventions; overlapping daily raw-close return paths were extremely close in the five-name bootstrap, with at least 99.7% of daily return differences within 0.10 percentage points.
 
-The next stock-level research gate is therefore not "find a different data source"; it is to freeze the PIT universe/identifier rules, reconcile corporate actions, and run the same pre-declared TimesFM forecast matrix across the stock cross-section.
-
+The current next stock-level gate is to freeze the PIT universe/identifier rules, complete the TimesFM 3.0 stock forecast matrix, and only then move surviving signals into cost-aware strategy simulation.
