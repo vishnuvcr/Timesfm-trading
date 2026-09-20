@@ -97,3 +97,8 @@ Running the updated corporate-action-aware validator against the hash-verified 2
 ## Final rerun marker — 2026-09-20
 
 Validator counter fix applied; rerunning the same hash-verified 214-symbol release gate without changing the data or acceptance criteria.
+
+
+## Final corrected execution marker — 2026-09-20
+
+All validator counters are now initialized in the exact executed code path. Running the hash-verified release gate without changing acceptance criteria.
