@@ -16,3 +16,5 @@
 
 | 2026-09-20 | CI validation | Phase 3 pull-request CI failed because a unit-test fixture expected MAE 1/3 while the correct value for the fixture is 0.5. | CI blocked despite correct implementation. | Corrected the test expectation to 0.5; waiting for the updated pull-request CI run. |
 | 2026-09-20 | Tooling | Attempted to call an unavailable GitHub pull-request lookup tool. | No repository impact. | Use available GitHub PR/workflow tools and commit SHA queries. |
+
+| 2026-09-20 | CI validation | Phase 3 pull-request CI run 25 found a second fixture arithmetic error: RMSE expectation used 0.25/3 instead of 1.25/3. | CI remained red even though the metric implementation matched the mathematical definition. | Corrected the fixture; latest commit awaits the next pull-request CI result. |
