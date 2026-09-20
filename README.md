@@ -12,12 +12,12 @@ Research program to evaluate Google TimesFM for a reproducible Indian-market tra
 | 1 | Literature + evidence review | **Complete / protocol frozen** |
 | 2 | NSE/BSE data lake + PIT controls | **Validation green; official NSE hosted-runner routes blocked; alternate individual-stock EOD lane green** |
 | 3 | TimesFM 3.0 forecast gates | **Engineering green; NIFTY P0 blocked; 30-stock recent-window bootstrap and four-fold robustness extension complete; no stock alpha promoted** |
-| 4 | Individual-stock + index strategy research | **Phase 4.1 stock overlay tested; simple TimesFM-only/hybrid selection rejected; conditional stock-signal research next** |
+| 4 | Individual-stock + index strategy research | **Complete for current empirical gate; standalone/hybrid stock overlays rejected; regime-conditioned residual also rejected** |
 | 5 | Options + IV/OI/Greeks | **Protocol/engineering bootstrap complete; empirical gate blocked by authorized historical option data** |
-| 6 | Regimes/cross-market/news/corporate actions | **Engineering track active; empirical promotion downstream of data gates** |
-| 7 | Cost/slippage/tax-aware walk-forward | **Engineering track active** |
+| 6 | Regimes/cross-market/news/corporate actions | **Phase 6.1 stock regime-conditioning test complete; no incremental TimesFM stock information promoted** |
+| 7 | Cost/slippage/tax-aware walk-forward | **Engineering complete; no candidate advanced to final promotion walk-forward** |
 | 8 | Simulation readiness/audit | **Engineering track active; non-executing only** |
-| 9 | Final manuscript/release | **Engineering track active** |
+| 9 | Final manuscript/release | **Complete; manuscript and final conclusion released** |
 
 All ten phase branches exist and have manual GitHub Actions entry points.
 
@@ -126,3 +126,20 @@ Three layers of stock evidence were completed:
 The four-fold forecast robustness test covered 4,800 stock origins. The final nested strategy test used prior-fold-only regime thresholds and failed against the momentum control at every tested cost scenario. No daily individual-stock TimesFM strategy is validated.
 
 See [Individual-stock TimesFM gate conclusion](docs/INDIVIDUAL_STOCK_TIMESFM_GATE_CONCLUSION.md).
+
+
+## Final research release
+
+The individual-stock empirical research has reached the declared stop rule. No TimesFM 3.0 stock strategy passed the complete promotion gate.
+
+Key evidence:
+- four-fold stock robustness: TimesFM remained worse than persistence on point-error aggregates;
+- direct stock-selection: TimesFM mean rank IC -0.0237 versus momentum +0.0138;
+- regime-conditioned incremental test: no predeclared regime survived rebalance-level permutation testing and BH-FDR;
+- risk-on overlay: small gross improvement but underperformed momentum after modest cost stress.
+
+[Final research manuscript](manuscript/TimesFM_NSE_Research_Manuscript.md)  
+[Final research conclusion](docs/FINAL_RESEARCH_CONCLUSION.md)  
+[Phase 9 status](docs/PHASE_9_STATUS.md)
+
+The project remains research-only and non-executing.
