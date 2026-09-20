@@ -12,7 +12,7 @@ Research program to evaluate Google TimesFM for a reproducible NSE trading pipel
 | 0 | Governance, reproducibility, repo bootstrap | **Complete** |
 | 1 | Literature + evidence review | **Complete / protocol frozen** |
 | 2 | NSE data lake and point-in-time controls | **In progress** |
-| 3 | TimesFM 3.0 baseline/gate by horizon | **Engineering bootstrap complete; experiment blocked by Phase 2 gate** |
+| 3 | TimesFM 3.0 baseline/gate by horizon | **Engineering + unit-test gate green; real forecast blocked by P0 data acquisition** |
 | 4 | Strategy research: scalping/intraday/BTST/swing | Planned |
 | 5 | Options research + IV/OI/Greeks | Planned |
 | 6 | Cross-market/regime/news/corporate-action features | Planned |
@@ -77,7 +77,7 @@ The 3.0 branch now contains:
 - a forecast-record provenance schema;
 - a manual model-smoke workflow.
 
-The actual statistical gate is intentionally blocked until Phase 2 supplies a frozen P0 dataset.
+Phase 3 unit/statistics CI is green; the actual statistical forecast gate remains blocked until Phase 2 supplies a frozen P0 dataset.
 
 ## Repository map
 

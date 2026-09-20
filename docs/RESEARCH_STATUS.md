@@ -29,7 +29,7 @@ New options evidence:
 A September 2026 pre-registered SPY implied-volatility study found TimesFM-3 forecast-loss advantages that narrowed after recalibration; the market's own forward-variance forecast beat the model at ATM nodes, while a residual wing signal survived statistical controls. The study stopped before economic/fill testing. This strengthens the Phase 5 requirement to compare TimesFM against market-implied forecasts and execute a full option P&L backtest before any conclusion.
 
 ## Phase 2 — Data
-**In progress.**
+**Validation green; real P0 acquisition remains.**
 
 Completed on branch `phase-2-data`:
 - point-in-time data policy;
@@ -45,13 +45,14 @@ Validation:
 - local offline manifest validation: passed;
 - PIT rejection test: passed;
 - pytest: 2 passed;
+- GitHub Actions validation run 30: source registry, manifest validation and data-layer tests passed;
 - direct container clone could not run because github.com DNS was unavailable; logged as environment limitation.
 
 Current Phase 2 gate:
-Acquire/connect real P0 datasets and produce first real frozen manifests. Then run schema, PIT, calendar, corporate-action, derivatives lifecycle and option-quote integrity tests.
+Acquire/connect real P0 datasets and produce first real frozen manifests. Then validate the real datasets with the already-green schema, PIT, calendar, corporate-action, derivatives lifecycle and option-quote integrity tests.
 
 ## Phase 3 — TimesFM 3.0
-**Engineering bootstrap complete; statistical gate blocked by Phase 2.**
+**Engineering/unit-test gate green; statistical forecast gate blocked by real P0 acquisition.**
 
 The phase-3 branch now includes:
 - pinned TimesFM 3.0.2 research environment;
@@ -62,9 +63,9 @@ The phase-3 branch now includes:
 - forecast provenance schema;
 - manual model smoke workflow.
 
-The official TimesFM README confirms the 3.0 evaluator supports univariate and multivariate forecasting, past-only and past-future covariates, and nine quantiles. citeturn498629view0
+The official TimesFM README confirms the 3.0 evaluator supports univariate and multivariate forecasting, past-only and past-future covariates, and nine quantiles. citeturn341680search8turn341680search1
 
-No real forecast result has been reported yet.
+CI verification is green: pull-request run 29 (`35517423864`) passed the statistics/adapter unit suite. No real forecast result has been reported yet.
 
 ## Frozen experiment design
 
