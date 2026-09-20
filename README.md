@@ -130,29 +130,20 @@ See [Individual-stock TimesFM gate conclusion](docs/INDIVIDUAL_STOCK_TIMESFM_GAT
 
 ## Final research release
 
-The earlier daily individual-stock stop was superseded by the predeclared Phase 4B multifrequency continuation. The current 10-session TimesFM stock-ranking candidate has passed the bootstrap/PIT candidate gates but has not yet completed the Phase 7 post-selection holdout.
+The final individual-stock TimesFM 3.0 candidate has now been resolved by the Phase 7 post-selection holdout.
 
-Key evidence:
-- four-fold stock robustness: TimesFM remained worse than persistence on point-error aggregates;
-- direct stock-selection: TimesFM mean rank IC -0.0237 versus momentum +0.0138;
-- regime-conditioned incremental test: no predeclared regime survived rebalance-level permutation testing and BH-FDR;
-- risk-on overlay: small gross improvement but underperformed momentum after modest cost stress.
+The single frozen 10-session TimesFM ranking candidate failed the untouched 2023+ holdout against the 20-session momentum control:
+- 0.00% extra slippage: +3.72% vs +67.97%;
+- 0.125%: -7.93% vs +47.20%;
+- 0.25%: -18.30% vs +28.96%;
+- 0.375%: -27.52% vs +12.94%;
+- 0.50%: -35.72% vs -1.12%.
+
+The candidate was below momentum at every stress level. Capacity was not the binding explanation; maximum simulated participation was about 0.014% of trailing turnover.
 
 [Final research manuscript](manuscript/TimesFM_NSE_Research_Manuscript.md)  
 [Final research conclusion](docs/FINAL_RESEARCH_CONCLUSION.md)  
+[Phase 7 holdout](docs/PHASE_7_TIMESFM10_HOLDOUT.md)  
 [Phase 9 status](docs/PHASE_9_STATUS.md)
 
-The project remains research-only and non-executing.
-
-
-## Current Phase 4B/Phase 7 state — 2026-09-20
-
-A frozen Phase 4B swing matrix tested individual stocks at 2, 5, 10 and 20 sessions. The 10-session TimesFM cross-sectional ranking was the only candidate ahead of the 20-session momentum control across all declared proportional-cost stresses. A cached PIT rerun left all 30 bootstrap names eligible at the tested dates, so the portfolio result was unchanged.
-
-The candidate is **not yet a validated or production strategy**. It is frozen for the Phase 7 post-selection holdout with dated cash-equity fees, statutory charges, brokerage/DP costs, slippage/impact stress, turnover, capacity, drawdown, year/regime breakdown and multiple-testing-aware inference.
-
-[Phase 4B conclusion](docs/PHASE_4B_CONCLUSION.md)  
-[Phase 4B status](docs/PHASE_4B_STATUS.md)  
-[Phase 4B frozen matrix](docs/PHASE_4B_EXPERIMENT_MATRIX.md)
-
-The earlier Phase 9 manuscript/final-conclusion artifacts are now provisional/historical until this downstream candidate gate is resolved.
+The current individual-stock EOD TimesFM strategy search is closed. Options and intraday/execution research remain separately data-gated future tracks. The project remains research-only and non-executing.
