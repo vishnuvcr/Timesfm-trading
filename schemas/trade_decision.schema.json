@@ -1,0 +1,27 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"Canonical trade decision",
+  "type":"object",
+  "required":["decision_id","timestamp","instrument_id","strategy","side","forecast_model","expected_move","cost_hurdle","expected_edge","position_size","max_loss","license_state"],
+  "properties":{
+    "decision_id":{"type":"string"},
+    "timestamp":{"type":"string","format":"date-time"},
+    "instrument_id":{"type":"string"},
+    "strategy":{"enum":["SCALPING","INTRADAY","BTST","SWING","OPTIONS"]},
+    "side":{"enum":["LONG","SHORT","FLAT"]},
+    "forecast_model":{"type":"string"},
+    "forecast_mean":{"type":["number","null"]},
+    "forecast_q10":{"type":["number","null"]},
+    "forecast_q90":{"type":["number","null"]},
+    "forecast_uncertainty":{"type":["number","null"]},
+    "expected_move":{"type":"number"},
+    "cost_hurdle":{"type":"number","minimum":0},
+    "expected_edge":{"type":"number"},
+    "regime_state":{"type":"string"},
+    "liquidity_score":{"type":["number","null"]},
+    "position_size":{"type":"number","minimum":0},
+    "max_loss":{"type":"number","minimum":0},
+    "license_state":{"enum":["licensed_production","research_only","blocked"]},
+    "execution_rule":{"type":"string"}
+  }
+}
