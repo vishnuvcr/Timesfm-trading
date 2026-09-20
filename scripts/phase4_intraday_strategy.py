@@ -105,6 +105,7 @@ def build_common_data(all_sessions):
         opens = []
         vwap = []
         valid = []
+        volume = []
         day_start = {}
         offset = 0
         for day in common_days:
@@ -114,12 +115,14 @@ def build_common_data(all_sessions):
             opens.extend(r["open"] for r in vals)
             vwap.extend(session_vwap(vals))
             valid.extend(r["valid"] for r in vals)
+            volume.extend(r["volume"] for r in vals)
             offset += 375
         data[symbol] = {
             "log_close": np.asarray(log_close, dtype=np.float32),
             "open": np.asarray(opens, dtype=np.float32),
             "vwap": np.asarray(vwap, dtype=np.float32),
             "valid": np.asarray(valid, dtype=bool),
+            "volume": np.asarray(volume, dtype=np.float32),
         }
     return common_days, data
 
@@ -290,12 +293,12 @@ def main():
                     realized_return = exit_price / entry - 1.0
                     vwap = float(data[symbol]["vwap"][base])
                     price = float(np.exp(data[symbol]["log_close"][base]))
-                    avg_turnover = float(np.mean(
+                    trailing_value = float(np.mean(
                         np.exp(data[symbol]["log_close"][max(0, base-60):base])
-                        * 0.0 + 1.0
+                        * data[symbol]["volume"][max(0, base-60):base]
                     ))
-                    # No quote history exists; participation is recorded as an undefined/zero diagnostic.
-                    participation_ratio = 0.0
+                    trade_value = CAPITAL / TOP_K
+                    participation_ratio = trade_value / max(trailing_value, 1.0)
                     tf_score[symbol] = pred
                     vwap_score[symbol] = price / vwap - 1.0 if vwap > 0 else 0.0
                     future_log[symbol] = future
