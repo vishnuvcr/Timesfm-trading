@@ -1,11 +1,19 @@
 name: Phase 9 manuscript
 
 on:
+  pull_request:
+  push:
+    branches: [phase-9-manuscript]
   workflow_dispatch:
 
 jobs:
-  research:
+  manuscript-readiness:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: echo "Manual run for Phase 9 manuscript"
+      - name: Validate manuscript structure
+        run: |
+          test -s docs/FINAL_MANUSCRIPT_OUTLINE.md
+          test -s docs/MANUSCRIPT_RESULTS_MAP.md
+          test -s docs/RESEARCH_PLAN.md
+          test -s docs/RESEARCH_STATUS.md
