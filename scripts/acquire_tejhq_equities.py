@@ -54,8 +54,7 @@ def normalise_ohlcv(rows: list[dict], symbol: str) -> list[dict]:
     return sorted(out, key=lambda x: str(x["date"]))
 
 
-def write_csv(path: Path, rows: list[dict]) -> str:
-    fields = ["date","symbol","series","isin","open","high","low","close","volume","turnover"]
+def write_csv(path: Path, rows: list[dict], fields: list[str]) -> str:
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=fields)
@@ -63,6 +62,18 @@ def write_csv(path: Path, rows: list[dict]) -> str:
         for row in rows:
             w.writerow({k: row.get(k, "") for k in fields})
     return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def normalise_actions(rows: list[dict], symbol: str) -> list[dict]:
+    fields = ("exchange", "symbol", "isin", "company", "ex_date", "record_date", "type", "ratio_num", "ratio_den", "cash_amount", "face_value_from", "face_value_to", "raw_subject")
+    out = []
+    for row in rows:
+        d = {k: row.get(k, "") for k in fields}
+        if not d["symbol"]:
+            d["symbol"] = symbol
+        if d["ex_date"]:
+            out.append(d)
+    return sorted(out, key=lambda x: str(x["ex_date"]))
 
 
 def main() -> None:
@@ -73,6 +84,7 @@ def main() -> None:
     ap.add_argument("--start", default=DEFAULT_START)
     ap.add_argument("--end", default=DEFAULT_END)
     ap.add_argument("--refresh", action="store_true")
+    ap.add_argument("--actions", action="store_true", help="Also cache corporate actions for each selected symbol")
     ap.add_argument("--sleep", type=float, default=0.25)
     args = ap.parse_args()
 
@@ -107,7 +119,19 @@ def main() -> None:
         rows = normalise_ohlcv(extract_rows(r.json()), symbol)
         if len(rows) < 200:
             raise RuntimeError(f"{symbol}: only {len(rows)} rows from {url}")
-        digest = write_csv(out_path, rows)
+        digest = write_csv(out_path, rows, ["date","symbol","series","isin","open","high","low","close","volume","turnover"])
+        if args.actions:
+            action_url = f"{BASE}/actions/{quote(symbol)}"
+            ar = session.get(action_url, timeout=60)
+            ar.raise_for_status()
+            action_rows = normalise_actions(extract_rows(ar.json()), symbol)
+            action_path = args.out / f"{symbol}_actions.csv"
+            action_digest = write_csv(action_path, action_rows, ["exchange","symbol","isin","company","ex_date","record_date","type","ratio_num","ratio_den","cash_amount","face_value_from","face_value_to","raw_subject"])
+        else:
+            action_url = ""
+            action_rows = []
+            action_digest = ""
+
         manifest["symbols"][symbol] = {
             "path": str(out_path),
             "sha256": digest,
@@ -116,6 +140,9 @@ def main() -> None:
             "last_date": str(rows[-1]["date"]),
             "cached": False,
             "url": url,
+            "actions_url": action_url,
+            "actions_rows": len(action_rows),
+            "actions_sha256": action_digest,
         }
         time.sleep(args.sleep)
 
