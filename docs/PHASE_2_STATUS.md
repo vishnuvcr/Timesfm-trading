@@ -33,3 +33,8 @@ Acquire or connect the first licensed/permitted P0 datasets, generate real manif
 6. option quote integrity tests.
 
 Only after these pass will Phase 3 begin.
+
+
+## Canonical schema layer added
+
+Phase 2 now defines canonical schemas and invariant checks for equity bars, option quotes, derivative contracts and corporate actions. These checks explicitly reject impossible OHLC, negative volume/OI, crossed quotes, post-expiry quotes, invalid contract chronology and corporate-action dates that precede the announcement timestamp.
