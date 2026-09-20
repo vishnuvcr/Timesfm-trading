@@ -1,0 +1,43 @@
+{
+  "lane": "P1_exploratory_phase3_ablation",
+  "workflow_run": 35520255061,
+  "artifact_digest": "sha256:7513e09d99718582d6ec6307b99abc1f454a1ea14431e91b5b5a3744df5fa2bd",
+  "source_repo": "Gajapathy-Selvaraj/Stock_Market_Datasets_NSE",
+  "source_commit": "c73de0e6c9acca1330a19cd41ee3d7dbd5100260",
+  "series": [
+    "NIFTY50",
+    "RELIANCE",
+    "TCS",
+    "HDFCBANK",
+    "HINDUNILVR"
+  ],
+  "rows_aligned": 4015,
+  "date_start": "2004-08-25",
+  "date_end": "2021-01-25",
+  "origins": 80,
+  "context": 128,
+  "horizon": 5,
+  "results": [
+    {
+      "model": "univariate",
+      "mae_log_level": 0.018485760688781737,
+      "rmse_log_level": 0.021658965539785174,
+      "directional_accuracy": 0.7
+    },
+    {
+      "model": "native_multivariate_5_series",
+      "mae_log_level": 0.018580043315887453,
+      "rmse_log_level": 0.022571293085838065,
+      "directional_accuracy": 0.725,
+      "mae_change_pct": 0.51002838721661,
+      "rmse_change_pct": 4.212239704509635
+    },
+    {
+      "model": "univariate_plus_4_past_only_covariates",
+      "mae_log_level": 0.018485760688781737,
+      "rmse_log_level": 0.021658965539785174,
+      "directional_accuracy": 0.7
+    }
+  ],
+  "note": "Secondary-data ablation only; not primary NSE evidence and not eligible for strategy promotion."
+}

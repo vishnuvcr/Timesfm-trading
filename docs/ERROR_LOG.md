@@ -25,3 +25,5 @@
 | 2026-09-20 | Phase 3 P1 uncertainty analysis | Formalized the previously observed interval-width vs absolute-movement relationship inside the reproducible P1 runner. | Allows uncertainty/magnitude hypothesis testing to be reproduced from the same forecast run. | Added Spearman and quartile-spread metrics to the stored P1 summary; still secondary exploratory evidence only. |
 
 | 2026-09-20 | Phase 3 P1 multivariate ablation | The secondary stock CSVs contain a `15:30:00` time suffix in `Date`; the first parser assumed date-only strings. | Ablation stopped before model inference. | Normalize the first date token and rerun unchanged origins/configuration. |
+
+| 2026-09-20 | Phase 3 P1 multivariate result | Corrected ablation run 64 completed successfully after timestamp normalization. Native multivariate changed directional accuracy but slightly worsened point-error metrics; past-only covariates matched univariate metrics in this run. | H2/H3 now have an exploratory secondary-data result; primary P0 gate unchanged. | Recorded the three-condition comparison as C-grade evidence only. |

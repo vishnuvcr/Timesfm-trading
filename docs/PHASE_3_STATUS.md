@@ -28,6 +28,11 @@ Observed on the secondary snapshot: log-level MAE 0.01310 vs persistence 0.01517
 ## P1 multivariate/covariate ablation
 A secondary-data ablation is now queued to compare univariate NIFTY 50, native five-series multivariate, and NIFTY 50 plus four past-only stock covariates on identical origins. This directly tests H2/H3 without weakening the P0 primary-data gate.
 
+## P1 multivariate/covariate ablation result
+Recorded in [P1 multivariate ablation](P1_MULTIVARIATE_ABLATION.md) and `results/p1_multivariate_ablation.json`.
+
+On 4,015 aligned secondary rows (2004-08-25 to 2021-01-25), 80 identical origins, context 128 and 5-session horizon: univariate log-level MAE/RMSE were 0.01849/0.02166 with 70.0% directional accuracy; native five-series multivariate was 0.01858/0.02257 with 72.5% directional accuracy; NIFTY 50 plus four past-only covariates was identical to the univariate metrics in this run. Thus multivariate conditioning changed the directional figure in this exploratory sample but slightly worsened point-error metrics; past-only covariates produced no recorded change. These are secondary-data observations only and not strategy-promotion evidence.
+
 ## Experimental gate remains blocked
 The real forecast experiment cannot be declared valid until Phase 2 supplies a frozen, point-in-time P0 dataset and the Phase 2 leakage, calendar, contract and option-integrity tests pass.
 
