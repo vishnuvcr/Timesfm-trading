@@ -105,3 +105,11 @@ Interpretation: the stock sample does not support TimesFM 3.0 as a better point-
 Known data-quality flag: `TATAMOTORS.csv` in the adjusted bootstrap ends on 2025-10-23 while most names extend to 2026-09-18. This is logged as a stock-source/identifier continuity issue to resolve before final PIT evidence.
 
 No strategy is promoted from this exploratory run.
+
+
+## 2026-09-20 — four-fold stock robustness extension
+
+A separate exploratory track is now defined to run four chronological folds across each stock's available adjusted-price history, with 40 origins per fold (160 origins per stock where history permits). This is intentionally outside the frozen primary matrix and cannot promote a result by itself.
+
+The track is triggered by a push marker `[stock-p1-multifold]`, uses the same TimesFM 3.0 checkpoint/context/horizon and the same persistence baseline, and stores fold-level and stock-level results as a workflow artifact. The purpose is to test whether the recent-40-origin stock result survives earlier market periods rather than becoming a recency artifact.
+
