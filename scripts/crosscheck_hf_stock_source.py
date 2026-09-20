@@ -37,6 +37,12 @@ def crosscheck(local_path: Path, hf_path: Path) -> dict:
 
     pct_diff = (merged["close_tejhq"] - merged["close_yahoo"]).abs() / merged["close_yahoo"].abs().replace(0, pd.NA)
     within_10bp = float((pct_diff <= 0.001).mean())
+    merged["ret_tejhq"] = merged["close_tejhq"].pct_change()
+    merged["ret_yahoo"] = merged["close_yahoo"].pct_change()
+    ret = merged.dropna(subset=["ret_tejhq", "ret_yahoo"]).copy()
+    ret_diff = (ret["ret_tejhq"] - ret["ret_yahoo"]).abs()
+    return_corr = float(ret["ret_tejhq"].corr(ret["ret_yahoo"]))
+    return_within_10bp = float((ret_diff <= 0.001).mean())
     return {
         "symbol": local_path.stem,
         "tejhq_rows": int(len(local)),
@@ -48,7 +54,11 @@ def crosscheck(local_path: Path, hf_path: Path) -> dict:
         "p95_abs_close_pct_diff": float(pct_diff.quantile(0.95)),
         "max_abs_close_pct_diff": float(pct_diff.max()),
         "share_close_within_0_10pct": within_10bp,
-        "source_note": "Yahoo/yfinance dataset is an independent cross-check; no raw cross-check file is committed.",
+        "daily_return_corr_raw_close": return_corr,
+        "median_abs_daily_return_diff": float(ret_diff.median()),
+        "p95_abs_daily_return_diff": float(ret_diff.quantile(0.95)),
+        "share_daily_return_diff_within_0_10pct": return_within_10bp,
+        "source_note": "Yahoo/yfinance dataset is an independent cross-check; level differences may reflect corporate-action adjustment conventions; no raw cross-check file is committed.",
     }
 
 
