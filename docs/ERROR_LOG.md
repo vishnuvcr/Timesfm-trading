@@ -28,3 +28,7 @@
 | 2026-09-20 | Phase 2 adjusted stock acquisition | Initial workflow run was skipped because the script/workflow commit preceded the marker-trigger commit. | No data loss; acquisition simply did not execute on that earlier commit. | Triggered a controlled `[acquire-adjusted]` commit; workflow 35522208459 completed acquisition, validation and cache commit successfully. |
 
 | 2026-09-20 | Phase 3 individual-stock bootstrap | First 30-stock TimesFM workflow reached the model step but failed immediately with an unterminated Python string in `scripts/bootstrap_timesfm3_stocks_p1.py`. | No forecast result was produced. | Corrected both JSON-write newline literals and added a `py_compile` syntax gate before model execution; rerun triggered. |
+
+
+| 2026-09-20 | Phase 4 branch integration | Draft Phase 4 PR #3 conflicted with independently updated main, so direct GitHub merge was rejected. | No research data loss; branch remained intact. | Resolved as a content-level merge by copying the completed Phase 4 artifacts into main, preserving the newer Phase 3 logs and results. |
+| 2026-09-20 | Phase 4.1 empirical result | TimesFM-only and simple hybrid stock-selection overlays were weaker than the independent 20-session momentum control across the tested 30-stock/32-rebalance experiment and deteriorated under cost stress. | Simple TimesFM stock-selection hypothesis failed the exploratory economic gate. | Rejected promotion and moved the research question to conditional/incremental information under regime/liquidity/event controls. |
