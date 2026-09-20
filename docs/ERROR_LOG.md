@@ -13,3 +13,5 @@
 | 2026-09-20 | Phase 3 P1 source switch | Official NIFTY Indices TRI endpoint remained HTML/non-JSON after session hardening. | Exploratory 3.0 pipeline could not obtain official TRI data from Actions. | P1 bootstrap switched to a fixed, explicitly secondary Google Finance-derived snapshot pinned by upstream commit/blob SHA and cached in Actions; it remains ineligible for primary evidence. |
 
 | 2026-09-20 | Phase 3 P1 workflow versioning | Run 52 executed the pre-switch P1 script because the newly created local-file script blob was not included in the preceding commit. | P1 run repeated the same official endpoint failure; no result artifact was produced. | Committed the verified local-file script explicitly; next [bootstrap-p1] run will use the secondary cached snapshot. |
+
+| 2026-09-20 | Phase 3 P1 workflow wiring | Run 54 successfully loaded the new local-input script but the workflow still invoked it without `--input`. | P1 bootstrap stopped before reading the cached secondary dataset. | Replaced the Phase 3 workflow with the explicit cached-input command and pinned script invocation. |

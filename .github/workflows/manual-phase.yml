@@ -29,10 +29,32 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+          cache: "pip"
+          cache-dependency-path: requirements-research.txt
+      - name: Cache Hugging Face model files
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: timesfm3-hf-${{ runner.os }}-3.0.2
+      - name: Cache secondary P1 input
+        uses: actions/cache@v4
+        with:
+          path: .cache/p1
+          key: p1-nifty50-googlefinance-c73de0e6c9acca1330a19cd41ee3d7dbd5100260
       - name: Install pinned TimesFM 3 environment
-        run: python -m pip install --upgrade pip && python -m pip install -r requirements-research.txt cloudscraper
-      - name: Run official NIFTY 50 TRI P1 bootstrap
-        run: PYTHONPATH=. python scripts/bootstrap_timesfm3_p1.py
+        run: python -m pip install -r requirements-research.txt
+      - name: Fetch secondary P1 input when cache is cold
+        run: |
+          mkdir -p .cache/p1
+          if [ ! -f ".cache/p1/NIFTY_50(INDEX)from2000.csv" ]; then
+            curl --fail --location "https://raw.githubusercontent.com/Gajapathy-Selvaraj/Stock_Market_Datasets_NSE/c73de0e6c9acca1330a19cd41ee3d7dbd5100260/NIFTY_50%28INDEX%29from2000.csv" -o ".cache/p1/NIFTY_50(INDEX)from2000.csv"
+          fi
+      - name: Record P1 input provenance
+        run: |
+          sha256sum ".cache/p1/NIFTY_50(INDEX)from2000.csv"
+          wc -l ".cache/p1/NIFTY_50(INDEX)from2000.csv"
+      - name: Run TimesFM 3.0 P1 exploratory bootstrap
+        run: PYTHONPATH=. python scripts/bootstrap_timesfm3_p1.py --input ".cache/p1/NIFTY_50(INDEX)from2000.csv"
       - name: Upload exploratory results
         uses: actions/upload-artifact@v4
         with:
