@@ -152,3 +152,7 @@ See docs/PHASE_4B_SWING_CONCLUSION.md and results/p4b_swing_summary.json.
 ## Phase 4B current candidate — 2026-09-20
 
 The first frozen swing matrix found one candidate mechanism: **10-session cross-sectional TimesFM ranking**. It exceeded the independent 20-session momentum control under all four tested cost stresses on the 30-stock bootstrap, but the four-fold block permutation test is not statistically conclusive and the point-in-time universe gate has not yet passed. The candidate is therefore being advanced only to PIT validation, not declared a trading strategy.
+
+## Phase 4B candidate gate — 2026-09-20
+
+The 10-session cross-sectional TimesFM ranking candidate passed the cached point-in-time eligibility check and remained ahead of the 20-session momentum control across the declared cost stresses. The candidate is now frozen for a post-selection Phase 7 holdout; no additional TimesFM search is permitted before that result.
