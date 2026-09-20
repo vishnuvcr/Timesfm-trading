@@ -5,15 +5,15 @@ import json
 import math
 from datetime import datetime
 from pathlib import Path
-from urllib.request import Request, urlopen
-
 import numpy as np
+import cloudscraper
 
 from src.model.timesfm3_adapter import TimesFM3Adapter
 from src.stats.forecast_metrics import mae, rmse
 
 
 ENDPOINT = "https://www.niftyindices.com/Backpage.aspx/getTotalReturnIndexString"
+HISTORICAL_PAGE = "https://www.niftyindices.com/reports/historical-data"
 INDEX_NAME = "NIFTY 50"
 START_DATE = "01-Jan-2000"
 END_DATE = "18-Sep-2026"
@@ -28,15 +28,30 @@ def fetch_tri() -> list[tuple[str, float]]:
         f"'endDate':'{END_DATE}','indexName':'{INDEX_NAME}'}}"
     )
     payload = json.dumps({"cinfo": cinfo}).encode("utf-8")
-    headers = {
-        "Content-Type": "application/json; charset=UTF-8",
-        "X-Requested-With": "XMLHttpRequest",
-        "Referer": "https://www.niftyindices.com/reports/historical-data",
-        "User-Agent": "Mozilla/5.0 (compatible; TimesFM-NSE-research/1.0)",
-    }
-    req = Request(ENDPOINT, data=payload, headers=headers, method="POST")
-    with urlopen(req, timeout=60) as response:
-        body = json.loads(response.read().decode("utf-8"))
+    session = cloudscraper.create_scraper(
+        browser={"browser": "chrome", "platform": "windows", "mobile": False}
+    )
+    session.headers.update(
+        {
+            "Content-Type": "application/json; charset=utf-8",
+            "Accept": "application/json, text/javascript, */*; q=0.01",
+            "Accept-Language": "en-US,en;q=0.9",
+            "Origin": "https://www.niftyindices.com",
+            "Referer": HISTORICAL_PAGE,
+            "X-Requested-With": "XMLHttpRequest",
+        }
+    )
+    session.get(HISTORICAL_PAGE, timeout=30)
+    response = session.post(ENDPOINT, json={"cinfo": cinfo}, timeout=60)
+    try:
+        body = response.json()
+    except ValueError as exc:
+        preview = response.text[:500].replace("\n", " ")
+        raise RuntimeError(
+            f"TRI endpoint returned non-JSON HTTP {response.status_code}: {preview}"
+        ) from exc
+    if "d" not in body:
+        raise RuntimeError(f"TRI endpoint response missing d: {body}")
     rows = json.loads(body["d"])
     out = []
     for row in rows:
