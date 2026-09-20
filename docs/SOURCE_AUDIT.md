@@ -45,3 +45,8 @@ A YouTube search for directly relevant TimesFM 3.0 trading/finance/NSE material 
 3. reproducible community implementation
 4. community dataset
 5. practitioner content
+
+
+## 2026-09-20 — hosted-runner access test outcome
+
+Official NSE access was tested through three independent routes from GitHub Actions: the NSE Indices historical backend, the NSE `historicalOR/indicesHistory` API, and the `nsearchives.nseindia.com` static index archive. The first returned HTML with HTTP 200, the second returned HTTP 403 during session warm-up, and the third timed out repeatedly. These are access-layer limitations of the hosted runner environment, not evidence that the data itself is unavailable. Primary research therefore requires an authorized/official data-delivery mechanism or licensed vendor feed.
