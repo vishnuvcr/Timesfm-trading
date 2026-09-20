@@ -1,0 +1,38 @@
+{
+  "run_id": 35525457869,
+  "lane": "phase_4b_swing_bootstrap",
+  "stocks": 30,
+  "horizon_sessions": 10,
+  "folds": 4,
+  "origins_per_fold": 8,
+  "total_rebalances": 32,
+  "timesfm_forecast_return_mae": 0.0466,
+  "persistence_return_mae": 0.04241,
+  "timesfm_directional_excess_pp": -5,
+  "timesfm_mean_cross_sectional_rank_ic": 0.00481,
+  "net_total_return_by_one_way_cost": {
+    "0.00125": {
+      "timesfm": 0.198688,
+      "momentum": 0.09579,
+      "uncertainty_scaled_momentum": 0.002853
+    },
+    "0.00250": {
+      "timesfm": 0.14122,
+      "momentum": 0.04569,
+      "uncertainty_scaled_momentum": -0.044315
+    },
+    "0.00375": {
+      "timesfm": 0.086412,
+      "momentum": -0.002198,
+      "uncertainty_scaled_momentum": -0.08934
+    },
+    "0.00500": {
+      "timesfm": 0.034146,
+      "momentum": -0.047967,
+      "uncertainty_scaled_momentum": -0.132314
+    }
+  },
+  "folds_timesfm_ahead_of_momentum_at_all_costs": 3,
+  "exact_four_fold_signflip_p_one_sided": 0.3125,
+  "status": "candidate_only"
+}
