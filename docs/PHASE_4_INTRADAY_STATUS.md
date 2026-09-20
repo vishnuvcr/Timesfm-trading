@@ -92,3 +92,8 @@ The rerun now:
 ## Final source-gate execution marker — 2026-09-20
 
 Running the updated corporate-action-aware validator against the hash-verified 214-symbol release.
+
+
+## Final rerun marker — 2026-09-20
+
+Validator counter fix applied; rerunning the same hash-verified 214-symbol release gate without changing the data or acceptance criteria.
