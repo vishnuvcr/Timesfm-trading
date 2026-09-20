@@ -13,3 +13,5 @@
 | 2026-09-20 | Phase 2 CI validation | Latest Phase 2 validation run 19 failed because src/data/validate_manifest.py contained an unterminated string literal at the multi-error print statement. | Data-validation job stopped before data-layer tests. | Replaced the malformed string with print("\\n".join(all_errors)); next CI run must confirm the fix. |
 
 | 2026-09-20 | Phase 2 public P0 acquisition | GitHub Actions run 40 reached the official NIFTY 50 historical endpoint but received a non-JSON challenge/HTML response, causing JSON parsing to fail. | Official P0 cache was not created. | Switched the fetcher to a browser-profiled Cloudflare session with an initial historical-data page GET; next tagged acquisition run will retry with this handshake. |
+
+| 2026-09-20 | Phase 2 CI wiring | Hardened acquisition code imported `cloudscraper`, but the acquisition job's dependency-install step had not been updated, causing run 44 to fail immediately with ModuleNotFoundError. | Second P0 acquisition attempt did not reach the endpoint. | Added `pip install cloudscraper` to the acquisition job; next tagged run will exercise the actual fetcher. |

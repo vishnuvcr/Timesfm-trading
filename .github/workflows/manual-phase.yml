@@ -44,6 +44,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Install acquisition dependency
+        run: python -m pip install --upgrade pip cloudscraper
       - name: Download one NSE F&O archive
         env:
           FO_DATE: ${{ inputs.acquire_fo_date }}
