@@ -107,44 +107,65 @@ def main() -> None:
 
     for symbol in symbols:
         out_path = args.out / f"{symbol}.csv"
-        if out_path.exists() and not args.refresh:
-            digest = hashlib.sha256(out_path.read_bytes()).hexdigest()
-            rows = max(0, len(out_path.read_text(encoding="utf-8").splitlines()) - 1)
-            manifest["symbols"][symbol] = {"path": str(out_path), "sha256": digest, "rows": rows, "cached": True}
-            continue
+        price_cached = out_path.exists() and not args.refresh
 
-        url = f"{BASE}/ohlcv/nse/{quote(symbol)}?from={args.start}&to={args.end}"
-        r = session.get(url, timeout=60)
-        r.raise_for_status()
-        rows = normalise_ohlcv(extract_rows(r.json()), symbol)
-        if len(rows) < 200:
-            raise RuntimeError(f"{symbol}: only {len(rows)} rows from {url}")
-        digest = write_csv(out_path, rows, ["date","symbol","series","isin","open","high","low","close","volume","turnover"])
-        if args.actions:
-            action_url = f"{BASE}/actions/{quote(symbol)}"
-            ar = session.get(action_url, timeout=60)
-            ar.raise_for_status()
-            action_rows = normalise_actions(extract_rows(ar.json()), symbol)
-            action_path = args.out / f"{symbol}_actions.csv"
-            action_digest = write_csv(action_path, action_rows, ["exchange","symbol","isin","company","ex_date","record_date","type","ratio_num","ratio_den","cash_amount","face_value_from","face_value_to","raw_subject"])
+        if price_cached:
+            digest = hashlib.sha256(out_path.read_bytes()).hexdigest()
+            rows_count = max(0, len(out_path.read_text(encoding="utf-8").splitlines()) - 1)
+            first_date = last_date = ""
         else:
-            action_url = ""
-            action_rows = []
-            action_digest = ""
+            url = f"{BASE}/ohlcv/nse/{quote(symbol)}?from={args.start}&to={args.end}"
+            r = session.get(url, timeout=60)
+            r.raise_for_status()
+            rows = normalise_ohlcv(extract_rows(r.json()), symbol)
+            if len(rows) < 200:
+                raise RuntimeError(f"{symbol}: only {len(rows)} rows from {url}")
+            digest = write_csv(
+                out_path,
+                rows,
+                ["date","symbol","series","isin","open","high","low","close","volume","turnover"],
+            )
+            rows_count = len(rows)
+            first_date = str(rows[0]["date"])
+            last_date = str(rows[-1]["date"])
+            time.sleep(args.sleep)
+
+        action_url = ""
+        action_digest = ""
+        action_rows = 0
+        if args.actions:
+            action_path = args.out / f"{symbol}_actions.csv"
+            action_cached = action_path.exists() and not args.refresh
+            if action_cached:
+                action_digest = hashlib.sha256(action_path.read_bytes()).hexdigest()
+                action_rows = max(0, len(action_path.read_text(encoding="utf-8").splitlines()) - 1)
+            else:
+                action_url = f"{BASE}/actions/{quote(symbol)}"
+                ar = session.get(action_url, timeout=60)
+                ar.raise_for_status()
+                action_rows_data = normalise_actions(extract_rows(ar.json()), symbol)
+                action_digest = write_csv(
+                    action_path,
+                    action_rows_data,
+                    ["exchange","symbol","isin","company","ex_date","record_date","type",
+                     "ratio_num","ratio_den","cash_amount","face_value_from","face_value_to","raw_subject"],
+                )
+                action_rows = len(action_rows_data)
+                time.sleep(args.sleep)
 
         manifest["symbols"][symbol] = {
             "path": str(out_path),
             "sha256": digest,
-            "rows": len(rows),
-            "first_date": str(rows[0]["date"]),
-            "last_date": str(rows[-1]["date"]),
-            "cached": False,
-            "url": url,
+            "rows": rows_count,
+            "first_date": first_date,
+            "last_date": last_date,
+            "cached": price_cached,
+            "url": f"{BASE}/ohlcv/nse/{quote(symbol)}?from={args.start}&to={args.end}",
+            "actions_path": str(args.out / f"{symbol}_actions.csv") if args.actions else "",
             "actions_url": action_url,
-            "actions_rows": len(action_rows),
+            "actions_rows": action_rows,
             "actions_sha256": action_digest,
         }
-        time.sleep(args.sleep)
 
     args.out.mkdir(parents=True, exist_ok=True)
     (args.out / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
