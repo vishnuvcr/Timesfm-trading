@@ -3,7 +3,14 @@
 Updated: 2026-09-20 IST
 
 ## Status
-Validation green — source/schema architecture and CI validation complete; official public NIFTY P0 acquisition is currently blocked.
+Validation green — source/schema architecture and CI validation complete; official public NSE access from the hosted runner remains blocked, but an alternate individual-stock acquisition lane is now active.
+
+## Alternate data lane
+- TejHQ public API/Hugging Face dataset is now registered as a P0-alternate candidate for EOD individual-stock research.
+- A 30-name NSE stock bootstrap universe is defined in `configs/equity_research_universe.json`.
+- The repository contains an idempotent acquisition script, validation checks and a manual/push-triggered GitHub Actions workflow.
+- The cached bootstrap panel is explicitly engineering/validation data; final empirical evidence must use a point-in-time liquidity universe.
+- An independent Yahoo-derived Hugging Face dataset is registered as a P1 cross-check for adjusted prices and corporate actions.
 
 ## Completed
 - Point-in-time data policy.
@@ -35,7 +42,7 @@ The remaining P0 data families—NIFTY Bank, India VIX, full cash/F&O history, c
 Official NIFTY 50 acquisition was attempted four times from GitHub Actions (runs 40, 43, 49 and 51). Each reached the NIFTY Indices application endpoint but received HTML with HTTP 200 instead of the expected JSON payload. Browser-profiled/cloudscraper session warm-up did not change this behavior. The retry loop is now stopped; see [issue #6](https://github.com/vishnuvcr/Timesfm-trading/issues/6).
 
 Next gate:
-Official GitHub Actions access testing is closed. Three distinct official routes were tested: (1) NSE Indices historical backend — HTTP 200 HTML response; (2) NSE `/api/historicalOR/indicesHistory` — HTTP 403 at session warm-up; (3) `nsearchives.nseindia.com` static `ind_close_all_DDMMYYYY.csv` — repeated HTTP timeouts, including an HTTP/1.1 retry. See issue #6. The primary P0 dataset now requires an authorized/official data-delivery route outside the hosted runner access path.
+Official GitHub Actions access testing is closed for the three public NSE routes already tested. The new alternate-stock acquisition workflow is the next executable data gate. Three distinct official routes were tested: (1) NSE Indices historical backend — HTTP 200 HTML response; (2) NSE `/api/historicalOR/indicesHistory` — HTTP 403 at session warm-up; (3) `nsearchives.nseindia.com` static `ind_close_all_DDMMYYYY.csv` — repeated HTTP timeouts, including an HTTP/1.1 retry. See issue #6. The primary P0 dataset now requires an authorized/official data-delivery route outside the hosted runner access path.
 1. schema conformance,
 2. PIT leakage tests,
 3. calendar/session tests,
