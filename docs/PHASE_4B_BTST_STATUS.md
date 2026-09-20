@@ -40,3 +40,8 @@ No BTST strategy result exists yet. No holdout has been opened.
 ## Frozen BTST execution marker — 2026-09-21
 
 Running the predeclared close-to-next-open BTST matrix on the validated ten-stock universe with timestamp-safe global features, corporate-action exclusions, delivery/STT/DP costs, and fixed four-fold development/holdout rules.
+
+
+## Rerun marker after implementation fix — 2026-09-21
+
+The first execution failed only in the global-covariate breadth lookup. The research protocol, data source, dates, costs and promotion rules remain unchanged; rerunning the same frozen matrix after correcting the stock-level breadth reference.
