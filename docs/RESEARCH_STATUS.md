@@ -220,3 +220,12 @@ Completed stock gates:
 No tested TimesFM stock strategy passed all promotion conditions. The result is a negative research finding, not evidence that all future TimesFM/market combinations must fail.
 
 The complete manuscript is at manuscript/TimesFM_NSE_Research_Manuscript.md and the final conclusion is at docs/FINAL_RESEARCH_CONCLUSION.md.
+
+
+## Phase 4B continuation — 2026-09-20
+
+The earlier Phase 9 stock stop was superseded by a predeclared multifrequency continuation. Phase 4B tested 2/5/10/20-session stock horizons using the existing 30-name bootstrap.
+
+The 10-session raw TimesFM cross-sectional ranking was the only candidate that remained ahead of the 20-session momentum control across all four Phase 4B proportional-cost stresses. A PIT timestamp rerun left all 30 cached symbols eligible at the 32 tested dates, so the result did not change.
+
+This is **candidate evidence only**. The exact four-fold sign-flip p-value is 0.3125 one-sided, and the bootstrap remains a 30-name panel rather than a final universe-scale PIT dataset. The candidate is frozen for a post-selection Phase 7 holdout; no additional TimesFM search is permitted before that result.
