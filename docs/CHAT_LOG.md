@@ -71,3 +71,12 @@ The apparent improvement from a low-breadth TimesFM-minus-momentum residual was 
 **Decision:** close the current daily individual-stock TimesFM overlay lane. No tested daily TimesFM stock-selection mechanism has demonstrated incremental value over the independent baseline.
 
 The next work should not search arbitrary TimesFM thresholds for a positive result. Future reopening requires a material protocol amendment, new authorized/PIT-clean data or a genuinely different economic mechanism.
+
+
+## 2026-09-20 — Phase 4B repository setup
+
+**Observable outcome:** dedicated branch `phase-4b-stock-multifrequency` created from current main. The branch now contains the Phase 4B status/matrix, a 30-stock 2/5/10/20-session swing experiment, a candidate minute-source validation script, and a manual/push Actions workflow.
+
+**Method gate:** BTST is not proxied by a daily close-to-close return. Next-session open/close data must be available and validated before genuine BTST claims are tested.
+
+**Current external evidence:** the candidate minute dataset publishes UTC timestamped OHLCV/OI fields and reports 2022–2026 1-minute coverage; NSE documents regular equity trading 09:15–15:30. These support a validation plan, not yet a promotion to exchange-primary evidence. citeturn461402search0turn437184search0
