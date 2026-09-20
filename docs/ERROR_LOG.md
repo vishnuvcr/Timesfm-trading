@@ -9,3 +9,5 @@
 | 2026-09-20 | Research design | Initial plan treated TimesFM 3.0 as evaluation-only for the research stage. | Research scope was narrower than the user's requested model. | Verified current official 3.0 license/README; promoted 3.0 to primary research model and retained 2.5 as benchmark/fallback. | 
 
 | 2026-09-20 | Phase 2 validation | Direct container clone of GitHub repository failed because github.com could not be resolved. | End-to-end repository test could not run in the container. | Ran the exact validator logic in an isolated offline harness; GitHub Actions remains the canonical CI execution path. |
+
+| 2026-09-20 | Phase 2 CI validation | Latest Phase 2 validation run 19 failed because src/data/validate_manifest.py contained an unterminated string literal at the multi-error print statement. | Data-validation job stopped before data-layer tests. | Replaced the malformed string with print("\\n".join(all_errors)); next CI run must confirm the fix. |

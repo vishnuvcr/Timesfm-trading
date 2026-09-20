@@ -61,8 +61,7 @@ def validate_directory(directory: Path) -> int:
         all_errors.extend(validate_manifest(path))
 
     if all_errors:
-        print("
-".join(all_errors))
+        print("\n".join(all_errors))
         return 1
 
     print(f"Validated {len(files)} manifest(s).")
