@@ -30,7 +30,7 @@ jobs:
         with:
           python-version: "3.12"
       - name: Install pinned TimesFM 3 environment
-        run: python -m pip install --upgrade pip && python -m pip install -r requirements-research.txt
+        run: python -m pip install --upgrade pip && python -m pip install -r requirements-research.txt cloudscraper
       - name: Run official NIFTY 50 TRI P1 bootstrap
         run: PYTHONPATH=. python scripts/bootstrap_timesfm3_p1.py
       - name: Upload exploratory results
