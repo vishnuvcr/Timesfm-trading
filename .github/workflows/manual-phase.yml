@@ -96,6 +96,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Install acquisition dependency
+        run: python -m pip install --upgrade pip cloudscraper
       - name: Acquire official NIFTY 50 historical OHLC
         run: PYTHONPATH=. python scripts/fetch_nifty50.py
       - name: Validate NIFTY 50 dataset
