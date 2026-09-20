@@ -195,3 +195,16 @@ Net total return:
 The incremental TimesFM residual lost to the independent momentum control at every cost level. The daily stock TimesFM overlay gate is therefore closed. No stock strategy is validated.
 
 See [individual-stock TimesFM gate conclusion](docs/INDIVIDUAL_STOCK_TIMESFM_GATE_CONCLUSION.md).
+
+
+## Phase 4B — multifrequency stock research — 2026-09-20
+
+**Active on branch:** `phase-4b-stock-multifrequency`.
+
+The daily individual-stock TimesFM overlay gate remains closed. Phase 4B is testing a predeclared different mechanism/holding-period matrix:
+- swing horizons 2/5/10/20 sessions;
+- TimesFM forecast ranking versus the 20-session momentum baseline;
+- TimesFM uncertainty-scaled sizing of the independent momentum signal;
+- candidate BTST/intraday/scalping only after minute-source and execution-quality validation.
+
+No Phase 4B empirical result has yet been promoted. The fixed 30-stock set remains bootstrap/engineering evidence only.
