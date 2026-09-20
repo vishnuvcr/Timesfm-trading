@@ -1,0 +1,38 @@
+name: Phase 4 intraday release data gate
+
+on:
+  push:
+    branches: [phase-4-intraday-gate]
+  workflow_dispatch:
+
+jobs:
+  release-minute-gate:
+    if: github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[p4-intraday-release]')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Fetch Phase 2 raw EOD cache
+        run: |
+          git fetch origin phase-2-data
+          git checkout origin/phase-2-data -- data/cache/equities/tejhq_nse
+      - name: Download verified intraday release
+        run: |
+          curl -L --fail --retry 4 --retry-all-errors             -o stocks_1m_csvs.zip             https://github.com/voletiramu/nse-fno-1min-data/releases/download/v1.0.0/stocks_1m_csvs.zip
+      - name: Verify release digest
+        run: |
+          echo "20024713c455cc16b5daae91e06991d57a1acfa6a30c77bb7d5a742ee1789ab2  stocks_1m_csvs.zip" | sha256sum -c -
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run deep release validation
+        run: |
+          python scripts/validate_intraday_release_p4.py             --zip stocks_1m_csvs.zip             --raw-dir data/cache/equities/tejhq_nse             --output p4_intraday_release_validation
+      - name: Upload validation
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase4-intraday-release-validation
+          path: p4_intraday_release_validation/
