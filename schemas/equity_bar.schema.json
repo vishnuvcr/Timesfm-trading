@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Canonical equity bar",
+  "type": "object",
+  "required": ["instrument_id","event_timestamp","open","high","low","close","volume","source_id"],
+  "properties": {
+    "instrument_id": {"type":"string"},
+    "event_timestamp": {"type":"string","format":"date-time"},
+    "session_date": {"type":"string","format":"date"},
+    "open": {"type":"number"},
+    "high": {"type":"number"},
+    "low": {"type":"number"},
+    "close": {"type":"number"},
+    "volume": {"type":"number","minimum":0},
+    "turnover": {"type":["number","null"],"minimum":0},
+    "vwap": {"type":["number","null"]},
+    "trades": {"type":["integer","null"],"minimum":0},
+    "open_interest": {"type":["number","null"],"minimum":0},
+    "source_id": {"type":"string"},
+    "source_revision": {"type":["string","null"]},
+    "availability_timestamp": {"type":"string","format":"date-time"}
+  }
+}
