@@ -1,5 +1,3 @@
-import numpy as np
-
 from src.trading.risk import passes_edge_gate, passes_license_gate, uncertainty_adjusted_size
 
 
@@ -9,10 +7,20 @@ def test_edge_gate_rejects_non_positive_net_edge() -> None:
 
 
 def test_uncertainty_adjusted_size_drops_when_uncertainty_is_zero() -> None:
-    assert uncertainty_adjusted_size(expected_edge=0.1, forecast_uncertainty=0.0, volatility=0.2, capital=100000.0) == 0.0
+    assert uncertainty_adjusted_size(
+        expected_edge=0.1,
+        forecast_uncertainty=0.0,
+        volatility=0.2,
+        capital=100000.0,
+    ) == 0.0
 
 
-def test_timesfm3_license_gate() -> None:
-    assert not passes_license_gate("research_only", "timesfm-3.0-pytorch")
-    assert passes_license_gate("licensed_production", "timesfm-3.0-pytorch")
-    assert passes_license_gate("research_only", "timesfm-2.5-pytorch")
+def test_timesfm3_is_allowed_for_non_executing_simulation() -> None:
+    assert passes_license_gate("research_only", "timesfm-3.0-pytorch", "simulation")
+    assert not passes_license_gate("research_only", "timesfm-3.0-pytorch", "live")
+    assert passes_license_gate("licensed_production", "timesfm-3.0-pytorch", "live")
+
+
+def test_timesfm25_can_be_used_as_research_benchmark() -> None:
+    assert passes_license_gate("research_only", "timesfm-2.5-pytorch", "simulation")
+    assert not passes_license_gate("research_only", "timesfm-2.5-pytorch", "live")

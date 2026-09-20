@@ -1,6 +1,10 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+from typing import Literal
+
+
+ExecutionMode = Literal["simulation", "paper", "live"]
 
 
 @dataclass(frozen=True)
@@ -27,11 +31,30 @@ def uncertainty_adjusted_size(
     return max(0.0, min(raw, capital * limits.max_gross_exposure))
 
 
-def passes_edge_gate(expected_move: float, cost_hurdle: float, safety_multiple: float = 1.0) -> bool:
+def passes_edge_gate(
+    expected_move: float,
+    cost_hurdle: float,
+    safety_multiple: float = 1.0,
+) -> bool:
     return expected_move > cost_hurdle * safety_multiple
 
 
-def passes_license_gate(license_state: str, model_id: str) -> bool:
-    if model_id.startswith("timesfm-3.0") and license_state != "licensed_production":
-        return False
-    return license_state in {"licensed_production", "research_only"}
+def passes_license_gate(
+    license_state: str,
+    model_id: str,
+    execution_mode: ExecutionMode = "simulation",
+) -> bool:
+    """Validate model use for the project's declared execution mode.
+
+    TimesFM 3.0 research_only is valid for non-executing simulation only.
+    Live/production modes require an explicitly licensed production model.
+    """
+    if execution_mode == "simulation":
+        if model_id.startswith("timesfm-3.0"):
+            return license_state == "research_only"
+        return license_state in {"research_only", "licensed_production"}
+
+    if model_id.startswith("timesfm-3.0"):
+        return license_state == "licensed_production"
+
+    return license_state == "licensed_production"
