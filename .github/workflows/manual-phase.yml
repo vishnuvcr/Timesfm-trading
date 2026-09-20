@@ -1,6 +1,7 @@
 name: Phase 3 TimesFM 3.0 gate
 
 on:
+  pull_request:
   push:
     branches: [phase-3-timesfm-gate]
   workflow_dispatch:
