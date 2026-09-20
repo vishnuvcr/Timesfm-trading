@@ -19,7 +19,7 @@ TimesFM 3.0 remains the primary model for strategy research. This branch builds 
 - License gate distinguishing research-only simulation from live/production use.
 - Shared forecast-envelope and cost-aware signal primitives for scalping, intraday, BTST and swing research.
 - Unit tests for risk, license and research-rule invariants.
-- Manual GitHub Actions workflow; latest phase-4 CI run 23 passed.
+- Manual GitHub Actions workflow; latest phase-4 CI run 70 passed after the interval-uncertainty test was corrected to use tolerance-based floating-point comparison.
 
 ## Research hypotheses represented by the shared primitives
 
