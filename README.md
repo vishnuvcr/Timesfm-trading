@@ -14,7 +14,7 @@ Research program to evaluate Google TimesFM for a reproducible NSE trading pipel
 | 2 | NSE data lake and point-in-time controls | **In progress** |
 | 3 | TimesFM 3.0 baseline/gate by horizon | **Engineering + unit-test gate green; real forecast blocked by P0 data acquisition** |
 | 4 | Strategy research: scalping/intraday/BTST/swing | **Engineering bootstrap complete; empirical gate blocked by P0/Phase 3** |
-| 5 | Options research + IV/OI/Greeks | **Protocol/engineering bootstrap in progress; empirical gate blocked by authorized options data** |
+| 5 | Options research + IV/OI/Greeks | **Protocol/engineering bootstrap complete; empirical gate blocked by authorized options data** |
 | 6 | Cross-market/regime/news/corporate-action features | Planned |
 | 7 | Cost/slippage/tax-aware walk-forward simulation | Planned |
 | 8 | Simulation readiness + monitoring | Planned |

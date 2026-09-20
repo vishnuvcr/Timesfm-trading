@@ -84,9 +84,9 @@ The dated 2026 cost model is frozen in [docs/COST_MODEL.md](docs/COST_MODEL.md);
 Phase 4 now includes non-executing shared research rules for cost hurdles, uncertainty-adjusted sizing and volatility-targeted exposure. Phase 4 CI run 35 passed.
 
 ## Phase 5 — Options
-**Protocol/engineering bootstrap in progress; empirical testing blocked by authorized historical option data.**
+**Protocol/engineering bootstrap complete; empirical testing blocked by authorized historical option data.**
 
-Phase 5 now includes a formal implied-move benchmark, residual-vs-cost gate and defined-risk spread accounting. The first options CI run exposed a floating-point fixture issue; it was corrected and the next CI run is in progress.
+Phase 5 now includes a formal implied-move benchmark, residual-vs-cost gate and defined-risk spread accounting. Corrected options CI run 38 passed.
 
 No live or paper order execution is planned. No strategy has passed an empirical research gate.
 

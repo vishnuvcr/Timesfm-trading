@@ -22,4 +22,4 @@
 | 2026-09-20 | Tooling | A GitHub workflow-job tool call used the wrong repository argument field name. | Tool validation failure only; no repository impact. | Corrected the argument to the connector's required `repo_full_name` field. |
 | 2026-09-20 | Phase 2 CI validation | Phase 2 run 19 failed because `src/data/validate_manifest.py` contained an unterminated string literal in the multi-error print statement. | Data-validation stopped before data-layer tests. | Fixed the statement to `print("\\n".join(all_errors))`; Phase 2 run 30 then passed source-registry, manifest and data-layer validation. |
 
-| 2026-09-20 | Phase 5 CI validation | First options CI run failed on exact equality of a floating-point residual (0.015000000000000003 vs 0.015). | CI red despite correct arithmetic. | Corrected the fixture to use pytest.approx; subsequent CI run is being verified. |
+| 2026-09-20 | Phase 5 CI validation | First options CI run failed on exact equality of a floating-point residual (0.015000000000000003 vs 0.015). | CI red despite correct arithmetic. | Corrected the fixture to use pytest.approx; run 38 passed. |
