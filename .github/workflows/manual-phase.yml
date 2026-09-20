@@ -91,6 +91,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Install probe dependency
+        run: python -m pip install --upgrade pip requests
       - name: Probe official NSE historical-index API
         run: |
           PYTHONPATH=. python scripts/fetch_nse_index_history.py --start 2019-01-01 --end 2019-01-05 --output /tmp/nifty50_2019_probe.csv

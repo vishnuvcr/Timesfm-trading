@@ -19,3 +19,5 @@
 | 2026-09-20 | Phase 2 official P0 acquisition | Final retry (run 51) still received the NIFTY Indices HTML application page with HTTP 200 instead of JSON. | Official NIFTY 50 P0 cache could not be created after four acquisition attempts. | Stop repeated retries; opened issue #6 and require an authorized/official data-delivery route or alternate official endpoint before resuming the P0 acquisition loop. |
 
 | 2026-09-20 | Phase 2 source discovery | NSE's official Historical Index Data page exposes a distinct `/api/historicalOR/indicesHistory` route. Reproducible NSE clients use 89-day chunks with session warm-up. | Opens a potentially usable official P0 path without changing the research plan. | Added a bounded historical/current probe; promotion requires successful probes and full manifest validation. |
+
+| 2026-09-20 | Phase 2 probe CI wiring | The new official NSE historical-index probe imported `requests`, but its job did not install the dependency; run 58 stopped with ModuleNotFoundError before network access. | Probe did not test the alternate official endpoint. | Added explicit `requests` installation to the probe job. |
