@@ -1,3 +1,5 @@
+import pytest
+
 from src.options.research_rules import (
     debit_spread_max_loss,
     debit_spread_max_profit,
@@ -15,7 +17,7 @@ def test_implied_move_uses_iv_and_dte() -> None:
 
 def test_forecast_range_and_residual() -> None:
     assert forecast_move_from_quantiles(-0.03, 0.05) == 0.05
-    assert implied_residual(0.05, 0.03, calibration_error=0.005) == 0.015
+    assert implied_residual(0.05, 0.03, calibration_error=0.005) == pytest.approx(0.015)
 
 
 def test_option_edge_gate_includes_safety_multiple() -> None:
