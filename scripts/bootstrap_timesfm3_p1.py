@@ -1,68 +1,53 @@
 from __future__ import annotations
 
+import argparse
 import csv
 import json
-import math
 from datetime import datetime
 from pathlib import Path
+
 import numpy as np
-import cloudscraper
 
 from src.model.timesfm3_adapter import TimesFM3Adapter
 from src.stats.forecast_metrics import mae, rmse
 
 
-ENDPOINT = "https://www.niftyindices.com/Backpage.aspx/getTotalReturnIndexString"
-HISTORICAL_PAGE = "https://www.niftyindices.com/reports/historical-data"
-INDEX_NAME = "NIFTY 50"
-START_DATE = "01-Jan-2000"
-END_DATE = "18-Sep-2026"
+P1_SOURCE_COMMIT = "c73de0e6c9acca1330a19cd41ee3d7dbd5100260"
+P1_SOURCE_BLOB = "fc51a9331ee2b72c430724d5e0bdd0237f91103a"
+P1_SOURCE_REPO = "Gajapathy-Selvaraj/Stock_Market_Datasets_NSE"
+P1_SOURCE_FILE = "NIFTY_50(INDEX)from2000.csv"
 CONTEXT = 128
 HORIZON = 5
 ORIGINS = 80
 
 
-def fetch_tri() -> list[tuple[str, float]]:
-    cinfo = (
-        f"{{'name':'{INDEX_NAME}','startDate':'{START_DATE}',"
-        f"'endDate':'{END_DATE}','indexName':'{INDEX_NAME}'}}"
-    )
-    payload = json.dumps({"cinfo": cinfo}).encode("utf-8")
-    session = cloudscraper.create_scraper(
-        browser={"browser": "chrome", "platform": "windows", "mobile": False}
-    )
-    session.headers.update(
-        {
-            "Content-Type": "application/json; charset=utf-8",
-            "Accept": "application/json, text/javascript, */*; q=0.01",
-            "Accept-Language": "en-US,en;q=0.9",
-            "Origin": "https://www.niftyindices.com",
-            "Referer": HISTORICAL_PAGE,
-            "X-Requested-With": "XMLHttpRequest",
-        }
-    )
-    session.get(HISTORICAL_PAGE, timeout=30)
-    response = session.post(ENDPOINT, json={"cinfo": cinfo}, timeout=60)
-    try:
-        body = response.json()
-    except ValueError as exc:
-        preview = response.text[:500].replace("\n", " ")
-        raise RuntimeError(
-            f"TRI endpoint returned non-JSON HTTP {response.status_code}: {preview}"
-        ) from exc
-    if "d" not in body:
-        raise RuntimeError(f"TRI endpoint response missing d: {body}")
-    rows = json.loads(body["d"])
-    out = []
-    for row in rows:
-        d = datetime.strptime(row["Date"], "%d %b %Y").date().isoformat()
-        out.append((d, float(row["TotalReturnsIndex"])))
+def load_p1_csv(path: Path) -> list[tuple[str, float]]:
+    out: list[tuple[str, float]] = []
+    with path.open(encoding="utf-8", newline="") as fh:
+        reader = csv.DictReader(fh)
+        required = {"Date", "Open", "High", "Low", "Close"}
+        if not required.issubset(reader.fieldnames or []):
+            raise RuntimeError(f"missing columns: {sorted(required)}")
+        for row in reader:
+            try:
+                dt = datetime.strptime(row["Date"], "%m/%d/%Y").date().isoformat()
+                close = float(row["Close"])
+            except (KeyError, TypeError, ValueError) as exc:
+                raise RuntimeError(f"invalid P1 row: {row}") from exc
+            if close <= 0:
+                raise RuntimeError(f"non-positive close: {row}")
+            out.append((dt, close))
     out.sort()
+    if len(out) < CONTEXT + HORIZON + ORIGINS:
+        raise RuntimeError(f"insufficient P1 rows: {len(out)}")
     return out
 
 
 def main() -> None:
-    rows = fetch_tri()
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--input", required=True)
+    args = ap.parse_args()
+    rows = load_p1_csv(Path(args.input))
     if len(rows) < CONTEXT + HORIZON + ORIGINS:
         raise RuntimeError(f"insufficient TRI rows: {len(rows)}")
 
@@ -122,8 +107,11 @@ def main() -> None:
     summary = {
         "lane": "P1_exploratory_bootstrap",
         "primary_model": "timesfm-3.0-pytorch",
-        "dataset": "NIFTY 50 Total Return Index",
-        "source": ENDPOINT,
+        "dataset": "NIFTY 50 daily OHLC secondary snapshot",
+        "source_repo": P1_SOURCE_REPO,
+        "source_file": P1_SOURCE_FILE,
+        "source_commit": P1_SOURCE_COMMIT,
+        "source_blob": P1_SOURCE_BLOB,
         "date_start": dates[0],
         "date_end": dates[-1],
         "origins": len(origin_idx),
@@ -137,7 +125,7 @@ def main() -> None:
         "five_day_return_mae_persistence": mae(actual_returns, persistence_returns),
         "directional_accuracy_timesfm": float(np.mean((np.asarray(actual_returns) > 0) == (np.asarray(forecast_returns) > 0))),
         "directional_base_rate": float(np.mean(np.asarray(actual_returns) > 0)),
-        "note": "Exploratory pipeline validation only; not a primary trading result and not a P0 promotion result.",
+        "note": "Pipeline-validation result only. Secondary Google Finance-derived snapshot; not P0 evidence and not eligible for strategy promotion.",
     }
 
     outdir = Path("p1_results")
