@@ -11,8 +11,6 @@ from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
 import csv
-import numpy as np
-
 DATASET = "xxparthparekhxx/indian-stock-market-minute-data"
 CONFIG = "default"
 SPLIT = "minute"
