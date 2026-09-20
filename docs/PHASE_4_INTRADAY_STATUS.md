@@ -102,3 +102,15 @@ Validator counter fix applied; rerunning the same hash-verified 214-symbol relea
 ## Final corrected execution marker — 2026-09-20
 
 All validator counters are now initialized in the exact executed code path. Running the hash-verified release gate without changing acceptance criteria.
+
+
+## Acceptance-rule freeze — 2026-09-20
+
+The minute-source gate now uses fixed, source-level thresholds:
+- >=99% complete 09:15–15:29 sessions;
+- zero duplicate timestamps;
+- no more than 2 quarantined invalid-OHLC rows per symbol;
+- <=0.1% zero-volume rows;
+- after excluding recorded corporate-action dates, median absolute daily log-return difference <=10 bps and 95th percentile <=100 bps versus the independent raw EOD source.
+
+Post-session rows are quarantined rather than used. These rules are fixed before the next execution and are not tuned to any strategy result.
