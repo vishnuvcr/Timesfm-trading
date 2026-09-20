@@ -77,10 +77,19 @@ Individual stocks are first-class instruments. Current strategy hypotheses inclu
 The common engine still requires PIT integrity, realistic costs/slippage, walk-forward stability and multiple-testing control.
 
 ## Phase 5 — Options
-**Protocol/engineering bootstrap complete; empirical testing blocked by authorized historical option data.**
+**Protocol/engineering bootstrap complete; empirical testing remains blocked by authorized historical option data.**
 
-## Phases 6–9
-**Engineering tracks exist and are being maintained; empirical promotion remains downstream of data/forecast/cost gates.**
+## Phase 6 — Regimes/external information
+**Phase 6.1 stock regime-conditioning test completed; no incremental TimesFM stock information survived the statistical/economic gate.**
+
+## Phase 7 — Cost/slippage/tax-aware walk-forward
+**Cost-engineering track complete; no Phase 6 candidate advanced to a full promotion walk-forward.**
+
+## Phase 8 — Simulation readiness/audit
+**Non-executing engineering only; no paper/live execution path enabled.**
+
+## Phase 9 — Final manuscript/release
+**Complete. Final manuscript and conclusion committed; individual-stock empirical search stopped at the declared promotion gate.**
 
 No strategy has passed a final empirical promotion gate. No live/paper execution path has been enabled.
 
@@ -195,3 +204,19 @@ Net total return:
 The incremental TimesFM residual lost to the independent momentum control at every cost level. The daily stock TimesFM overlay gate is therefore closed. No stock strategy is validated.
 
 See [individual-stock TimesFM gate conclusion](docs/INDIVIDUAL_STOCK_TIMESFM_GATE_CONCLUSION.md).
+
+
+## Final empirical conclusion — 2026-09-20
+
+The individual-stock EOD empirical program has reached its stop rule.
+
+Completed stock gates:
+1. 30-stock TimesFM 3.0 forecast bootstrap;
+2. four-fold robustness across 4,800 stock-level origins;
+3. direct stock-selection comparison against 20-session momentum;
+4. regime/liquidity/corporate-action-conditioned incremental-information test;
+5. cost-stress rejection of the remaining gross candidate.
+
+No tested TimesFM stock strategy passed all promotion conditions. The result is a negative research finding, not evidence that all future TimesFM/market combinations must fail.
+
+The complete manuscript is at manuscript/TimesFM_NSE_Research_Manuscript.md and the final conclusion is at docs/FINAL_RESEARCH_CONCLUSION.md.
