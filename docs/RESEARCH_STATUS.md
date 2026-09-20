@@ -70,3 +70,8 @@ The dated 2026 cost model is frozen in [docs/COST_MODEL.md](docs/COST_MODEL.md);
 **Planned.**
 
 No live strategy has passed a research gate.
+
+
+## Review checkpoints
+
+Draft PR #1 contains Phase 2 data-lake/PIT infrastructure; draft PR #2 contains Phase 3 TimesFM 3.0 forecast-gate infrastructure. Neither is merged because their empirical phase gates are not yet complete.
