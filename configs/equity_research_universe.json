@@ -1,0 +1,17 @@
+{
+  "version": "2026-09-20.stock-bootstrap-1",
+  "purpose": "Bootstrap individual-stock research lane while official NSE hosted-runner access is blocked.",
+  "exchange": "NSE",
+  "symbols": [
+    "RELIANCE", "TCS", "HDFCBANK", "INFY", "ICICIBANK", "SBIN", "ITC",
+    "BHARTIARTL", "LT", "AXISBANK", "KOTAKBANK", "HINDUNILVR", "MARUTI",
+    "SUNPHARMA", "BAJFINANCE", "ASIANPAINT", "TITAN", "HCLTECH", "WIPRO",
+    "ULTRACEMCO", "NESTLEIND", "M&M", "NTPC", "ONGC", "POWERGRID",
+    "TATAMOTORS", "TATASTEEL", "ADANIENT", "CIPLA", "DRREDDY"
+  ],
+  "methodology": {
+    "use": "engineering/bootstrap and data-validation only",
+    "limitation": "Fixed current large-cap names are not a point-in-time universe and must not be used as final evidence without PIT membership/liquidity filtering.",
+    "final_gate": "Phase 4 final stock results must use a point-in-time liquidity universe and retain delisted/name-change history where data permit."
+  }
+}
