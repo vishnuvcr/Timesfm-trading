@@ -80,3 +80,8 @@ Draft PR #1 contains Phase 2 data-lake/PIT infrastructure; draft PR #2 contains 
 ## License interpretation correction
 
 The official 3.0 license is more restrictive than the earlier project notes implied: Non-Commercial Purpose explicitly excludes revenue-generating activity and commercial decision-making, and restrictions extend to outputs. This is now treated as a hard governance gate, not a deployment-afterthought. citeturn670140view0
+
+
+## License checkpoint
+
+Open issue #4 tracks commercial permission for TimesFM 3.0 before any profit-seeking trading decision uses its pretrained outputs.
