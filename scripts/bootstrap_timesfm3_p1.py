@@ -9,7 +9,7 @@ from pathlib import Path
 import numpy as np
 
 from src.model.timesfm3_adapter import TimesFM3Adapter
-from src.stats.forecast_metrics import mae, rmse
+from src.stats.forecast_metrics import mae, rmse, spearman_rank_ic
 
 
 P1_SOURCE_COMMIT = "c73de0e6c9acca1330a19cd41ee3d7dbd5100260"
@@ -83,6 +83,8 @@ def main() -> None:
     forecast_returns = []
     actual_returns = []
     persistence_returns = []
+    origin_interval_widths = []
+    origin_abs_moves = []
 
     for idx, out in zip(origin_idx, outputs):
         pred = np.asarray(out.forecast).reshape(-1)
@@ -106,6 +108,10 @@ def main() -> None:
                 q90.extend(q[0, :, -1].tolist())
             else:
                 raise RuntimeError(f"unexpected quantile shape: {out.quantiles.shape}")
+        if q10 and q90:
+            qbase = len(q10) - HORIZON
+            origin_interval_widths.append(float(q90[qbase + HORIZON - 1] - q10[qbase + HORIZON - 1]))
+            origin_abs_moves.append(abs(float(actual[-1] - last)))
 
     summary = {
         "lane": "P1_exploratory_bootstrap",
@@ -128,6 +134,10 @@ def main() -> None:
         "five_day_return_mae_persistence": mae(actual_returns, persistence_returns),
         "directional_accuracy_timesfm": float(np.mean((np.asarray(actual_returns) > 0) == (np.asarray(forecast_returns) > 0))),
         "directional_base_rate": float(np.mean(np.asarray(actual_returns) > 0)),
+        "q10_q90_width_h5_spearman_vs_abs_move": spearman_rank_ic(np.asarray(origin_abs_moves), np.asarray(origin_interval_widths)) if origin_interval_widths else float("nan"),
+        "q10_q90_width_h5_mean_lowest_quartile": float(np.mean(np.asarray(origin_abs_moves)[np.argsort(origin_interval_widths)[:max(1, len(origin_abs_moves)//4)]])) if origin_interval_widths else float("nan"),
+        "q10_q90_width_h5_mean_highest_quartile": float(np.mean(np.asarray(origin_abs_moves)[np.argsort(origin_interval_widths)[-max(1, len(origin_abs_moves)//4):]])) if origin_interval_widths else float("nan"),
+        "q10_q90_width_h5_high_low_quartile_ratio": float(np.mean(np.asarray(origin_abs_moves)[np.argsort(origin_interval_widths)[-max(1, len(origin_abs_moves)//4):]]) / np.mean(np.asarray(origin_abs_moves)[np.argsort(origin_interval_widths)[:max(1, len(origin_abs_moves)//4)]]) ) if origin_interval_widths else float("nan"),
         "note": "Pipeline-validation result only. Secondary Google Finance-derived snapshot; not P0 evidence and not eligible for strategy promotion.",
     }
 

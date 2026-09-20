@@ -21,3 +21,5 @@
 | 2026-09-20 | Phase 3 P1 result | Corrected TimesFM 3.0 exploratory run 56 completed successfully on the secondary NIFTY 50 snapshot. | Pipeline now produces forecast metrics and artifacts; primary NSE evidence remains unavailable. | Recorded the result as C-grade exploratory evidence only; no strategy promotion. |
 
 | 2026-09-20 | Phase 3 P1 ablation | Added a five-series secondary-data ablation to test native multivariate and past-only covariate support under identical origins. | Exploratory H2/H3 evidence can be collected without using the blocked P0 dataset. | Same upstream commit, identical 128-context/5-horizon/80-origin design, no strategy promotion. |
+
+| 2026-09-20 | Phase 3 P1 uncertainty analysis | Formalized the previously observed interval-width vs absolute-movement relationship inside the reproducible P1 runner. | Allows uncertainty/magnitude hypothesis testing to be reproduced from the same forecast run. | Added Spearman and quartile-spread metrics to the stored P1 summary; still secondary exploratory evidence only. |
