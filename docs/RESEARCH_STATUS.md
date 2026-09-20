@@ -3,7 +3,7 @@
 Updated: 2026-09-20 IST
 
 ## Phase 0 — Governance
-**Initialized / complete for bootstrap.**
+**Complete for bootstrap.**
 
 Starting state:
 - public repository
@@ -11,22 +11,38 @@ Starting state:
 - repository was empty at initialization
 - no prior research files, code, workflows or datasets
 
-Controls created:
+Completed controls:
 - research plan
 - project instructions
 - status log
 - error log
 - chat/decision log
+- phase branches 0–9
+- manual GitHub Actions entry point on each phase branch
 
 ## Phase 1 — Literature
-**In progress.**
+**In progress — protocol being frozen.**
 
-Initial evidence sources:
-- Google Research/TimesFM official documentation and papers
-- TimesFM 2.5/3.0 model and license documentation
-- 2025–2026 financial TSFM research
-- independent NSE-inclusive TimesFM benchmark repository
-- NSE official market/derivatives/data sources
-- Paytm Money official pricing/risk materials
+Evidence reviewed:
+- official TimesFM papers and current model documentation
+- TimesFM 2.5/3.0 licensing and fine-tuning documentation
+- 2025–2026 financial TSFM benchmarks
+- base-rate-honest TimesFM research
+- independent NSE-inclusive TimesFM benchmark
+- NSE market/derivatives/option-chain/corporate-action/FII-FPI-DII material
+- Paytm Money current and historical pricing/support material
+- recent Nifty options volatility-risk-premium research
 
-Next: freeze the literature matrix and experimental protocol before processing trading data.
+Preliminary conclusion:
+Do not assume zero-shot TimesFM direction is alpha. The research will test direction, uncertainty, volatility, execution timing, regime conditioning and option-implied-versus-forecast-range signals separately.
+
+## Phase 2 — Data
+**Planned.**
+
+First data gate:
+point-in-time integrity, timestamp normalization, corporate-action handling, contract lifecycle/roll handling, option liquidity filters, and immutable manifests.
+
+## Phase 3 onward
+**Planned.**
+
+No live strategy has passed a research gate.
