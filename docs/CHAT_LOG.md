@@ -1,20 +1,21 @@
 # Chat / decision log
 
-## 2026-09-20
+## 2026-09-20 — individual-stock scope expansion
 
-**User request:** Deep research on using TimesFM for NSE trading across scalping, intraday, BTST, swing and options, with a consistent trading pipeline; repository: `vishnuvcr/Timesfm-trading`.
+**User instruction:** Trading strategy must include individual stocks, not only indices.
 
-**Recorded actions/outcomes**
-- Inspected repository metadata: public repo, default branch `main`, initially empty.
-- Created phased research plan and governance files.
-- Started evidence review using Google Research/TimesFM, arXiv/Hugging Face research, NSE official materials and Paytm Money official materials.
-- Identified license constraint: TimesFM 3.0 pretrained weights are currently non-commercial/non-production; TimesFM 2.5 remains the practical deployable research lane under Apache-2.0 weights.
-- Identified evidence that raw directional accuracy can be misleading and that TSFM gains over naive financial baselines may be small; the project therefore uses a forecast gate and economic-value gate.
-- No live strategy has been approved.
+**Observable implementation**
+- Added a 30-name NSE stock bootstrap universe.
+- Added an alternate EOD acquisition lane using TejHQ.
+- Added corporate-action caching and validation.
+- Added individual-stock strategy design and first-class stock experiments.
+- Added an independent Yahoo/yfinance-derived Hugging Face cross-check workflow.
+- Kept the fixed 30-name list as bootstrap-only; final evidence requires point-in-time universe/liquidity selection and identifier continuity.
 
-Private chain-of-thought is not copied here; this log records observable decisions and outcomes.
+## 2026-09-20 — official NSE blocker response
 
+Three distinct hosted-runner NSE routes remain blocked. The decision is to use independently reachable sources without relabeling them as official-primary.
 
-## 2026-09-20 — model selection update
+## 2026-09-20 — alternate stock acquisition outcome
 
-The user explicitly selected TimesFM 3.0. The plan is changed to make 3.0 the primary research model and 2.5 the benchmark/ablation/fallback. Official sources confirm 3.0 supports native multivariate forecasting and flexible covariates. Its current pretrained-weight license permits qualifying research/evaluation but does not clear commercial or production use; live deployment therefore requires separate licensing/permission or an appropriately licensed production model.
+30 stock EOD series were cached and validated. Corporate-action histories are also cached. SHA-256 manifests record source URLs and file hashes. The lane is green for engineering/bootstrapping and not yet a final alpha/strategy dataset.
