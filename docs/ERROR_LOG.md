@@ -32,3 +32,7 @@
 
 | 2026-09-20 | Phase 4 branch integration | Draft Phase 4 PR #3 conflicted with independently updated main, so direct GitHub merge was rejected. | No research data loss; branch remained intact. | Resolved as a content-level merge by copying the completed Phase 4 artifacts into main, preserving the newer Phase 3 logs and results. |
 | 2026-09-20 | Phase 4.1 empirical result | TimesFM-only and simple hybrid stock-selection overlays were weaker than the independent 20-session momentum control across the tested 30-stock/32-rebalance experiment and deteriorated under cost stress. | Simple TimesFM stock-selection hypothesis failed the exploratory economic gate. | Rejected promotion and moved the research question to conditional/incremental information under regime/liquidity/event controls. |
+
+
+| 2026-09-20 | Phase 4.2 nested regime result | A low-breadth TimesFM-minus-momentum residual appeared favorable only when the regime threshold was viewed with full-sample information. | That construction risked hindsight/selection bias. | Re-ran with a strict nested threshold learned only from prior folds; the residual lost to momentum at every tested cost scenario. |
+| 2026-09-20 | Phase 4 daily stock gate | Standalone TimesFM ranking, simple hybrid, momentum-gated TimesFM and nested regime-conditioned residual all failed their declared gates. | No daily individual-stock TimesFM strategy is validated. | Closed the current daily stock overlay lane and logged the result as the final Phase 4 daily-stock conclusion. |
