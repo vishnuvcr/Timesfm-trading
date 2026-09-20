@@ -255,6 +255,18 @@
       "storage": "tier_a_if_license_permits",
       "priority": "P2",
       "notes": "Snapshot provenance and licensing vary by dataset; freeze before use."
+    },
+    {
+      "id": "community_tejhq_adjusted_pit",
+      "domain": "equity_adjusted_pit_universe",
+      "source": "TejHQ Indian Markets Hugging Face",
+      "url": "https://huggingface.co/datasets/tejhq/indian-markets",
+      "cadence": "daily",
+      "pit_required": true,
+      "coverage_goal": "back-adjusted NSE equity prices, corporate-action-adjustment factors, symbol history and point-in-time liquidity universe",
+      "storage": "tier_a_permitted_snapshot",
+      "priority": "P0-alternate",
+      "notes": "Adjusted-price and PIT-universe trees are consumed from the published parquet distribution; final evidence still requires independent validation and frozen universe rules."
     }
   ]
 }
