@@ -1,0 +1,16 @@
+{
+  "dataset_id": "synthetic_phase2_smoke",
+  "source_id": "test_fixture",
+  "retrieved_at": "2026-09-20T13:30:00+00:00",
+  "effective_from": "2026-09-20T00:00:00+00:00",
+  "effective_to": "2026-09-20T13:30:00+00:00",
+  "availability_timestamp": "2026-09-20T13:00:00+00:00",
+  "sha256": "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef",
+  "row_count": 1,
+  "schema_version": "phase2-1",
+  "storage_class": "tier_a_public",
+  "revision": "fixture-v1",
+  "source_url": "https://example.invalid/fixture",
+  "pit_validated": true,
+  "notes": "Synthetic validator fixture; contains no market data."
+}
