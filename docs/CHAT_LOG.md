@@ -13,3 +13,8 @@
 - No live strategy has been approved.
 
 Private chain-of-thought is not copied here; this log records observable decisions and outcomes.
+
+
+## 2026-09-20 — model selection update
+
+The user explicitly selected TimesFM 3.0. The plan is changed to make 3.0 the primary research model and 2.5 the benchmark/ablation/fallback. Official sources confirm 3.0 supports native multivariate forecasting and flexible covariates. Its current pretrained-weight license permits qualifying research/evaluation but does not clear commercial or production use; live deployment therefore requires separate licensing/permission or an appropriately licensed production model.
