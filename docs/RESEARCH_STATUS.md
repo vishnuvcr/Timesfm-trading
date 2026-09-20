@@ -247,3 +247,20 @@ TimesFM net total return versus the 20-session momentum control:
 The candidate was below momentum at every stress. One-sided block-signflip p-values ranged from 0.972 to 0.984. Maximum simulated participation was about 0.014% of trailing turnover.
 
 **Final inference:** the Phase 4B candidate failed the Phase 7 promotion gate. The current individual-stock TimesFM EOD strategy search is closed. The project proceeds to final manuscript/release and preserves options/intraday work as separately data-gated future research.
+
+
+## Phase 7 stock holdout — 2026-09-20
+
+The only Phase 4B individual-stock candidate that survived the exploratory/PIT candidate gates was tested on an untouched 2023+ holdout.
+
+Result:
+- 91 ten-session rebalances;
+- 29–30 PIT-eligible names per origin;
+- TimesFM 10-session ranking versus fixed 20-session momentum control;
+- TimesFM net total return: +3.72% before added slippage, then -7.93%, -18.30%, -27.52% and -35.72% as extra one-way slippage increased from 0.125% to 0.50%;
+- momentum: +67.97%, +47.20%, +28.96%, +12.94% and -1.12% at the same stresses;
+- TimesFM was behind momentum even at zero added slippage;
+- maximum TimesFM simulated participation ~0.014% of trailing turnover, so capacity was not the explanation;
+- paired block-signflip p-values 0.972–0.984 one-sided.
+
+**Current inference:** no individual-stock EOD TimesFM strategy has passed the full economic promotion gate. The Phase 4B stock search is closed under the current protocol. The next permitted work is a materially different mechanism/holding period, not additional tuning of this failed candidate.
