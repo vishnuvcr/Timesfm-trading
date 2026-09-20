@@ -15,3 +15,5 @@
 | 2026-09-20 | Phase 3 P1 workflow versioning | Run 52 executed the pre-switch P1 script because the newly created local-file script blob was not included in the preceding commit. | P1 run repeated the same official endpoint failure; no result artifact was produced. | Committed the verified local-file script explicitly; next [bootstrap-p1] run will use the secondary cached snapshot. |
 
 | 2026-09-20 | Phase 3 P1 workflow wiring | Run 54 successfully loaded the new local-input script but the workflow still invoked it without `--input`. | P1 bootstrap stopped before reading the cached secondary dataset. | Replaced the Phase 3 workflow with the explicit cached-input command and pinned script invocation. |
+
+| 2026-09-20 | Phase 3 P1 inference | TimesFM 3.0 univariate quantiles were returned as shape `(5, 9)` rather than the multivariate `(series, horizon, 9)` shape assumed by the bootstrap. | Inference completed but result processing stopped before metrics were written. | Added explicit handling for both univariate `(horizon, 9)` and multivariate `(series, horizon, 9)` quantile layouts; next P1 run will verify. |

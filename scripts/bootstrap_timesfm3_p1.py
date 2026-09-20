@@ -98,11 +98,14 @@ def main() -> None:
         persistence_returns.append(0.0)
         if out.quantiles is not None:
             q = np.asarray(out.quantiles)
-            q = q.reshape(-1, HORIZON, 9) if q.ndim == 3 else q
-            if q.ndim != 3:
+            if q.ndim == 2 and q.shape == (HORIZON, 9):
+                q10.extend(q[:, 0].tolist())
+                q90.extend(q[:, -1].tolist())
+            elif q.ndim == 3 and q.shape[-2:] == (HORIZON, 9):
+                q10.extend(q[0, :, 0].tolist())
+                q90.extend(q[0, :, -1].tolist())
+            else:
                 raise RuntimeError(f"unexpected quantile shape: {out.quantiles.shape}")
-            q10.extend(q[0, :, 0].tolist())
-            q90.extend(q[0, :, -1].tolist())
 
     summary = {
         "lane": "P1_exploratory_bootstrap",
