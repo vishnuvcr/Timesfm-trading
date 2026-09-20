@@ -3,7 +3,7 @@
 Updated: 2026-09-20 IST
 
 ## Status
-In progress — source and schema architecture complete; acquisition validation next.
+Validation green — source/schema architecture and CI validation complete; real P0 acquisition is next.
 
 ## Completed
 - Point-in-time data policy.
@@ -16,6 +16,10 @@ In progress — source and schema architecture complete; acquisition validation 
 - Official-source audit for NSE historical reports, UDiFF derivatives reports, India VIX, option chain, FII/FPI/DII, corporate actions, paid historical trade/order data, GIFT NIFTY and BSE historical products.
 
 ## Validation result
+Local and GitHub Actions validation is now passing.
+
+GitHub Actions run 30 validated the source registry, manifest validator and data-layer tests. The earlier run 19 failure was a syntax error in `src/data/validate_manifest.py`; it was fixed and the corrected run passed.
+
 The same validator code was executed in a local offline harness:
 - manifest validation: passed
 - synthetic future-availability rejection test: passed
@@ -32,7 +36,7 @@ Acquire or connect the first licensed/permitted P0 datasets, generate real manif
 5. derivative contract lifecycle tests,
 6. option quote integrity tests.
 
-Only after these pass will Phase 3 begin.
+Phase 3 engineering is already bootstrapped and its unit/statistics CI is green. The Phase 3 statistical forecast gate now waits only for the first frozen, point-in-time P0 dataset.
 
 
 ## Canonical schema layer added
