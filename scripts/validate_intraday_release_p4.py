@@ -11,7 +11,7 @@ from collections import defaultdict
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
-SYMBOLS = ("RELIANCE", "TCS", "HDFCBANK", "INFY", "SBIN")
+SYMBOLS = ("RELIANCE", "TCS", "HDFCBANK", "INFY", "ICICIBANK", "SBIN", "ITC", "BHARTIARTL", "LT", "AXISBANK")
 IST = timezone(timedelta(hours=5, minutes=30))
 EXPECTED_BARS = 375
 MIN_COMPLETE_FRACTION = 0.99
