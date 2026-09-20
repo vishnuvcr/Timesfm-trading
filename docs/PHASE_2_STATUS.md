@@ -27,8 +27,13 @@ The same validator code was executed in a local offline harness:
 
 A direct repository clone from the execution container was attempted for an end-to-end repository test, but the environment could not resolve github.com. This is logged as an environment/network limitation, not a code failure.
 
-## Next gate
-Acquire or connect the first licensed/permitted P0 datasets, generate real manifests, and run:
+## Acquisition gate
+A reproducible public-P0 acquisition workflow is now wired for the official NSE Indices NIFTY 50 historical OHLC endpoint. The workflow is triggered once by a `[acquire-p0]` commit marker, validates the resulting dataset, freezes its SHA-256 manifest, and commits the canonical cache to this branch. The cached data will then be reused rather than downloaded on every forecast run.
+
+The remaining P0 data families—NIFTY Bank, India VIX, full cash/F&O history, corporate actions, participant flows and authorized intraday/options data—remain separate gates.
+
+Next gate:
+Run the public P0 acquisition and then run:
 1. schema conformance,
 2. PIT leakage tests,
 3. calendar/session tests,

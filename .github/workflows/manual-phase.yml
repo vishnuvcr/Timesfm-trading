@@ -26,6 +26,13 @@ jobs:
         run: python -m json.tool configs/source_registry.json >/dev/null
       - name: Validate dataset manifests
         run: PYTHONPATH=. python src/data/validate_manifest.py
+      - name: Validate cached NIFTY 50 dataset when present
+        run: |
+          if [ -f data/derived/nifty50_daily.csv ]; then
+            PYTHONPATH=. python src/data/validate_nifty50.py
+          else
+            echo "NIFTY 50 cache not present yet; acquisition gate remains open."
+          fi
       - name: Run data-layer tests
         run: PYTHONPATH=. python -m pytest -q
 
@@ -60,12 +67,12 @@ jobs:
           from datetime import date
           from pathlib import Path
           from src.data.nse_fo_archives import plan_for_date
-          d=date.fromisoformat(os.environ["FO_DATE"])
-          plan=plan_for_date(d)
-          p=next(Path("private_data/fo").rglob(plan.filename))
-          h=hashlib.sha256(p.read_bytes()).hexdigest()
-          out={"trade_date":os.environ["FO_DATE"],"filename":plan.filename,"sha256":h,"format":plan.format}
-          Path("private_data/fo_manifest.json").write_text(json.dumps(out,indent=2))
+          d = date.fromisoformat(os.environ["FO_DATE"])
+          plan = plan_for_date(d)
+          p = next(Path("private_data/fo").rglob(plan.filename))
+          h = hashlib.sha256(p.read_bytes()).hexdigest()
+          out = {"trade_date": os.environ["FO_DATE"], "filename": plan.filename, "sha256": h, "format": plan.format}
+          Path("private_data/fo_manifest.json").write_text(json.dumps(out, indent=2))
           print(json.dumps(out))
           PY
       - name: Upload private acquisition artifact
@@ -73,3 +80,33 @@ jobs:
         with:
           name: nse-fo-sample-${{ inputs.acquire_fo_date }}
           path: private_data/
+
+  acquire-public-p0-index:
+    if: github.event_name == 'push' && contains(github.event.head_commit.message, '[acquire-p0]')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: phase-2-data
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Acquire official NIFTY 50 historical OHLC
+        run: PYTHONPATH=. python scripts/fetch_nifty50.py
+      - name: Validate NIFTY 50 dataset
+        run: PYTHONPATH=. python src/data/validate_nifty50.py
+      - name: Freeze manifest
+        run: |
+          PYTHONPATH=. python src/data/freeze_manifest.py             --file data/derived/nifty50_daily.csv             --dataset-id nse_nifty50_daily_ohlc             --source-id nse_niftyindices_historical             --schema-version phase2-nifty50-1             --storage-class tier_a_public             --source-url https://www.niftyindices.com/reports/historical-data             --pit-validated             --row-count "$(($(wc -l < data/derived/nifty50_daily.csv) - 1))"             --output data/manifests/nse_nifty50_daily_ohlc.json
+      - name: Test and commit cache
+        run: |
+          PYTHONPATH=. python -m pytest -q
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/derived/nifty50_daily.csv data/manifests/nse_nifty50_daily_ohlc.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Cache official NIFTY 50 P0 dataset"
+          git push origin phase-2-data
