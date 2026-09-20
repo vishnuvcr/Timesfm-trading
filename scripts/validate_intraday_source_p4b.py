@@ -14,7 +14,7 @@ CONFIG = "default"
 SPLIT = "minute"
 PROBE_SYMBOL = "20MICRONS"
 PAGE_SIZE = 100
-PAGES = 20
+PAGES = 2
 
 def parse_args() -> argparse.Namespace:
     ap = argparse.ArgumentParser()
