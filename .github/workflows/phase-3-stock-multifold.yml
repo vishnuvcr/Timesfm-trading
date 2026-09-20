@@ -1,0 +1,43 @@
+name: Phase 3 stock TimesFM multi-fold exploratory gate
+
+on:
+  push:
+    branches: [phase-3-timesfm-gate]
+  workflow_dispatch:
+
+jobs:
+  stock-multifold-p1:
+    if: github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[stock-p1-multifold]')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Fetch Phase 2 adjusted stock cache
+        run: |
+          git fetch origin phase-2-data
+          git checkout origin/phase-2-data -- configs/equity_research_universe.json data/cache/equities/tejhq_nse_adjusted
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+          cache-dependency-path: requirements-research.txt
+      - name: Cache TimesFM 3.0 model files
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: timesfm3-hf-${{ runner.os }}-3.0.2
+      - name: Install pinned TimesFM 3 environment
+        run: python -m pip install -r requirements-research.txt
+      - name: Syntax check stock multi-fold bootstrap
+        run: python -m py_compile scripts/bootstrap_timesfm3_stocks_multifold_p1.py
+      - name: Run four-fold individual-stock exploratory bootstrap
+        run: |
+          PYTHONPATH=. python scripts/bootstrap_timesfm3_stocks_multifold_p1.py             --data-dir data/cache/equities/tejhq_nse_adjusted             --output p3_stock_multifold_results
+      - name: Upload multi-fold results
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase3-p1-individual-stock-multifold
+          path: p3_stock_multifold_results/
