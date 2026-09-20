@@ -1,0 +1,47 @@
+name: Phase 6 regime-conditioned stock TimesFM research
+
+on:
+  push:
+    branches: [phase-6-regimes]
+  workflow_dispatch:
+
+jobs:
+  p61-regime-conditioned:
+    if: github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[p61-regime]')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Fetch Phase 2 adjusted prices and corporate actions
+        run: |
+          git fetch origin phase-2-data
+          git checkout origin/phase-2-data -- configs/equity_research_universe.json data/cache/equities/tejhq_nse_adjusted data/cache/equities/tejhq_nse
+      - name: Fetch tested TimesFM 3.0 adapter
+        run: |
+          git fetch origin phase-3-timesfm-gate
+          git checkout origin/phase-3-timesfm-gate -- src/model src/stats requirements-research.txt
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+          cache-dependency-path: requirements-research.txt
+      - name: Cache TimesFM 3.0 model files
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: timesfm3-hf-${{ runner.os }}-3.0.2
+      - name: Install pinned TimesFM 3.0 research environment
+        run: python -m pip install -r requirements-research.txt
+      - name: Syntax check regime research
+        run: python -m py_compile scripts/regime_conditional_stock_p61.py
+      - name: Run Phase 6.1 regime-conditioned stock experiment
+        run: |
+          PYTHONPATH=. python scripts/regime_conditional_stock_p61.py             --data-dir data/cache/equities/tejhq_nse_adjusted             --actions-dir data/cache/equities/tejhq_nse             --output p6_regime_incremental_results
+      - name: Upload Phase 6.1 results
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase6-p61-regime-conditioned-stock-timesfm
+          path: p6_regime_incremental_results/
