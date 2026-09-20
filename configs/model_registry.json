@@ -1,0 +1,13 @@
+{
+  "primary": {
+    "model_id": "timesfm-3.0-pytorch",
+    "checkpoint": "google/timesfm-3.0-pytorch",
+    "package": "timesfm[torch]==3.0.2",
+    "license": "timesfm-non-commercial-license-v1.0",
+    "role": "primary_research"
+  },
+  "benchmark": {
+    "model_id": "timesfm-2.5-pytorch",
+    "role": "benchmark_ablation_fallback"
+  }
+}
