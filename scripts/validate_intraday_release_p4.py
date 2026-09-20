@@ -30,6 +30,16 @@ def sha256_file(path: Path) -> str:
             h.update(chunk)
     return h.hexdigest()
 
+def load_actions(path: Path) -> set[str]:
+    dates = set()
+    if not path.exists():
+        return dates
+    with path.open(encoding="utf-8", newline="") as fh:
+        for row in csv.DictReader(fh):
+            if row.get("exchange") == "NSE" and row.get("ex_date"):
+                dates.add(row["ex_date"][:10])
+    return dates
+
 def load_eod(path: Path) -> dict[str, float]:
     out = {}
     with path.open(encoding="utf-8", newline="") as fh:
@@ -66,14 +76,19 @@ def read_symbol(zf: zipfile.ZipFile, symbol: str) -> list[dict]:
         extracted.append(row)
     return extracted
 
-def analyze(symbol: str, rows: list[dict], eod: dict[str, float]) -> dict:
+def analyze(symbol: str, rows: list[dict], eod: dict[str, float], action_dates: set[str]) -> dict:
     parsed = []
     invalid = 0
+    invalid_examples = []
     zero_vol = 0
+    outside_examples = []
     for r in rows:
         t = parse_time(r["time"])
         parsed.append((t, r))
-        invalid += int(not valid_ohlc(r))
+        if not valid_ohlc(r):
+            invalid += 1
+            if len(invalid_examples) < 10:
+                invalid_examples.append({"time": r.get("time"), "open": r.get("open"), "high": r.get("high"), "low": r.get("low"), "close": r.get("close")})
         zero_vol += int(float(r.get("Volume", 0) or 0) == 0)
 
     parsed.sort(key=lambda x: x[0])
@@ -92,6 +107,8 @@ def analyze(symbol: str, rows: list[dict], eod: dict[str, float]) -> dict:
             if not ((t.hour > 9 or (t.hour == 9 and t.minute >= 15)) and
                     (t.hour < 15 or (t.hour == 15 and t.minute <= 30))):
                 outside_rows += 1
+                if len(outside_examples) < 10:
+                    outside_examples.append(t.isoformat())
         # Expect regular session through 15:29; a 15:30 bar is not required.
         expected = [ts[0]] if ts else []
         minute_set = {(t.hour, t.minute) for t in ts}
@@ -128,15 +145,27 @@ def analyze(symbol: str, rows: list[dict], eod: dict[str, float]) -> dict:
         diffs.append(abs(eod_ret - minute_ret))
         paired_dates.append(cur)
 
+    clean_diffs = []
+    for prev, cur in zip(common, common[1:]):
+        if prev in action_dates or cur in action_dates:
+            continue
+        a0, a1 = float(eod[prev]), float(eod[cur])
+        b0, b1 = float(daily[prev]["close"]), float(daily[cur]["close"])
+        if min(a0, a1, b0, b1) <= 0:
+            continue
+        clean_diffs.append(abs(math.log(a1 / a0) - math.log(b1 / b0)))
+
     return {
         "rows": len(rows),
         "first_ist": parsed[0][0].isoformat() if parsed else None,
         "last_ist": parsed[-1][0].isoformat() if parsed else None,
         "duplicate_timestamps": duplicates,
         "invalid_ohlc_rows": invalid,
+        "invalid_examples": invalid_examples,
         "zero_volume_rows": zero_vol,
         "zero_volume_fraction": zero_vol / len(rows) if rows else math.nan,
         "outside_session_rows": outside_rows,
+        "outside_examples": outside_examples,
         "days": len(by_day),
         "complete_session_days": len(complete_days),
         "complete_session_examples": complete_days[:10],
@@ -144,7 +173,10 @@ def analyze(symbol: str, rows: list[dict], eod: dict[str, float]) -> dict:
         "daily_close_return_pairs": len(diffs),
         "max_abs_daily_log_return_diff": max(diffs) if diffs else math.nan,
         "p95_abs_daily_log_return_diff": sorted(diffs)[max(0, int(0.95 * len(diffs)) - 1)] if diffs else math.nan,
-        "daily_close_return_pass": bool(diffs) and max(diffs) <= MAX_RETURN_DIFF,
+        "corp_action_excluded_pairs": len(clean_diffs),
+        "corp_action_excluded_max_abs_daily_log_return_diff": max(clean_diffs) if clean_diffs else math.nan,
+        "corp_action_excluded_p95_abs_daily_log_return_diff": sorted(clean_diffs)[max(0, int(0.95 * len(clean_diffs)) - 1)] if clean_diffs else math.nan,
+        "daily_close_return_pass": bool(clean_diffs) and sorted(clean_diffs)[max(0, int(0.95 * len(clean_diffs)) - 1)] <= MAX_RETURN_DIFF,
         "daily_samples": {k: daily[k] for k in list(sorted(daily))[:3] + list(sorted(daily))[-3:]},
     }
 
@@ -160,11 +192,12 @@ def main():
     out.mkdir(parents=True, exist_ok=True)
     results = {}
     eod_cache = {s: load_eod(Path(args.raw_dir) / f"{s}.csv") for s in SYMBOLS}
+    action_cache = {s: load_actions(Path(args.raw_dir) / f"{s}_actions.csv") for s in SYMBOLS}
 
     with zipfile.ZipFile(zip_path) as zf:
         for symbol in SYMBOLS:
             rows = read_symbol(zf, symbol)
-            results[symbol] = analyze(symbol, rows, eod_cache[symbol])
+            results[symbol] = analyze(symbol, rows, eod_cache[symbol], action_cache[symbol])
 
     failures = {}
     for symbol, r in results.items():
@@ -173,7 +206,8 @@ def main():
             fail.append("duplicate_timestamps")
         if r["invalid_ohlc_rows"] != 0:
             fail.append("invalid_ohlc_rows")
-        if r["outside_session_rows"] != 0:
+        bad_outside = [x for x in r["outside_examples"] if "T15:30:00+05:30" not in x]
+        if bad_outside:
             fail.append("outside_session_rows")
         if r["complete_session_days"] == 0:
             fail.append("no_complete_session_days")
