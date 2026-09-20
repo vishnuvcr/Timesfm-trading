@@ -147,6 +147,66 @@
       "coverage_goal": "brokerage, platform/depository/other published charges and effective-date tariff",
       "storage": "tier_a_metadata",
       "priority": "P0"
+    },
+    {
+      "id": "community_nse_dataset_catalog",
+      "domain": "data_tooling",
+      "source": "GitHub community",
+      "url": "https://github.com/NikhilSuthar/indian-market-data",
+      "cadence": "software_release",
+      "pit_required": true,
+      "coverage_goal": "implementation cross-check for NSE report URL patterns and schemas",
+      "storage": "tier_a_metadata",
+      "priority": "P1",
+      "notes": "Secondary implementation reference; official NSE remains source of record."
+    },
+    {
+      "id": "community_fno_bank",
+      "domain": "fo_eod_crosscheck",
+      "source": "GitHub community",
+      "url": "https://github.com/SantoshSrinivas79/NSE-FNO-Data-bank",
+      "cadence": "daily",
+      "pit_required": true,
+      "coverage_goal": "validated NSE F&O bhavcopy archival cross-check",
+      "storage": "tier_a_metadata_or_permitted",
+      "priority": "P1",
+      "notes": "Use for validation and source-history comparison, not as a substitute for licensed primary data."
+    },
+    {
+      "id": "community_nse_intraday",
+      "domain": "intraday_crosscheck",
+      "source": "GitHub community",
+      "url": "https://github.com/gsidhu/nse-intraday-data",
+      "cadence": "historical",
+      "pit_required": true,
+      "coverage_goal": "1-minute NIFTY/Bank Nifty research bootstrap",
+      "storage": "tier_a_if_license_permits",
+      "priority": "P1",
+      "notes": "Secondary dataset; verify provenance, revisions and license before use."
+    },
+    {
+      "id": "community_nse_options_hf",
+      "domain": "options_intraday_crosscheck",
+      "source": "Hugging Face community",
+      "url": "https://huggingface.co/datasets/rissin/nse-options-intraday",
+      "cadence": "historical",
+      "pit_required": true,
+      "coverage_goal": "NIFTY/BANKNIFTY/SENSEX options daily + intraday cross-check",
+      "storage": "tier_a_if_license_permits",
+      "priority": "P1",
+      "notes": "Secondary dataset assembled from multiple sources; never treated as primary exchange truth."
+    },
+    {
+      "id": "community_india_eod_kaggle",
+      "domain": "equity_eod_crosscheck",
+      "source": "Kaggle community",
+      "url": "https://www.kaggle.com/datasets/nishanthsalian/indian-stock-index-eod-data1990-onwards",
+      "cadence": "historical",
+      "pit_required": true,
+      "coverage_goal": "long-run Indian EOD cross-check",
+      "storage": "tier_a_if_license_permits",
+      "priority": "P2",
+      "notes": "Historical Kaggle snapshot; provenance and adjustment methodology require verification."
     }
   ]
 }
