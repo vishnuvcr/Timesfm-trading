@@ -51,7 +51,7 @@ Completed on `phase-2-data`:
 **Remaining stock-data gate:** build/verify price adjustment and point-in-time security identity/universe logic, and cross-check selected names against an independent Yahoo/yfinance-based dataset before running the main holdout.
 
 ## Phase 3 — TimesFM 3.0
-**Engineering/unit-test gate green; statistical forecast gate can now be extended to individual-stock bootstrap data, while official NIFTY P0 remains blocked.**
+**Engineering/unit-test gate green; individual-stock exploratory bootstrap completed; official NIFTY P0 remains blocked and the stock sample is not yet primary evidence.**
 
 The 3.0 branch includes:
 - pinned TimesFM 3.0.2;
@@ -112,3 +112,32 @@ The official NSE hosted-runner blocker remains unchanged for the primary index r
 - In that five-name bootstrap, at least 99.7% of overlapping daily raw-close returns differed by no more than 0.10 percentage points between the two sources.
 
 This does not make the bootstrap a final unbiased universe. Final stock evidence still requires frozen PIT eligibility, identifier continuity and holdout separation.
+
+
+## Phase 3 stock bootstrap checkpoint — 2026-09-20
+
+Workflow 35522976491 completed the repaired 30-stock exploratory TimesFM 3.0 lane successfully.
+
+Configuration:
+- 30-name TejHQ adjusted-price bootstrap;
+- context 128;
+- horizon 5 sessions;
+- 40 recent chronological origins per stock.
+
+Observed:
+- mean log MAE 0.018675 vs persistence 0.017629;
+- mean log RMSE 0.027242 vs persistence 0.025726;
+- 3/30 stocks better on MAE and 3/30 on RMSE;
+- mean directional accuracy 50.83% vs mean positive-return base rate 39.75%;
+- 25/30 stocks showed positive stock-level directional excess;
+- only 5/30 improved five-session return MAE;
+- mean q10–q90 width versus subsequent absolute movement Spearman rho -0.121, with 9 positive and 21 negative stock-level correlations.
+
+Interpretation:
+The bootstrap does not support a general TimesFM point-forecast advantage over persistence. The directional excess is an exploratory finding that still requires an independent stock-selection baseline, broader chronological folds, multiple-testing control and realistic cost/slippage simulation. The negative interval-width relationship means the uncertainty-sizing hypothesis seen in the earlier secondary NIFTY experiment does not transfer automatically to stocks.
+
+A source-quality flag remains for TATAMOTORS, whose cached adjusted series ends 2025-10-23 while most names extend to 2026-09-18. Final PIT evidence must resolve identifier/source continuity before holdout promotion.
+
+## Updated next gate
+
+The next empirical stock step is a multi-fold stock forecast matrix on a frozen PIT universe, with explicit baseline selection and the existing economic-cost gate. High-frequency/scalping claims remain gated on the newly identified 1-minute source validation and execution-quality checks.
