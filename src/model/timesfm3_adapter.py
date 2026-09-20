@@ -24,7 +24,10 @@ class TimesFM3Adapter:
         checkpoint: str = DEFAULT_CHECKPOINT,
         device: str = "cpu",
         per_core_batch_size: int = 8,
+        purpose: str = "research_only",
     ) -> None:
+        if purpose != "research_only":
+            raise PermissionError("TimesFM 3.0 pretrained weights are restricted to non-commercial/non-production research use until licensed.")
         try:
             from timesfm3 import ModelConfig, TimesFM3Evaluator
         except ImportError as exc:
