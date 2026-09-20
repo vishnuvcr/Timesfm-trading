@@ -75,3 +75,15 @@ Release v1.0.0:
 - stated source: Zerodha Kite API.
 
 The gate will selectively extract five fixed liquid symbols and compare full-session minute bars with the cached EOD series before any strategy work.
+
+
+## Reconciliation rerun — 2026-09-20
+
+The first verified-release run proved the release artifact and produced 512 complete sessions for each of the tested symbols, but the raw daily-close comparison was contaminated by corporate-action/adjustment differences and the validator treated 15:30 endpoint rows as out-of-session.
+
+The rerun now:
+- excludes daily return pairs adjacent to recorded NSE corporate-action dates;
+- accepts 15:30 as an endpoint row without treating it as an anomaly;
+- counts all other out-of-session rows;
+- records concrete invalid-OHLC examples;
+- retains the release SHA-256 gate.
