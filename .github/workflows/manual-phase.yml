@@ -83,6 +83,19 @@ jobs:
           name: nse-fo-sample-${{ inputs.acquire_fo_date }}
           path: private_data/
 
+  probe-official-p0-api:
+    if: github.event_name == 'push' && contains(github.event.head_commit.message, '[probe-p0-api]')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Probe official NSE historical-index API
+        run: |
+          PYTHONPATH=. python scripts/fetch_nse_index_history.py --start 2019-01-01 --end 2019-01-05 --output /tmp/nifty50_2019_probe.csv
+          PYTHONPATH=. python scripts/fetch_nse_index_history.py --start 2026-09-01 --end 2026-09-18 --output /tmp/nifty50_2026_probe.csv
+
   acquire-public-p0-index:
     if: github.event_name == 'push' && contains(github.event.head_commit.message, '[acquire-p0]')
     runs-on: ubuntu-latest

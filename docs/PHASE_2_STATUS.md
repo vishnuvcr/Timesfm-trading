@@ -35,7 +35,7 @@ The remaining P0 data families—NIFTY Bank, India VIX, full cash/F&O history, c
 Official NIFTY 50 acquisition was attempted four times from GitHub Actions (runs 40, 43, 49 and 51). Each reached the NIFTY Indices application endpoint but received HTML with HTTP 200 instead of the expected JSON payload. Browser-profiled/cloudscraper session warm-up did not change this behavior. The retry loop is now stopped; see [issue #6](https://github.com/vishnuvcr/Timesfm-trading/issues/6).
 
 Next gate:
-Obtain an authorized/official P0 delivery route or a different official endpoint. Once obtained, generate the real manifest and run:
+Probe the distinct official NSE `/api/historicalOR/indicesHistory` route. If both historical and current windows succeed, promote it to the primary NIFTY 50 acquisition path and generate the frozen P0 manifest. The previously blocked NSE Indices backend remains disabled for acquisition.
 1. schema conformance,
 2. PIT leakage tests,
 3. calendar/session tests,
