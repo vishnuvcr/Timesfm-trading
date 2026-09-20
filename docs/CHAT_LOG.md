@@ -86,3 +86,7 @@ The next work should not search arbitrary TimesFM thresholds for a positive resu
 **Observed failure:** Phase 4B workflow run 35525131467 failed in `setup-python` because the source-validation job requested pip caching without a requirements file. The dependent swing job was skipped.
 
 **Fix:** disabled pip caching for the source-only job; retained dependency caching in the TimesFM swing job. The failure is logged in `docs/ERROR_LOG.md`.
+
+## 2026-09-20 — Phase 4B CI second correction
+
+Run 35525174393 reached setup-python but failed because `cache: false` is not a supported value. The workflow was corrected by removing the cache parameter from the source-validation job entirely. The error is logged in `docs/ERROR_LOG.md`.
