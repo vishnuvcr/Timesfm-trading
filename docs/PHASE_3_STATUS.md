@@ -57,3 +57,8 @@ The phase now contains deterministic NumPy-only implementations for:
 - Benjamini-Hochberg FDR adjustment.
 
 These are reusable research primitives, not results. The workflow runs their unit tests before the model smoke test.
+
+
+## CI verification history
+
+Pull-request CI run 21 failed on an incorrect MAE fixture expectation; corrected to 0.5. Pull-request CI run 25 then exposed an incorrect RMSE fixture expectation; corrected to sqrt(1.25/3). A third CI run is expected from the latest commit before this phase can be called green.
