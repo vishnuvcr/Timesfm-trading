@@ -1,0 +1,88 @@
+exchange,symbol,isin,company,ex_date,record_date,type,ratio_num,ratio_den,cash_amount,face_value_from,face_value_to,raw_subject
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2010-01-27,2010-01-28,other,,,,,,3rd Int Div-Rs.2/- Pr Shr
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2010-06-15,,dividend,,,14,,,Final Dividend Rs.4/- Per Share And Special Dividend Rs.10/- Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2010-07-29,2010-07-30,dividend,,,2,,,Interim Dividend Rs.2/- Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2010-11-01,2010-11-02,dividend,,,2,,,2nd Interim Dividend-Rs.2/- Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2011-01-27,2011-01-28,dividend,,,2,,,3rd Interim Dividend-Rs.2/- Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2011-06-08,,dividend,,,8,,,Dividend-Rs.8/- Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2011-07-28,2011-07-29,dividend,,,3,,,Interim Dividend Rs.3/- Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2011-10-25,2011-10-29,dividend,,,3,,,Interim Dividend - Rs. 3/- Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2012-01-25,2012-01-28,dividend,,,3,,,3rd Interim Dividend Rs.3/- Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2012-06-07,,dividend,,,16,,,Annual General Meeting / Final Dividend - Rs.8/- / Special Dividend - Rs.8/-
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2012-07-23,2012-07-24,dividend,,,3,,,Interim Dividend Rs.3/- Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2012-10-31,2012-11-01,dividend,,,3,,,2nd Interim Dividend Rs 3 Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2013-01-23,2013-01-24,dividend,,,,,,Interim Dividend 3 Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2013-06-06,,dividend,,,13,,,Annual General Meeting And Dividend Rs.13/- Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2013-07-29,2013-07-30,dividend,,,4,,,Interim Dividend - Rs 4/- Per Equity Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2013-10-25,2013-10-28,dividend,,,4,,,2nd Interim Dividend Rs.4/- Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2014-01-27,2014-01-28,dividend,,,4,,,Interim Dividend Rs.4/- Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2014-06-06,,dividend,,,20,,,Annual General Meeting / Dividend - Rs. 20/- Per Equity Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2014-07-28,2014-07-30,dividend,,,45,,,Interim Dividend - Rs 5/- Per Share + Special Dividend - Rs 40/- Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2014-10-29,2014-10-30,dividend,,,5,,,2nd Interim Dividend Rs.5/- Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2015-01-27,2015-01-28,dividend,,,5,,,Third Interim Dividend - Rs 5/- Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2015-06-05,,dividend,,,24,,,Annual General Meeting /Dividend - Rs 24/- Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2015-07-20,2015-07-21,dividend,,,5.5,,,Interim Dividend - Rs 5.50/- Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2015-10-23,2015-10-26,dividend,,,5.5,,,Interim Dividend - Rs 5.50/- Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2016-01-21,2016-01-22,dividend,,,5.5,,,Interim Dividend - Rs 5.50/- Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2016-06-06,,dividend,,,27,,,Annual General Meeting/Dividend Rs 27/- Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2016-07-25,2016-07-26,dividend,,,6.5,,,Interim Dividend - Rs 6.50/- Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2016-10-24,2016-10-25,dividend,,,6.5,,,Interim Dividend- Rs 6.50/- Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2017-01-23,2017-01-24,dividend,,,6.5,,,Interim Dividend Rs 6.50 Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2017-05-05,2017-05-08,buyback,,,,,,Buyback
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2017-06-13,,dividend,,,27.5,,,Annual General Meeting/Dividend - Rs 27.50/- Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2017-07-24,2017-07-25,dividend,,,7,,,Interim Dividend - Rs 7/- Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2017-10-25,2017-10-26,dividend,,,7,,,Interim Dividend Rs 7/- Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2018-01-22,2018-01-23,dividend,,,7,,,Interim Dividend - Rs 7 Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2018-05-31,2018-06-02,bonus,1,1,,,,Bonus 1:1 /Dividend- Rs 29 Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2018-07-17,2018-07-18,dividend,,,4,,,Interim Dividend- Rs 4 Per Share (Purpose Revised)
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2018-08-14,2018-08-18,buyback,,,,,,Buyback
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2018-10-23,2018-10-24,other,,,,,,Int Div Rs 4 Per Sh
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2019-01-17,2019-01-18,dividend,,,4,,,Interim Dividend - Rs 4 Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2019-06-04,2019-06-06,dividend,,,18,,,Dividend - Rs 18 Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2019-07-16,2019-07-17,dividend,,,5,,,Interim Dividend - Rs 5 Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2019-10-17,2019-10-18,dividend,,,45,,,Interim Dividend - Rs 5 Per Share And Special Dividend - Rs 40 Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2020-01-23,2020-01-25,dividend,,,5,,,Interim Dividend - Rs 5 Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2020-03-19,2020-03-20,dividend,,,12,,,Interim Dividend - Rs 12 Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2020-06-03,2020-06-04,dividend,,,6,,,Dividend - Rs 6 Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2020-07-16,2020-07-17,dividend,,,5,,,Interim Dividend - Rs    5 Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2020-10-14,2020-10-15,dividend,,,12,,,Interim Dividend - Rs 12 Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2020-11-26,2020-11-28,buyback,,,,,,Buyback
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2021-01-14,2021-01-16,dividend,,,6,,,Interim Dividend - Rs 6 Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2021-05-25,2021-05-27,dividend,,,15,,,Dividend - Rs 15 Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2021-07-15,2021-07-16,dividend,,,7,,,Interim Dividend - Rs 7 Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2021-10-14,2021-10-19,dividend,,,7,,,Interim Dividend - Rs 7 Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2022-01-19,2022-01-20,dividend,,,7,,,Interim Dividend - Rs 7 Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2022-02-22,2022-02-23,buyback,,,,,,Buyback
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2022-05-25,2022-05-26,dividend,,,22,,,Dividend - Rs 22 Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2022-07-14,2022-07-16,dividend,,,8,,,Interim Dividend- Rs 8 Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2022-10-17,2022-10-18,dividend,,,8,,,Interim Dividend - Rs 8 Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2023-01-16,2023-01-17,dividend,,,75,,,Interim Dividend - Rs 8 Per Share Special Dividend - Rs 67 Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2023-06-15,2023-06-15,dividend,,,24,,,Dividend - Rs 24 Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2023-07-20,2023-07-20,dividend,,,9,,,Interim Dividend - Rs 9 Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2023-10-19,2023-10-19,dividend,,,9,,,Interim Dividend - Rs 9 Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2023-11-24,2023-11-25,buyback,,,,,,Buy Back
+BSE,TCS,INE467B01029,Tata Consultancy Services Ltd,2024-01-19,2024-01-19,dividend,,,18,,,Special Dividend - Rs. - 18.0000
+BSE,TCS,INE467B01029,Tata Consultancy Services Ltd,2024-01-19,2024-01-19,dividend,,,9,,,Interim Dividend - Rs. - 9.0000
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2024-01-19,2024-01-19,dividend,,,27,,,Interim Dividend - Rs 9 Per Share Special Dividend - Rs 18 Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2024-05-16,2024-05-16,dividend,,,28,,,Dividend - Rs 28 Per Share
+BSE,TCS,INE467B01029,Tata Consultancy Services Ltd,2024-05-16,2024-05-16,dividend,,,28,,,Final Dividend - Rs. - 28.0000
+BSE,TCS,INE467B01029,Tata Consultancy Services Ltd,2024-07-19,2024-07-20,dividend,,,10,,,Interim Dividend - Rs. - 10.0000
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2024-07-19,2024-07-20,dividend,,,10,,,Interim Dividend - Rs 10 Per Share
+BSE,TCS,INE467B01029,Tata Consultancy Services Ltd,2024-10-18,2024-10-18,dividend,,,10,,,Interim Dividend - Rs. - 10.0000
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2024-10-18,2024-10-18,dividend,,,10,,,Interim Dividend - Rs 10 Per Share
+BSE,TCS,INE467B01029,Tata Consultancy Services Ltd,2025-01-17,2025-01-17,dividend,,,10,,,Interim Dividend - Rs. - 10.0000
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2025-01-17,2025-01-17,dividend,,,76,,,Interim Dividend - Rs 10 Per Share Special Dividend - Rs 66 Per Share
+BSE,TCS,INE467B01029,Tata Consultancy Services Ltd,2025-01-17,2025-01-17,dividend,,,66,,,Special Dividend - Rs. - 66.0000
+BSE,TCS,INE467B01029,Tata Consultancy Services Ltd,2025-06-04,2025-06-04,dividend,,,30,,,Final Dividend - Rs. - 30.0000
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2025-06-04,2025-06-04,dividend,,,30,,,Dividend - Rs 30 Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2025-07-16,2025-07-16,dividend,,,11,,,Interim Dividend - Rs 11 Per Share
+BSE,TCS,INE467B01029,Tata Consultancy Services Ltd,2025-07-16,2025-07-16,dividend,,,11,,,Interim Dividend - Rs. - 11.0000
+BSE,TCS,INE467B01029,Tata Consultancy Services Ltd,2025-10-15,2025-10-15,dividend,,,11,,,Interim Dividend - Rs. - 11.0000
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2025-10-15,2025-10-15,dividend,,,11,,,Interim Dividend - Rs 11 Per Share
+BSE,TCS,INE467B01029,Tata Consultancy Services Ltd,2026-01-16,2026-01-17,dividend,,,46,,,Special Dividend - Rs. - 46.0000
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2026-01-16,2026-01-17,dividend,,,57,,,Interim Dividend Rs 11 Per Share/ Special Dividend Rs 46 Per Share
+BSE,TCS,INE467B01029,Tata Consultancy Services Ltd,2026-01-16,2026-01-17,dividend,,,11,,,Interim Dividend - Rs. - 11.0000
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2026-05-25,2026-05-25,dividend,,,31,,,Dividend - Rs 31 Per Share
+BSE,TCS,INE467B01029,Tata Consultancy Services Ltd,2026-05-25,2026-05-25,dividend,,,31,,,Final Dividend - Rs. - 31.0000
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2026-07-15,2026-07-15,dividend,,,12,,,Interim Dividend - Rs 12 Per Share
+BSE,TCS,INE467B01029,Tata Consultancy Services Ltd,2026-07-15,2026-07-15,dividend,,,12,,,Interim Dividend - Rs. - 12.0000

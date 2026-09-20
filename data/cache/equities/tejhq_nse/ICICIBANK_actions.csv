@@ -1,0 +1,21 @@
+exchange,symbol,isin,company,ex_date,record_date,type,ratio_num,ratio_den,cash_amount,face_value_from,face_value_to,raw_subject
+NSE,ICICIBANK,INE090A01013,ICICI Bank Limited,2010-06-10,,dividend,,,12,,,Annual General Meeting And Dividend Rs.12/- Per Share
+NSE,ICICIBANK,INE090A01013,ICICI Bank Limited,2011-06-02,,dividend,,,14,,,Annual General Meeting And Dividend Rs.14/- Per Share
+NSE,ICICIBANK,INE090A01013,ICICI Bank Limited,2012-05-31,,dividend,,,16.5,,,Annual General Meeting And Dividend Rs.16.50 Per Share
+NSE,ICICIBANK,INE090A01013,ICICI Bank Limited,2013-05-30,,dividend,,,20,,,Annual General Meeting/Dividend Rs.20/- Per Share
+NSE,ICICIBANK,INE090A01013,ICICI Bank Limited,2014-06-05,,dividend,,,23,,,Annual General Meeting/Dividend Rs.23/- Per Share
+NSE,ICICIBANK,INE090A01013,ICICI Bank Limited,2014-12-04,2014-12-05,split,,,,10,2,Face Value Split (Sub-Division) - From Rs 10/- Per Share To Rs 2/- Per Share
+NSE,ICICIBANK,INE090A01013,ICICI Bank Limited,2015-06-04,,dividend,,,5,,,Annual General Meeting/ Dividend - Rs 5/- Per Share
+NSE,ICICIBANK,INE090A01013,ICICI Bank Limited,2016-06-16,,dividend,,,5,,,Annual General Meeting/ Dividend - Rs 5/- Per Share
+NSE,ICICIBANK,INE090A01013,ICICI Bank Limited,2017-06-20,,bonus,1,10,,,,Annual General Meeting/Dividend - Rs 2.50 Per Share/Bonus 1:10 (Revised)
+NSE,ICICIBANK,INE090A01013,ICICI Bank Limited,2018-08-24,,dividend,,,1.5,,,Dividend- Rs 1.50 Per Share (Date Revised)
+NSE,ICICIBANK,INE090A01013,ICICI Bank Limited,2019-07-22,,dividend,,,1,,,Annual General Meeting/Dividend - Re 1 Per Share
+NSE,ICICIBANK,INE090A01013,ICICI Bank Limited,2021-07-29,2021-07-30,dividend,,,2,,,Dividend - Rs 2 Per Share
+NSE,ICICIBANK,INE090A01013,ICICI Bank Limited,2022-08-08,2022-08-10,dividend,,,5,,,Dividend - Rs 5 Per Share
+NSE,ICICIBANK,INE090A01013,ICICI Bank Limited,2023-08-09,2023-08-09,dividend,,,8,,,Dividend - Rs 8 Per Share
+NSE,ICICIBANK,INE090A01013,ICICI Bank Limited,2024-08-12,2024-08-12,dividend,,,10,,,Dividend - Rs 10 Per Share
+BSE,ICICIBANK,INE090A01021,ICICI Bank Ltd,2024-08-12,2024-08-12,dividend,,,10,,,Final Dividend - Rs. - 10.0000
+BSE,ICICIBANK,INE090A01021,ICICI Bank Ltd,2025-08-12,2025-08-12,dividend,,,11,,,Dividend - Rs. - 11.0000
+NSE,ICICIBANK,INE090A01013,ICICI Bank Limited,2025-08-12,2025-08-12,dividend,,,11,,,Dividend - Rs 11 Per Share
+NSE,ICICIBANK,INE090A01013,ICICI Bank Limited,2026-08-03,2026-08-03,dividend,,,12,,,Dividend - Rs 12 Per Share
+BSE,ICICIBANK,INE090A01021,ICICI Bank Ltd,2026-08-03,2026-08-03,dividend,,,12,,,Dividend - Rs. - 12.0000

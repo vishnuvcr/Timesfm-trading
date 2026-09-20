@@ -1,0 +1,23 @@
+exchange,symbol,isin,company,ex_date,record_date,type,ratio_num,ratio_den,cash_amount,face_value_from,face_value_to,raw_subject
+NSE,TATASTEEL,INE081A01012,Tata Steel Limited,2010-07-12,,dividend,,,8,,,Annual General Meeting And Dividend Rs.8/- Per Share
+NSE,TATASTEEL,INE081A01012,Tata Steel Limited,2011-07-04,,dividend,,,12,,,Annual General Meeting/Dividend Rs 12 Per Share
+NSE,TATASTEEL,INE081A01012,Tata Steel Limited,2012-07-16,,dividend,,,12,,,Annual General Meeting/Dividend Rs 12 Per Share
+NSE,TATASTEEL,INE081A01012,Tata Steel Limited,2013-07-15,,dividend,,,8,,,Annual General Meeting / Dividend - Rs.8/- Per Ordinary Share
+NSE,TATASTEEL,INE081A01012,Tata Steel Limited,2014-07-14,,dividend,,,10,,,Annual General Meeting / Dividend - Rs.10/- Per Ordinary Share
+NSE,TATASTEEL,INE081A01012,Tata Steel Limited,2015-07-23,,dividend,,,8,,,Annual General Meeting / Dividend - Rs. 8/- Per Share
+NSE,TATASTEEL,INE081A01012,Tata Steel Limited,2016-07-28,,dividend,,,8,,,Annual General Meeting/Dividend Rs 8/- Per Share
+NSE,TATASTEEL,INE081A01012,Tata Steel Limited,2017-07-20,,dividend,,,10,,,Annual General Meeting/Dividend - Rs 10/- Per Share
+NSE,TATASTEEL,INE081A01012,Tata Steel Limited,2018-01-31,2018-02-01,rights,,,,,,Rights - 4:25 Fully Paid Up Shares @ Premium Rs 500/- Per Share / 2:25 Partly Paid Up Shares @ Premium Rs 605/- Per Share
+NSE,TATASTEEL,INE081A01012,Tata Steel Limited,2018-07-05,,dividend,,,10,,,Annual General Meeting / Dividend- Rs 10 Per Share
+NSE,TATASTEEL,INE081A01012,Tata Steel Limited,2019-07-04,,dividend,,,13,,,Annual General Meeting/Dividend - Rs 13 Per Share
+NSE,TATASTEEL,INE081A01012,Tata Steel Limited,2020-08-06,,dividend,,,10,,,Dividend - Rs 10 Per Share
+NSE,TATASTEEL,INE081A01012,Tata Steel Limited,2021-06-17,,dividend,,,25,,,Annual General Meeting/Dividend - Rs 25 Per Share
+NSE,TATASTEEL,INE081A01012,Tata Steel Limited,2022-06-15,,dividend,,,51,,,Annual General Meeting/Dividend - Rs  51 Per Share
+NSE,TATASTEEL,INE081A01012,Tata Steel Limited,2022-07-28,2022-07-29,split,,,,10,1,Face Value Split (Sub-Division) - From Rs 10/- Per Share To Re 1/- Per Share
+NSE,TATASTEEL,INE081A01012,Tata Steel Limited,2023-06-22,,dividend,,,3.6,,,Annual General Meeting/Dividend - Rs 3.60 Per Share
+BSE,TATASTEEL,INE081A01020,Tata Steel Ltd,2024-06-21,2024-06-21,dividend,,,3.6,,,Final Dividend - Rs. - 3.6000
+NSE,TATASTEEL,INE081A01012,Tata Steel Limited,2024-06-21,2024-06-21,dividend,,,3.6,,,Dividend - Rs 3.60 Per Share
+NSE,TATASTEEL,INE081A01012,Tata Steel Limited,2025-06-06,2025-06-06,dividend,,,3.6,,,Dividend - Rs 3.60 Per Share
+BSE,TATASTEEL,INE081A01020,Tata Steel Ltd,2025-06-06,2025-06-06,dividend,,,3.6,,,Final Dividend - Rs. - 3.6000
+BSE,TATASTEEL,INE081A01020,Tata Steel Ltd,2026-06-12,2026-06-12,dividend,,,4,,,Final Dividend - Rs. - 4.0000
+NSE,TATASTEEL,INE081A01012,Tata Steel Limited,2026-06-12,2026-06-12,dividend,,,4,,,Dividend - Rs 4 Per Share

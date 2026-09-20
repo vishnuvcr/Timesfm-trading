@@ -1,0 +1,23 @@
+exchange,symbol,isin,company,ex_date,record_date,type,ratio_num,ratio_den,cash_amount,face_value_from,face_value_to,raw_subject
+NSE,TITAN,INE280A01010,Titan Company Limited,2010-07-09,,dividend,,,15,,,Dividend-Rs.15/- Per Share
+NSE,TITAN,INE280A01010,Titan Company Limited,2011-06-23,2011-06-24,split,,,,10,1,Bonus 1:1 / Face Value Split From Rs.10/- To Re.1/-
+NSE,TITAN,INE280A01010,Titan Company Limited,2011-07-22,,dividend,,,1.25,,,Dividend-Rs.1.25 Per Share
+NSE,TITAN,INE280A01010,Titan Company Limited,2012-07-13,,dividend,,,1.75,,,Annual General Meeting /Dividend Rs. 1.75 Per Share
+NSE,TITAN,INE280A01010,Titan Company Limited,2013-07-16,,dividend,,,2.1,,,Annual General Meeting/Dividend Rs 2.10/- Per Share
+NSE,TITAN,INE280A01010,Titan Company Limited,2014-07-15,,dividend,,,2.1,,,Annual General Meeting / Dividend - Rs 2.10/- Per Share
+NSE,TITAN,INE280A01010,Titan Company Limited,2015-07-17,,dividend,,,2.3,,,Annual General Meeting/Dividend - Rs 2.30/- Per Share
+NSE,TITAN,INE280A01010,Titan Company Limited,2016-03-22,2016-03-24,dividend,,,2.2,,,Interim Dividend - Rs 2.20/- Per Share (Purpose Revised)
+NSE,TITAN,INE280A01010,Titan Company Limited,2016-07-22,,agm,,,,,,Annual General Meeting
+NSE,TITAN,INE280A01010,Titan Company Limited,2017-07-24,,dividend,,,2.6,,,Dividend - Rs 2.60 Per Share
+NSE,TITAN,INE280A01010,Titan Company Limited,2018-07-23,,dividend,,,3.75,,,Annual General Meeting/Dividend- Rs 3.75 Per Share
+NSE,TITAN,INE280A01010,Titan Company Limited,2019-07-29,,dividend,,,5,,,Annual General Meeting/ Dividend - Rs 5 Per Share
+NSE,TITAN,INE280A01010,Titan Company Limited,2020-08-03,,dividend,,,4,,,Annual General Meeting/Dividend - Rs 4 Per Share
+NSE,TITAN,INE280A01010,Titan Company Limited,2021-07-22,,dividend,,,4,,,Annual General Meeting/Dividend - Rs 4 Per Share
+NSE,TITAN,INE280A01010,Titan Company Limited,2022-07-08,,dividend,,,7.5,,,Annual General Meeting/Dividend - Rs 7.50 Per Share
+NSE,TITAN,INE280A01010,Titan Company Limited,2023-07-13,,dividend,,,10,,,Annual General Meeting/Dividend - Rs 10 Per Share
+BSE,TITAN,INE280A01028,Titan Company Ltd,2024-06-27,,dividend,,,11,,,Dividend - Rs. - 11.0000
+NSE,TITAN,INE280A01010,Titan Company Limited,2024-06-27,,dividend,,,11,,,Annual General Meeting/Dividend - Rs 11 Per Share
+NSE,TITAN,INE280A01010,Titan Company Limited,2025-07-08,2025-07-08,dividend,,,11,,,Dividend - Rs 11 Per Share
+BSE,TITAN,INE280A01028,Titan Company Ltd,2025-07-08,2025-07-08,dividend,,,11,,,Dividend - Rs. - 11.0000
+BSE,TITAN,INE280A01028,Titan Company Ltd,2026-07-09,2026-07-09,dividend,,,15,,,Dividend - Rs. - 15.0000
+NSE,TITAN,INE280A01010,Titan Company Limited,2026-07-09,2026-07-09,dividend,,,15,,,Dividend - Rs 15 Per Share

@@ -1,0 +1,21 @@
+exchange,symbol,isin,company,ex_date,record_date,type,ratio_num,ratio_den,cash_amount,face_value_from,face_value_to,raw_subject
+NSE,ULTRACEMCO,INE481G01011,UltraTech Cement Limited,2010-06-21,,dividend,,,6,,,Final Dividend-Rs.6/- Per Share
+NSE,ULTRACEMCO,INE481G01011,UltraTech Cement Limited,2011-08-25,,dividend,,,6,,,Dividend Rs 6 Per Share
+NSE,ULTRACEMCO,INE481G01011,UltraTech Cement Limited,2012-08-17,,dividend,,,8,,,Annual General Meeting And Dividend Rs.8/- Per Share
+NSE,ULTRACEMCO,INE481G01011,UltraTech Cement Limited,2013-07-17,,dividend,,,9,,,Annual General Meeting And Dividend Rs.9/- Per Share
+NSE,ULTRACEMCO,INE481G01011,UltraTech Cement Limited,2014-07-24,,dividend,,,9,,,Annual General Meeting/Dividend - Rs.9/- Per Share
+NSE,ULTRACEMCO,INE481G01011,UltraTech Cement Limited,2015-08-14,,dividend,,,9,,,Annual General Meeting/ Dividend - Rs 9/- Per Share
+NSE,ULTRACEMCO,INE481G01011,UltraTech Cement Limited,2016-07-04,,dividend,,,9.5,,,Annual General Meeting/ Dividend  -Rs 9.50/- Per Share
+NSE,ULTRACEMCO,INE481G01011,UltraTech Cement Limited,2017-07-10,,dividend,,,10,,,Annual General Meeting/Dividend  - Rs 10 Per Share
+NSE,ULTRACEMCO,INE481G01011,UltraTech Cement Limited,2018-07-10,,dividend,,,10.5,,,Annual General Meeting/Dividend- Rs 10.50 Per Share
+NSE,ULTRACEMCO,INE481G01011,UltraTech Cement Limited,2019-07-10,,dividend,,,11.5,,,Annual General Meeting/Dividend - Rs 11.50 Per Share
+NSE,ULTRACEMCO,INE481G01011,UltraTech Cement Limited,2020-07-29,,dividend,,,13,,,Annual General Meeting/Dividend - Rs 13 Per Share
+NSE,ULTRACEMCO,INE481G01011,UltraTech Cement Limited,2021-08-02,,dividend,,,37,,,Annual General Meeting/Dividend - Rs 37 Per Share
+NSE,ULTRACEMCO,INE481G01011,UltraTech Cement Limited,2022-08-02,,dividend,,,38,,,Annual General Meeting/Dividend - Rs 38 Per Share
+NSE,ULTRACEMCO,INE481G01011,UltraTech Cement Limited,2023-07-27,,dividend,,,38,,,Annual General Meeting/Dividend - Rs  38 Per Share
+NSE,ULTRACEMCO,INE481G01011,UltraTech Cement Limited,2024-07-30,,dividend,,,70,,,Annual General Meeting/Dividend - Rs 70 Per Share
+BSE,ULTRACEMCO,INE481G01011,UltraTech Cement Ltd,2024-07-30,,dividend,,,70,,,Final Dividend - Rs. - 70.0000
+BSE,ULTRACEMCO,INE481G01011,UltraTech Cement Ltd,2025-07-25,2025-07-25,dividend,,,77.5,,,Final Dividend - Rs. - 77.5000
+NSE,ULTRACEMCO,INE481G01011,UltraTech Cement Limited,2025-07-25,2025-07-25,dividend,,,77.5,,,Dividend - Rs 77.50 Per Sh
+BSE,ULTRACEMCO,INE481G01011,UltraTech Cement Ltd,2026-07-30,2026-07-30,dividend,,,240,,,Final Dividend - Rs. - 240.0000
+NSE,ULTRACEMCO,INE481G01011,UltraTech Cement Limited,2026-07-30,2026-07-30,dividend,,,240,,,Dividend - Rs 240 Per Share

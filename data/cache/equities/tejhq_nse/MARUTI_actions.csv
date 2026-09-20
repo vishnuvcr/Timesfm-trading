@@ -1,0 +1,22 @@
+exchange,symbol,isin,company,ex_date,record_date,type,ratio_num,ratio_den,cash_amount,face_value_from,face_value_to,raw_subject
+NSE,MARUTI,INE585B01010,Maruti Suzuki India Limited,2010-08-24,,dividend,,,6,,,Annual General Meeting And Final Dividend Rs.6/- Per Share
+NSE,MARUTI,INE585B01010,Maruti Suzuki India Limited,2011-08-24,,dividend,,,7.5,,,Dividend-Rs.7.50 Per Share
+NSE,MARUTI,INE585B01010,Maruti Suzuki India Limited,2012-08-14,,dividend,,,7.5,,,Annual General Meeting/ Dividend Rs.7.50 Per Share
+NSE,MARUTI,INE585B01010,Maruti Suzuki India Limited,2013-08-13,,dividend,,,8,,,Annual General Meeting / Final Dividend Rs.8/- Per Equity Share
+NSE,MARUTI,INE585B01010,Maruti Suzuki India Limited,2014-07-31,2014-08-01,other,,,,,,E-Voting
+NSE,MARUTI,INE585B01010,Maruti Suzuki India Limited,2014-08-27,,dividend,,,12,,,Annual General Meeting / Dividend - Rs 12/- Per Share
+NSE,MARUTI,INE585B01010,Maruti Suzuki India Limited,2015-08-26,,dividend,,,25,,,Annual General Meeting / Dividend - Rs 25/- Per Share
+NSE,MARUTI,INE585B01010,Maruti Suzuki India Limited,2016-08-31,,dividend,,,35,,,Final Dividend - Rs 35/- Per Share
+NSE,MARUTI,INE585B01010,Maruti Suzuki India Limited,2017-08-24,,dividend,,,75,,,Dividend - Rs 75/- Per Share
+NSE,MARUTI,INE585B01010,Maruti Suzuki India Limited,2018-08-14,,dividend,,,80,,,Dividend Rs 80/- Per Share
+NSE,MARUTI,INE585B01010,Maruti Suzuki India Limited,2019-08-14,,dividend,,,80,,,Dividend - Rs 80 Per Share
+NSE,MARUTI,INE585B01010,Maruti Suzuki India Limited,2020-08-13,,dividend,,,60,,,Dividend - Rs 60 Per Share
+NSE,MARUTI,INE585B01010,Maruti Suzuki India Limited,2021-08-05,,dividend,,,45,,,Dividend - Rs 45 Per Share
+NSE,MARUTI,INE585B01010,Maruti Suzuki India Limited,2022-08-03,,dividend,,,60,,,Dividend - Rs 60 Per Share
+NSE,MARUTI,INE585B01010,Maruti Suzuki India Limited,2023-08-03,,dividend,,,90,,,Dividend - Rs 90 Per Share
+NSE,MARUTI,INE585B01010,Maruti Suzuki India Limited,2024-08-02,,dividend,,,125,,,Dividend - Rs 125 Per Share
+BSE,MARUTI,INE585B01010,Maruti Suzuki India Ltd,2024-08-02,,dividend,,,125,,,Final Dividend - Rs. - 125.0000
+BSE,MARUTI,INE585B01010,Maruti Suzuki India Ltd,2025-08-01,2025-08-01,dividend,,,135,,,Final Dividend - Rs. - 135.0000
+NSE,MARUTI,INE585B01010,Maruti Suzuki India Limited,2025-08-01,2025-08-01,dividend,,,135,,,Dividend - Rs 135 Per Share
+BSE,MARUTI,INE585B01010,Maruti Suzuki India Ltd,2026-08-07,2026-08-07,dividend,,,140,,,Final Dividend - Rs. - 140.0000
+NSE,MARUTI,INE585B01010,Maruti Suzuki India Limited,2026-08-07,2026-08-07,dividend,,,140,,,Dividend - Rs 140 Per Share

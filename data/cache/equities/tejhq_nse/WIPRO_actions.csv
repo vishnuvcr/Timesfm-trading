@@ -1,0 +1,52 @@
+exchange,symbol,isin,company,ex_date,record_date,type,ratio_num,ratio_den,cash_amount,face_value_from,face_value_to,raw_subject
+NSE,WIPRO,INE075A01022,Wipro Limited,2010-06-15,2010-06-16,bonus,2,3,,,,Bonus 2:3 And Final Dividend Rs.6/- Per Share
+NSE,WIPRO,INE075A01022,Wipro Limited,2010-07-15,,agm,,,,,,Annual General Meeting
+NSE,WIPRO,INE075A01022,Wipro Limited,2011-01-27,2011-01-28,dividend,,,2,,,Interim Dividend-Rs.2/- Per Share (Purpose Revised)
+NSE,WIPRO,INE075A01022,Wipro Limited,2011-06-29,,dividend,,,4,,,Annual General Meeting And Dividend Rs.4/- Per Share
+NSE,WIPRO,INE075A01022,Wipro Limited,2012-01-24,2012-01-25,dividend,,,2,,,Interim Dividend Rs.2/- Per Share (Purpose Revised)
+NSE,WIPRO,INE075A01022,Wipro Limited,2012-06-28,,dividend,,,4,,,Annual General Meeting And Dividend Rs.4/- Per Share
+NSE,WIPRO,INE075A01022,Wipro Limited,2013-01-23,2013-01-25,dividend,,,2,,,Interim Dividend Rs 2 Per Share (Purpose Revised)
+NSE,WIPRO,INE075A01022,Wipro Limited,2013-04-09,2013-04-11,other,,,,,,Scheme Of Arrangement
+NSE,WIPRO,INE075A01022,Wipro Limited,2013-06-27,,dividend,,,5,,,Annual General Meeting / Final Dividend Rs.5 Per Equity Share
+NSE,WIPRO,INE075A01022,Wipro Limited,2014-01-22,2014-01-23,dividend,,,3,,,Interim Dividend - Rs 3/- Per Share (Purpose Revised)
+NSE,WIPRO,INE075A01022,Wipro Limited,2014-07-21,,dividend,,,5,,,Annual General Meeting And Final Dividend- Rs.5/- Per Share (Bc Start Date Revised)
+NSE,WIPRO,INE075A01022,Wipro Limited,2015-01-22,2015-01-23,dividend,,,5,,,Interim Dividend - Rs 5/- Per Share (Purpose Revised)
+NSE,WIPRO,INE075A01022,Wipro Limited,2015-07-20,,dividend,,,7,,,Annual General Meeting/ Dividend - Rs 7/- Per Share
+NSE,WIPRO,INE075A01022,Wipro Limited,2016-01-25,2016-01-27,dividend,,,5,,,Interim Dividend - Rs 5/- Per Share (Purpose Revised)
+NSE,WIPRO,INE075A01022,Wipro Limited,2016-05-05,2016-05-06,buyback,,,,,,Buyback Of Shares
+NSE,WIPRO,INE075A01022,Wipro Limited,2016-07-11,,dividend,,,1,,,Annual General Meeting/ Dividend - Re 1/- Per Share
+NSE,WIPRO,INE075A01022,Wipro Limited,2017-02-02,2017-02-03,dividend,,,2,,,Interim Dividend Rs 2/- Per Share (Purpose Revised)
+NSE,WIPRO,INE075A01022,Wipro Limited,2017-06-13,2017-06-14,bonus,1,1,,,,Bonus 1:1
+NSE,WIPRO,INE075A01022,Wipro Limited,2017-07-13,,agm,,,,,,Annual General Meeting
+NSE,WIPRO,INE075A01022,Wipro Limited,2017-09-14,2017-09-15,buyback,,,,,,Buyback
+NSE,WIPRO,INE075A01022,Wipro Limited,2018-01-31,2018-02-01,dividend,,,1,,,Interim Dividend - Re 1 Per Share (Purpose Revised)
+NSE,WIPRO,INE075A01022,Wipro Limited,2018-07-13,,agm,,,,,,Annual General Meeting
+NSE,WIPRO,INE075A01022,Wipro Limited,2019-01-29,2019-01-30,dividend,,,1,,,Interim Dividend - Re 1 Per Share
+NSE,WIPRO,INE075A01022,Wipro Limited,2019-03-06,2019-03-07,bonus,1,3,,,,Bonus 1:3
+NSE,WIPRO,INE075A01022,Wipro Limited,2019-06-20,2019-06-21,buyback,,,,,,Buyback
+NSE,WIPRO,INE075A01022,Wipro Limited,2020-01-24,2020-01-27,dividend,,,1,,,Interim Dividend - Re 1 Per Share
+NSE,WIPRO,INE075A01022,Wipro Limited,2020-07-08,,agm,,,,,,Annual General Meeting
+NSE,WIPRO,INE075A01022,Wipro Limited,2020-12-10,2020-12-11,buyback,,,,,,Buyback
+NSE,WIPRO,INE075A01022,Wipro Limited,2021-01-22,2021-01-25,dividend,,,1,,,Interim Dividend - Re 1 Per Share
+NSE,WIPRO,INE075A01022,Wipro Limited,2021-07-08,,agm,,,,,,Annual General Meeting
+NSE,WIPRO,INE075A01022,Wipro Limited,2022-01-21,2022-01-24,dividend,,,1,,,Interim Dividend - Re 1 Per Share
+NSE,WIPRO,INE075A01022,Wipro Limited,2022-04-05,2022-04-06,dividend,,,5,,,Interim Dividend - Rs 5 Per Share
+NSE,WIPRO,INE075A01022,Wipro Limited,2022-07-14,,agm,,,,,,Annual General Meeting
+NSE,WIPRO,INE075A01022,Wipro Limited,2023-01-24,2023-01-25,dividend,,,1,,,Interim Dividend - Re  1 Per Share
+NSE,WIPRO,INE075A01022,Wipro Limited,2023-06-16,2023-06-16,buyback,,,,,,Buy Back
+NSE,WIPRO,INE075A01022,Wipro Limited,2023-07-10,,agm,,,,,,Annual General Meeting
+NSE,WIPRO,INE075A01022,Wipro Limited,2024-01-24,2024-01-24,dividend,,,1,,,Interim Dividend - Re 1 Per Share
+BSE,WIPRO,INE075A01022,Wipro Ltd,2024-01-24,2024-01-24,dividend,,,1,,,Interim Dividend - Rs. - 1.0000
+NSE,WIPRO,INE075A01022,Wipro Limited,2024-07-16,,agm,,,,,,Annual General Meeting
+NSE,WIPRO,INE075A01022,Wipro Limited,2024-12-03,2024-12-03,bonus,1,1,,,,Bonus 1:1
+BSE,WIPRO,INE075A01022,Wipro Ltd,2024-12-03,2024-12-03,bonus,1,1,,,,Bonus issue 1:1
+NSE,WIPRO,INE075A01022,Wipro Limited,2025-01-28,2025-01-28,dividend,,,6,,,Interim Dividend - Rs 6 Per Share
+BSE,WIPRO,INE075A01022,Wipro Ltd,2025-01-28,2025-01-28,dividend,,,6,,,Interim Dividend - Rs. - 6.0000
+BSE,WIPRO,INE075A01022,Wipro Ltd,2025-07-28,2025-07-28,dividend,,,5,,,Interim Dividend - Rs. - 5.0000
+NSE,WIPRO,INE075A01022,Wipro Limited,2025-07-28,2025-07-28,dividend,,,5,,,Interim Dividend - Rs 5 Per Share
+NSE,WIPRO,INE075A01022,Wipro Limited,2026-01-27,2026-01-27,dividend,,,6,,,Interim Dividend - Rs 6 Per Share
+BSE,WIPRO,INE075A01022,Wipro Ltd,2026-01-27,2026-01-27,dividend,,,6,,,Interim Dividend - Rs. - 6.0000
+BSE,WIPRO,INE075A01022,Wipro Ltd,2026-06-05,2026-06-05,buyback,,,,,,Buy Back of Shares
+NSE,WIPRO,INE075A01022,Wipro Limited,2026-06-05,2026-06-05,buyback,,,,,,Buy Back
+BSE,WIPRO,INE075A01022,Wipro Ltd,2026-07-27,2026-07-27,dividend,,,2,,,Interim Dividend - Rs. - 2.0000
+NSE,WIPRO,INE075A01022,Wipro Limited,2026-07-27,2026-07-27,dividend,,,2,,,Interim Dividend - Rs 2 Per Share

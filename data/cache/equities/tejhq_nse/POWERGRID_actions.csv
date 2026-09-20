@@ -1,0 +1,51 @@
+exchange,symbol,isin,company,ex_date,record_date,type,ratio_num,ratio_den,cash_amount,face_value_from,face_value_to,raw_subject
+NSE,POWERGRID,INE752E01010,Power Grid Corporation of India Limited,2010-01-11,2010-01-12,other,,,,,,Int Div-Re.0.50 Per Sharepurpose Revised
+NSE,POWERGRID,INE752E01010,Power Grid Corporation of India Limited,2010-09-07,,dividend,,,1,,,Annual General Meeting And Dividend Re.1/- Per Share
+NSE,POWERGRID,INE752E01010,Power Grid Corporation of India Limited,2011-02-11,2011-02-14,dividend,,,0.5,,,Interim Dividend-Re.0.50 Per Share (Purpose Revised)
+NSE,POWERGRID,INE752E01010,Power Grid Corporation of India Limited,2011-09-06,,dividend,,,1.25,,,Dividend-Rs.1.25 Per Share
+NSE,POWERGRID,INE752E01010,Power Grid Corporation of India Limited,2012-02-13,2012-02-14,dividend,,,0.8,,,Interim Dividend Re.0.80 Per Share (Purpose Revised)
+NSE,POWERGRID,INE752E01010,Power Grid Corporation of India Limited,2012-09-05,,dividend,,,1.31,,,Annual General Meeting/Dividend Re 1.31 Per Share
+NSE,POWERGRID,INE752E01010,Power Grid Corporation of India Limited,2013-02-15,2013-02-19,dividend,,,1.61,,,Interim Dividend Rs 1.61 Per Share (Purpose Revised)
+NSE,POWERGRID,INE752E01010,Power Grid Corporation of India Limited,2013-09-05,,dividend,,,1.14,,,Annual General Meeting / Dividend - Rs 1.14 Per Share
+NSE,POWERGRID,INE752E01010,Power Grid Corporation of India Limited,2014-03-04,2014-03-05,dividend,,,1.27,,,Interim Dividend Rs.1.27 Per Share(Purpose Revised)
+NSE,POWERGRID,INE752E01010,Power Grid Corporation of India Limited,2014-09-04,,dividend,,,1.31,,,Annual General Meeting / Final Dividend - Rs 1.31/- Per Share
+NSE,POWERGRID,INE752E01010,Power Grid Corporation of India Limited,2015-03-09,2015-03-10,dividend,,,0.69,,,Interim Dividend - Re 0.69/- Per Share (Purpose Revised)
+NSE,POWERGRID,INE752E01010,Power Grid Corporation of India Limited,2015-09-07,,dividend,,,1.31,,,Annual General Meeting/ Dividend -  Rs 1.31/- Per Share
+NSE,POWERGRID,INE752E01010,Power Grid Corporation of India Limited,2016-02-03,2016-02-04,dividend,,,0.8,,,Interim Dividend -  Re 0.80/- Per Share (Purpose Revised)
+NSE,POWERGRID,INE752E01010,Power Grid Corporation of India Limited,2016-09-08,,dividend,,,1.51,,,Dividend - Rs 1.51 Per Share
+NSE,POWERGRID,INE752E01010,Power Grid Corporation of India Limited,2017-02-16,2017-02-17,dividend,,,1,,,Interim Dividend Re 1/- Per Share (Purpose Revised)
+NSE,POWERGRID,INE752E01010,Power Grid Corporation of India Limited,2017-09-11,,dividend,,,3.35,,,Dividend - Rs 3.35 Per Share
+NSE,POWERGRID,INE752E01010,Power Grid Corporation of India Limited,2018-02-08,2018-02-09,dividend,,,2.45,,,Interim Dividend Rs 2.45 Per Share (Purpose Revised)
+NSE,POWERGRID,INE752E01010,Power Grid Corporation of India Limited,2018-09-10,,dividend,,,2.8,,,Annual General Meeting/Dividend Rs 2.80 Per Share
+NSE,POWERGRID,INE752E01010,Power Grid Corporation of India Limited,2019-03-14,2019-03-15,dividend,,,5.83,,,Interim Dividend - Rs 5.83 Per Share
+NSE,POWERGRID,INE752E01010,Power Grid Corporation of India Limited,2019-08-19,,dividend,,,2.5,,,Annual General Meeting/Dividend - Rs 2.50 Per Share
+NSE,POWERGRID,INE752E01010,Power Grid Corporation of India Limited,2020-03-16,2020-03-17,dividend,,,5.96,,,Interim Dividend - Rs 5.96 Per Share
+NSE,POWERGRID,INE752E01010,Power Grid Corporation of India Limited,2020-09-02,,dividend,,,4.04,,,Annual General Meeting/Dividend - Rs 4.04 Per Share
+NSE,POWERGRID,INE752E01010,Power Grid Corporation of India Limited,2020-12-17,2020-12-19,dividend,,,5,,,Interim Dividend - Rs 5 Per Share
+NSE,POWERGRID,INE752E01010,Power Grid Corporation of India Limited,2021-03-08,2021-03-09,dividend,,,4,,,Interim Dividend - Rs 4 Per Share
+NSE,POWERGRID,INE752E01010,Power Grid Corporation of India Limited,2021-07-29,2021-07-30,bonus,1,3,,,,Bonus 1:3
+NSE,POWERGRID,INE752E01010,Power Grid Corporation of India Limited,2021-09-08,,dividend,,,3,,,Annual General Meeting/Dividend - Rs 3 Per Share
+NSE,POWERGRID,INE752E01010,Power Grid Corporation of India Limited,2021-12-22,2021-12-23,dividend,,,7,,,Interim Dividend - Rs 4 Per Share/ Special Dividend - Rs 3 Per Share
+NSE,POWERGRID,INE752E01010,Power Grid Corporation of India Limited,2022-02-16,2022-02-17,dividend,,,5.5,,,Interim Dividend - Rs 5.50 Per Share
+NSE,POWERGRID,INE752E01010,Power Grid Corporation of India Limited,2022-08-19,2022-08-22,dividend,,,2.25,,,Annual General Meeting/Dividend - Rs 2.25 Per Share
+NSE,POWERGRID,INE752E01010,Power Grid Corporation of India Limited,2022-11-14,2022-11-15,dividend,,,5,,,Interim Dividend - Rs 5 Per Share
+NSE,POWERGRID,INE752E01010,Power Grid Corporation of India Limited,2023-02-08,2023-02-08,dividend,,,5,,,Interim Dividend - Rs 5 Per Share
+NSE,POWERGRID,INE752E01010,Power Grid Corporation of India Limited,2023-08-08,2023-08-08,dividend,,,4.75,,,Dividend - Rs 4.75 Per Share
+NSE,POWERGRID,INE752E01010,Power Grid Corporation of India Limited,2023-09-12,2023-09-12,bonus,1,3,,,,Bonus 1:3
+NSE,POWERGRID,INE752E01010,Power Grid Corporation of India Limited,2023-11-16,2023-11-16,dividend,,,4,,,Interim Dividend - Rs 4 Per Share
+BSE,POWERGRID,INE752E01010,Power Grid Corporation of India Ltd,2024-02-15,2024-02-15,dividend,,,4.5,,,Interim Dividend - Rs. - 4.5000
+NSE,POWERGRID,INE752E01010,Power Grid Corporation of India Limited,2024-02-15,2024-02-15,dividend,,,4.5,,,Interim Dividend - Rs 4.50 Per Share
+BSE,POWERGRID,INE752E01010,Power Grid Corporation of India Ltd,2024-08-16,2024-08-16,dividend,,,2.75,,,Final Dividend - Rs. - 2.7500
+NSE,POWERGRID,INE752E01010,Power Grid Corporation of India Limited,2024-08-16,2024-08-16,dividend,,,2.75,,,Annual General Meeting/Dividend - Rs 2.75 Per Share
+NSE,POWERGRID,INE752E01010,Power Grid Corporation of India Limited,2024-11-14,2024-11-14,dividend,,,4.5,,,Interim Dividend - Rs 4.50 Per Share
+BSE,POWERGRID,INE752E01010,Power Grid Corporation of India Ltd,2024-11-14,2024-11-14,dividend,,,4.5,,,Interim Dividend - Rs. - 4.5000
+NSE,POWERGRID,INE752E01010,Power Grid Corporation of India Limited,2025-02-07,2025-02-07,dividend,,,3.25,,,Interim Dividend - Rs 3.25 Per Share
+BSE,POWERGRID,INE752E01010,Power Grid Corporation of India Ltd,2025-02-07,2025-02-07,dividend,,,3.25,,,Interim Dividend - Rs. - 3.2500
+BSE,POWERGRID,INE752E01010,Power Grid Corporation of India Ltd,2025-08-19,2025-08-19,dividend,,,1.25,,,Final Dividend - Rs. - 1.2500
+NSE,POWERGRID,INE752E01010,Power Grid Corporation of India Limited,2025-08-19,2025-08-19,dividend,,,1.25,,,Dividend - Rs 1.25 Per Share
+NSE,POWERGRID,INE752E01010,Power Grid Corporation of India Limited,2025-11-10,2025-11-10,dividend,,,4.5,,,Interim Dividend - Rs 4.50 Per Share
+BSE,POWERGRID,INE752E01010,Power Grid Corporation of India Ltd,2025-11-10,2025-11-10,dividend,,,4.5,,,Interim Dividend - Rs. - 4.5000
+NSE,POWERGRID,INE752E01010,Power Grid Corporation of India Limited,2026-02-09,2026-02-09,dividend,,,3.25,,,Interim Dividend - Rs 3.25 Per Share
+BSE,POWERGRID,INE752E01010,Power Grid Corporation of India Ltd,2026-02-09,2026-02-09,dividend,,,3.25,,,Interim Dividend - Rs. - 3.2500
+BSE,POWERGRID,INE752E01010,Power Grid Corporation of India Ltd,2026-08-13,2026-08-13,dividend,,,1.25,,,Final Dividend - Rs. - 1.2500
+NSE,POWERGRID,INE752E01010,Power Grid Corporation of India Limited,2026-08-13,2026-08-13,dividend,,,1.25,,,Dividend - Rs 1.25 Per Share

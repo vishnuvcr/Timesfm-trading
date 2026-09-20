@@ -1,0 +1,34 @@
+exchange,symbol,isin,company,ex_date,record_date,type,ratio_num,ratio_den,cash_amount,face_value_from,face_value_to,raw_subject
+NSE,ITC,INE154A01025,ITC Limited,2010-06-09,,dividend,,,10,,,Final Dividend Rs.4.50 Per Share And Special Centenary Dividend Rs.5.50 Per Share
+NSE,ITC,INE154A01025,ITC Limited,2010-08-03,2010-08-04,bonus,1,1,,,,Bonus 1:1
+NSE,ITC,INE154A01025,ITC Limited,2011-06-10,,dividend,,,4.45,,,Dividend Final Rs 2.80 And Special Rs 1.65 Per Share
+NSE,ITC,INE154A01025,ITC Limited,2012-06-11,,dividend,,,4.5,,,Annual General Meeting/Dividend Rs 4.50 Per Share
+NSE,ITC,INE154A01025,ITC Limited,2013-05-31,,dividend,,,5.25,,,Annual General Meeting And Dividend Rs.5.25 Per Share
+NSE,ITC,INE154A01025,ITC Limited,2014-06-03,,dividend,,,6,,,Dividend - Rs 6/- Per Share
+NSE,ITC,INE154A01025,ITC Limited,2015-06-03,,dividend,,,6.25,,,Dividend - Rs 6.25/- Per Share
+NSE,ITC,INE154A01025,ITC Limited,2016-05-30,,dividend,,,10.5,,,Dividend-Rs.8.50 Per Share (Including Special Dividend Of Rs.2/- Per Share).
+NSE,ITC,INE154A01025,ITC Limited,2016-07-01,2016-07-04,bonus,1,2,,,,Bonus 1:2
+NSE,ITC,INE154A01025,ITC Limited,2017-06-05,,dividend,,,4.75,,,Dividend-Rs 4.75 Per Share
+NSE,ITC,INE154A01025,ITC Limited,2018-05-25,,dividend,,,5.15,,,Dividend- Rs 5.15 Per Share
+NSE,ITC,INE154A01025,ITC Limited,2019-05-22,,dividend,,,5.75,,,Dividend - Rs 5.75 Per Share
+NSE,ITC,INE154A01025,ITC Limited,2020-07-06,,dividend,,,10.15,,,Dividend - Rs 10.15 Per Share
+NSE,ITC,INE154A01025,ITC Limited,2021-02-22,2021-02-23,dividend,,,5,,,Interim Dividend - Rs 5 Per Share
+NSE,ITC,INE154A01025,ITC Limited,2021-06-10,2021-06-11,dividend,,,5.75,,,Dividend - Rs 5.75 Per Share
+NSE,ITC,INE154A01025,ITC Limited,2022-02-14,2022-02-15,dividend,,,5.25,,,Interim Dividend - Rs 5.25 Per Share
+NSE,ITC,INE154A01025,ITC Limited,2022-05-26,2022-05-28,dividend,,,6.25,,,Dividend - Rs 6.25 Per Share
+NSE,ITC,INE154A01025,ITC Limited,2023-02-15,2023-02-15,dividend,,,6,,,Interim Dividend - Rs  6 Per Share
+NSE,ITC,INE154A01025,ITC Limited,2023-05-30,2023-05-30,dividend,,,9.5,,,Dividend - Rs 6.75 Per Share /Special Dividend - Rs 2.75 Per Share
+NSE,ITC,INE154A01025,ITC Limited,2024-02-08,2024-02-08,dividend,,,6.25,,,Interim Dividend - Rs 6.25 Per Share
+BSE,ITC,INE154A01025,ITC Ltd,2024-02-08,2024-02-08,dividend,,,6.25,,,Interim Dividend - Rs. - 6.2500
+BSE,ITC,INE154A01025,ITC Ltd,2024-06-04,2024-06-04,dividend,,,7.5,,,Final Dividend - Rs. - 7.5000
+NSE,ITC,INE154A01025,ITC Limited,2024-06-04,2024-06-04,dividend,,,7.5,,,Dividend - Rs 7.50 Per Share
+BSE,ITC,INE154A01025,ITC Ltd,2025-01-06,2025-01-06,demerger,,,,,,Spin Off
+NSE,ITC,INE154A01025,ITC Limited,2025-01-06,2025-01-06,demerger,,,,,,Demerger
+NSE,ITC,INE154A01025,ITC Limited,2025-02-12,2025-02-12,dividend,,,6.5,,,Interim Dividend - Rs 6.50 Per Share
+BSE,ITC,INE154A01025,ITC Ltd,2025-02-12,2025-02-12,dividend,,,6.5,,,Interim Dividend - Rs. - 6.5000
+BSE,ITC,INE154A01025,ITC Ltd,2025-05-28,2025-05-28,dividend,,,7.85,,,Final Dividend - Rs. - 7.8500
+NSE,ITC,INE154A01025,ITC Limited,2025-05-28,2025-05-28,dividend,,,7.85,,,Dividend - Rs 7.85 Per Share
+NSE,ITC,INE154A01025,ITC Limited,2026-02-04,2026-02-04,dividend,,,6.5,,,Interim Dividend - Rs 6.50 Per Share
+BSE,ITC,INE154A01025,ITC Ltd,2026-02-04,2026-02-04,dividend,,,6.5,,,Interim Dividend - Rs. - 6.5000
+BSE,ITC,INE154A01025,ITC Ltd,2026-05-27,2026-05-27,dividend,,,8,,,Final Dividend - Rs. - 8.0000
+NSE,ITC,INE154A01025,ITC Limited,2026-05-27,2026-05-27,dividend,,,8,,,Dividend - Rs 8 Per Share

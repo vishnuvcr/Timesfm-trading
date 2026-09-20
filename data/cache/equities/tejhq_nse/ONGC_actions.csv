@@ -1,0 +1,57 @@
+exchange,symbol,isin,company,ex_date,record_date,type,ratio_num,ratio_den,cash_amount,face_value_from,face_value_to,raw_subject
+NSE,ONGC,INE213A01011,Oil & Natural Gas Corporation Limited,2010-09-09,,dividend,,,15,,,Annual General Meeting And Final Dividend Rs.15/- Per Share
+NSE,ONGC,INE213A01011,Oil & Natural Gas Corporation Limited,2010-12-20,2010-12-21,dividend,,,32,,,Special Interim Dividend-Rs.32/- Per Share (Purpose Revised)
+NSE,ONGC,INE213A01011,Oil & Natural Gas Corporation Limited,2011-02-08,2011-02-09,split,,,,10,5,Bonus 1:1 And Face Value Split From Rs.10/- To Rs.5/-
+NSE,ONGC,INE213A01011,Oil & Natural Gas Corporation Limited,2011-08-18,,dividend,,,0.75,,,Annual General Meeting And Dividend Re.0.75 Per Share
+NSE,ONGC,INE213A01011,Oil & Natural Gas Corporation Limited,2012-01-06,2012-01-09,dividend,,,6.25,,,Interim Dividend Rs.6.25 Per Share (Purpose Revised)
+NSE,ONGC,INE213A01011,Oil & Natural Gas Corporation Limited,2012-03-19,2012-03-20,dividend,,,1.5,,,Interim Dividend Rs.1.50 Per Share (Purpose Revised)
+NSE,ONGC,INE213A01011,Oil & Natural Gas Corporation Limited,2012-09-14,,dividend,,,2,,,Annual General Meeting/ Dividend Rs 2.00 Per Share
+NSE,ONGC,INE213A01011,Oil & Natural Gas Corporation Limited,2012-12-24,2012-12-26,dividend,,,5,,,Interim Dividend Of Rs.5/- Per Equity Share
+NSE,ONGC,INE213A01011,Oil & Natural Gas Corporation Limited,2013-03-22,2013-03-25,dividend,,,4,,,Second Interim Dividend Rs.4 Per Share (Purpose Revised)
+NSE,ONGC,INE213A01011,Oil & Natural Gas Corporation Limited,2013-09-17,,dividend,,,0.5,,,Annual General Meeting / Dividend - Re 0.50 Per Share
+NSE,ONGC,INE213A01011,Oil & Natural Gas Corporation Limited,2013-12-10,2013-12-11,dividend,,,5,,,Interim Dividend Of Rs.5/- Per Equity Share
+NSE,ONGC,INE213A01011,Oil & Natural Gas Corporation Limited,2014-03-27,2014-03-29,dividend,,,4.25,,,Second Interim Dividend - Rs 4.25/- Per Share (Purpose Revised)
+NSE,ONGC,INE213A01011,Oil & Natural Gas Corporation Limited,2014-09-11,,dividend,,,0.25,,,Annual General Meeting And Dividend Re.0.25 Per Share
+NSE,ONGC,INE213A01011,Oil & Natural Gas Corporation Limited,2014-12-16,2014-12-17,dividend,,,5,,,Interim Dividend - Rs 5/- Per Share (Purpose Revised)
+NSE,ONGC,INE213A01011,Oil & Natural Gas Corporation Limited,2015-03-24,2015-03-25,dividend,,,4,,,Second Interim Dividend - Rs 4/- Per Share (Purpose Revised)
+NSE,ONGC,INE213A01011,Oil & Natural Gas Corporation Limited,2015-09-07,,dividend,,,0.5,,,Annual General Meeting/ Dividend -  Re 0.50/- Per Share
+NSE,ONGC,INE213A01011,Oil & Natural Gas Corporation Limited,2015-11-10,2015-11-13,dividend,,,4.5,,,Interim Dividend -  Rs 4.50/- Per Share (Purpose Revised)
+NSE,ONGC,INE213A01011,Oil & Natural Gas Corporation Limited,2016-03-16,2016-03-17,dividend,,,0.75,,,Interim Dividend - Re 0.75/- Per Share (Purpose Revised)
+NSE,ONGC,INE213A01011,Oil & Natural Gas Corporation Limited,2016-08-31,,dividend,,,3.25,,,Annual General Meeting/Dividend - Rs 3.25 Per Share
+NSE,ONGC,INE213A01011,Oil & Natural Gas Corporation Limited,2016-11-03,2016-11-05,dividend,,,4.5,,,Interim Dividend Rs 4.50 Per Share (Purpose Revised)
+NSE,ONGC,INE213A01011,Oil & Natural Gas Corporation Limited,2016-12-15,2016-12-16,bonus,1,2,,,,Bonus 1: 2
+NSE,ONGC,INE213A01011,Oil & Natural Gas Corporation Limited,2017-02-07,2017-02-08,dividend,,,2.25,,,Interim Dividend Rs 2.25 Per Share (Purpose Revised)
+NSE,ONGC,INE213A01011,Oil & Natural Gas Corporation Limited,2017-09-21,,dividend,,,0.8,,,Annual General Meeting/Dividend - Re 0.80 Per Share
+NSE,ONGC,INE213A01011,Oil & Natural Gas Corporation Limited,2017-11-03,2017-11-06,dividend,,,3,,,Interim Dividend - Rs 3/- Per Share (Purpose Revised)
+NSE,ONGC,INE213A01011,Oil & Natural Gas Corporation Limited,2018-03-13,2018-03-14,dividend,,,2.25,,,Interim Dividend - Rs 2.25 Per Share (Purpose Revised)
+NSE,ONGC,INE213A01011,Oil & Natural Gas Corporation Limited,2018-09-19,2018-09-21,dividend,,,1.35,,,Dividend Rs 1.35 Per Share
+NSE,ONGC,INE213A01011,Oil & Natural Gas Corporation Limited,2019-01-03,2019-01-04,buyback,,,,,,Buy Back
+NSE,ONGC,INE213A01011,Oil & Natural Gas Corporation Limited,2019-02-28,2019-03-01,dividend,,,5.25,,,Interim Dividend - Rs 5.25 Per Sh
+NSE,ONGC,INE213A01011,Oil & Natural Gas Corporation Limited,2019-03-26,2019-03-27,dividend,,,1,,,Interim Dividend - Re 1 Per Sh
+NSE,ONGC,INE213A01011,Oil & Natural Gas Corporation Limited,2019-08-22,2019-08-23,dividend,,,0.75,,,Annual General Meeting/Dividend - Rs 0.75 Per Share
+NSE,ONGC,INE213A01011,Oil & Natural Gas Corporation Limited,2020-03-23,2020-03-24,dividend,,,5,,,Interim Dividend - Rs 5 Per Share
+NSE,ONGC,INE213A01011,Oil & Natural Gas Corporation Limited,2021-02-17,2021-02-20,dividend,,,1.75,,,Interim Dividend - Rs 1.75 Per Share
+NSE,ONGC,INE213A01011,Oil & Natural Gas Corporation Limited,2021-09-08,2021-09-10,dividend,,,1.85,,,Dividend - Rs 1.85 Per Share
+NSE,ONGC,INE213A01011,Oil & Natural Gas Corporation Limited,2021-11-22,2021-11-23,dividend,,,5.5,,,Interim Dividend - Rs 5.50 Per Share
+NSE,ONGC,INE213A01011,Oil & Natural Gas Corporation Limited,2022-02-21,2022-02-22,dividend,,,1.75,,,Interim Dividend - Rs 1.75 Per Share
+NSE,ONGC,INE213A01011,Oil & Natural Gas Corporation Limited,2022-08-18,2022-08-19,dividend,,,3.25,,,Dividend - Rs 3.25 Per Share
+NSE,ONGC,INE213A01011,Oil & Natural Gas Corporation Limited,2022-11-21,2022-11-22,dividend,,,6.75,,,Interim Dividend - Rs 6.75 Per Share
+NSE,ONGC,INE213A01011,Oil & Natural Gas Corporation Limited,2023-02-24,2023-02-24,dividend,,,4,,,Interim Dividend - Rs 4 Per Share
+NSE,ONGC,INE213A01011,Oil & Natural Gas Corporation Limited,2023-08-18,2023-08-18,dividend,,,0.5,,,Dividend - Re 0.50 Per Share
+NSE,ONGC,INE213A01011,Oil & Natural Gas Corporation Limited,2023-11-21,2023-11-21,dividend,,,5.75,,,Interim Dividend - Rs 5.75 Per Share
+BSE,ONGC,INE213A01029,Oil and Natural Gas Corporation Ltd,2024-02-16,2024-02-17,dividend,,,4,,,Interim Dividend - Rs. - 4.0000
+NSE,ONGC,INE213A01011,Oil & Natural Gas Corporation Limited,2024-02-16,2024-02-17,dividend,,,4,,,Interim Dividend - Rs 4 Per Share
+NSE,ONGC,INE213A01011,Oil & Natural Gas Corporation Limited,2024-08-23,2024-08-23,dividend,,,2.5,,,Dividend - Rs 2.50 Per Share
+BSE,ONGC,INE213A01029,Oil and Natural Gas Corporation Ltd,2024-08-23,2024-08-23,dividend,,,2.5,,,Final Dividend - Rs. - 2.5000
+BSE,ONGC,INE213A01029,Oil and Natural Gas Corporation Ltd,2024-11-19,2024-11-20,dividend,,,6,,,Interim Dividend - Rs. - 6.0000
+NSE,ONGC,INE213A01011,Oil & Natural Gas Corporation Limited,2024-11-19,2024-11-20,dividend,,,6,,,Interim Dividend - Rs 6 Per Share
+NSE,ONGC,INE213A01011,Oil & Natural Gas Corporation Limited,2025-02-07,2025-02-07,dividend,,,5,,,Interim Dividend - Rs 5 Per Share
+BSE,ONGC,INE213A01029,Oil and Natural Gas Corporation Ltd,2025-02-07,2025-02-07,dividend,,,5,,,Interim Dividend - Rs. - 5.0000
+NSE,ONGC,INE213A01011,Oil & Natural Gas Corporation Limited,2025-09-04,2025-09-04,dividend,,,1.25,,,Dividend - Rs 1.25 Per Share
+BSE,ONGC,INE213A01029,Oil and Natural Gas Corporation Ltd,2025-09-04,2025-09-04,dividend,,,1.25,,,Final Dividend - Rs. - 1.2500
+BSE,ONGC,INE213A01029,Oil and Natural Gas Corporation Ltd,2025-11-14,2025-11-14,dividend,,,6,,,Interim Dividend - Rs. - 6.0000
+NSE,ONGC,INE213A01011,Oil & Natural Gas Corporation Limited,2025-11-14,2025-11-14,dividend,,,6,,,Interim Dividend - Rs 6 Per Share
+NSE,ONGC,INE213A01011,Oil & Natural Gas Corporation Limited,2026-02-18,2026-02-18,dividend,,,6.25,,,Interim Dividend - Rs 6.25 Per Share
+BSE,ONGC,INE213A01029,Oil and Natural Gas Corporation Ltd,2026-02-18,2026-02-18,dividend,,,6.25,,,Interim Dividend - Rs. - 6.2500
+BSE,ONGC,INE213A01029,Oil and Natural Gas Corporation Ltd,2026-09-04,2026-09-04,dividend,,,1,,,Final Dividend - Rs. - 1.0000
+NSE,ONGC,INE213A01011,Oil & Natural Gas Corporation Limited,2026-09-04,2026-09-04,dividend,,,1,,,Dividend - Re 1 Per Share

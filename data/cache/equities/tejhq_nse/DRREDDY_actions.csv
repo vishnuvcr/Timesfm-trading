@@ -1,0 +1,24 @@
+exchange,symbol,isin,company,ex_date,record_date,type,ratio_num,ratio_den,cash_amount,face_value_from,face_value_to,raw_subject
+NSE,DRREDDY,INE089A01023,Dr. Reddy's Laboratories Limited,2010-07-02,,dividend,,,11.25,,,Annual General Meeting And Final Dividend Rs.11.25 Per Share
+NSE,DRREDDY,INE089A01023,Dr. Reddy's Laboratories Limited,2011-03-17,2011-03-18,bonus,,,,,,Scheme Of Arrangement - Bonus Debentures 6:1
+NSE,DRREDDY,INE089A01023,Dr. Reddy's Laboratories Limited,2011-06-30,,dividend,,,11.25,,,Annual General Meeting And Dividend Rs.11.25 Per Share
+NSE,DRREDDY,INE089A01023,Dr. Reddy's Laboratories Limited,2012-06-28,,dividend,,,13.75,,,Annual General Meeting And Dividend - Rs.13.75 Per Share
+NSE,DRREDDY,INE089A01023,Dr. Reddy's Laboratories Limited,2013-07-12,,dividend,,,15,,,Annual General Meeting And Dividend Rs.15/- Per Share
+NSE,DRREDDY,INE089A01023,Dr. Reddy's Laboratories Limited,2014-07-11,,dividend,,,18,,,Annual General Meeting / Final Dividend - Rs 18/- Per Share
+NSE,DRREDDY,INE089A01023,Dr. Reddy's Laboratories Limited,2015-07-10,,dividend,,,20,,,Annual General Meeting/Dividend Rs 20/- Per Share
+NSE,DRREDDY,INE089A01023,Dr. Reddy's Laboratories Limited,2016-07-18,,dividend,,,20,,,Annual General Meeting/ Dividend - Rs 20/- Per Share
+NSE,DRREDDY,INE089A01023,Dr. Reddy's Laboratories Limited,2017-07-17,,dividend,,,20,,,Annual General Meeting/Dividend - Rs 20/- Per Share
+NSE,DRREDDY,INE089A01023,Dr. Reddy's Laboratories Limited,2018-07-16,,dividend,,,20,,,Annual General Meeting/Dividend- Rs 20 Per Share
+NSE,DRREDDY,INE089A01023,Dr. Reddy's Laboratories Limited,2019-07-15,,dividend,,,20,,,Annual General Meeting/Dividend - Rs 20 Per Share
+NSE,DRREDDY,INE089A01023,Dr. Reddy's Laboratories Limited,2020-07-13,,dividend,,,25,,,Annual General Meeting/Dividend - Rs 25 Per Share
+NSE,DRREDDY,INE089A01023,Dr. Reddy's Laboratories Limited,2021-07-09,,dividend,,,25,,,Annual General Meeting/Dividend - Rs 25 Per Share
+NSE,DRREDDY,INE089A01023,Dr. Reddy's Laboratories Limited,2022-07-11,,dividend,,,30,,,Annual General Meeting/Dividend - Rs 30 Per Share
+NSE,DRREDDY,INE089A01023,Dr. Reddy's Laboratories Limited,2023-07-11,,dividend,,,40,,,Annual General Meeting/Dividend - Rs 40 Per Share
+BSE,DRREDDY,INE089A01031,Dr Reddys Laboratories Ltd,2024-07-16,,dividend,,,40,,,Final Dividend - Rs. - 40.0000
+NSE,DRREDDY,INE089A01023,Dr. Reddy's Laboratories Limited,2024-07-16,,dividend,,,40,,,Annual General Meeting/Dividend - Rs 40 Per Share
+BSE,DRREDDY,INE089A01031,Dr Reddys Laboratories Ltd,2024-10-28,2024-10-28,split,,,,5,1,Stock  Split From Rs.5/- to Rs.1/-
+NSE,DRREDDY,INE089A01023,Dr. Reddy's Laboratories Limited,2024-10-28,2024-10-28,split,,,,5,1,Face Value Split (Sub-Division) - From Rs 5/- Per Share To Re 1/- Per Share
+BSE,DRREDDY,INE089A01031,Dr Reddys Laboratories Ltd,2025-07-10,2025-07-10,dividend,,,8,,,Final Dividend - Rs. - 8.0000
+NSE,DRREDDY,INE089A01023,Dr. Reddy's Laboratories Limited,2025-07-10,2025-07-10,dividend,,,8,,,Dividend - Rs 8 Per Share
+NSE,DRREDDY,INE089A01023,Dr. Reddy's Laboratories Limited,2026-07-10,2026-07-10,dividend,,,8,,,Dividend - Rs 8 Per Share
+BSE,DRREDDY,INE089A01031,Dr Reddys Laboratories Ltd,2026-07-10,2026-07-10,dividend,,,8,,,Final Dividend - Rs. - 8.0000

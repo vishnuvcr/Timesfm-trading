@@ -1,0 +1,41 @@
+exchange,symbol,isin,company,ex_date,record_date,type,ratio_num,ratio_den,cash_amount,face_value_from,face_value_to,raw_subject
+NSE,ASIANPAINT,INE021A01018,Asian Paints Limited,2010-06-30,,dividend,,,18.5,,,Annual General Meeting And Dividend Rs.18.50 Per Share
+NSE,ASIANPAINT,INE021A01018,Asian Paints Limited,2010-10-29,2010-11-01,dividend,,,8.5,,,Interim Dividend-Rs.8.50 Per Share (Purpose Revised)
+NSE,ASIANPAINT,INE021A01018,Asian Paints Limited,2011-06-09,,dividend,,,23.5,,,Annual General Meeting And Dividend Rs.23.50 Per Share
+NSE,ASIANPAINT,INE021A01018,Asian Paints Limited,2011-10-25,2011-10-28,dividend,,,9.5,,,Interim Dividend Rs.9.50 Per Share (Purpose Revised)
+NSE,ASIANPAINT,INE021A01018,Asian Paints Limited,2012-06-07,,dividend,,,30.5,,,Annual General Meeting And Dividend - Rs.30.50 Per Share
+NSE,ASIANPAINT,INE021A01018,Asian Paints Limited,2012-10-29,2012-10-30,dividend,,,9.5,,,Interim Dividend Rs 9.50 Per Share (Purpose Revised)
+NSE,ASIANPAINT,INE021A01018,Asian Paints Limited,2013-06-06,,dividend,,,36.5,,,Annual General Meeting / Final Dividend Rs.36.50/- Per Equity Share
+NSE,ASIANPAINT,INE021A01018,Asian Paints Limited,2013-07-30,2013-07-31,split,,,,,,Face Value Split Rs 10 To Re 1
+NSE,ASIANPAINT,INE021A01018,Asian Paints Limited,2013-10-24,2013-10-26,dividend,,,1.1,,,Interim Dividend - Rs 1.10/- Per Share
+NSE,ASIANPAINT,INE021A01018,Asian Paints Limited,2014-06-16,,dividend,,,4.2,,,Annual General Meeting/Dividend Rs 4.20/- Per Share
+NSE,ASIANPAINT,INE021A01018,Asian Paints Limited,2014-09-22,2014-09-23,dividend,,,1.8,,,Interim Dividend Rs.1.80 Per Share (Purpose Revised)
+NSE,ASIANPAINT,INE021A01018,Asian Paints Limited,2015-06-24,,dividend,,,4.3,,,Annual General Meeting/ Dividend - Rs 4.30/- Per Share
+NSE,ASIANPAINT,INE021A01018,Asian Paints Limited,2015-10-28,2015-10-29,dividend,,,2.2,,,Interim Dividend - Rs 2.20/- Per Share (Purpose Revised)
+NSE,ASIANPAINT,INE021A01018,Asian Paints Limited,2016-06-16,,dividend,,,5.3,,,Annul General Meeting/ Dividend - Rs 5.30/- Per Share
+NSE,ASIANPAINT,INE021A01018,Asian Paints Limited,2016-11-01,2016-11-02,dividend,,,2.65,,,Interim Dividend Rs 2.65 Per Share (Purpose Revised)
+NSE,ASIANPAINT,INE021A01018,Asian Paints Limited,2017-06-15,,dividend,,,7.65,,,Annual General Meeting/Dividend Rs 5.65 Per Share + Special Dividend Rs 2/- Per Share
+NSE,ASIANPAINT,INE021A01018,Asian Paints Limited,2017-10-31,2017-11-01,dividend,,,2.65,,,Interim Dividend - Rs 2.65 Per Share (Purpose Revised)
+NSE,ASIANPAINT,INE021A01018,Asian Paints Limited,2018-06-14,,dividend,,,6.05,,,Dividend- Rs 6.05 Per Share
+NSE,ASIANPAINT,INE021A01018,Asian Paints Limited,2018-10-29,2018-10-30,dividend,,,2.85,,,Interim Dividend - Rs 2.85 Per Sh
+NSE,ASIANPAINT,INE021A01018,Asian Paints Limited,2019-06-13,,dividend,,,7.65,,,Dividend Rs -7.65 Per Share
+NSE,ASIANPAINT,INE021A01018,Asian Paints Limited,2019-10-30,2019-10-31,dividend,,,3.35,,,Interim Dividend - Rs 3.35 Per Sh
+NSE,ASIANPAINT,INE021A01018,Asian Paints Limited,2020-03-03,2020-03-04,dividend,,,7.15,,,Interim Dividend - Rs 7.15 Per Share
+NSE,ASIANPAINT,INE021A01018,Asian Paints Limited,2020-07-23,,dividend,,,1.5,,,Annual General Meeting/Dividend - Rs  1.50 Per Share
+NSE,ASIANPAINT,INE021A01018,Asian Paints Limited,2020-10-28,2020-10-30,dividend,,,3.35,,,Interim Dividend - Rs 3.35 Per Share
+NSE,ASIANPAINT,INE021A01018,Asian Paints Limited,2021-06-10,2021-06-11,dividend,,,14.5,,,Dividend - Rs 14.50 Per Sh
+NSE,ASIANPAINT,INE021A01018,Asian Paints Limited,2021-10-28,2021-10-29,dividend,,,3.65,,,Interim Dividend - Rs 3.65 Per Share
+NSE,ASIANPAINT,INE021A01018,Asian Paints Limited,2022-06-09,2022-06-10,dividend,,,15.5,,,Dividend - Rs 15.50 Per Share
+NSE,ASIANPAINT,INE021A01018,Asian Paints Limited,2022-10-31,2022-11-01,dividend,,,4.4,,,Interim Dividend - Rs 4.40 Per Share
+NSE,ASIANPAINT,INE021A01018,Asian Paints Limited,2023-06-09,2023-06-09,dividend,,,21.25,,,Dividend - Rs 21.25 Per Share
+NSE,ASIANPAINT,INE021A01018,Asian Paints Limited,2023-11-03,2023-11-03,dividend,,,5.15,,,Interim Dividend - Rs 5.15 Per Share
+NSE,ASIANPAINT,INE021A01018,Asian Paints Limited,2024-06-11,2024-06-11,dividend,,,28.15,,,Dividend - Rs 28.15 Per Share
+BSE,ASIANPAINT,INE021A01026,Asian Paints Ltd,2024-06-11,2024-06-11,dividend,,,28.15,,,Final Dividend - Rs. - 28.1500
+BSE,ASIANPAINT,INE021A01026,Asian Paints Ltd,2024-11-19,2024-11-19,dividend,,,4.25,,,Interim Dividend - Rs. - 4.2500
+NSE,ASIANPAINT,INE021A01018,Asian Paints Limited,2024-11-19,2024-11-19,dividend,,,4.25,,,Interim Dividend - Rs 4.25 Per Share
+BSE,ASIANPAINT,INE021A01026,Asian Paints Ltd,2025-06-10,2025-06-10,dividend,,,20.55,,,Final Dividend - Rs. - 20.5500
+NSE,ASIANPAINT,INE021A01018,Asian Paints Limited,2025-06-10,2025-06-10,dividend,,,20.55,,,Dividend - Rs 20.55 Per Share
+NSE,ASIANPAINT,INE021A01018,Asian Paints Limited,2025-11-18,2025-11-18,dividend,,,4.5,,,Interim Dividend - Rs 4.50 Per Share
+BSE,ASIANPAINT,INE021A01026,Asian Paints Ltd,2025-11-18,2025-11-18,dividend,,,4.5,,,Interim Dividend - Rs. - 4.5000
+BSE,ASIANPAINT,INE021A01026,Asian Paints Ltd,2026-06-23,2026-06-23,dividend,,,23,,,Final Dividend - Rs. - 23.0000
+NSE,ASIANPAINT,INE021A01018,Asian Paints Limited,2026-06-23,2026-06-23,dividend,,,23,,,Dividend - Rs 23 Per Share

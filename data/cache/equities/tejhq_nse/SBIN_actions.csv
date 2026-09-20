@@ -1,0 +1,22 @@
+exchange,symbol,isin,company,ex_date,record_date,type,ratio_num,ratio_den,cash_amount,face_value_from,face_value_to,raw_subject
+NSE,SBIN,INE062A01012,State Bank of India,2010-02-05,,other,,,,,,Int Div-Rs.10/- Per Share
+NSE,SBIN,INE062A01012,State Bank of India,2010-06-09,,dividend,,,20,,,Final Dividend-Rs.20/- Per Share (Purpose Revised)
+NSE,SBIN,INE062A01012,State Bank of India,2011-05-20,,dividend,,,30,,,Dividend-Rs.30/- Per Share (Purpose Revised)
+NSE,SBIN,INE062A01012,State Bank of India,2012-05-24,,dividend,,,35,,,Annual General Meeting And Dividend Rs 35 Per Share (Purpose Revised)
+NSE,SBIN,INE062A01012,State Bank of India,2013-05-28,,dividend,,,41.5,,,Dividend Rs 41.50 Per Share (Purpose Revised)
+NSE,SBIN,INE062A01012,State Bank of India,2014-03-11,,dividend,,,15,,,Interim Dividend Rs 15 Per Share
+NSE,SBIN,INE062A01012,State Bank of India,2014-05-29,,dividend,,,15,,,Annual General Meeting And Dividend Rs 15 Per Share (Purpose Revised)
+NSE,SBIN,INE062A01012,State Bank of India,2014-11-20,2014-11-21,split,,,,,,Face Value Split Rs.10/- To Re.1/- Per Share
+NSE,SBIN,INE062A01012,State Bank of India,2015-05-28,,dividend,,,3.5,,,Dividend - Rs 3.50/- Per Share (Purpose Revised)
+NSE,SBIN,INE062A01012,State Bank of India,2016-06-03,,dividend,,,2.6,,,Dividend - Rs 2.60/- Per Share
+NSE,SBIN,INE062A01012,State Bank of India,2017-05-26,,dividend,,,2.6,,,Dividend - Rs 2.60 Per Share (Purpose Revised)
+NSE,SBIN,INE062A01012,State Bank of India,2018-06-15,,agm,,,,,,Annual General Meeting/ Change In Registrar And Transfer Agent
+NSE,SBIN,INE062A01012,State Bank of India,2021-06-03,2021-06-04,dividend,,,4,,,Dividend - Rs 4 Per Share
+NSE,SBIN,INE062A01012,State Bank of India,2022-05-25,,dividend,,,7.1,,,Dividend - Rs 7.10 Per Share
+NSE,SBIN,INE062A01012,State Bank of India,2023-05-31,,dividend,,,11.3,,,Dividend - Rs 11.30 Per Share
+BSE,SBIN,INE062A01020,State Bank of India,2024-05-22,2024-05-22,dividend,,,13.7,,,Final Dividend - Rs. - 13.7000
+NSE,SBIN,INE062A01012,State Bank of India,2024-05-22,2024-05-22,dividend,,,13.7,,,Dividend - Rs 13.70 Per Share
+BSE,SBIN,INE062A01020,State Bank of India,2025-05-16,2025-05-16,dividend,,,15.9,,,Final Dividend - Rs. - 15.9000
+NSE,SBIN,INE062A01012,State Bank of India,2025-05-16,2025-05-16,dividend,,,15.9,,,Dividend - Rs 15.90 Per Share
+NSE,SBIN,INE062A01012,State Bank of India,2026-05-15,2026-05-16,dividend,,,17.35,,,Dividend - Rs 17.35 Per Share
+BSE,SBIN,INE062A01020,State Bank of India,2026-05-15,2026-05-16,dividend,,,17.35,,,Final Dividend - Rs. - 17.3500

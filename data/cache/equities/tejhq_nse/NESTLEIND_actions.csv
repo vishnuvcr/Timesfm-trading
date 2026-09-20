@@ -1,0 +1,59 @@
+exchange,symbol,isin,company,ex_date,record_date,type,ratio_num,ratio_den,cash_amount,face_value_from,face_value_to,raw_subject
+NSE,NESTLEIND,INE239A01016,Nestle India Limited,2010-04-23,,other,,,,,,Div-Fin Rs.12.5+Int Rs.9 Purpose Revised
+NSE,NESTLEIND,INE239A01016,Nestle India Limited,2010-11-03,2010-11-04,dividend,,,27,,,2nd Interim Dividend - Rs 27/- Per Share (Purpose Revised)
+NSE,NESTLEIND,INE239A01016,Nestle India Limited,2011-04-21,,dividend,,,21.5,,,Final Dividend Rs.12.50/- Per Share And Interim Dividend Rs.9/- Per Share(Purpose Revised)
+NSE,NESTLEIND,INE239A01016,Nestle India Limited,2011-12-12,2011-12-13,dividend,,,27,,,2nd Interim Dividend Rs.27/- Per Share (Purpose Revised)
+NSE,NESTLEIND,INE239A01016,Nestle India Limited,2012-03-21,,dividend,,,12.5,,,Annual General Meeting And Dividend - Rs.12.50/- Per Share
+NSE,NESTLEIND,INE239A01016,Nestle India Limited,2012-08-01,2012-08-02,dividend,,,18,,,Interim Dividend Rs 18 Per Share (Purpose Revised)
+NSE,NESTLEIND,INE239A01016,Nestle India Limited,2012-12-12,2012-12-13,dividend,,,18,,,2nd Interim Dividend Rs.18/- Per Share (Purpose Revised)
+NSE,NESTLEIND,INE239A01016,Nestle India Limited,2013-02-25,2013-02-26,dividend,,,12.5,,,Interim Dividend Rs 12.50 Per Share
+NSE,NESTLEIND,INE239A01016,Nestle India Limited,2013-04-29,,agm,,,,,,Annual General Meeting
+NSE,NESTLEIND,INE239A01016,Nestle India Limited,2013-11-01,2013-11-05,dividend,,,18,,,2nd Interim Dividend Rs.18/- Per Share (Purpose Revised)
+NSE,NESTLEIND,INE239A01016,Nestle India Limited,2014-05-15,,dividend,,,12.5,,,Annual General Meeting / Final Dividend - Rs 12.50/- Per Share
+NSE,NESTLEIND,INE239A01016,Nestle India Limited,2014-09-15,2014-09-16,dividend,,,30,,,2nd Interim Dividend Rs.30/- Per Share (Purpose Revised)
+NSE,NESTLEIND,INE239A01016,Nestle India Limited,2014-12-08,2014-12-09,dividend,,,8,,,Third Interim Dividend - Rs 8/- Per Share (Purpose Revised)
+NSE,NESTLEIND,INE239A01016,Nestle India Limited,2015-05-19,,dividend,,,26.5,,,Annual General Meeting/Final Dividend - Rs 12.50/- Per Share / Interim Dividend - Rs 14/- Per Share (Purpose Revised)
+NSE,NESTLEIND,INE239A01016,Nestle India Limited,2015-12-11,2015-12-14,dividend,,,16,,,Interim Dividend-Rs 16/- Per Share
+NSE,NESTLEIND,INE239A01016,Nestle India Limited,2016-05-18,,dividend,,,30.5,,,Annual General Meeting/Final Dividend- Rs 18.50/- Per Share + Interim Dividend -Rs 12/- Per Share (Purpose Revised)
+NSE,NESTLEIND,INE239A01016,Nestle India Limited,2016-08-05,2016-08-08,dividend,,,12,,,Interim Dividend - Re 12/- Per Share(Purpose Revised)
+NSE,NESTLEIND,INE239A01016,Nestle India Limited,2016-12-09,2016-12-13,dividend,,,16,,,Interim Dividend Rs 16/- Per Share (Purpose Revised)
+NSE,NESTLEIND,INE239A01016,Nestle India Limited,2017-05-19,,dividend,,,38,,,Annual General Meeting/Dividend - Rs 23/- Per Share/Interim Dividend -Rs 15/- Per Share
+NSE,NESTLEIND,INE239A01016,Nestle India Limited,2017-08-02,2017-08-03,dividend,,,15,,,Interim Dividend Rs 15/- Per Share
+NSE,NESTLEIND,INE239A01016,Nestle India Limited,2017-12-11,2017-12-12,dividend,,,33,,,Interim Dividend - Rs 33/- Per Share (Purpose Revised)
+NSE,NESTLEIND,INE239A01016,Nestle India Limited,2018-05-16,,dividend,,,43,,,Annual General Meeting/ Final Dividend - Rs 23 Per Share/ Interim Dividend - Rs 20 Per Share (Purpose Revised)
+NSE,NESTLEIND,INE239A01016,Nestle India Limited,2018-08-10,2018-08-13,dividend,,,20,,,Interim Dividend Rs 20 Per Share
+NSE,NESTLEIND,INE239A01016,Nestle India Limited,2018-12-12,2018-12-13,dividend,,,50,,,Interim Dividend - Rs 50 Per Share
+NSE,NESTLEIND,INE239A01016,Nestle India Limited,2019-04-30,,dividend,,,25,,,Annual General Meeting/ Dividend - Rs 25 Per Share
+NSE,NESTLEIND,INE239A01016,Nestle India Limited,2019-05-06,2019-05-07,dividend,,,23,,,Interim Dividend - Rs 23 Per Share
+NSE,NESTLEIND,INE239A01016,Nestle India Limited,2019-08-09,2019-08-13,dividend,,,203,,,Interim Dividend - Rs 23 Per Share/ Special Dividend - Rs180 Per Share
+NSE,NESTLEIND,INE239A01016,Nestle India Limited,2019-12-10,2019-12-11,dividend,,,55,,,Interim Dividend - Rs 55 Per Share
+NSE,NESTLEIND,INE239A01016,Nestle India Limited,2020-06-11,,dividend,,,61,,,Annual General Meeting/Dividend - Rs 61 Per Share
+NSE,NESTLEIND,INE239A01016,Nestle India Limited,2020-10-29,2020-11-02,other,,,,,,Interim Dividned - Rs 135 Per Share
+NSE,NESTLEIND,INE239A01016,Nestle India Limited,2021-04-29,,dividend,,,65,,,Annual General Meeting/Dividend - Rs 65 Per Share
+NSE,NESTLEIND,INE239A01016,Nestle India Limited,2021-04-29,,dividend,,,25,,,Interim Dividend - Rs 25 Per Share
+NSE,NESTLEIND,INE239A01016,Nestle India Limited,2021-10-26,2021-10-27,dividend,,,110,,,Interim Dividend - Rs 110 Per Share
+NSE,NESTLEIND,INE239A01016,Nestle India Limited,2022-04-21,2022-04-22,dividend,,,90,,,Interim Dividend - Rs 25 Per Sh/Dividend - Rs 65 Per Share
+NSE,NESTLEIND,INE239A01016,Nestle India Limited,2022-10-31,2022-11-01,dividend,,,120,,,Interim Dividend - Rs 120 Per Share
+NSE,NESTLEIND,INE239A01016,Nestle India Limited,2023-04-21,2023-04-21,dividend,,,27,,,Interim Dividend - Rs  27 Per Share
+NSE,NESTLEIND,INE239A01016,Nestle India Limited,2023-04-21,2023-04-21,dividend,,,75,,,Final Dividend - Rs 75 Per Share
+NSE,NESTLEIND,INE239A01016,Nestle India Limited,2023-11-01,2023-11-01,dividend,,,140,,,Interim Dividend - Rs 140 Per Share
+BSE,NESTLEIND,INE239A01024,Nestle India Ltd,2024-01-05,2024-01-05,split,,,,10,1,Stock  Split From Rs.10/- to Rs.1/-
+NSE,NESTLEIND,INE239A01016,Nestle India Limited,2024-01-05,2024-01-05,split,,,,10,1,Face Value Split (Sub-Division) - From Rs10/- Per Share To Re 1/- Per Share
+BSE,NESTLEIND,INE239A01024,Nestle India Ltd,2024-02-15,2024-02-15,dividend,,,7,,,Interim Dividend - Rs. - 7.0000
+NSE,NESTLEIND,INE239A01016,Nestle India Limited,2024-02-15,2024-02-15,dividend,,,7,,,Interim Dividend - Rs 7 Per Share
+NSE,NESTLEIND,INE239A01016,Nestle India Limited,2024-07-16,2024-07-16,dividend,,,8.5,,,Dividend - Rs 8.50 Per Share
+BSE,NESTLEIND,INE239A01024,Nestle India Ltd,2024-07-16,2024-07-16,dividend,,,8.5,,,Final Dividend - Rs. - 8.5000
+NSE,NESTLEIND,INE239A01016,Nestle India Limited,2024-07-16,2024-07-16,dividend,,,2.75,,,Interim Dividend - Rs 2.75 Per Share
+BSE,NESTLEIND,INE239A01024,Nestle India Ltd,2024-07-16,2024-07-16,dividend,,,2.75,,,Interim Dividend - Rs. - 2.7500
+BSE,NESTLEIND,INE239A01024,Nestle India Ltd,2025-02-07,2025-02-07,dividend,,,14.25,,,Interim Dividend - Rs. - 14.2500
+NSE,NESTLEIND,INE239A01016,Nestle India Limited,2025-02-07,2025-02-07,dividend,,,14.25,,,Interim Dividend - Rs 14.25 Per Share
+NSE,NESTLEIND,INE239A01016,Nestle India Limited,2025-07-04,2025-07-04,dividend,,,10,,,Dividend - Rs 10 Per Share
+BSE,NESTLEIND,INE239A01024,Nestle India Ltd,2025-07-04,2025-07-04,dividend,,,10,,,Final Dividend - Rs. - 10.0000
+BSE,NESTLEIND,INE239A01024,Nestle India Ltd,2025-08-08,2025-08-08,bonus,1,1,,,,Bonus issue 1:1
+NSE,NESTLEIND,INE239A01016,Nestle India Limited,2025-08-08,2025-08-08,bonus,1,1,,,,Bonus 1:1
+BSE,NESTLEIND,INE239A01024,Nestle India Ltd,2026-02-06,2026-02-06,dividend,,,7,,,Interim Dividend - Rs. - 7.0000
+NSE,NESTLEIND,INE239A01016,Nestle India Limited,2026-02-06,2026-02-06,dividend,,,7,,,Interim Dividend - Rs 7 Per Share
+NSE,NESTLEIND,INE239A01016,Nestle India Limited,2026-07-10,2026-07-10,dividend,,,5,,,Dividend - Rs 5 Per Share
+NSE,NESTLEIND,INE239A01016,Nestle India Limited,2026-07-10,2026-07-10,dividend,,,2,,,Special Dividend - Rs 2 Per Share
+BSE,NESTLEIND,INE239A01024,Nestle India Ltd,2026-07-10,2026-07-10,dividend,,,5,,,Final Dividend - Rs. - 5.0000
+BSE,NESTLEIND,INE239A01024,Nestle India Ltd,2026-07-10,2026-07-10,dividend,,,2,,,Special Dividend - Rs. - 2.0000

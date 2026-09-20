@@ -1,0 +1,35 @@
+exchange,symbol,isin,company,ex_date,record_date,type,ratio_num,ratio_den,cash_amount,face_value_from,face_value_to,raw_subject
+NSE,SUNPHARMA,INE044A01028,Sun Pharmaceutical Industries Limited,2010-09-09,,dividend,,,13.75,,,Dividend-Rs.13.75 Per Share
+NSE,SUNPHARMA,INE044A01028,Sun Pharmaceutical Industries Limited,2010-11-25,2010-11-26,split,,,,5,1,Face Value Split From Rs.5/- To Re.1/-
+NSE,SUNPHARMA,INE044A01028,Sun Pharmaceutical Industries Limited,2011-09-02,,dividend,,,3.5,,,Annual General Meeting And Dividend Rs.3.50 Per Share
+NSE,SUNPHARMA,INE044A01028,Sun Pharmaceutical Industries Limited,2012-08-14,2012-08-16,dividend,,,4.25,,,Interim Dividend Rs.4.25 Per Share (Purpose Revised)
+NSE,SUNPHARMA,INE044A01028,Sun Pharmaceutical Industries Limited,2012-10-31,,agm,,,,,,Annual General Meeting
+NSE,SUNPHARMA,INE044A01028,Sun Pharmaceutical Industries Limited,2013-07-29,2013-07-30,bonus,1,1,,,,Bonus 1:1
+NSE,SUNPHARMA,INE044A01028,Sun Pharmaceutical Industries Limited,2013-09-19,,dividend,,,2.5,,,Annual General Meeting / Dividend - Rs 2.50/- Per Share
+NSE,SUNPHARMA,INE044A01028,Sun Pharmaceutical Industries Limited,2014-09-11,,dividend,,,1.5,,,Annual General Meeting / Dividend - Rs 1.50/- Per Share
+NSE,SUNPHARMA,INE044A01028,Sun Pharmaceutical Industries Limited,2015-10-21,,dividend,,,3,,,Annual General Meeting/ Dividend - Rs 3/- Per Share
+NSE,SUNPHARMA,INE044A01028,Sun Pharmaceutical Industries Limited,2016-07-14,2016-07-15,buyback,,,,,,Buy Back
+NSE,SUNPHARMA,INE044A01028,Sun Pharmaceutical Industries Limited,2016-09-08,,dividend,,,1,,,Annual General Meeting/Dividend Re 1/- Per Share
+NSE,SUNPHARMA,INE044A01028,Sun Pharmaceutical Industries Limited,2017-09-18,,dividend,,,3.5,,,Annual General Meeting/Dividend - Rs 3.50 Per Share
+NSE,SUNPHARMA,INE044A01028,Sun Pharmaceutical Industries Limited,2018-09-17,,dividend,,,2,,,Annual General Meeting/Dividend Rs 2 Per Share
+NSE,SUNPHARMA,INE044A01028,Sun Pharmaceutical Industries Limited,2019-08-20,,dividend,,,2.75,,,Annual General Meeting/Dividend - Rs 2.75 Per Share
+NSE,SUNPHARMA,INE044A01028,Sun Pharmaceutical Industries Limited,2020-02-17,2020-02-18,dividend,,,3,,,Interim Dividend - Rs 3 Per Share
+NSE,SUNPHARMA,INE044A01028,Sun Pharmaceutical Industries Limited,2020-08-19,,dividend,,,1,,,Annual General Meeting/Dividend - Re 1 Per Share
+NSE,SUNPHARMA,INE044A01028,Sun Pharmaceutical Industries Limited,2021-02-09,2021-02-10,dividend,,,5.5,,,Interim Dividend - Rs 5.50 Per Share
+NSE,SUNPHARMA,INE044A01028,Sun Pharmaceutical Industries Limited,2021-08-23,,dividend,,,2,,,Annual General Meeting/Dividend - Rs 2 Per Share
+NSE,SUNPHARMA,INE044A01028,Sun Pharmaceutical Industries Limited,2022-02-09,2022-02-10,dividend,,,7,,,Interim Dividend - Rs 7 Per Share
+NSE,SUNPHARMA,INE044A01028,Sun Pharmaceutical Industries Limited,2022-08-19,2022-08-22,dividend,,,3,,,Dividend - Rs 3 Per Share
+NSE,SUNPHARMA,INE044A01028,Sun Pharmaceutical Industries Limited,2023-02-08,2023-02-08,dividend,,,7.5,,,Interim Dividend - Rs 7.50 Per Share
+NSE,SUNPHARMA,INE044A01028,Sun Pharmaceutical Industries Limited,2023-07-28,2023-07-28,dividend,,,4,,,Dividend - Rs 4 Per Share
+NSE,SUNPHARMA,INE044A01028,Sun Pharmaceutical Industries Limited,2024-02-09,2024-02-09,dividend,,,8.5,,,Interim Dividend - Rs 8.50 Per Share
+BSE,SUNPHARMA,INE044A01036,Sun Pharmaceutical Industries Ltd,2024-02-09,2024-02-09,dividend,,,8.5,,,Interim Dividend - Rs. - 8.5000
+BSE,SUNPHARMA,INE044A01036,Sun Pharmaceutical Industries Ltd,2024-07-12,2024-07-12,dividend,,,5,,,Final Dividend - Rs. - 5.0000
+NSE,SUNPHARMA,INE044A01028,Sun Pharmaceutical Industries Limited,2024-07-12,2024-07-12,dividend,,,5,,,Dividend - Rs 5 Per Share
+NSE,SUNPHARMA,INE044A01028,Sun Pharmaceutical Industries Limited,2025-02-06,2025-02-06,dividend,,,10.5,,,Interim Dividend - Rs 10.50 Per Share
+BSE,SUNPHARMA,INE044A01036,Sun Pharmaceutical Industries Ltd,2025-02-06,2025-02-06,dividend,,,10.5,,,Interim Dividend - Rs. - 10.5000
+NSE,SUNPHARMA,INE044A01028,Sun Pharmaceutical Industries Limited,2025-07-07,2025-07-07,dividend,,,5.5,,,Dividend - Rs 5.50 Per Share
+BSE,SUNPHARMA,INE044A01036,Sun Pharmaceutical Industries Ltd,2025-07-07,2025-07-07,dividend,,,5.5,,,Final Dividend - Rs. - 5.5000
+BSE,SUNPHARMA,INE044A01036,Sun Pharmaceutical Industries Ltd,2026-02-05,2026-02-05,dividend,,,11,,,Interim Dividend - Rs. - 11.0000
+NSE,SUNPHARMA,INE044A01028,Sun Pharmaceutical Industries Limited,2026-02-05,2026-02-05,dividend,,,11,,,Interim Dividend - Rs 11 Per Share
+NSE,SUNPHARMA,INE044A01028,Sun Pharmaceutical Industries Limited,2026-07-07,2026-07-07,dividend,,,5,,,Dividend - Rs 5 Per Share
+BSE,SUNPHARMA,INE044A01036,Sun Pharmaceutical Industries Ltd,2026-07-07,2026-07-07,dividend,,,5,,,Final Dividend - Rs. - 5.0000

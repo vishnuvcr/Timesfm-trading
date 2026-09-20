@@ -1,0 +1,86 @@
+exchange,symbol,isin,company,ex_date,record_date,type,ratio_num,ratio_den,cash_amount,face_value_from,face_value_to,raw_subject
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2010-01-29,2010-02-01,other,,,,,,2nd Int Div-Re.1/- Per Shpurpose Revised
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2010-04-26,2010-04-27,other,,,,,,Int Div-Re.1/- Per Share Purpose Revised
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2010-10-22,,dividend,,,2.5,,,Annual General Meeting/Final Dividend Re.1/- Per Share/Interim Dividend Rs.1.50 Per Share (Purpose Revised)
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2011-01-24,2011-01-25,dividend,,,2,,,2nd Interim Dividend-Rs.2/- Per Share (Purpose Revised)
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2011-04-25,2011-04-26,dividend,,,2,,,3rd Interim Dividend-Rs.2/- Per Share (Purpose Revised)
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2011-10-21,,dividend,,,6,,,Final Dividend Rs.2/- Per Share/Interim Dividend Rs.2/- Per Share/Special Dividend Rs.2/- Per Share/Annual General Meeting (Purpose Revised)
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2012-01-20,2012-01-23,dividend,,,2,,,Interim Dividend Rs.2/- Per Share (Purpose Revised)
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2012-04-23,2012-04-24,dividend,,,2,,,Interim Dividend Rs.2/- Per Share (Purpose Revised)
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2012-10-19,,dividend,,,6,,,Final Dividend Rs.4/- Per Share And Interim Dividend Rs.2/- Per Share (Purpose Revised)
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2013-01-21,2013-01-22,dividend,,,2,,,Interim Dividend Of Rs 2/- Per Equity Share (Purpose Revised)
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2013-04-22,2013-04-23,dividend,,,2,,,Interim Dividend Of Rs 2/- Per Equity Share (Purpose Revised)
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2013-10-22,2013-10-23,dividend,,,2,,,Interim Dividend Rs 2/- Per Share
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2013-12-18,,dividend,,,6,,,Annual General Meeting / Final Dividend - Rs 6/- Per Share
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2014-01-22,2014-01-23,dividend,,,4,,,Second Interim Dividend Rs. 4/- Per Share
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2014-04-22,2014-04-23,dividend,,,4,,,Interim Dividend - Rs 4/- Per Share (Purpose Revised)
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2014-08-05,2014-08-06,dividend,,,12,,,Interim Dividend - Rs 12/- Per Share (Purpose Revised)
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2014-10-21,2014-10-23,dividend,,,6,,,Interim Dividend Rs.6/- Per Share (Purpose Revised)
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2014-11-20,,agm,,,,,,Annual General Meeting
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2015-02-04,2015-02-05,dividend,,,8,,,Interim Dividend - Rs 8/- Per Share (Purpose Revised)
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2015-03-19,2015-03-20,bonus,1,1,,,,Bonus 1 : 1
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2015-04-24,2015-04-27,dividend,,,4,,,Interim Dividend - Rs 4/- Per Share (Purpose Revised)
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2015-08-07,2015-08-10,dividend,,,5,,,Interim Dividend - Rs 5/- Per Share (Purpose Revised)
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2015-10-23,2015-10-26,dividend,,,5,,,Interim Dividend - Rs 5/- Per Share (Purpose Revised)
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2015-12-17,,agm,,,,,,Annual General Meeting
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2016-01-27,2016-01-28,dividend,,,6,,,Interim Dividend Rs 6/- Per Share (Purpose Revised)
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2016-05-05,2016-05-06,dividend,,,6,,,Interim Dividend - Rs 6/- Per Share (Purpose Revised)
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2016-08-10,2016-08-11,dividend,,,6,,,Interim Dividend - Rs 6/- Per Share (Purpose Revised)
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2016-09-16,,agm,,,,,,Annual General Meeting
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2016-10-27,2016-10-29,dividend,,,6,,,Interim Dividend - Rs 6/- Per Share (Purpose Revised)
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2017-02-01,2017-02-02,dividend,,,6,,,Interim Dividend Rs 6/- Per Share (Purpose Revised)
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2017-05-24,2017-05-25,dividend,,,6,,,Buyback/Interim Dividend Rs 6/- Per Share (Purpose Revised)
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2017-08-03,2017-08-04,dividend,,,2,,,Interim Dividend - Rs 2/- Per Share
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2017-09-12,,agm,,,,,,Annual General Meeting
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2017-11-01,2017-11-02,dividend,,,2,,,Interim Dividend - Rs 2/- Per Share
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2018-01-29,2018-01-30,dividend,,,2,,,Interim Dividend - Rs 2 Per Share (Purpose Revised)
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2018-05-09,2018-05-10,dividend,,,2,,,Interim Dividend - Rs 2 Per Share (Purpose Revised)
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2018-08-02,,other,,,,,,Int Div- 2 Per Share (Purpose Revised)
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2018-08-30,2018-08-31,buyback,,,,,,Buyback
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2018-09-10,,agm,,,,,,Annual General Meeting
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2018-10-30,2018-10-31,dividend,,,2,,,Interim Dividend - Rs 2 Per Sh
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2019-02-05,2019-02-06,dividend,,,2,,,Interim Dividend - Rs 2 Per Share
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2019-05-16,2019-05-17,dividend,,,2,,,Interim Dividend - Rs 2 Per Share
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2019-07-29,,agm,,,,,,Annual General Meeting
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2019-08-14,2019-08-17,dividend,,,2,,,Interim Dividend - Rs 2 Per Share
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2019-10-31,2019-11-01,dividend,,,2,,,Interim Dividend - Rs 2 Per Sh
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2019-12-05,2019-12-07,bonus,1,1,,,,Bonus 1:1
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2020-01-24,2020-01-27,dividend,,,2,,,Interim Dividend - Rs 2 Per Share
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2020-07-23,2020-07-25,dividend,,,2,,,Interim Dividend - Rs 2 Per Share
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2020-09-14,,dividend,,,2,,,Dividend - Rs 2 Per Share
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2020-10-22,2020-10-24,dividend,,,4,,,Interim Dividend - Rs 4 Per Share
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2021-01-21,2021-01-23,dividend,,,4,,,Interim Dividend - Rs 4 Per Share
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2021-04-29,2021-05-01,dividend,,,16,,,Interim Dividend - Rs 6 Per Share Special Interim Dividend - Rs 10 Per Share
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2021-07-27,2021-07-28,dividend,,,6,,,Interim Dividend - Rs 6 Per Share
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2021-10-21,2021-10-23,dividend,,,10,,,Interm Dividend - Rs 10 Per Share
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2022-01-20,2022-01-22,dividend,,,10,,,Interim Dividend - Rs 10 Per Share
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2022-04-28,2022-04-29,dividend,,,18,,,Interim Dividend Rs 18 Per Share
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2022-07-19,2022-07-20,dividend,,,10,,,Interim Dividend- Rs 10 Per Share
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2022-10-19,2022-10-20,dividend,,,10,,,Interim Dividend - Rs 10 Per Share
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2023-01-19,2023-01-20,dividend,,,10,,,Interim Dividend - Rs 10 Per Share
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2023-04-28,2023-04-28,dividend,,,18,,,Interim Dividend - Rs 18 Per Share
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2023-07-20,2023-07-20,dividend,,,10,,,Dividend - Rs 10 Per Share
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2023-10-20,2023-10-20,dividend,,,12,,,Interim Dividend - Rs 12 Per Share
+BSE,HCLTECH,INE860A01027,HCL Technologies Ltd,2024-01-19,2024-01-20,dividend,,,12,,,Interim Dividend - Rs. - 12.0000
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2024-01-19,2024-01-20,dividend,,,12,,,Interim Dividend - Rs 12 Per Share
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2024-05-07,2024-05-07,dividend,,,18,,,Interim Dividend - Rs 18 Per Share
+BSE,HCLTECH,INE860A01027,HCL Technologies Ltd,2024-05-07,2024-05-07,dividend,,,18,,,Interim Dividend - Rs. - 18.0000
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2024-07-23,2024-07-23,dividend,,,12,,,Interim Dividend - Rs 12 Per Share
+BSE,HCLTECH,INE860A01027,HCL Technologies Ltd,2024-07-23,2024-07-23,dividend,,,12,,,Interim Dividend - Rs. - 12.0000
+BSE,HCLTECH,INE860A01027,HCL Technologies Ltd,2024-10-22,2024-10-22,dividend,,,12,,,Interim Dividend - Rs. - 12.0000
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2024-10-22,2024-10-22,dividend,,,12,,,Interim Dividend - Rs 12 Per Share
+BSE,HCLTECH,INE860A01027,HCL Technologies Ltd,2025-01-17,2025-01-17,dividend,,,6,,,Special Dividend - Rs. - 6.0000
+BSE,HCLTECH,INE860A01027,HCL Technologies Ltd,2025-01-17,2025-01-17,dividend,,,12,,,Interim Dividend - Rs. - 12.0000
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2025-01-17,2025-01-17,dividend,,,18,,,Interim Dividend - Rs 12 Per Share Special Dividend - Rs 6 Per Share
+BSE,HCLTECH,INE860A01027,HCL Technologies Ltd,2025-04-28,2025-04-28,dividend,,,18,,,Interim Dividend - Rs. - 18.0000
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2025-04-28,2025-04-28,dividend,,,18,,,Interim Dividend - Rs 18 Per Share
+BSE,HCLTECH,INE860A01027,HCL Technologies Ltd,2025-07-18,2025-07-18,dividend,,,12,,,Interim Dividend - Rs. - 12.0000
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2025-07-18,2025-07-18,dividend,,,12,,,Interim Dividend - Rs 12 Per Share
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2025-10-17,2025-10-17,dividend,,,12,,,Interim Dividend - Rs 12 Per Share
+BSE,HCLTECH,INE860A01027,HCL Technologies Ltd,2025-10-17,2025-10-17,dividend,,,12,,,Interim Dividend - Rs. - 12.0000
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2026-01-16,2026-01-17,dividend,,,12,,,Interim Dividend - Rs 12 Per Share
+BSE,HCLTECH,INE860A01027,HCL Technologies Ltd,2026-01-16,2026-01-17,dividend,,,12,,,Interim Dividend - Rs. - 12.0000
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2026-04-24,2026-04-25,dividend,,,24,,,Interim Dividend - Rs 24 Per Share
+BSE,HCLTECH,INE860A01027,HCL Technologies Ltd,2026-04-24,2026-04-25,dividend,,,24,,,Interim Dividend - Rs. - 24.0000
+NSE,HCLTECH,INE860A01027,HCL Technologies Limited,2026-07-17,2026-07-17,dividend,,,12,,,Interim Dividend - Rs 12 Per Share
+BSE,HCLTECH,INE860A01027,HCL Technologies Ltd,2026-07-17,2026-07-17,dividend,,,12,,,Interim Dividend - Rs. - 12.0000

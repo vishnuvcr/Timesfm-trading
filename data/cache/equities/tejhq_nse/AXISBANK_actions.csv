@@ -1,0 +1,20 @@
+exchange,symbol,isin,company,ex_date,record_date,type,ratio_num,ratio_den,cash_amount,face_value_from,face_value_to,raw_subject
+NSE,AXISBANK,INE238A01026,Axis Bank Limited,2010-05-20,,agm,,,,,,Agm/Div-Rs.12/- Per Share
+NSE,AXISBANK,INE238A01026,Axis Bank Limited,2011-06-08,,dividend,,,14,,,Annual General Meeting And Dividend Rs.14/- Per Share
+NSE,AXISBANK,INE238A01026,Axis Bank Limited,2012-06-14,,dividend,,,16,,,Annual General Meeting And Dividend Rs.16/- Per Share
+NSE,AXISBANK,INE238A01026,Axis Bank Limited,2013-07-05,,dividend,,,18,,,Annual General Meeting / Dividend Rs.18/- Per Equity Share
+NSE,AXISBANK,INE238A01026,Axis Bank Limited,2014-06-12,,dividend,,,20,,,Annual General Meeting / Dividend Rs.20/- Per Equity Share
+NSE,AXISBANK,INE238A01026,Axis Bank Limited,2014-07-28,2014-07-30,split,,,,10,2,Face Value Split From Rs 10/- To Rs 2/- Per Share
+NSE,AXISBANK,INE238A01026,Axis Bank Limited,2015-07-09,,dividend,,,4.6,,,Annual General Meeting/Dividend Rs 4.60/- Per Share
+NSE,AXISBANK,INE238A01026,Axis Bank Limited,2016-07-07,,dividend,,,5,,,Annual General Meeting/ Dividend-Rs 5/- Per Share
+NSE,AXISBANK,INE238A01026,Axis Bank Limited,2017-07-06,,dividend,,,5,,,Annual General Meeting/Dividend - Rs 5/- Per Share
+NSE,AXISBANK,INE238A01026,Axis Bank Limited,2018-05-31,,agm,,,,,,Annual General Meeting
+NSE,AXISBANK,INE238A01026,Axis Bank Limited,2019-07-04,,dividend,,,1,,,Annual General Meeting/ Dividend - Re 1 Per Share
+NSE,AXISBANK,INE238A01026,Axis Bank Limited,2022-07-07,2022-07-08,dividend,,,1,,,Dividend - Rs 1 Per Share
+NSE,AXISBANK,INE238A01026,Axis Bank Limited,2023-07-07,2023-07-07,dividend,,,1,,,Dividend - Re 1 Per Share
+NSE,AXISBANK,INE238A01026,Axis Bank Limited,2024-07-12,2024-07-12,dividend,,,1,,,Dividend - Re 1 Per Share
+BSE,AXISBANK,INE238A01034,AXIS Bank Ltd,2024-07-12,2024-07-12,dividend,,,1,,,Final Dividend - Rs. - 1.0000
+NSE,AXISBANK,INE238A01026,Axis Bank Limited,2025-07-04,2025-07-04,dividend,,,1,,,Dividend - Re 1 Per Sh
+BSE,AXISBANK,INE238A01034,AXIS Bank Ltd,2025-07-04,2025-07-04,dividend,,,1,,,Final Dividend - Rs. - 1.0000
+BSE,AXISBANK,INE238A01034,AXIS Bank Ltd,2026-07-10,2026-07-10,dividend,,,1,,,Final Dividend - Rs. - 1.0000
+NSE,AXISBANK,INE238A01026,Axis Bank Limited,2026-07-10,2026-07-10,dividend,,,1,,,Dividend - Re 1 Per Share

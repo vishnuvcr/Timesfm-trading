@@ -1,0 +1,46 @@
+exchange,symbol,isin,company,ex_date,record_date,type,ratio_num,ratio_den,cash_amount,face_value_from,face_value_to,raw_subject
+NSE,INFY,INE009A01021,Infosys Limited,2010-05-26,,agm,,,,,,Agm/Div-Rs.15/- Per Share
+NSE,INFY,INE009A01021,Infosys Limited,2010-10-21,2010-10-22,dividend,,,40,,,Interim Dividend Rs.10/- Per Share And Special Dividend Rs.30/- Per Share (Purpose Revised)
+NSE,INFY,INE009A01021,Infosys Limited,2011-05-26,,dividend,,,20,,,Annual General Meeting And Final Dividend Rs.20/- Per Share
+NSE,INFY,INE009A01021,Infosys Limited,2011-10-20,2011-10-21,dividend,,,15,,,Interim Dividend - Rs.15 Per Share (Purpose Revised)
+NSE,INFY,INE009A01021,Infosys Limited,2012-05-24,,dividend,,,32,,,Annual General Meeting / Dividend - Final Rs 22 + Special Rs 10
+NSE,INFY,INE009A01021,Infosys Limited,2012-10-18,2012-10-19,dividend,,,15,,,Interim Dividend Rs.15/- Per Share (Purpose Revised)
+NSE,INFY,INE009A01021,Infosys Limited,2013-05-30,,dividend,,,27,,,Annual General Meeting/Final Dividend Rs.27 Per Share
+NSE,INFY,INE009A01021,Infosys Limited,2013-10-17,2013-10-18,dividend,,,20,,,Interim Dividend Rs.20/- Per Share (Purpose Revised)
+NSE,INFY,INE009A01021,Infosys Limited,2014-05-29,,dividend,,,43,,,Annual General Meeting / Final Dividend - Rs 43/- Per Share
+NSE,INFY,INE009A01021,Infosys Limited,2014-10-16,2014-10-17,dividend,,,30,,,Interim Dividend Rs.30/- Per Share (Purpose Revised)
+NSE,INFY,INE009A01021,Infosys Limited,2014-12-02,2014-12-03,bonus,1,1,,,,Bonus 1:1
+NSE,INFY,INE009A01021,Infosys Limited,2015-06-15,,bonus,1,1,,,,Annual General Meeting/ Dividend - Rs 29.50/- Per Share And Bonus 1:1
+NSE,INFY,INE009A01021,Infosys Limited,2015-10-16,2015-10-19,dividend,,,10,,,Interim Dividend Rs.10/- Per Share (Purpose Revised)
+NSE,INFY,INE009A01021,Infosys Limited,2016-06-09,,dividend,,,14.25,,,Annual General Meeting And Final Dividend Rs.14.25 Per Share
+NSE,INFY,INE009A01021,Infosys Limited,2016-10-21,2016-10-24,dividend,,,11,,,Interim Dividend Rs 11/- Per Share (Purpose Revised)
+NSE,INFY,INE009A01021,Infosys Limited,2017-06-01,,dividend,,,14.75,,,Annual General Meeting/Dividend - Rs 14.75 Per Share
+NSE,INFY,INE009A01021,Infosys Limited,2017-10-31,2017-11-01,dividend,,,13,,,Interim Dividend - Rs 13/- Per Share (Purpose Revised)
+NSE,INFY,INE009A01021,Infosys Limited,2017-10-31,2017-11-01,buyback,,,,,,Buyback
+NSE,INFY,INE009A01021,Infosys Limited,2018-06-14,,dividend,,,30.5,,,Annual General Meeting/ Final Dividend Rs 20.50 Per Shar/ Special Dividend - Rs 10 Per Share
+NSE,INFY,INE009A01021,Infosys Limited,2018-09-04,2018-09-05,bonus,1,1,,,,Bonus 1:1
+NSE,INFY,INE009A01021,Infosys Limited,2018-10-25,2018-10-27,dividend,,,7,,,Interim Dividend - Rs 7 Per Share
+NSE,INFY,INE009A01021,Infosys Limited,2019-01-24,2019-01-25,dividend,,,4,,,Special Dividend - Rs 4 Per Share
+NSE,INFY,INE009A01021,Infosys Limited,2019-06-13,,dividend,,,10.5,,,Annual General Meeting/Dividend- Rs 10.50 Per Share
+NSE,INFY,INE009A01021,Infosys Limited,2019-10-23,2019-10-24,dividend,,,8,,,Interim Dividend - Rs 8 Per Share
+NSE,INFY,INE009A01021,Infosys Limited,2020-05-29,2020-06-01,dividend,,,9.5,,,Dividend - Rs 9.50 Per Share
+NSE,INFY,INE009A01021,Infosys Limited,2020-10-23,2020-10-26,dividend,,,12,,,Interim Dividend - Rs 12 Per Share
+NSE,INFY,INE009A01021,Infosys Limited,2021-05-31,2021-06-01,dividend,,,15,,,Annual General Meeting/Dividend - Rs 15 Per Share
+NSE,INFY,INE009A01021,Infosys Limited,2021-10-26,2021-10-27,dividend,,,15,,,Interim Dividend - Rs 15 Per Sh
+NSE,INFY,INE009A01021,Infosys Limited,2022-05-31,2022-06-01,dividend,,,16,,,Annual General Meeting/Dividend - Rs 16 Per Share
+NSE,INFY,INE009A01021,Infosys Limited,2022-10-27,2022-10-28,dividend,,,16.5,,,Interim Dividend - Rs 16.50 Per Share
+NSE,INFY,INE009A01021,Infosys Limited,2023-06-02,2023-06-02,dividend,,,17.5,,,Annual General Meeting/Dividend - Rs 17.50 Per Share
+NSE,INFY,INE009A01021,Infosys Limited,2023-10-25,2023-10-25,dividend,,,18,,,Interim Dividend - Rs 18 Per Share
+BSE,INFY,INE009A01021,Infosys Ltd,2024-05-31,2024-05-31,dividend,,,8,,,Special Dividend - Rs. - 8.0000
+NSE,INFY,INE009A01021,Infosys Limited,2024-05-31,2024-05-31,dividend,,,28,,,Annual General Meeting/Special Dividend - Rs 8 Per Share /Dividend - Rs 20 Per Share
+BSE,INFY,INE009A01021,Infosys Ltd,2024-05-31,2024-05-31,dividend,,,20,,,Final Dividend - Rs. - 20.0000
+BSE,INFY,INE009A01021,Infosys Ltd,2024-10-29,2024-10-29,dividend,,,21,,,Interim Dividend - Rs. - 21.0000
+NSE,INFY,INE009A01021,Infosys Limited,2024-10-29,2024-10-29,dividend,,,21,,,Interim Dividend - Rs 21 Per Share
+BSE,INFY,INE009A01021,Infosys Ltd,2025-05-30,2025-05-30,dividend,,,22,,,Final Dividend - Rs. - 22.0000
+NSE,INFY,INE009A01021,Infosys Limited,2025-05-30,2025-05-30,dividend,,,22,,,Dividend - Rs 22 Per Share
+NSE,INFY,INE009A01021,Infosys Limited,2025-10-27,2025-10-27,dividend,,,23,,,Interim Dividend - Rs 23 Per Share
+BSE,INFY,INE009A01021,Infosys Ltd,2025-10-27,2025-10-27,dividend,,,23,,,Interim Dividend - Rs. - 23.0000
+BSE,INFY,INE009A01021,Infosys Ltd,2025-11-14,2025-11-14,buyback,,,,,,Buy Back of Shares
+NSE,INFY,INE009A01021,Infosys Limited,2025-11-14,2025-11-14,buyback,,,,,,Buy Back
+BSE,INFY,INE009A01021,Infosys Ltd,2026-06-10,2026-06-10,dividend,,,25,,,Final Dividend - Rs. - 25.0000
+NSE,INFY,INE009A01021,Infosys Limited,2026-06-10,2026-06-10,dividend,,,25,,,Dividend - Rs 25 Per Share

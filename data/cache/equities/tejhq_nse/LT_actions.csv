@@ -1,0 +1,28 @@
+exchange,symbol,isin,company,ex_date,record_date,type,ratio_num,ratio_den,cash_amount,face_value_from,face_value_to,raw_subject
+NSE,LT,INE018A01030,Larsen & Toubro Limited,2010-08-17,,dividend,,,12.5,,,Annual General Meeting And Dividend Rs.12.50 Per Share
+NSE,LT,INE018A01030,Larsen & Toubro Limited,2011-08-17,,dividend,,,14.5,,,Dividend-Rs.14.50 Per Share
+NSE,LT,INE018A01030,Larsen & Toubro Limited,2012-08-14,,dividend,,,16.5,,,Annual General Meeting / Dividend Rs 16.50 Per Share
+NSE,LT,INE018A01030,Larsen & Toubro Limited,2013-07-11,2013-07-13,bonus,1,2,,,,Bonus 1:2
+NSE,LT,INE018A01030,Larsen & Toubro Limited,2013-08-13,,dividend,,,12.33,,,Annual General Meeting / Dividend - Rs 12.33/- Per Share
+NSE,LT,INE018A01030,Larsen & Toubro Limited,2014-08-13,,dividend,,,14.25,,,Annual General Meeting / Dividend - Rs 14.25/- Per Share
+NSE,LT,INE018A01030,Larsen & Toubro Limited,2015-09-01,,dividend,,,16.25,,,Annual General Meeting/ Dividend - Rs 16.25/- Per Share
+NSE,LT,INE018A01030,Larsen & Toubro Limited,2016-08-18,,dividend,,,18.25,,,Dividend - Rs 18.25/- Per Share
+NSE,LT,INE018A01030,Larsen & Toubro Limited,2017-07-13,2017-07-14,bonus,1,2,,,,Bonus 1:2
+NSE,LT,INE018A01030,Larsen & Toubro Limited,2017-08-11,,dividend,,,14,,,Annual General Meeting/Dividend - Rs 14/- Per Share
+NSE,LT,INE018A01030,Larsen & Toubro Limited,2018-08-14,,dividend,,,16,,,Annual General Meeting/Dividend- Rs 16 Per Share
+NSE,LT,INE018A01030,Larsen & Toubro Limited,2018-10-12,2018-10-15,buyback,,,,,,Buyback
+NSE,LT,INE018A01030,Larsen & Toubro Limited,2019-07-24,,dividend,,,18,,,Annual General Meeting/Dividend - Rs 18 Per Share
+NSE,LT,INE018A01030,Larsen & Toubro Limited,2020-03-24,2020-03-26,dividend,,,10,,,Interim Dividend - Rs 10 Per Share
+NSE,LT,INE018A01030,Larsen & Toubro Limited,2020-08-05,,dividend,,,8,,,Annual General Meeting/Dividend - Rs  8 Per Share
+NSE,LT,INE018A01030,Larsen & Toubro Limited,2020-11-04,2020-11-05,dividend,,,18,,,Special Dividend - Rs 18 Per Share
+NSE,LT,INE018A01030,Larsen & Toubro Limited,2021-07-28,,dividend,,,18,,,Annual General Meeting/Dividend - Rs 18 Per Share
+NSE,LT,INE018A01030,Larsen & Toubro Limited,2022-07-21,2022-07-22,dividend,,,22,,,Dividend - Rs 22 Per Share
+NSE,LT,INE018A01030,Larsen & Toubro Limited,2023-08-02,2023-08-02,dividend,,,6,,,Special Dividend - Rs 6 Per Share
+NSE,LT,INE018A01030,Larsen & Toubro Limited,2023-08-02,2023-08-02,dividend,,,24,,,Dividend - Rs 24 Per Share
+NSE,LT,INE018A01030,Larsen & Toubro Limited,2023-09-12,2023-09-12,buyback,,,,,,Buy Back
+NSE,LT,INE018A01030,Larsen & Toubro Limited,2024-06-20,2024-06-20,dividend,,,28,,,Dividend - Rs 28 Per Share
+BSE,LT,INE018A01030,Larsen & Toubro Ltd,2024-06-20,2024-06-20,dividend,,,28,,,Final Dividend - Rs. - 28.0000
+BSE,LT,INE018A01030,Larsen & Toubro Ltd,2025-06-03,2025-06-03,dividend,,,34,,,Final Dividend - Rs. - 34.0000
+NSE,LT,INE018A01030,Larsen & Toubro Limited,2025-06-03,2025-06-03,dividend,,,34,,,Dividend - Rs 34 Per Share
+NSE,LT,INE018A01030,Larsen & Toubro Limited,2026-05-22,2026-05-22,dividend,,,38,,,Dividend - Rs 38 Per Share
+BSE,LT,INE018A01030,Larsen & Toubro Ltd,2026-05-22,2026-05-22,dividend,,,38,,,Final Dividend - Rs. - 38.0000

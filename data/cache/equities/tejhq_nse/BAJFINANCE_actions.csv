@@ -1,0 +1,30 @@
+exchange,symbol,isin,company,ex_date,record_date,type,ratio_num,ratio_den,cash_amount,face_value_from,face_value_to,raw_subject
+NSE,BAJFINANCE,INE296A01016,Bajaj Finance Limited,2010-07-08,,dividend,,,6,,,Annual General Meeting And Dividend Rs.6/- Per Share
+NSE,BAJFINANCE,INE296A01016,Bajaj Finance Limited,2011-06-29,,dividend,,,10,,,Annual General Meeting And Dividend Rs.10/- Per Share
+NSE,BAJFINANCE,INE296A01016,Bajaj Finance Limited,2012-07-05,,dividend,,,12,,,Annual General Meeting And Dividend - Rs.12/- Per Share
+NSE,BAJFINANCE,INE296A01016,Bajaj Finance Limited,2013-01-23,2013-01-25,rights,3,19,,,,Rights 3:19 @ Premium Rs 1090 Per Share
+NSE,BAJFINANCE,INE296A01016,Bajaj Finance Limited,2013-07-04,,dividend,,,15,,,Annual General Meeting And Dividend Rs.15/- Per Share
+NSE,BAJFINANCE,INE296A01016,Bajaj Finance Limited,2014-07-03,,dividend,,,16,,,Annual General Meeting And Dividend Rs.16/- Per Share
+NSE,BAJFINANCE,INE296A01016,Bajaj Finance Limited,2015-07-09,,dividend,,,18,,,Annual General Meeting / Dividend - Rs 18/- Per Share
+NSE,BAJFINANCE,INE296A01016,Bajaj Finance Limited,2016-03-16,2016-03-17,dividend,,,18,,,Interim Dividend - Rs 18/- Per Share (Purpose Revised)
+NSE,BAJFINANCE,INE296A01016,Bajaj Finance Limited,2016-07-14,,dividend,,,7,,,Dividend Rs 7/- Per Share
+NSE,BAJFINANCE,INE296A01016,Bajaj Finance Limited,2016-09-08,2016-09-10,split,,,,10,2,Bonus 1:1/Face Value Split (Sub-Division) - From Rs 10/- Per Share To Rs 2/- Per Share
+NSE,BAJFINANCE,INE296A01016,Bajaj Finance Limited,2017-07-06,,dividend,,,3.6,,,Annual General Meeting/Dividend - Rs 3.60/- Per Share
+NSE,BAJFINANCE,INE296A01016,Bajaj Finance Limited,2018-07-05,,dividend,,,4,,,Annual General Meeting / Dividend- Rs 4 Per Share
+NSE,BAJFINANCE,INE296A01016,Bajaj Finance Limited,2019-07-11,,dividend,,,6,,,Annual General Meeting/ Dividend - Rs 6 Per Share
+NSE,BAJFINANCE,INE296A01016,Bajaj Finance Limited,2020-03-03,2020-03-04,dividend,,,10,,,Interim Dividend - Rs 10 Per Share
+NSE,BAJFINANCE,INE296A01016,Bajaj Finance Limited,2021-07-08,,dividend,,,10,,,Annual General Meeting/Dividend - Rs 10 Per Share
+NSE,BAJFINANCE,INE296A01016,Bajaj Finance Limited,2022-06-30,2022-07-01,dividend,,,20,,,Dividend - Rs 20 Per Share
+NSE,BAJFINANCE,INE296A01016,Bajaj Finance Limited,2023-06-30,2023-06-30,dividend,,,30,,,Dividend - Rs 30 Per Share
+BSE,BAJFINANCE,INE296A01032,Bajaj Finance Ltd,2024-06-21,2024-06-21,dividend,,,36,,,Final Dividend - Rs. - 36.0000
+NSE,BAJFINANCE,INE296A01016,Bajaj Finance Limited,2024-06-21,2024-06-21,dividend,,,36,,,Dividend - Rs 36 Per Share
+BSE,BAJFINANCE,INE296A01032,Bajaj Finance Ltd,2025-05-09,2025-05-09,dividend,,,12,,,Special Dividend - Rs. - 12.0000
+NSE,BAJFINANCE,INE296A01016,Bajaj Finance Limited,2025-05-09,2025-05-09,dividend,,,12,,,Special Dividend - Rs 12 Per Share
+NSE,BAJFINANCE,INE296A01016,Bajaj Finance Limited,2025-05-30,2025-05-30,dividend,,,44,,,Dividend - Rs 44 Per Share
+BSE,BAJFINANCE,INE296A01032,Bajaj Finance Ltd,2025-05-30,2025-05-30,dividend,,,44,,,Final Dividend - Rs. - 44.0000
+BSE,BAJFINANCE,INE296A01032,Bajaj Finance Ltd,2025-06-16,2025-06-16,split,,,,2,1,Stock  Split From Rs.2/- to Rs.1/-
+NSE,BAJFINANCE,INE296A01016,Bajaj Finance Limited,2025-06-16,2025-06-16,bonus,4,1,,,,Bonus 4:1
+NSE,BAJFINANCE,INE296A01016,Bajaj Finance Limited,2025-06-16,2025-06-16,split,,,,2,1,Face Value Split (Sub-Division) - From Rs 2/- Per Share To Re 1/- Per Share
+BSE,BAJFINANCE,INE296A01032,Bajaj Finance Ltd,2025-06-16,2025-06-16,bonus,4,1,,,,Bonus issue 4:1
+BSE,BAJFINANCE,INE296A01032,Bajaj Finance Ltd,2026-06-30,2026-06-30,dividend,,,6,,,Final Dividend - Rs. - 6.0000
+NSE,BAJFINANCE,INE296A01016,Bajaj Finance Limited,2026-06-30,2026-06-30,dividend,,,6,,,Dividend - Rs 6 Per Share

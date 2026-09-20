@@ -1,0 +1,51 @@
+exchange,symbol,isin,company,ex_date,record_date,type,ratio_num,ratio_den,cash_amount,face_value_from,face_value_to,raw_subject
+NSE,NTPC,INE733E01010,NTPC Limited,2010-03-18,2010-03-19,other,,,,,,Int Div-Rs.3/- Per Share Purpose Revised
+NSE,NTPC,INE733E01010,NTPC Limited,2010-09-08,,dividend,,,0.8,,,Annual General Meeting And Final Dividend Re.0.80 Per Share
+NSE,NTPC,INE733E01010,NTPC Limited,2011-02-04,2011-02-07,dividend,,,3,,,Interim Dividend-Rs.3/- Per Share (Purpose Revised)
+NSE,NTPC,INE733E01010,NTPC Limited,2011-09-08,,dividend,,,0.8,,,Annual General Meeting And Dividend Re.0.80 Per Share
+NSE,NTPC,INE733E01010,NTPC Limited,2012-01-31,2012-02-01,dividend,,,3.5,,,Interim Dividend Rs.3.50 Per Share (Purpose Revised)
+NSE,NTPC,INE733E01010,NTPC Limited,2012-09-06,,dividend,,,0.5,,,Annual General Meeting And Dividend Re.0.50 Per Share
+NSE,NTPC,INE733E01010,NTPC Limited,2013-03-01,2013-03-04,dividend,,,3.75,,,Interim Dividend Rs.3.75 Per Share (Purpose Revised)
+NSE,NTPC,INE733E01010,NTPC Limited,2013-09-05,,dividend,,,2,,,Annual General Meeting/Final Dividend Re.0.75 Per Share And Special Dividend Rs.1.25 Per Share
+NSE,NTPC,INE733E01010,NTPC Limited,2014-01-31,2014-02-03,dividend,,,4,,,Interim Dividend - Rs 4/- Per Share (Purpose Revised)
+NSE,NTPC,INE733E01010,NTPC Limited,2014-08-13,,dividend,,,1.75,,,Annual General Meeting / Final Dividend - Rs 1.75/- Per Share
+NSE,NTPC,INE733E01010,NTPC Limited,2015-02-04,2015-02-05,dividend,,,0.75,,,Interim Dividend - Re 0.75/- Per Share (Purpose Revised)
+NSE,NTPC,INE733E01010,NTPC Limited,2015-03-20,2015-03-23,bonus,,,,,,Scheme Of Arrangement - Bonus Debentures 1:1
+NSE,NTPC,INE733E01010,NTPC Limited,2015-09-03,,dividend,,,1.75,,,Annual General Meeting/ Dividend -  Rs 1.75/- Per Share
+NSE,NTPC,INE733E01010,NTPC Limited,2016-02-05,2016-02-08,dividend,,,1.6,,,Interim Dividend - Rs 1.60/- Per Share (Purpose Revised)
+NSE,NTPC,INE733E01010,NTPC Limited,2016-09-08,,dividend,,,1.75,,,Dividend - Rs 1.75 Per Share
+NSE,NTPC,INE733E01010,NTPC Limited,2017-02-15,2017-02-16,dividend,,,2.61,,,Interim Dividend Rs 2.61/- Per Share (Purpose Revised)
+NSE,NTPC,INE733E01010,NTPC Limited,2017-09-07,,dividend,,,2.17,,,Annual General Meeting/Dividend - Rs 2.17 Per Share
+NSE,NTPC,INE733E01010,NTPC Limited,2018-02-07,2018-02-08,dividend,,,2.73,,,Interim Dividend Rs 2.73 Per Share (Purpose Revised)
+NSE,NTPC,INE733E01010,NTPC Limited,2018-09-06,,dividend,,,2.39,,,Dividend Rs 2.39 Per Share
+NSE,NTPC,INE733E01010,NTPC Limited,2019-02-06,2019-02-07,dividend,,,3.58,,,Interim Dividend - Rs 3.58 Per Share
+NSE,NTPC,INE733E01010,NTPC Limited,2019-03-19,2019-03-20,bonus,1,5,,,,Bonus 1:5
+NSE,NTPC,INE733E01010,NTPC Limited,2019-08-13,,dividend,,,2.5,,,Dividend - Rs 2.50 Per Share
+NSE,NTPC,INE733E01010,NTPC Limited,2020-03-26,2020-03-27,dividend,,,0.5,,,Interim Dividend - Rs 0.50 Per Hsare
+NSE,NTPC,INE733E01010,NTPC Limited,2020-08-13,2020-08-14,dividend,,,2.65,,,Dividend - Rs 2.65  Per Share
+NSE,NTPC,INE733E01010,NTPC Limited,2020-09-16,,agm,,,,,,Annual General Meeting
+NSE,NTPC,INE733E01010,NTPC Limited,2020-11-12,2020-11-13,other,,,,,,Buy-Back
+NSE,NTPC,INE733E01010,NTPC Limited,2021-02-11,2021-02-12,dividend,,,3,,,Interim Dividend - Rs 3 Per Share
+NSE,NTPC,INE733E01010,NTPC Limited,2021-09-08,2021-09-10,dividend,,,3.15,,,Dividend - Rs 3.15 Per Share
+NSE,NTPC,INE733E01010,NTPC Limited,2021-09-20,,agm,,,,,,Annual General Meeting
+NSE,NTPC,INE733E01010,NTPC Limited,2022-02-03,2022-02-05,dividend,,,4,,,Interim Dividend - Rs 4 Per Share
+NSE,NTPC,INE733E01010,NTPC Limited,2022-08-10,2022-08-11,dividend,,,3,,,Dividend - Rs 3 Per Share
+NSE,NTPC,INE733E01010,NTPC Limited,2023-02-03,2023-02-04,dividend,,,4.25,,,Interim Dividend - Rs 4.25 Per Share
+NSE,NTPC,INE733E01010,NTPC Limited,2023-08-11,2023-08-11,dividend,,,3,,,Dividend - Rs 3 Per Share
+NSE,NTPC,INE733E01010,NTPC Limited,2023-11-03,2023-11-04,dividend,,,2.25,,,Interim Dividend - Rs 2.25 Per Share
+NSE,NTPC,INE733E01010,NTPC Limited,2024-02-06,2024-02-06,dividend,,,2.25,,,Interim Dividend - Rs 2.25 Per Share
+BSE,NTPC,INE733E01010,NTPC Ltd,2024-02-06,2024-02-06,dividend,,,2.25,,,Interim Dividend - Rs. - 2.2500
+BSE,NTPC,INE733E01010,NTPC Ltd,2024-08-07,2024-08-07,dividend,,,3.25,,,Final Dividend - Rs. - 3.2500
+NSE,NTPC,INE733E01010,NTPC Limited,2024-08-07,2024-08-07,dividend,,,3.25,,,Dividend - Rs 3.25 Per Share
+NSE,NTPC,INE733E01010,NTPC Limited,2024-10-31,2024-11-02,dividend,,,2.5,,,Interim Dividend - Rs 2.50 Per Share
+BSE,NTPC,INE733E01010,NTPC Ltd,2024-10-31,2024-11-02,dividend,,,2.5,,,Interim Dividend - Rs. - 2.5000
+NSE,NTPC,INE733E01010,NTPC Limited,2025-01-31,2025-01-31,dividend,,,2.5,,,Interim Dividend - Rs 2.50 Per Share
+BSE,NTPC,INE733E01010,NTPC Ltd,2025-01-31,2025-01-31,dividend,,,2.5,,,Interim Dividend - Rs. - 2.5000
+NSE,NTPC,INE733E01010,NTPC Limited,2025-09-04,2025-09-04,dividend,,,3.35,,,Dividend - Rs 3.35 Per Share
+BSE,NTPC,INE733E01010,NTPC Ltd,2025-09-04,2025-09-04,dividend,,,3.35,,,Final Dividend - Rs. - 3.3500
+BSE,NTPC,INE733E01010,NTPC Ltd,2025-11-07,2025-11-07,dividend,,,2.75,,,Interim Dividend - Rs. - 2.7500
+NSE,NTPC,INE733E01010,NTPC Limited,2025-11-07,2025-11-07,dividend,,,2.75,,,Interim Dividend - Rs 2.75 Per Share
+NSE,NTPC,INE733E01010,NTPC Limited,2026-02-06,2026-02-06,dividend,,,2.75,,,Interim Dividend - Rs 2.75 Per Share
+BSE,NTPC,INE733E01010,NTPC Ltd,2026-02-06,2026-02-06,dividend,,,2.75,,,Interim Dividend - Rs. - 2.7500
+BSE,NTPC,INE733E01010,NTPC Ltd,2026-09-02,2026-09-02,dividend,,,3.5,,,Final Dividend - Rs. - 3.5000
+NSE,NTPC,INE733E01010,NTPC Limited,2026-09-02,2026-09-02,dividend,,,3.5,,,Dividend - Rs 3.50 Per Share
