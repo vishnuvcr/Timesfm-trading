@@ -145,6 +145,8 @@ jobs:
           key: timesfm3-hf-${{ runner.os }}-3.0.2
       - name: Install pinned TimesFM 3 environment
         run: python -m pip install -r requirements-research.txt
+      - name: Syntax check stock bootstrap
+        run: python -m py_compile scripts/bootstrap_timesfm3_stocks_p1.py
       - name: Run individual-stock exploratory bootstrap
         run: |
           PYTHONPATH=. python scripts/bootstrap_timesfm3_stocks_p1.py \
