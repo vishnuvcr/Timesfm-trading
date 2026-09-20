@@ -467,6 +467,7 @@ def main():
     ap.add_argument("--global-dir", required=True)
     ap.add_argument("--actions-dir", required=True)
     ap.add_argument("--fii-dii", default="")
+    ap.add_argument("--variant", choices=("both", "univariate", "global"), default="both")
     ap.add_argument("--output", default="p4b_btst_results")
     args = ap.parse_args()
 
@@ -499,7 +500,8 @@ def main():
     )
 
     rows = []
-    for variant in ("univariate", "global"):
+    variants = ("univariate", "global") if args.variant == "both" else (args.variant,)
+    for variant in variants:
         tasks = []
         for fold, idxs in folds.items():
             for idx in idxs:
@@ -556,7 +558,7 @@ def main():
                     horizon=1,
                     past_only_covariates=all_covars,
                     return_quantiles=False,
-                    univariate=True,
+                    univariate=False,
                 )
             else:
                 outputs = model.predict_batch(
@@ -610,7 +612,7 @@ def main():
                 })
 
     forecast_summary = []
-    for variant in ("univariate", "global"):
+    for variant in variants:
         for h in (variant,):
             vals = [r for r in rows if r["variant"] == variant]
             y = []
@@ -641,7 +643,7 @@ def main():
             })
 
     strategy_results = []
-    for variant in ("univariate", "global"):
+    for variant in variants:
         variant_rows = [r for r in rows if r["variant"] == variant]
         for strategy in ("timesfm", "control"):
             for slip in SLIPPAGE_STRESSES:
@@ -664,7 +666,7 @@ def main():
                 })
 
     primary_p = {}
-    for variant in ("univariate", "global"):
+    for variant in variants:
         vp = [r for r in rows if r["variant"] == variant and r["fold"] in DEV_FOLDS]
         t_periods = simulate(vp, "timesfm", PRIMARY_SLIPPAGE)["path"]
         c_periods = simulate(vp, "control", PRIMARY_SLIPPAGE)["path"]
@@ -673,7 +675,7 @@ def main():
 
     qvals = bh(primary_p)
     candidates = []
-    for variant in ("univariate", "global"):
+    for variant in variants:
         t = next(x for x in strategy_results if x["variant"] == variant and x["strategy"] == "timesfm" and abs(x["slippage_rate"] - PRIMARY_SLIPPAGE) < 1e-12)
         c = next(x for x in strategy_results if x["variant"] == variant and x["strategy"] == "control" and abs(x["slippage_rate"] - PRIMARY_SLIPPAGE) < 1e-12)
         fold_ok = all(t["fold_returns"][f-1] > c["fold_returns"][f-1] and t["fold_returns"][f-1] > 0 for f in DEV_FOLDS)
@@ -716,7 +718,8 @@ def main():
         "development_candidates": candidates,
         "holdout_results": holdout,
         "status": "candidate_holdout_required" if candidates else "no_btst_cell_passed_development",
-        "note": "BTST target is close-to-next-open. Global covariates are timestamp-safe at the 15:30 IST signal cutoff. FII/DII parsing is a secondary sensitivity only and does not enter the promotion family.",
+        "variant_scope": list(variants),
+        "note": "BTST target is close-to-next-open. The corrected global variant uses TimesFM 3.0's documented covariate path with univariate=False; the univariate=True path is reserved for the no-covariate cell. Global covariates are timestamp-safe at the 15:30 IST signal cutoff. FII/DII parsing is a secondary sensitivity only and does not enter the promotion family.",
     }
 
     out = Path(args.output)
