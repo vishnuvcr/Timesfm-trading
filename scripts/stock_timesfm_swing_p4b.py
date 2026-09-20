@@ -107,11 +107,19 @@ def main() -> None:
                     future.append(float(series[symbol][1][i+horizon] - series[symbol][1][i]))
                 forecasts = model.predict_batch(contexts, horizon=horizon, return_quantiles=True, univariate=True)
                 tfm = np.array([float(np.asarray(out.forecast).reshape(-1)[-1] - contexts[j][-1]) for j, out in enumerate(forecasts)])
-                widths = np.array([
-                    float(np.asarray(out.quantiles)[:, -1][8] - np.asarray(out.quantiles)[:, -1][0])
-                    if out.quantiles is not None else np.nan
-                    for out in forecasts
-                ])
+                widths = []
+                for out in forecasts:
+                    if out.quantiles is None:
+                        widths.append(np.nan)
+                        continue
+                    q = np.asarray(out.quantiles)
+                    if q.ndim == 2 and q.shape == (horizon, 9):
+                        widths.append(float(q[-1, -1] - q[-1, 0]))
+                    elif q.ndim == 3 and q.shape[-2:] == (horizon, 9):
+                        widths.append(float(q[0, -1, -1] - q[0, -1, 0]))
+                    else:
+                        raise RuntimeError(f"unexpected TimesFM quantile shape {q.shape}; expected ({horizon}, 9) or (N, {horizon}, 9)")
+                widths = np.asarray(widths, dtype=float)
                 mom = np.asarray(momentum, dtype=float)
                 fut = np.asarray(future, dtype=float)
                 width_filled = np.nan_to_num(widths, nan=float(np.nanmedian(widths)))
