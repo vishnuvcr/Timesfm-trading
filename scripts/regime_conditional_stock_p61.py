@@ -86,15 +86,26 @@ def bh_adjust(pvals: list[float]) -> list[float]:
     return adj.tolist()
 
 
-def permutation_pvalue(x: np.ndarray, y: np.ndarray, seed: int = 7, n_perm: int = 2000) -> float:
-    x = np.asarray(x, dtype=float)
-    y = np.asarray(y, dtype=float)
-    observed = abs(float(spearman_rank_ic(x, y)))
+def origin_level_permutation_pvalue(origins: list[tuple[np.ndarray, np.ndarray]], seed: int = 7, n_perm: int = 2000) -> float:
+    if len(origins) < 4:
+        return float("nan")
+    observed_series = [
+        float(spearman_rank_ic(x, y)) for x, y in origins
+        if len(x) >= TOP_K
+    ]
+    if not observed_series:
+        return float("nan")
+    observed = abs(float(np.mean(observed_series)))
     rng = np.random.default_rng(seed)
     hits = 0
     for _ in range(n_perm):
-        yp = rng.permutation(y)
-        hits += abs(float(spearman_rank_ic(x, yp))) >= observed
+        permuted = []
+        for x, y in origins:
+            if len(x) < TOP_K:
+                continue
+            permuted.append(float(spearman_rank_ic(x, rng.permutation(y))))
+        if permuted and abs(float(np.mean(permuted))) >= observed:
+            hits += 1
     return (hits + 1.0) / (n_perm + 1.0)
 
 
@@ -238,7 +249,7 @@ def main() -> None:
             or (name == "trend_up" and r["trend_up"])
             or (name == "trend_down" and not r["trend_up"])
         ]
-        x_resid, y = [], []
+        origin_ics = []
         momentum_excess, resid_excess = [], []
         for r in subset:
             eligible = r["eligible"]
@@ -248,17 +259,17 @@ def main() -> None:
             rr = r["residual"][idxs]
             mm = r["momentum"][idxs]
             yy = r["future_return"][idxs]
-            x_resid.extend(rr.tolist())
-            y.extend(yy.tolist())
+            origin_ics.append((rr, yy))
 
             top_m = idxs[np.argsort(mm)[-TOP_K:]]
             top_r = idxs[np.argsort(rr)[-TOP_K:]]
-            momentum_excess.append(float(np.mean(r["future_return"][top_m]) - np.mean(r["future_return"][top_m * 0 + idxs])))
+            momentum_excess.append(float(np.mean(r["future_return"][top_m]) - np.mean(r["future_return"][idxs])))
             resid_excess.append(float(np.mean(r["future_return"][top_r]) - np.mean(r["future_return"][top_m])))
 
-        if len(x_resid) >= 20:
-            rank_ic = float(spearman_rank_ic(np.asarray(x_resid), np.asarray(y)))
-            p = permutation_pvalue(np.asarray(x_resid), np.asarray(y), seed=19 + len(metrics))
+        if origin_ics:
+            rank_series = [float(spearman_rank_ic(x, y)) for x, y in origin_ics]
+            rank_ic = float(np.mean(rank_series))
+            p = origin_level_permutation_pvalue(origin_ics, seed=19 + len(metrics))
             pvals.append(p)
         else:
             rank_ic, p = float("nan"), float("nan")
