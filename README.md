@@ -40,7 +40,9 @@ The repository now has:
 - SHA-256 manifests;
 - validation code;
 - a manual/push GitHub Actions acquisition workflow;
-- a documented independent cross-check source.
+- a documented independent cross-check source;
+- back-adjusted stock prices and a filtered point-in-time liquidity-universe table;
+- a return-path cross-check summary for five liquid names. 
 
 The current cache is **bootstrap evidence**, not a final claim of PIT/survivorship-safe stock performance. Individual-stock empirical testing must still reconcile identifier history, corporate actions, point-in-time universe membership and execution costs.
 
@@ -86,3 +88,11 @@ Paytm Money remains the reference brokerage/RMS source for simulation. Models mu
 - [Error log](docs/ERROR_LOG.md)
 - [Chat/decision log](docs/CHAT_LOG.md)
 - [Official NSE access blocker — Issue #6](https://github.com/vishnuvcr/Timesfm-trading/issues/6)
+
+
+## Stock-data validation checkpoint
+
+The alternate stock lane is now green through raw prices, corporate actions, adjusted prices and PIT liquidity metadata. The independent source check found large level differences in some names, but those differences were consistent with adjustment conventions; overlapping daily raw-close return paths were extremely close in the five-name bootstrap, with at least 99.7% of daily return differences within 0.10 percentage points.
+
+The next stock-level research gate is therefore not "find a different data source"; it is to freeze the PIT universe/identifier rules, reconcile corporate actions, and run the same pre-declared TimesFM forecast matrix across the stock cross-section.
+
