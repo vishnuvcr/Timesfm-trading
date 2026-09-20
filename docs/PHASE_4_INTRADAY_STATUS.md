@@ -87,3 +87,8 @@ The rerun now:
 - counts all other out-of-session rows;
 - records concrete invalid-OHLC examples;
 - retains the release SHA-256 gate.
+
+
+## Final source-gate execution marker — 2026-09-20
+
+Running the updated corporate-action-aware validator against the hash-verified 214-symbol release.
