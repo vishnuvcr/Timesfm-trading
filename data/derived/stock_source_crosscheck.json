@@ -20,7 +20,11 @@
       "p95_abs_close_pct_diff": 3.3747752397452033,
       "max_abs_close_pct_diff": 3.3805779937373104,
       "share_close_within_0_10pct": 0.1121654501216545,
-      "source_note": "Yahoo/yfinance dataset is an independent cross-check; no raw cross-check file is committed."
+      "daily_return_corr_raw_close": 0.8361199704371908,
+      "median_abs_daily_return_diff": 2.2813839706259387e-08,
+      "p95_abs_daily_return_diff": 6.815203363874643e-08,
+      "share_daily_return_diff_within_0_10pct": 0.9970781592403214,
+      "source_note": "Yahoo/yfinance dataset is an independent cross-check; level differences may reflect corporate-action adjustment conventions; no raw cross-check file is committed."
     },
     {
       "symbol": "TCS",
@@ -33,7 +37,11 @@
       "p95_abs_close_pct_diff": 1.000000077574613,
       "max_abs_close_pct_diff": 1.0081584392550988,
       "share_close_within_0_10pct": 0.49562043795620436,
-      "source_note": "Yahoo/yfinance dataset is an independent cross-check; no raw cross-check file is committed."
+      "daily_return_corr_raw_close": 0.8980283683377775,
+      "median_abs_daily_return_diff": 2.339632254599877e-08,
+      "p95_abs_daily_return_diff": 6.998347359399302e-08,
+      "share_daily_return_diff_within_0_10pct": 0.9978096860550012,
+      "source_note": "Yahoo/yfinance dataset is an independent cross-check; level differences may reflect corporate-action adjustment conventions; no raw cross-check file is committed."
     },
     {
       "symbol": "HDFCBANK",
@@ -46,7 +54,11 @@
       "p95_abs_close_pct_diff": 18.999999945374316,
       "max_abs_close_pct_diff": 19.00000104667044,
       "share_close_within_0_10pct": 0.06277372262773723,
-      "source_note": "Yahoo/yfinance dataset is an independent cross-check; no raw cross-check file is committed."
+      "daily_return_corr_raw_close": 0.655535234389097,
+      "median_abs_daily_return_diff": 2.2376643649124617e-08,
+      "p95_abs_daily_return_diff": 6.796259330865694e-08,
+      "share_daily_return_diff_within_0_10pct": 0.9982964224872232,
+      "source_note": "Yahoo/yfinance dataset is an independent cross-check; level differences may reflect corporate-action adjustment conventions; no raw cross-check file is committed."
     },
     {
       "symbol": "INFY",
@@ -59,7 +71,11 @@
       "p95_abs_close_pct_diff": 7.000000166912368,
       "max_abs_close_pct_diff": 7.000000378806264,
       "share_close_within_0_10pct": 0.5275548421615838,
-      "source_note": "Yahoo/yfinance dataset is an independent cross-check; no raw cross-check file is committed."
+      "daily_return_corr_raw_close": 0.7756187146467753,
+      "median_abs_daily_return_diff": 2.2137524369192363e-08,
+      "p95_abs_daily_return_diff": 6.621900792147526e-08,
+      "share_daily_return_diff_within_0_10pct": 0.9986620283649986,
+      "source_note": "Yahoo/yfinance dataset is an independent cross-check; level differences may reflect corporate-action adjustment conventions; no raw cross-check file is committed."
     },
     {
       "symbol": "SBIN",
@@ -72,7 +88,11 @@
       "p95_abs_close_pct_diff": 9.000000251798046,
       "max_abs_close_pct_diff": 9.000000571679838,
       "share_close_within_0_10pct": 0.7065693430656934,
-      "source_note": "Yahoo/yfinance dataset is an independent cross-check; no raw cross-check file is committed."
+      "daily_return_corr_raw_close": 0.8136245447674323,
+      "median_abs_daily_return_diff": 2.337954274622689e-08,
+      "p95_abs_daily_return_diff": 7.01841522676716e-08,
+      "share_daily_return_diff_within_0_10pct": 0.9973229496227792,
+      "source_note": "Yahoo/yfinance dataset is an independent cross-check; level differences may reflect corporate-action adjustment conventions; no raw cross-check file is committed."
     }
   ],
   "raw_crosscheck_files_committed": false
