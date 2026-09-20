@@ -1,0 +1,46 @@
+name: Phase 6 10-session TimesFM regime conditioning
+
+on:
+  push:
+    branches: [phase-6-regimes-10d]
+  workflow_dispatch:
+
+jobs:
+  p62-10d-regime:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Fetch Phase 2 adjusted prices and corporate actions
+        run: |
+          git fetch origin phase-2-data
+          git checkout origin/phase-2-data -- configs/equity_research_universe.json data/cache/equities/tejhq_nse_adjusted data/cache/equities/tejhq_nse
+      - name: Fetch tested TimesFM 3.0 adapter and statistics
+        run: |
+          git fetch origin phase-3-timesfm-gate
+          git checkout origin/phase-3-timesfm-gate -- src/model src/stats requirements-research.txt
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+          cache-dependency-path: requirements-research.txt
+      - name: Cache TimesFM 3.0 model files
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: timesfm3-hf-3.0.2-${{ runner.os }}
+      - name: Install pinned TimesFM 3.0 research environment
+        run: python -m pip install -r requirements-research.txt
+      - name: Syntax check
+        run: python -m py_compile scripts/regime_conditioned_stock_p62_10d.py
+      - name: Run 10-session regime conditioning
+        run: |
+          PYTHONPATH=. python scripts/regime_conditioned_stock_p62_10d.py             --data-dir data/cache/equities/tejhq_nse_adjusted             --actions-dir data/cache/equities/tejhq_nse             --output p6_2_10d_results
+      - name: Upload results
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase6-p62-10d-regime-conditioned-timesfm
+          path: p6_2_10d_results/
