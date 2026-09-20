@@ -64,15 +64,15 @@ def choose_top(scores: np.ndarray, k: int, eligible: np.ndarray | None = None) -
     return w
 
 
-def fixed_cost(notional_orders: int) -> float:
-    return float(notional_orders) * (BROKERAGE_PER_ORDER + DP_SELL)
-
-
 def portfolio_trade_cost(old_w: np.ndarray, new_w: np.ndarray, capital: float, one_way_rate: float) -> tuple[float, float]:
     delta = np.abs(new_w - old_w)
     traded_notional = float(delta.sum() * capital)
-    orders = int(np.sum((old_w > 1e-12) & (new_w < 1e-12)) + np.sum((new_w > 1e-12) & (old_w < 1e-12)))
-    fixed = fixed_cost(orders)
+    sell_mask = (old_w > 1e-12) & (new_w < 1e-12)
+    buy_mask = (new_w > 1e-12) & (old_w < 1e-12)
+    resize_mask = (np.abs(delta) > 1e-12) & ~(sell_mask | buy_mask)
+    sell_orders = int(sell_mask.sum() + resize_mask.sum())
+    buy_orders = int(buy_mask.sum() + resize_mask.sum())
+    fixed = (sell_orders + buy_orders) * BROKERAGE_PER_ORDER + sell_orders * DP_SELL
     proportional = traded_notional * one_way_rate
     return proportional + fixed, traded_notional
 
@@ -102,7 +102,7 @@ def run_backtest(
     results = []
     for strategy in STRATEGIES:
         capital = CAPITAL
-        old_w = np.zeros(TOP_K)
+        old_w = np.zeros(len(returns[0]['future_return']))
         equity_curve = [capital]
         gross_period_returns: list[float] = []
         net_period_returns: list[float] = []
@@ -113,7 +113,7 @@ def run_backtest(
             future = np.asarray(row["future_return"], dtype=float)
 
             if strategy == "equal_weight":
-                new_w = np.ones(TOP_K) / TOP_K
+                new_w = np.ones(len(scores)) / len(scores)
             elif strategy == "momentum_gate":
                 eligible = np.asarray(row["timesfm_positive"], dtype=bool)
                 new_w = choose_top(scores, TOP_K, eligible)
@@ -122,11 +122,7 @@ def run_backtest(
 
             # Equal-weight portfolio is represented over TOP_K slots; cost is based on weight turnover.
             # The signal is long-only and uninvested slots remain cash.
-            period_return = float(np.dot(new_w, future[np.argsort(scores)[-TOP_K:][::-1]]) if strategy != "equal_weight" else np.mean(future))
-            # For scored strategies, selected returns must correspond to selected names, not score order.
-            if strategy != "equal_weight":
-                selected = np.flatnonzero(new_w > 0)
-                period_return = float(np.dot(new_w[selected], future[selected]))
+            period_return = float(np.dot(new_w, future))
 
             fee, traded_notional = portfolio_trade_cost(old_w, new_w, capital, one_way_rate)
             net_return = (period_return * capital - fee) / capital
