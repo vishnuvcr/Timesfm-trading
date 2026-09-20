@@ -90,3 +90,17 @@ The next work should not search arbitrary TimesFM thresholds for a positive resu
 ## 2026-09-20 — Phase 4B CI second correction
 
 Run 35525174393 reached setup-python but failed because `cache: false` is not a supported value. The workflow was corrected by removing the cache parameter from the source-validation job entirely. The error is logged in `docs/ERROR_LOG.md`.
+
+## 2026-09-20 — Phase 4B swing matrix result
+
+Observable result: workflow 35525457869 completed the frozen 30-stock 2/5/10/20-session swing matrix, totaling 3,840 stock-level forecast origins.
+
+Source result: the candidate 1-minute source passed a 200-row structural 20MICRONS probe with correct schema, zero duplicate timestamps and zero invalid OHLC rows.
+
+Forecast result: TimesFM MAE was worse than persistence at all horizons; directional excess was negative at every horizon.
+
+Strategy result: the 10-session TimesFM ranking beat the 20-session momentum control at every tested cost stress, including +19.87% versus +9.58% at 0.125% one-way and +3.41% versus -4.80% at 0.50%. It was ahead in three of four chronological folds at 0.125%, but exact sign-flip p=0.625 and BH q=0.833.
+
+Decision: do not call this validated alpha. Retain the 10-session TimesFM ranking as a downstream exploratory candidate for regime/external-information and Phase 7 walk-forward validation; reject the other TimesFM horizon cells for promotion.
+
+Artifacts: workflow 35525457869; swing artifact 10609348369; source-validation artifact 10610350345. Compact results and hashes are committed under results/.

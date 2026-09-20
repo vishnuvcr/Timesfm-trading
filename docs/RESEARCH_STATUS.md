@@ -208,3 +208,17 @@ The daily individual-stock TimesFM overlay gate remains closed. Phase 4B is test
 - candidate BTST/intraday/scalping only after minute-source and execution-quality validation.
 
 No Phase 4B empirical result has yet been promoted. The fixed 30-stock set remains bootstrap/engineering evidence only.
+
+## Phase 4B swing result — 2026-09-20
+
+Workflow 35525457869 completed the frozen 30-stock 2/5/10/20-session swing matrix.
+
+- TimesFM MAE was worse than persistence at all four horizons.
+- The 10-session TimesFM ranking beat 20-session momentum at 0.125%, 0.25%, 0.375% and 0.50% one-way costs.
+- Ten-session fold comparison at 0.125%: TimesFM led momentum in folds 2, 3 and 4 but lost in fold 1.
+- Exact four-fold sign-flip p=0.625; BH q=0.833 for the 10-session TimesFM cell at the 0.125% reference.
+- 10-session selection concentration was not dominated by a single name, but the universe remains a bootstrap panel.
+
+**Current Phase 4B decision:** retain 10-session TimesFM as a downstream exploratory candidate only; reject promotion of the other TimesFM horizon cells and the uncertainty-scaled mechanism.
+
+See docs/PHASE_4B_SWING_CONCLUSION.md and results/p4b_swing_summary.json.

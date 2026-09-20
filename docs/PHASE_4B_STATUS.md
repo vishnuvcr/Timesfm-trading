@@ -71,3 +71,13 @@ A close-to-close daily return is not labeled BTST. Genuine BTST requires a next-
 
 ## Stop rule
 Do not expand the swing search beyond the predeclared horizon/mechanism matrix unless a protocol amendment is recorded. Weak cells stop at the phase gate.
+
+## Swing execution result — 2026-09-20
+
+The frozen 2/5/10/20-session swing matrix completed successfully (workflow 35525457869; artifact 10609348369; 3,840 stock-level forecast origins).
+
+Forecast-error gate: TimesFM MAE was worse than persistence at all horizons. Directional excess was -2.40, -4.58, -5.00 and -1.15 pp at 2/5/10/20 sessions.
+
+Strategy gate: the 10-session TimesFM ranking beat the independent 20-session momentum control at all four one-way cost stresses and was ahead in folds 2–4 at the 0.125% reference. The exact four-fold sign-flip p-value was 0.625 and BH q=0.833 across the eight predeclared cells.
+
+Decision: advance only the 10-session TimesFM ranking as a downstream exploratory candidate. Do not promote the other TimesFM horizon cells or the uncertainty-scaled mechanism. See PHASE_4B_SWING_CONCLUSION.md and results/p4b_swing_summary.json.

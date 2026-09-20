@@ -138,3 +138,13 @@ See:
 - `scripts/stock_timesfm_swing_p4b.py`
 - `scripts/validate_intraday_source_p4b.py`
 - `.github/workflows/phase-4b-stock-multifrequency.yml`
+
+## Phase 4B swing result — 2026-09-20
+
+The frozen individual-stock swing matrix completed successfully. TimesFM 3.0 point forecasts were worse than persistence at all tested horizons, but the **10-session TimesFM cross-sectional ranking** beat the independent 20-session momentum control at every tested one-way cost stress.
+
+This is **not a validated trading strategy**. The four-fold exact sign-flip p-value is 0.625 and the BH q-value is 0.833 at the 0.125% reference. The result is retained as a downstream research candidate, not promoted alpha.
+
+The candidate 1-minute source passed the initial structural data gate. BTST/intraday/scalping still require deeper session, cross-source and execution-quality validation.
+
+See docs/PHASE_4B_SWING_CONCLUSION.md and results/p4b_swing_summary.json.
