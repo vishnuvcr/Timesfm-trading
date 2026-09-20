@@ -71,3 +71,22 @@ The next validation should:
 6. pass the existing brokerage, statutory-charge, spread/slippage/impact and participation-cost model before strategy promotion.
 
 No stock strategy is validated by the present bootstrap.
+
+
+## Multi-fold stock robustness update — 2026-09-20
+
+The four-fold extension used 30 stocks × 4 chronological folds × 40 origins per fold (4,800 origins total), retaining the same TimesFM 3.0 configuration and persistence comparator.
+
+The result is consistently unfavorable for point forecasting: every stock's four-fold mean MAE difference was positive (TimesFM worse than persistence), with mean MAE difference +0.001144 and mean RMSE difference +0.001470. Mean five-session return-MAE difference was +0.001885.
+
+The recent-window directional result also failed the robustness test. Mean directional excess was -2.90 percentage points, with only 13/30 stocks non-negative across the four folds. Fold-level directional excess was negative in three of four folds.
+
+The interval-width/absolute-movement relationship was mildly positive in the multi-fold sample (mean Spearman rho +0.091), but this is far smaller and qualitatively different from the earlier secondary NIFTY observation (~+0.350). It is not calibrated, not cost-tested, and not sufficient to support a stock-sizing strategy.
+
+### Current inference
+
+The evidence now supports a **negative result for standalone TimesFM 3.0 stock forecasting against persistence on this bootstrap**. The recent directional excess should be treated as a recency-window artifact until independently reproduced.
+
+The remaining scientific opportunity is not to keep searching for a TimesFM-only direction rule. It is to test whether TimesFM adds incremental information to an independently specified stock-selection or market-structure signal after PIT universe construction, corporate-action reconciliation, multiple-testing correction and full economic costs.
+
+No stock strategy is currently validated.
