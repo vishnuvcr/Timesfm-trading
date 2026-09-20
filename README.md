@@ -12,7 +12,7 @@ Research program to evaluate Google TimesFM for a reproducible NSE trading pipel
 | 0 | Governance, reproducibility, repo bootstrap | **Complete** |
 | 1 | Literature + evidence review | **Complete / protocol frozen** |
 | 2 | NSE data lake and point-in-time controls | **In progress** |
-| 3 | TimesFM 3.0 baseline/gate by horizon | Planned |
+| 3 | TimesFM 3.0 baseline/gate by horizon | **Engineering bootstrap complete; experiment blocked by Phase 2 gate** |
 | 4 | Strategy research: scalping/intraday/BTST/swing | Planned |
 | 5 | Options research + IV/OI/Greeks | Planned |
 | 6 | Cross-market/regime/news/corporate-action features | Planned |
@@ -26,7 +26,7 @@ All ten phase branches exist and have manual GitHub Actions entry points.
 
 **TimesFM 3.0 is the primary research model.** TimesFM 2.5 remains the benchmark/ablation/fallback model.
 
-Google's current official documentation says TimesFM 3.0 adds native multivariate forecasting and flexible past-only and past-and-future covariate support. The source code in the main TimesFM repository is Apache-2.0, but the pretrained 3.0 weights are distributed under a separate TimesFM Non-Commercial License v1.0. That license permits qualifying testing, evaluation and research; commercial or production use of the pretrained weights requires separate permission/license from Google.
+Google's current official documentation says TimesFM 3.0 adds native multivariate forecasting and flexible past-only and past-and-future covariate support. The source code in the main TimesFM repository is Apache-2.0, but the pretrained 3.0 weights are distributed under a separate TimesFM Non-Commercial License v1.0. That license permits qualifying testing, evaluation and research; commercial or production use of the pretrained weights requires separate permission/license from Google. citeturn498629view0turn388765search3
 
 ## Phase 1 result
 
@@ -35,6 +35,12 @@ The protocol is frozen around a gate-first sequence:
 **3.0 forecast → calibration → multivariate/covariate conditioning → net economic edge → execution feasibility → risk/sizing → promotion**
 
 Direct directional forecasting is not assumed to be the only useful output. Volatility, uncertainty, regime filters, execution timing and option-implied-versus-forecast range remain first-class hypotheses.
+
+Recent finance-specific evidence reinforces that design. Financial TSFM benchmarks report small/sparse gains over random-walk baselines; a base-rate-honest TimesFM study shows raw directional accuracy can be misleading; and a September 2026 pre-registered TimesFM-3 study on the SPY implied-volatility surface found forecast-loss gains that narrowed after calibration, with the market's forward-variance forecast beating TimesFM at ATM nodes and no economic/fill test being run. citeturn130125academia13turn130125academia14turn290367search0
+
+## Frozen experiment matrix
+
+[Experiment matrix](docs/EXPERIMENT_MATRIX.md) fixes the primary target families, horizon families, input families, baselines, statistical metrics and promotion gates before strategy results are observed.
 
 ## Phase 2 result so far
 
@@ -52,10 +58,26 @@ NSE's official ecosystem provides security-wise archives, historical index/VIX d
 
 The public option-chain interface exposes OI, change in OI, volume, IV, LTP and bid/ask, but its terms restrict copying/aggregation; the research therefore treats an authorized historical options dataset as mandatory for Phase 5. citeturn173596search1
 
+Community GitHub/Kaggle/Hugging Face datasets are catalogued as secondary validation/bootstrapping sources, never as the primary exchange truth. citeturn325482search0turn325482search1turn325482search2turn325482search9
+
+## Phase 3 engineering result
+
+The 3.0 branch now contains:
+- pinned TimesFM 3.0.2 research environment;
+- a thin adapter around Google's TimesFM3Evaluator;
+- multivariate targets;
+- past-only covariates;
+- nine native quantiles;
+- a forecast-record provenance schema;
+- a manual model-smoke workflow.
+
+The actual statistical gate is intentionally blocked until Phase 2 supplies a frozen P0 dataset.
+
 ## Repository map
 
 - [Research plan](docs/RESEARCH_PLAN.md)
 - [Research status](docs/RESEARCH_STATUS.md)
+- [Experiment matrix](docs/EXPERIMENT_MATRIX.md)
 - [Methodology](docs/METHODOLOGY.md)
 - [Literature review](docs/LITERATURE_REVIEW.md)
 - [Data catalog](docs/DATA_CATALOG.md)
@@ -64,9 +86,9 @@ The public option-chain interface exposes OI, change in OI, volume, IV, LTP and 
 - [Error log](docs/ERROR_LOG.md)
 - [Chat/decision log](docs/CHAT_LOG.md)
 - [Project instructions](PROJECT_INSTRUCTIONS.md)
-- [Phase 2 status](https://github.com/vishnuvcr/Timesfm-trading/blob/phase-2-data/docs/PHASE_2_STATUS.md)
-- [Phase 2 data policy](https://github.com/vishnuvcr/Timesfm-trading/blob/phase-2-data/docs/PHASE_2_DATA_POLICY.md)
+- [Phase 2 branch status](https://github.com/vishnuvcr/Timesfm-trading/blob/phase-2-data/docs/PHASE_2_STATUS.md)
 - [Phase 2 source registry](https://github.com/vishnuvcr/Timesfm-trading/blob/phase-2-data/configs/source_registry.json)
+- [Phase 3 branch status](https://github.com/vishnuvcr/Timesfm-trading/blob/phase-3-timesfm-gate/docs/PHASE_3_STATUS.md)
 
 ## Market data scope
 
@@ -78,4 +100,4 @@ Paytm Money is the primary broker cost reference for the project. Current offici
 
 ## Important limitation
 
-No live trading claim is made. The repository currently contains a frozen research protocol and an active data-engineering framework, not a validated trading strategy.
+No live trading claim is made. The repository currently contains a frozen research protocol and active data/model engineering, not a validated trading strategy.
