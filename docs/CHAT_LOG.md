@@ -103,3 +103,11 @@ Results:
 The candidate was below momentum at every stress level. One-sided block-signflip p-values were 0.972–0.984. Maximum participation was about 0.014% of trailing turnover.
 
 **Decision:** close the current individual-stock TimesFM strategy search and proceed to final manuscript/release. No additional TimesFM thresholds, horizons, hybrids or regime variants are permitted on the completed holdout.
+
+## 2026-09-20 — Phase 4 intraday gate started
+
+The daily/multiday individual-stock TimesFM candidate was closed by Phase 7. A separate intraday/BTST/scalping data-integrity gate was started on branch `phase-4-intraday-gate`.
+
+The gate is source-only: no TimesFM trading strategy is being tested yet. It checks minute-bar schema, UTC→IST session mapping, complete 09:15–15:29 sessions, duplicates/gaps, OHLC validity, zero-volume behavior and source consistency against the cached EOD lane.
+
+The first execution failed on an unused NumPy import; it was removed and rerun. The current hosted run remains active.
