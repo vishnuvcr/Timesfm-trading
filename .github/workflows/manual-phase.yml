@@ -83,6 +83,24 @@ jobs:
           name: nse-fo-sample-${{ inputs.acquire_fo_date }}
           path: private_data/
 
+  retry-static-nse-index-http11:
+    if: github.event_name == 'push' && contains(github.event.head_commit.message, '[retry-static-index]')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Retry static NSE archive over HTTP/1.1
+        run: |
+          curl --http1.1 --retry 3 --retry-all-errors --connect-timeout 20 --max-time 60             --fail --location --silent --show-error             "https://nsearchives.nseindia.com/content/indices/ind_close_all_17042026.csv"             -o /tmp/ind_close_all_17042026.csv
+          python - <<'PY'
+          import csv
+          from pathlib import Path
+          p = Path("/tmp/ind_close_all_17042026.csv")
+          rows = list(csv.DictReader(p.open(encoding="utf-8-sig", newline="")))
+          nifty = [r for r in rows if r.get("Index Name") == "NIFTY 50"]
+          if not nifty:
+              raise SystemExit(f"NIFTY 50 not found; columns={rows[0].keys() if rows else []}")
+          print(nifty[0])
+          PY
+
   probe-static-nse-index-archive:
     if: github.event_name == 'push' && contains(github.event.head_commit.message, '[probe-static-index]')
     runs-on: ubuntu-latest

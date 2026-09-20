@@ -23,3 +23,5 @@
 | 2026-09-20 | Phase 2 probe CI wiring | The new official NSE historical-index probe imported `requests`, but its job did not install the dependency; run 58 stopped with ModuleNotFoundError before network access. | Probe did not test the alternate official endpoint. | Added explicit `requests` installation to the probe job. |
 
 | 2026-09-20 | Phase 2 source probe | Added a final test path using the official `nsearchives.nseindia.com/content/indices/ind_close_all_DDMMYYYY.csv` static archive, which community parsers document as containing NIFTY 50 OHLC. | Determines whether the static NSE archive host is reachable from GitHub Actions despite the main/API 403s. | Single-date probe only; promotion requires successful access and a scalable historical acquisition design. |
+
+| 2026-09-20 | Phase 2 static archive probe | `nsearchives.nseindia.com/content/indices/ind_close_all_17042026.csv` download from Actions failed with curl HTTP/2 stream error 92 before file completion. | Static archive accessibility is unresolved. | Added one controlled HTTP/1.1 retry with connection and retry bounds; if it fails, close the official runner-access loop. |
