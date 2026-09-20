@@ -17,6 +17,9 @@ Engineering bootstrap only. Statistical forecast gate has not started.
 - forecast-record schema with model/checkpoint/data-vintage provenance;
 - manual GitHub Actions smoke-test workflow.
 
+## P1 exploratory bootstrap
+An explicitly non-promotional P1 bootstrap lane has been added. It uses the public NIFTY 50 total-return series only to exercise the end-to-end TimesFM 3.0 forecasting, quantile and metric pipeline. It cannot promote a trading result because it is not the frozen primary price/OHLC P0 dataset.
+
 ## Experimental gate remains blocked
 The real forecast experiment cannot be declared valid until Phase 2 supplies a frozen, point-in-time P0 dataset and the Phase 2 leakage, calendar, contract and option-integrity tests pass.
 
@@ -45,7 +48,7 @@ The four input families will be evaluated on identical forecast origins and froz
 - Diebold-Mariano versus persistence
 - economic value after the frozen cost model
 
-No strategy is promoted from Phase 3 on raw forecast accuracy alone.
+No strategy is promoted from Phase 3 on raw forecast accuracy alone. P1 bootstrap output is retained as pipeline validation, not as a primary empirical finding.
 
 
 ## Statistical infrastructure added
