@@ -73,7 +73,7 @@ BTST rule without TimesFM vs BTST + TimesFM.
 ## S4 — Swing: volatility-targeted portfolio
 
 Universe:
-liquid NIFTY 50 names or a point-in-time index universe.
+individual NSE stocks selected by a point-in-time liquidity universe, with NIFTY/sector indices used as market and sector controls.
 
 Core rule:
 - rank or select using a separate permitted signal layer;
@@ -108,6 +108,20 @@ Preferred structures:
 - selected calendar/term-structure spread.
 
 Do not promote naked short-vol structures from this rule.
+
+## S6 — Individual-stock cross-sectional portfolio
+
+Candidate signal:
+- rank eligible stocks using a predeclared TimesFM forecast quantity or forecast-minus-baseline residual;
+- optionally combine with an independent quality/technical signal;
+- construct a capped long-only portfolio for cash equity;
+- evaluate any short leg only in a separately modeled legally supported instrument.
+
+Comparison:
+cross-sectional baseline vs baseline + TimesFM.
+
+Required controls:
+point-in-time universe, stock-specific costs, turnover/participation caps, corporate actions, sector concentration and market regime.
 
 ## Cross-strategy consistency
 
