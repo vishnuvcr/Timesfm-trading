@@ -31,3 +31,19 @@ No economic conclusion is promoted until PIT validation, multiple-testing correc
 ## Gate
 
 Phase 6 cannot promote a signal until P0 datasets, PIT controls and the frozen cost model are available.
+
+
+## 2026-09-20 — Phase 6.1 empirical stock conditioning
+
+A separate exploratory track now tests whether TimesFM adds incremental information to an independent 20-session momentum signal after observable market-state conditioning.
+
+Predeclared regimes:
+- risk-on: equal-weight 30-stock 20-session return >= 0, breadth >= 50%, and low volatility versus a past-only rolling median;
+- stress: 20-session return < 0, breadth < 50%, and high volatility;
+- trend-up/down and high/low volatility;
+- top-20-of-30 liquidity filter using trailing turnover;
+- five-trading-session post-corporate-action cooldown, using only ex-dates already observed by the decision timestamp.
+
+The TimesFM component is residualized cross-sectionally against momentum before rank testing. Significance uses rebalance-level permutation testing and Benjamini-Hochberg FDR across the predeclared regime cells. This avoids treating stock observations within the same rebalance as independent evidence.
+
+The experiment remains exploratory because the 30-name universe is not final PIT evidence and Phase 7's dated full cost engine is not yet applied.
