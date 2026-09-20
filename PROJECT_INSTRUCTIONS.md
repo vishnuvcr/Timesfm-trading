@@ -14,10 +14,12 @@ This repository implements the research workflow for TimesFM trading research on
 - Do not store secrets in Git; use GitHub Actions secrets or local environment variables.
 
 ## Model policy
-- TimesFM 3.0 is the primary research model.
-- TimesFM 2.5 is the comparison/ablation/fallback model.
-- Record the exact model repository, commit/version, configuration and model hash in every run manifest.
-- Treat the current TimesFM 3.0 pretrained-weight license as a research/non-production constraint. Do not move 3.0 outputs into live/production trading until licensing is explicitly cleared.
+- TimesFM 3.0 is the primary scientific research/evaluation model.
+- TimesFM 2.5 is the benchmark and current production/trading research lane unless and until 3.0 commercial rights are obtained.
+- Record exact model repository, commit/version, configuration and model hash in every run manifest.
+- Treat the current TimesFM 3.0 pretrained-weight license as a hard non-commercial/non-production gate.
+- Do not use 3.0 outputs to select, optimize, recommend, or operate a revenue-generating trading strategy unless licensing is explicitly cleared.
+- Research experiments involving 3.0 must record the license state in the run manifest.
 - Do not infer that 3.0's stronger general forecasting benchmarks imply trading alpha.
 
 ## Scope
@@ -30,6 +32,6 @@ All net-performance calculations must model brokerage, exchange/SEBI statutory c
 Use walk-forward validation, point-in-time datasets, explicit naive/statistical baselines, confidence intervals, forecast-loss comparisons, FDR control for multiple testing, and sensitivity analysis.
 
 ## Reproducibility
-Every experiment should have run id, code/model commit, data manifest/hash, model checkpoint/version, feature configuration, horizon/context, execution assumptions, random seeds where applicable, output paths, and a pass/fail gate.
+Every experiment should have run id, code/model commit, data manifest/hash, model checkpoint/version, feature configuration, horizon/context, execution assumptions, random seeds where applicable, output paths, license state, and a pass/fail gate.
 
 Private chain-of-thought is not stored. The chat log stores user requests, observable decisions, tool/data outcomes, errors and repository changes.
