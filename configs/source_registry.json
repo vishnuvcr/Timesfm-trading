@@ -1,5 +1,5 @@
 {
-  "version": "2026-09-20.phase2",
+  "version": "2026-09-20.phase2.alternate-equities-1",
   "timezone": "Asia/Kolkata",
   "sources": [
     {
@@ -207,6 +207,54 @@
       "storage": "tier_a_if_license_permits",
       "priority": "P2",
       "notes": "Historical Kaggle snapshot; provenance and adjustment methodology require verification."
+    },
+    {
+      "id": "community_tejhq_indian_markets",
+      "domain": "equity_eod_alternate",
+      "source": "TejHQ / tejhq/indian-markets",
+      "url": "https://huggingface.co/datasets/tejhq/indian-markets",
+      "cadence": "daily",
+      "pit_required": true,
+      "coverage_goal": "NSE/BSE EOD equity OHLCV, corporate actions, adjusted-price lineage and point-in-time liquidity universe",
+      "storage": "tier_a_permitted_snapshot",
+      "priority": "P0-alternate",
+      "notes": "Community redistribution states official NSE/BSE bhavcopy and corporate-action lineage. Fixed stock bootstrap is not final PIT evidence."
+    },
+    {
+      "id": "community_tejhq_nse_api",
+      "domain": "equity_eod_alternate_api",
+      "source": "TejHQ API",
+      "url": "https://api.tejhq.dev/v1/ohlcv/nse/{symbol}",
+      "cadence": "daily",
+      "pit_required": true,
+      "coverage_goal": "Keyless per-symbol NSE EOD OHLCV for individual-stock research",
+      "storage": "tier_a_permitted_cache",
+      "priority": "P0-alternate",
+      "notes": "Repository caches selected immutable stock files and SHA-256 manifest to avoid repeated downloads."
+    },
+    {
+      "id": "community_hf_indian_market_yahoo",
+      "domain": "equity_eod_crosscheck",
+      "source": "Hugging Face vishnun0027/indian-market-historical-ohlcv",
+      "url": "https://huggingface.co/datasets/vishnun0027/indian-market-historical-ohlcv",
+      "cadence": "daily",
+      "pit_required": true,
+      "coverage_goal": "Independent Indian stock OHLCV, adjusted close, dividends and splits cross-check",
+      "storage": "tier_a_if_permitted",
+      "priority": "P1",
+      "notes": "Dataset states Yahoo Finance/yfinance as source and MIT dataset license; not treated as exchange-primary."
+    },
+    {
+      "id": "community_kaggle_nse_equity_panels",
+      "domain": "equity_eod_crosscheck",
+      "source": "Kaggle community datasets",
+      "url": "https://www.kaggle.com/datasets/bhaktij/nse-stock-market-historical-data",
+      "cadence": "historical",
+      "pit_required": true,
+      "coverage_goal": "All-stock/large-stock historical panel cross-check",
+      "storage": "tier_a_if_license_permits",
+      "priority": "P2",
+      "notes": "Snapshot provenance and licensing vary by dataset; freeze before use."
     }
   ]
 }
