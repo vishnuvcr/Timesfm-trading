@@ -111,3 +111,9 @@ The daily/multiday individual-stock TimesFM candidate was closed by Phase 7. A s
 The gate is source-only: no TimesFM trading strategy is being tested yet. It checks minute-bar schema, UTC→IST session mapping, complete 09:15–15:29 sessions, duplicates/gaps, OHLC validity, zero-volume behavior and source consistency against the cached EOD lane.
 
 The first execution failed on an unused NumPy import; it was removed and rerun. The current hosted run remains active.
+
+## 2026-09-20 — Phase 4 intraday strategy result
+
+The ten-stock source-integrity gate passed. The frozen TimesFM 15/30/60-minute strategy matrix then failed the development gate at all three horizons. Development one-sided block p-values were 0.4381, 0.3043 and 0.6125; BH q=0.6125 for all. No fold-4 holdout was opened.
+
+Decision: close the first intraday TimesFM-vs-VWAP family and move to BTST/overnight rather than searching more intraday indicators or thresholds.
