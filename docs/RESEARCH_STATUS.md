@@ -9,10 +9,10 @@ Updated: 2026-09-20 IST
 **Complete / protocol frozen.**
 
 Model decision:
-- TimesFM 3.0 primary.
-- TimesFM 2.5 benchmark/ablation/fallback.
+- TimesFM 3.0 primary scientific/evaluation model.
+- TimesFM 2.5 benchmark and current trading/production research lane unless 3.0 commercial rights are obtained.
 - Direct direction is only one hypothesis; uncertainty, volatility, multivariate inputs and causal covariates are explicit research targets.
-- Deployment licensing is a later gate, not a reason to exclude 3.0 from research.
+- The current 3.0 pretrained-weight license is a hard gate: 3.0 outputs cannot be used to select/optimize/operate a revenue-generating trading strategy without commercial permission. See [LICENSE_GATE](LICENSE_GATE.md).
 
 New options evidence:
 A September 2026 pre-registered SPY implied-volatility study found TimesFM-3 forecast-loss advantages that narrowed after recalibration; the market's own forward-variance forecast beat the model at ATM nodes, while a residual wing signal survived statistical controls. The study stopped before economic/fill testing. This strengthens the Phase 5 requirement to compare TimesFM against market-implied forecasts and execute a full option P&L backtest before any conclusion.
@@ -75,3 +75,8 @@ No live strategy has passed a research gate.
 ## Review checkpoints
 
 Draft PR #1 contains Phase 2 data-lake/PIT infrastructure; draft PR #2 contains Phase 3 TimesFM 3.0 forecast-gate infrastructure. Neither is merged because their empirical phase gates are not yet complete.
+
+
+## License interpretation correction
+
+The official 3.0 license is more restrictive than the earlier project notes implied: Non-Commercial Purpose explicitly excludes revenue-generating activity and commercial decision-making, and restrictions extend to outputs. This is now treated as a hard governance gate, not a deployment-afterthought. citeturn670140view0
