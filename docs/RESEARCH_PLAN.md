@@ -118,3 +118,12 @@ The program ends after Phase 9. Within each phase, weak branches stop at their g
 ## Scope-change trigger
 
 A future decision to trade, deploy, sell, provide client-facing signals, connect a broker for execution, or otherwise use 3.0 outputs in commercial decision-making is a material scope change and requires a license review plus a fresh end-to-end validation plan.
+
+
+## Protocol amendment — Phase 4B multifrequency stock continuation — 2026-09-20
+
+After the daily individual-stock TimesFM overlay gate closed, the research scope was extended to the already-declared multifrequency stock families in the frozen experiment matrix rather than reopening arbitrary daily thresholds. Phase 4B predeclared 2/5/10/20-session swing targets and separate BTST/intraday/scalping data gates.
+
+The 10-session cross-sectional TimesFM ranking survived the bootstrap and cached PIT gates as a single candidate. It is now frozen for a post-selection Phase 7 holdout with exact cash-equity statutory/broker costs and slippage stress.
+
+This amendment supersedes the earlier Phase 9 final-stop wording. Phase 9 manuscript/release remains deferred until the frozen candidate is resolved by the downstream cost-aware gate.
