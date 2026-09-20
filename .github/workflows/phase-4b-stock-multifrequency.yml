@@ -7,6 +7,7 @@ on:
 
 jobs:
   validate-intraday-source:
+    if: github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[p4b-swing]')
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -28,6 +29,7 @@ jobs:
           path: p4b_intraday_validation/
 
   swing-bootstrap:
+    if: github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[p4b-swing]')
     needs: validate-intraday-source
     runs-on: ubuntu-latest
     permissions:
