@@ -100,3 +100,15 @@ C = community datasets/tools useful for cross-checks.
 D = anecdotal/practitioner content.
 
 No trading strategy is promoted solely on C or D evidence.
+
+## E12 — TimesFM 3.0 P1 NIFTY 50 exploratory forecast
+
+Finding: On a fixed secondary NIFTY 50 OHLC snapshot (5,058 rows, 2000-01-03 to 2021-01-25), TimesFM 3.0 was evaluated at 80 forecast origins with context 128 and a 5-session horizon. Log-level MAE was 0.01310 versus persistence 0.01517 (13.63% lower); RMSE was 0.01649 versus 0.01955 (15.66% lower); five-day return MAE was 0.01849 versus 0.02129 (13.18% lower). Directional accuracy was 70.0% versus a 75.0% positive-return base rate, giving -5.0 percentage points excess direction. q10-q90 coverage was 78.75%. An exploratory lag-4 Newey-West paired-loss test on origin-level MAE gave t=-2.10 and one-sided p≈0.018; moving-block bootstrap (block 5) 95% CI was approximately [-0.00416, -0.00029].
+
+Source: repository Phase 3 P1 workflow run 56 and its uploaded artifact; secondary Google Finance-derived GitHub snapshot, upstream commit c73de0e6c9acca1330a19cd41ee3d7dbd5100260 / blob fc51a9331ee2b72c430724d5e0bdd0237f91103a.
+
+Evidence grade: C — exploratory secondary-data result.
+
+Relevance: validates the end-to-end TimesFM 3.0 forecast, quantile and statistical pipeline and suggests level-error improvement can coexist with weak directional excess.
+
+Limitations: secondary dataset with no explicit upstream license file; historical window ends 2021-01-25; only one target/horizon/input family; post-hoc inference; no transaction-cost strategy test; not primary NSE P0 evidence; no promotion value.

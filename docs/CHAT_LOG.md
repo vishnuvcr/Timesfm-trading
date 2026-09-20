@@ -42,3 +42,8 @@ A direct read of the official TimesFM 3.0 Non-Commercial License shows a stricte
 ## 2026-09-20 — official P0 acquisition blocker
 
 **Observable outcome:** Four GitHub Actions attempts to retrieve the official NIFTY 50 historical endpoint all received the NIFTY Indices HTML application page with HTTP 200 rather than the expected JSON response. Cloudflare/browser-profiled session warm-up did not resolve it. The retry loop was closed and issue #6 opened. A fixed secondary Google Finance-derived NIFTY 50 snapshot is being used only for P1 TimesFM 3.0 pipeline validation; it is not primary evidence and is not redistributed because the upstream repo has no explicit license file.
+
+
+## 2026-09-20 — first TimesFM 3.0 P1 forecast result
+
+**Observable outcome:** Corrected Phase 3 P1 workflow run 56 completed successfully on the fixed secondary NIFTY 50 snapshot. At 80 origins / 5-session horizon, TimesFM 3.0 reduced log-level MAE by 13.63% and RMSE by 15.66% versus persistence; five-day return MAE improved by 13.18%. Directional accuracy was 70.0% versus a 75.0% positive-return base rate, and q10-q90 coverage was 78.75%. The result is recorded as C-grade exploratory evidence only and cannot promote a trading strategy or substitute for primary NSE P0 data.
