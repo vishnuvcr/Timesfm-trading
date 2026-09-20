@@ -87,3 +87,19 @@ No live/paper execution is enabled.
 The earlier daily-stock empirical stop was followed by the predeclared multifrequency continuation. The 10-session TimesFM cross-sectional ranking passed the cached PIT candidate gate and is now frozen for a Phase 7 post-selection holdout.
 
 This is not an authorization to reopen arbitrary TimesFM variants. The single candidate is the only stock mechanism moving forward.
+
+
+## 2026-09-20 — Phase 7 resolves the Phase 4B candidate
+
+The single frozen 10-session TimesFM individual-stock ranking candidate was evaluated once on the untouched 2023+ holdout.
+
+Results:
+- 0.00% extra slippage: TimesFM +3.72% vs momentum +67.97%;
+- 0.125%: -7.93% vs +47.20%;
+- 0.25%: -18.30% vs +28.96%;
+- 0.375%: -27.52% vs +12.94%;
+- 0.50%: -35.72% vs -1.12%.
+
+The candidate was below momentum at every stress level. One-sided block-signflip p-values were 0.972–0.984. Maximum participation was about 0.014% of trailing turnover.
+
+**Decision:** close the current individual-stock TimesFM strategy search and proceed to final manuscript/release. No additional TimesFM thresholds, horizons, hybrids or regime variants are permitted on the completed holdout.
