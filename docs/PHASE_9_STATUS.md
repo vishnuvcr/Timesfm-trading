@@ -4,44 +4,37 @@ Updated: 2026-09-20 IST
 
 ## Status
 
-**Final research manuscript complete; empirical individual-stock strategy search stopped at the declared promotion gate.**
+**Final manuscript/research release is active and reflects the completed Phase 7 holdout.**
 
 ## Final conclusion
 
-No validated TimesFM 3.0 individual-stock trading strategy was established on the available evidence.
+No validated TimesFM 3.0 individual-stock trading strategy was established.
 
-The research completed:
+The final evidence sequence is:
 - alternate individual-stock EOD data lane after the hosted NSE blocker;
 - TimesFM 3.0 30-stock forecast bootstrap;
-- four-fold stock robustness test;
-- individual-stock selection test against 20-session momentum;
-- regime/liquidity/corporate-action-conditioned incremental-information test;
-- cost-stress rejection of the remaining gross candidate.
+- four-fold robustness across 4,800 stock-level origins;
+- direct stock-selection, hybrid and regime-conditioned tests;
+- Phase 4B 2/5/10/20-session swing matrix;
+- frozen 10-session Phase 4B candidate;
+- cached PIT eligibility check;
+- 2023+ Phase 7 post-selection holdout with dated cash-equity costs, position drift, final liquidation and slippage stress.
 
-## Remaining gates
+The Phase 7 holdout rejected the sole surviving candidate. Therefore the current individual-stock EOD TimesFM search is closed.
 
-Options remain data-gated by authorized historical option data. Intraday/scalping remains data/execution-quality gated. These are documented future research directions rather than unsupported strategy claims.
-
-## Release artifacts
+## Manuscript and release artifacts
 
 - manuscript/TimesFM_NSE_Research_Manuscript.md
 - docs/FINAL_RESEARCH_CONCLUSION.md
 - docs/RESEARCH_STATUS.md
+- docs/PHASE_7_TIMESFM10_HOLDOUT.md
+- results/p7_timesfm10_holdout_summary.json
+- docs/PHASE_4B_CONCLUSION.md
 - docs/ERROR_LOG.md
 - docs/CHAT_LOG.md
-- results/p1_individual_stock_bootstrap.csv
-- results/p1_individual_stock_multifold_per_stock.csv
-- results/p4_p41_origin_diagnostics.csv
-- results/p6_p61_regime_metrics.json
-- results/p6_p61_strategy_cost_results.json
 
-## Publication rule
+## Remaining research lanes
 
-The manuscript is a research record, not a live-trading recommendation. No broker execution, paper execution or production decision path is enabled by this release.
+Options remain blocked by authorized historical option data. Intraday/scalping remains blocked from economic promotion until execution-grade data and fill validation are available. Any future positive strategy must begin on a new preregistered branch with an untouched holdout.
 
-
-## Supersession notice — 2026-09-20
-
-The earlier Phase 9 release state is no longer the latest research state. Phase 4B subsequently identified a single 10-session individual-stock TimesFM ranking candidate that passed the frozen bootstrap/PIT candidate gates.
-
-**Phase 9 is therefore deferred** until the candidate completes the predefined Phase 7 post-selection holdout. The manuscript and final conclusion files remain historical/provisional artifacts until that gate is resolved.
+The project remains research-only and non-executing.
