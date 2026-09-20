@@ -1,0 +1,31 @@
+name: Phase 4 intraday data integrity gate
+
+on:
+  push:
+    branches: [phase-4-intraday-gate]
+  workflow_dispatch:
+
+jobs:
+  minute-data-gate:
+    if: github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[p4-intraday-gate]')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Fetch Phase 2 raw EOD cache
+        run: |
+          git fetch origin phase-2-data
+          git checkout origin/phase-2-data -- data/cache/equities/tejhq_nse
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run deep minute-source validation
+        run: python scripts/validate_intraday_deep_p4.py --raw-dir data/cache/equities/tejhq_nse --output p4_intraday_validation
+      - name: Upload validation result
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase4-intraday-data-gate
+          path: p4_intraday_validation/
