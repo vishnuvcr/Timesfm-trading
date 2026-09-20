@@ -38,3 +38,10 @@ Options remain data-gated by authorized historical option data. Intraday/scalpin
 ## Publication rule
 
 The manuscript is a research record, not a live-trading recommendation. No broker execution, paper execution or production decision path is enabled by this release.
+
+
+## Supersession notice — 2026-09-20
+
+The earlier Phase 9 release state is no longer the latest research state. Phase 4B subsequently identified a single 10-session individual-stock TimesFM ranking candidate that passed the frozen bootstrap/PIT candidate gates.
+
+**Phase 9 is therefore deferred** until the candidate completes the predefined Phase 7 post-selection holdout. The manuscript and final conclusion files remain historical/provisional artifacts until that gate is resolved.
