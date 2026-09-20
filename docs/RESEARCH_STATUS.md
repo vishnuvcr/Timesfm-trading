@@ -81,6 +81,8 @@ The dated 2026 cost model is frozen in [docs/COST_MODEL.md](docs/COST_MODEL.md);
 ## Phase 4 — Strategy research
 **Engineering bootstrap complete; empirical testing blocked by frozen P0 data and Phase 3 forecast gate.**
 
+The current provisional direction is an uncertainty-conditioned exposure overlay: use TimesFM distribution width as risk information rather than treating raw direction as alpha. See [PROVISIONAL_RESEARCH_CONCLUSION](PROVISIONAL_RESEARCH_CONCLUSION.md).
+
 Phase 4 now includes non-executing shared research rules for cost hurdles, uncertainty-adjusted sizing and volatility-targeted exposure. Phase 4 CI run 35 passed.
 
 ## Phase 5 — Options

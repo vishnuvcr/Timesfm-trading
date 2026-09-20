@@ -132,3 +132,8 @@ No candidate becomes a validated strategy until it has:
 - multiple-testing control;
 - operational feasibility;
 - a model/license path suitable for the intended trading use.
+
+
+## S4 refinement — uncertainty-conditioned exposure overlay
+
+The secondary Phase 3 evidence supports making S4 explicitly uncertainty-conditioned: TimesFM q10-q90 width becomes a risk input, not a standalone directional signal. A future simulation should compare an independent directional baseline versus the same baseline with TimesFM uncertainty-based sizing, under identical costs and regimes. This remains provisional until primary P0 walk-forward validation.
