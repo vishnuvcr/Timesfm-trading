@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Canonical option quote",
+  "type": "object",
+  "required": ["contract_id","event_timestamp","underlying_id","expiry","strike","option_type","bid","ask","ltp","open_interest","volume","iv","source_id","availability_timestamp"],
+  "properties": {
+    "contract_id":{"type":"string"},
+    "event_timestamp":{"type":"string","format":"date-time"},
+    "underlying_id":{"type":"string"},
+    "expiry":{"type":"string","format":"date"},
+    "strike":{"type":"number"},
+    "option_type":{"enum":["CE","PE"]},
+    "bid":{"type":["number","null"],"minimum":0},
+    "ask":{"type":["number","null"],"minimum":0},
+    "ltp":{"type":["number","null"],"minimum":0},
+    "open_interest":{"type":["number","null"],"minimum":0},
+    "volume":{"type":["number","null"],"minimum":0},
+    "iv":{"type":["number","null"],"minimum":0},
+    "delta":{"type":["number","null"]},
+    "gamma":{"type":["number","null"]},
+    "theta":{"type":["number","null"]},
+    "vega":{"type":["number","null"]},
+    "source_id":{"type":"string"},
+    "availability_timestamp":{"type":"string","format":"date-time"},
+    "source_revision":{"type":["string","null"]}
+  }
+}
