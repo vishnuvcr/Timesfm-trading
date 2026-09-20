@@ -306,7 +306,7 @@ def make_covariate_matrix(days, data_by_symbol, feature_maps, flow_map, use_flow
                 arr[r, col] = last
             else:
                 last = float(arr[r, col])
-    return arr
+    return arr.T
 
 
 def build_stock_daily(sessions_by_symbol, common_days, actions):
