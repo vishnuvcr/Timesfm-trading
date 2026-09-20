@@ -10,16 +10,13 @@
 
 ## Abstract
 
-This study evaluates whether Google TimesFM 3.0 can provide statistically and economically useful information for Indian-equity trading research. The project was designed as a gate-first, point-in-time, cost-aware program covering individual stocks, indices, intraday/swing horizons, options, market regimes, corporate actions, institutional flows and global cross-market information. A major practical constraint was the inability of the hosted GitHub Actions environment to retrieve several official NSE historical routes. Rather than repeatedly retrying the same endpoints, the data program established an alternate individual-stock end-of-day lane based on TejHQ Indian-market data, independently cross-checked against Yahoo/yfinance-derived data. The study explicitly distinguishes alternate datasets from exchange-primary truth.
+This study evaluates whether Google TimesFM 3.0 can provide statistically and economically useful information for Indian-equity trading research. The project was designed as a gate-first, point-in-time, cost-aware program covering individual stocks, indices, swing/intraday horizons, options, market regimes, corporate actions, institutional flows and global cross-market information. Several official NSE historical routes were inaccessible from the hosted GitHub Actions environment, so the data program established an alternate individual-stock end-of-day lane based on TejHQ Indian-market data and independently cross-checked it against Yahoo/yfinance-derived data. Alternate sources were kept separate from exchange-primary evidence.
 
-The individual-stock TimesFM research progressed through three empirical gates. First, a 30-stock five-session forecast bootstrap used a 128-session context and 40 recent chronological origins per stock. TimesFM was worse than persistence on mean log MAE (0.018675 vs 0.017629) and RMSE (0.027242 vs 0.025726), although a recent-window directional excess appeared. Second, a four-fold chronological robustness test expanded the evaluation to 4,800 stock-level origins. TimesFM remained worse than persistence on point error and the mean directional excess became negative (-2.90 percentage points), eliminating the recent directional finding as a robust result. Third, an explicit stock-selection experiment compared a 20-session momentum control with TimesFM ranking and a 50/50 hybrid across 32 rebalances. TimesFM's mean rank IC was -0.0237 versus +0.0138 for momentum, and the TimesFM-only and hybrid portfolios were weaker under multiple cost stresses.
+The individual-stock research progressed through a sequence of increasingly strict tests. A 30-stock five-session TimesFM 3.0 forecast bootstrap was worse than persistence on mean log MAE and RMSE. A four-fold chronological robustness test covering 4,800 stock-level origins reversed an apparent recent directional excess into a negative mean directional excess. Direct cross-sectional selection, hybrid and regime-conditioned residual tests also failed to demonstrate incremental value after baseline and cost controls.
 
-A final regime-conditioned test asked whether TimesFM provided incremental information after trend, breadth, volatility, liquidity and post-corporate-action conditioning. The TimesFM residual had no statistically supported unconditional or regime-specific rank information after rebalance-level permutation testing and Benjamini-Hochberg false-discovery-rate control. A risk-on overlay produced a small zero-cost improvement over momentum but underperformed once a 0.25% one-way cost stress was introduced. On the declared promotion gate, no individual-stock TimesFM strategy survived.
+A predeclared Phase 4B multifrequency extension then tested 2, 5, 10 and 20-session holding horizons. The 10-session TimesFM cross-sectional ranking was the only exploratory cell that exceeded the 20-session momentum control across the declared cost stresses on the bootstrap panel. It was therefore frozen, subjected to a point-in-time eligibility rerun, and advanced without further tuning to a post-selection 2023+ Phase 7 holdout. That holdout used 91 non-overlapping ten-session rebalances, the dated cash-equity statutory/broker/DP cost model, position drift, final liquidation, and five additional one-way slippage stresses. At zero extra slippage, the TimesFM candidate returned +3.72% versus +67.97% for momentum; at 0.125% extra slippage it became -7.93% versus +47.20%. At 0.50% extra slippage it was -35.72% versus -1.12%. Paired block sign-flip tests were adverse at every stress level, and maximum simulated participation was only about 0.014% of trailing turnover.
 
-The study therefore reaches a negative but actionable scientific conclusion: **the tested TimesFM 3.0 stock strategies do not demonstrate robust, cost-surviving incremental alpha on the available bootstrap evidence.** The result does not show that TimesFM is incapable of helping Indian-market research. It shows that simple TimesFM direction, uncertainty sizing, raw ranking and basic regime-conditioned overlays are not sufficient.
-
----
-
+The final conclusion is therefore stronger than the earlier exploratory stop: **the single frozen 10-session individual-stock TimesFM mechanism failed its untouched post-selection holdout and no validated individual-stock TimesFM trading strategy was established.** The result does not prove that every TimesFM/market combination must fail; it establishes that the tested stock mechanisms did not survive chronological robustness and a realistic post-selection economic holdout on the available bootstrap evidence.
 ## 1. Introduction
 
 Time-series foundation models promise general-purpose forecasting across heterogeneous domains. TimesFM 3.0, released by Google Research in August 2026, adds native multivariate forecasting and both past-only and past-and-future covariate support. Google reports strong performance on general forecasting benchmarks, but those benchmarks do not establish trading profitability. 
@@ -258,9 +255,7 @@ The recent-window directional excess was +11.1 percentage points, but it was not
 
 ### 8.2 Phase 3 — four-fold robustness extension
 
-The robustness experiment used:
-
-30 stocks × 4 chronological folds × 40 origins = 4,800 stock-level forecast origins.
+The robustness experiment used 30 stocks × 4 chronological folds × 40 origins = 4,800 stock-level forecast origins.
 
 | Metric | TimesFM − persistence |
 |---|---:|
@@ -276,10 +271,7 @@ The recent +11.1 pp directional excess therefore did not survive chronological b
 
 ### 8.3 Phase 4.1 — individual-stock selection
 
-A predeclared 20-session momentum control was compared with:
-- TimesFM five-session forecast rank;
-- 50/50 standardized momentum + TimesFM;
-- momentum gated by TimesFM direction.
+A predeclared 20-session momentum control was compared with TimesFM five-session forecast ranking and a 50/50 standardized hybrid.
 
 | Signal | Mean rank IC |
 |---|---:|
@@ -287,65 +279,56 @@ A predeclared 20-session momentum control was compared with:
 | TimesFM 5-session forecast | −0.0237 |
 | 50/50 hybrid | −0.0151 |
 
-Across 32 non-overlapping rebalances, TimesFM did not add cross-sectional ranking value.
-
-At the lowest Phase 4 proportional cost stress:
-
-| Strategy | Net total return |
-|---|---:|
-| Equal-weight universe | −7.3% |
-| Momentum | −15.2% |
-| TimesFM-only | −26.6% |
-| Hybrid | −21.8% |
-
-Higher cost stress worsened all strategies.
+Across 32 non-overlapping rebalances, TimesFM did not add cross-sectional ranking value. At the lowest Phase 4 proportional cost stress, TimesFM-only net total return was about -26.6%, versus -15.2% for momentum and -21.8% for the hybrid.
 
 ### 8.4 Phase 6.1 — regime-conditioned incremental information
 
-The final stock experiment residualized the TimesFM forecast against momentum before evaluation and applied predeclared market-state, liquidity and event-conditioning rules.
+The predeclared regime-conditioned stock test residualized TimesFM against momentum and evaluated market state, breadth, volatility, liquidity and post-corporate-action conditions. No regime cell survived rebalance-level permutation testing and Benjamini-Hochberg FDR correction.
 
-| Regime | Residual rank IC | p-value | FDR q |
-|---|---:|---:|---:|
-| All | −0.0030 | 0.935 | 0.935 |
-| Risk-on | −0.0454 | 0.396 | 0.779 |
-| Breadth-high | −0.0280 | 0.557 | 0.779 |
-| Breadth-low | +0.0609 | 0.439 | 0.779 |
-| Trend-up | −0.0379 | 0.456 | 0.779 |
-| Trend-down | +0.0551 | 0.425 | 0.779 |
-| Low-vol | −0.0030 | 0.934 | 0.935 |
+The risk-on overlay produced a small gross improvement over momentum before proportional costs but underperformed after 0.25% and 0.50% one-way cost stress.
 
-High-volatility and stress cells were not populated by the sparse 32-rebalance design and are therefore labelled untested, not interpreted as zero effect.
+### 8.5 Phase 4B — multifrequency swing matrix
 
-### 8.5 Phase 6.1 cost stress
+A frozen 2/5/10/20-session swing matrix used 30 stocks, four chronological folds, eight non-overlapping rebalances per horizon and a top-six long-only portfolio.
 
-At zero proportional cost:
+Forecast-level metrics remained worse than persistence at all four horizons. The 10-session cell was the only exploratory mechanism that exceeded the 20-session momentum control under all four Phase 4B proportional cost stresses:
 
-| Strategy | Net total return |
-|---|---:|
-| Momentum | +35.00% |
-| Risk-on TimesFM residual overlay | +35.79% |
-| Hybrid | +34.52% |
+| Horizon | TimesFM net return at 0.125% | Momentum | TimesFM net return at 0.50% | Momentum |
+|---|---:|---:|---:|---:|
+| 2d | -15.58% | -10.42% | -25.60% | -17.66% |
+| 5d | -29.98% | -18.34% | -38.57% | -26.77% |
+| 10d | +19.87% | +9.58% | +3.41% | -4.80% |
+| 20d | -18.07% | -17.55% | -29.41% | -32.11% |
 
-At 0.25% one-way cost:
+The exact four-fold sign-flip p-value for the 10-session TimesFM-minus-momentum difference was 0.3125 one-sided. The 10-session candidate was therefore frozen for a downstream post-selection holdout rather than promoted.
 
-| Strategy | Net total return |
-|---|---:|
-| Momentum | +22.25% |
-| Risk-on TimesFM residual overlay | +20.93% |
-| Hybrid | +20.99% |
+### 8.6 Phase 4B — point-in-time candidate check
 
-At 0.50% one-way cost:
+The frozen 10-session candidate was rerun against the Phase 2 point-in-time liquidity table. All 30 cached bootstrap names were eligible at all 32 tested rebalances. The PIT restriction therefore did not alter portfolio composition.
 
-| Strategy | Net total return |
-|---|---:|
-| Momentum | +10.66% |
-| Risk-on TimesFM residual overlay | +7.65% |
-| Hybrid | +8.78% |
+This validates timestamp eligibility inside the cached panel, but not broad-universe survivorship protection because the price cache remains a 30-name engineering/bootstrap panel.
 
-The small gross risk-on improvement therefore did not survive cost stress.
+### 8.7 Phase 7 — 2023+ post-selection holdout
 
----
+The candidate was then evaluated once on an untouched 2023+ holdout. There were 91 non-overlapping ten-session rebalances from 2023-01-02 through 2026-09-03. Mean PIT-eligible names per origin were 29.76 (minimum 29, maximum 30). The candidate was fixed before this holdout; no parameters were tuned on holdout results.
 
+The cost model included current cash-delivery STT, exchange/IPFT charges, SEBI turnover fees, delivery stamp duty, GST on applicable service components, a ₹20/order brokerage reference, ₹13.5 delivery-sale DP reference, explicit position drift and final liquidation. Additional one-way slippage/impact stresses were 0%, 0.125%, 0.25%, 0.375% and 0.50%.
+
+| Extra one-way slippage | TimesFM net return | Momentum net return | TimesFM max DD | TimesFM Sharpe |
+|---|---:|---:|---:|---:|
+| 0.00% | +3.72% | +67.97% | -25.13% | 0.144 |
+| 0.125% | -7.93% | +47.20% | -28.83% | -0.075 |
+| 0.25% | -18.30% | +28.96% | -32.35% | -0.295 |
+| 0.375% | -27.52% | +12.94% | -36.79% | -0.515 |
+| 0.50% | -35.72% | -1.12% | -41.46% | -0.736 |
+
+The TimesFM candidate was below the no-TimesFM momentum control at every stress level, including zero extra slippage.
+
+The paired period difference was negative throughout. The one-sided block-signflip p-values were 0.984, 0.982, 0.979, 0.976 and 0.972 from the lowest to highest slippage stress. Maximum simulated participation was only about 0.014% of trailing turnover, so capacity was not the binding explanation.
+
+At the maximum 0.50% stress, the TimesFM candidate compounded negatively in every calendar year of the holdout: approximately +1.0% in 2023, -12.0% in 2024, -11.7% in 2025 and -17.6% in 2026. The momentum control was approximately +2.6%, +5.7%, +1.4% and -9.6% respectively.
+
+The candidate therefore failed the final economic promotion gate.
 ## 9. Visual Summary
 
 ### 9.1 Research pipeline
@@ -404,63 +387,66 @@ Second line: risk-on TimesFM residual overlay.
 
 ### Inference 1 — No standalone stock forecast edge
 
-TimesFM 3.0 did not beat persistence on mean point-error metrics in the stock bootstrap or the four-fold robustness evaluation.
+TimesFM 3.0 did not beat persistence on mean point-error metrics in the recent bootstrap or the four-fold stock robustness evaluation.
 
 ### Inference 2 — Recent directional excess was not robust
 
-A positive recent-window directional excess reversed under broader chronological validation. The result should therefore be treated as a recency-window artifact unless reproduced in an independent holdout.
+The positive recent-window directional finding reversed under broader chronological validation and is not accepted as evidence of a stable directional edge.
 
-### Inference 3 — Raw TimesFM ranking was not useful for stock selection
+### Inference 3 — Direct stock ranking did not survive selection controls
 
-TimesFM rank IC was negative in the Phase 4.1 stock-selection test and lower than the momentum control.
+TimesFM ranking was weaker than the independent 20-session momentum control in the first stock-selection experiment.
 
-### Inference 4 — Regime conditioning did not rescue the signal
+### Inference 4 — A different holding period produced an exploratory candidate, not a validated edge
 
-The predeclared regime cells did not show statistically supported incremental TimesFM information after FDR correction.
+The 10-session TimesFM ranking was the only Phase 4B cell that survived the exploratory cost screen, but its four-fold evidence was low-power and it remained a fixed 30-name bootstrap result.
 
-### Inference 5 — Small gross improvements were not economically durable
+### Inference 5 — The untouched post-selection holdout rejected the candidate
 
-The risk-on TimesFM residual overlay was slightly better than momentum before proportional costs but became worse once cost stress was introduced.
+The 2023+ Phase 7 holdout produced lower net returns than momentum at every slippage stress, including zero extra slippage. This resolves the exploratory Phase 4B candidate against the final economic gate.
 
----
+### Inference 6 — Capacity was not the limiting explanation
 
+Maximum simulated participation was approximately 0.014% of trailing turnover. The candidate's failure therefore did not arise from an obviously binding participation constraint in this simulation.
+
+### Inference 7 — Current individual-stock TimesFM search should stop
+
+Under the declared stop rule, the completed stock holdout should not be mined for new thresholds, horizons, hybrid weights or regime filters. Any future reopening requires a materially different preregistered question, new authorized/PIT-clean data or a genuinely different instrument/economic mechanism.
 ## 11. Discussion
 
 ### 11.1 What failed
 
-The study rejected a sequence of increasingly sophisticated but still simple hypotheses:
+The study rejected a sequence of increasingly demanding stock-level hypotheses:
 
 1. direct TimesFM stock direction;
 2. uncertainty-conditioned stock sizing;
-3. TimesFM cross-sectional ranking;
+3. five-session and then multifrequency raw TimesFM ranking;
 4. momentum + TimesFM blending;
 5. TimesFM directional gating;
-6. regime-conditioned TimesFM residual selection.
+6. regime-conditioned TimesFM residual selection;
+7. the one 10-session ranking candidate that survived exploratory cost screening.
 
-The important scientific point is not that a particular threshold failed. The important point is that the information did not survive progressively stricter controls.
+The most important result is the post-selection holdout: the only candidate allowed to advance from Phase 4B under the preregistered protocol did not survive a 2023+ cost-aware test against the independent momentum control.
 
 ### 11.2 Why this does not invalidate TimesFM generally
 
-TimesFM 3.0 was not designed specifically for NSE microstructure. Its general benchmark performance does not guarantee alpha in a competitive, cost-sensitive market. Google explicitly positions TimesFM-3 as a general zero-shot model with broad multivariate capabilities rather than a proprietary trading signal.
+TimesFM 3.0 is a general time-series foundation model, not a model trained specifically for NSE cross-sectional alpha. The negative result is conditional on the tested data source, universe, horizons, cost model and strategy translation. It does not establish that every market, target or TimesFM use case must fail.
 
-The negative findings therefore narrow the plausible research space rather than proving universal model failure.
+The research does establish something narrower and useful: on this stock panel, simple forecast translation into a long-only selection strategy did not produce robust incremental economics after post-selection testing.
 
-### 11.3 The more defensible future hypothesis
+### 11.3 Why the exploratory Phase 4B result disappeared
 
-The remaining scientifically interesting use is conditional information, not raw direction.
+The 10-session bootstrap result was supported by only four chronological blocks and was generated on a sparse 30-name panel. The stronger 2023+ holdout introduced 91 rebalances, current dated costs, position drift and final liquidation without allowing retuning. Its negative result therefore provides a materially stronger falsification test than the original Phase 4B candidate screen.
 
-That means asking whether TimesFM contributes information that an independent signal cannot already recover, for example:
-- residual return expectation;
-- event-conditioned range;
-- market-to-stock residual movement;
-- forecast distribution mismatch versus implied movement;
-- execution timing;
-- volatility forecasting.
+### 11.4 Remaining scientifically credible directions
 
-Such a study should be run on a larger, fully point-in-time universe with authorized exchange-grade data.
-
----
-
+Future research should shift the economic mechanism rather than search the same holdout for a better threshold. Plausible directions include:
+- stock-vs-index residual forecasting;
+- event-conditioned range/volatility forecasting;
+- forecast versus option-implied movement;
+- intraday execution timing with licensed execution-quality data;
+- broader point-in-time universes with continuous security identity;
+- other model classes used under the same frozen-origin benchmark.
 ## 12. Strengths
 
 1. Individual stocks were treated as first-class instruments.
@@ -538,78 +524,52 @@ Each experimental branch retains its own workflow and run history.
 
 **No validated TimesFM 3.0 individual-stock trading strategy was established by this research program.**
 
-The evidence is consistent across progressively stricter tests:
+The evidence now includes both exploratory and post-selection tests:
 
 - TimesFM did not beat persistence on stock point forecasting.
-- Recent directional excess did not survive chronological robustness.
-- TimesFM stock ranking had negative mean rank IC in the strategy test.
-- Simple momentum + TimesFM blending did not improve stock selection.
-- Regime-conditioned TimesFM residuals were not statistically supported after FDR correction.
-- The small gross risk-on improvement disappeared after cost stress.
-- Options could not be promoted because the required historical option dataset was unavailable.
-- Intraday/scalping claims were not promoted because execution-quality validation remains incomplete.
+- A recent directional excess did not survive four-fold chronological robustness.
+- Initial direct stock-selection and hybrid overlays were weaker than the independent momentum control.
+- Regime-conditioned TimesFM residuals were not statistically supported after rebalance-level permutation testing and FDR correction.
+- A predeclared multifrequency extension found one exploratory 10-session candidate, but that candidate failed the untouched 2023+ Phase 7 holdout.
+- The 10-session candidate was below momentum at every tested slippage stress, including zero extra slippage.
+- The maximum simulated participation was only about 0.014% of trailing turnover, so capacity was not the binding explanation.
 
-The usable research conclusion is therefore a negative one:
+The strongest current scientific statement is therefore:
 
-> On the available 2026 bootstrap evidence, TimesFM 3.0 should not be treated as a standalone directional stock-selection engine for NSE equities, nor should its simple forecast or uncertainty outputs be promoted into a trading strategy.
+> On the available Indian-equity bootstrap evidence, the tested TimesFM 3.0 individual-stock mechanisms do not provide robust incremental trading value after chronological robustness, baseline comparison and post-selection cost-aware validation.
 
 This is a research conclusion, not a recommendation about actual trading.
 
----
-
+The conclusion remains limited by the alternate EOD data lane and the lack of fully authorized exchange-grade broad-universe data and historical option/intraday execution datasets. Future research can test different economic mechanisms, instruments or higher-quality data under new preregistered holdouts. The completed individual-stock holdout itself is closed to further specification search.
 ## 16. Future Research Directions
 
-### Priority A — PIT stock universe
+### Priority A — Authorized point-in-time stock universe
 
-Replace the fixed 30-name bootstrap with a fully point-in-time liquidity universe, continuous ISIN lineage, delisting history and corporate-action-vintage controls.
+Replace the fixed 30-name bootstrap with a broad point-in-time liquidity universe with continuous ISIN lineage, delisting history and complete corporate-action vintage controls.
 
-### Priority B — Incremental residual research
+### Priority B — Different economic mechanisms
 
-Use a predeclared stock-selection control based on momentum, value, volatility or sector-relative residuals, then ask whether TimesFM adds information after the control.
+If the stock program is reopened, use a new preregistered hypothesis such as stock-vs-index residual returns, event-conditioned range/volatility forecasting, or cross-asset relative-value signals. Do not mine the completed TimesFM10 holdout for thresholds or weights.
 
 ### Priority C — Global cross-market information
 
-Add:
-- GIFT NIFTY;
-- US close-to-NSE-open spillover;
-- USDINR;
-- crude;
-- gold;
-- rates;
-- Asian-session variables.
-
-Test both close-to-open and session-overlap effects.
+Add GIFT NIFTY, US close-to-NSE-open spillovers, USDINR, crude, gold, rates and Asian-session variables with publication/availability timestamps.
 
 ### Priority D — Institutional-flow conditioning
 
-Use point-in-time FII/FPI/DII observations and test:
-- flow surprise;
-- flow trend;
-- FII-vs-DII divergence;
-- flow × TimesFM interactions.
+Use point-in-time FII/FPI/DII data and test flow surprises, divergence and interactions only on a fresh holdout.
 
 ### Priority E — Option-implied comparison
 
-Use authorized historical option quotes to compare:
-- TimesFM forecast range;
-- realized range;
-- implied move;
-- IV surface;
-- skew;
-- term structure.
-
-Only residual forecast information that beats the market-implied forecast should be considered for option structures.
+With authorized historical bid/ask/OI/IV/Greeks, compare TimesFM forecast distributions with implied movement before considering any options structure.
 
 ### Priority F — Intraday execution
 
-Validate the public 1-minute data source against an independently licensed execution-grade feed before using it for scalping claims.
+Validate the candidate public minute source against licensed execution-grade data, including session completeness, spread, zero-volume handling, corporate actions and fill-quality diagnostics, before any scalping or BTST economic claim.
 
-### Priority G — Alternative models
+### Priority G — Alternative models and benchmarks
 
-Test TimesFM 2.5 as a benchmark/ablation and compare against simple statistical models plus at least one lightweight supervised baseline under identical frozen origins.
-
----
-
+Compare TimesFM 2.5, lightweight statistical models and supervised baselines on identical frozen origins. Any future positive result must satisfy the same cost-aware post-selection standard used here.
 # Appendix A — Promotion Gate
 
 A stock strategy can be promoted only if all conditions hold:
@@ -626,6 +586,7 @@ A stock strategy can be promoted only if all conditions hold:
 10. Liquidity and participation constraints remain plausible.
 11. No material look-ahead or survivorship error.
 12. A reproducible run manifest exists.
+13. A post-selection holdout is completed without test-period tuning.
 
 No tested stock strategy satisfied all conditions.
 
@@ -659,10 +620,13 @@ The project was designed not to search indefinitely.
 The individual-stock EOD empirical search stopped after:
 1. a recent-stock forecast bootstrap;
 2. a chronological robustness extension;
-3. a direct stock-selection experiment;
-4. a regime-conditioned incremental experiment.
+3. direct stock-selection and hybrid tests;
+4. a regime-conditioned incremental experiment;
+5. a frozen multifrequency swing candidate;
+6. a point-in-time candidate check;
+7. a 2023+ post-selection cost-aware holdout.
 
-The final result was negative at each progressively stricter economic gate.
+The final candidate failed the holdout at zero and all additional slippage stresses.
 
 Future work therefore belongs to a new preregistered research branch, not additional unlogged threshold/search variants in the existing holdout.
 
