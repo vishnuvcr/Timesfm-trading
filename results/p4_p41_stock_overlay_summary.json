@@ -1,0 +1,61 @@
+{
+  "run_id": 35523966952,
+  "artifact_id": 10609283452,
+  "lane": "P4.1_exploratory_stock_selection_timesfm_overlay",
+  "stocks": 30,
+  "folds": 4,
+  "origins_per_fold": 8,
+  "total_rebalances": 32,
+  "lookback_sessions": 20,
+  "forecast_horizon": 5,
+  "top_k": 6,
+  "capital": 1000000.0,
+  "cost_reference": {
+    "brokerage_per_executed_order": 20.0,
+    "delivery_sale_dp_reference": 13.5,
+    "one_way_proportional_scenarios": [0.00125,0.0025,0.00375,0.005]
+  },
+  "cross_sectional_diagnostics": {
+    "momentum_mean_rank_ic": 0.013834816462736373,
+    "timesfm_mean_rank_ic": -0.02366518353726363,
+    "hybrid_mean_rank_ic": -0.015072302558398223,
+    "timesfm_minus_momentum_rank_ic": -0.0375,
+    "hybrid_minus_momentum_rank_ic": -0.02890711902113459,
+    "momentum_mean_top6_excess_vs_equal_weight": -0.0013863061244289037,
+    "timesfm_mean_top6_excess_vs_equal_weight": -0.005544598090151944,
+    "hybrid_mean_top6_excess_vs_equal_weight": -0.003590886046489076,
+    "timesfm_minus_momentum_top6_excess": -0.004158291965723041,
+    "hybrid_minus_momentum_top6_excess": -0.002204579922060173
+  },
+  "cost_aware_results": {
+    "one_way_0.125pct": {
+      "equal_weight_net_total_return": -0.07256992048931699,
+      "momentum_net_total_return": -0.1520194251259014,
+      "timesfm_net_total_return": -0.26623626082481266,
+      "hybrid_net_total_return": -0.21831325804911073,
+      "momentum_gate_net_total_return": -0.20354523661423662
+    },
+    "one_way_0.25pct": {
+      "equal_weight_net_total_return": -0.07371891773756856,
+      "momentum_net_total_return": -0.18218487973489628,
+      "timesfm_net_total_return": -0.29747599713900863,
+      "hybrid_net_total_return": -0.25181843424818773,
+      "momentum_gate_net_total_return": -0.2408187037413313
+    },
+    "one_way_0.375pct": {
+      "equal_weight_net_total_return": -0.07486791498581957,
+      "momentum_net_total_return": -0.2113165268693673,
+      "timesfm_net_total_return": -0.3274344540172851,
+      "hybrid_net_total_return": -0.28393885310082556,
+      "momentum_gate_net_total_return": -0.2764073514326215
+    },
+    "one_way_0.50pct": {
+      "equal_weight_net_total_return": -0.07601691223407081,
+      "momentum_net_total_return": -0.23944850880709756,
+      "timesfm_net_total_return": -0.3561622956460686,
+      "hybrid_net_total_return": -0.314729737831949,
+      "momentum_gate_net_total_return": -0.31038479709605127
+    }
+  },
+  "interpretation": "Exploratory only. The sample is sparse (32 rebalances), the common history is limited by the 30-name overlap including TATAMOTORS, and the cost scenarios are stress references rather than final effective-date charges. The TimesFM-only and hybrid overlays did not add incremental stock-selection value over the 20-session momentum control in this test. No strategy is promoted."
+}
