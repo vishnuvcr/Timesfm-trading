@@ -113,3 +113,24 @@ A separate exploratory track is now defined to run four chronological folds acro
 
 The track is triggered by a push marker `[stock-p1-multifold]`, uses the same TimesFM 3.0 checkpoint/context/horizon and the same persistence baseline, and stores fold-level and stock-level results as a workflow artifact. The purpose is to test whether the recent-40-origin stock result survives earlier market periods rather than becoming a recency artifact.
 
+
+
+## 2026-09-20 — four-fold stock robustness result
+
+The separate P1.1 multi-fold workflow completed successfully as run 35523375234; artifact 10608933929 was uploaded. Aggregate and per-stock summaries are stored in results/p1_individual_stock_multifold_summary.json and results/p1_individual_stock_multifold_per_stock.csv.
+
+Design: 30 stocks × 4 chronological folds × 40 origins per fold = 4,800 stock-level forecast origins, using the same TimesFM 3.0 checkpoint, 128-session context, 5-session horizon and persistence baseline.
+
+Aggregate result:
+- mean stock log-MAE difference (TimesFM minus persistence): +0.001144;
+- mean stock log-RMSE difference: +0.001470;
+- mean five-session return-MAE difference: +0.001885;
+- mean directional excess over each stock's fold-specific positive-return base rate: -2.90 percentage points;
+- only 13/30 stocks had non-negative mean directional excess;
+- no stock had a negative mean MAE difference across its four folds;
+- mean interval-width/absolute-movement Spearman rho: +0.091.
+
+Fold-level directional excess was negative in folds 1, 2 and 4 and only slightly positive in fold 3. Thus the +11.1 percentage-point directional excess seen in the recent-40-origin bootstrap does not persist across broader historical folds.
+
+Interpretation: the chronological robustness test materially weakens the recent stock-direction finding. TimesFM 3.0 did not beat persistence on stock point-error metrics, and its directional excess became negative when history was broadened. The interval-width relationship is mildly positive in this multi-fold sample, but the effect is small and not yet calibrated or economically validated. No stock strategy is promoted.
+
