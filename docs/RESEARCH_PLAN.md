@@ -61,9 +61,15 @@ Metrics: forecast error, excess direction, rank IC, quantile coverage, calibrati
 
 **No 3.0 forecast output from this phase may be promoted into a revenue-generating trading decision until the license gate is cleared.**
 
-## Phase 4 — cash equity strategy research
+## Phase 4 — cash equity and individual-stock strategy research
 
-Use the common strategy engine to derive and falsify simulated strategy hypotheses.
+Use the common strategy engine to derive and falsify simulated strategy hypotheses across **individual NSE-listed stocks as first-class instruments**, with indices used as market-state/baseline variables rather than the sole trading universe.
+
+The final stock study must use point-in-time eligibility/liquidity rules and retain name/ISIN history where available. The current fixed 30-name stock panel is only an engineering/bootstrap cache.
+
+### Individual stocks
+
+Test single-stock forecast overlays, cross-sectional ranking, uncertainty-conditioned sizing, stock-vs-index residual returns and event-aware stock setups. Compare every TimesFM condition with a non-TimesFM baseline.
 
 ### Scalping
 Test only liquid instruments/time windows with credible intraday data and fill assumptions. 3.0 remains the primary research model.
