@@ -1,0 +1,57 @@
+name: Independent stock source cross-check
+
+on:
+  workflow_dispatch:
+    inputs:
+      symbols:
+        description: Comma-separated symbols to cross-check
+        required: false
+        default: "RELIANCE,TCS,HDFCBANK,INFY,SBIN"
+        type: string
+  push:
+    branches: [phase-2-data]
+    paths:
+      - scripts/crosscheck_hf_stock_source.py
+
+jobs:
+  crosscheck:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: phase-2-data
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: python -m pip install --upgrade pip pandas pyarrow
+      - name: Run independent source cross-check
+        env:
+          SYMBOLS: ${{ inputs.symbols }}
+        run: |
+          args=()
+          if [ -n "$SYMBOLS" ]; then args+=(--symbols "$SYMBOLS"); fi
+          PYTHONPATH=. python scripts/crosscheck_hf_stock_source.py "${args[@]}"
+      - name: Validate cross-check artifact
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p = Path("data/derived/stock_source_crosscheck.json")
+          obj = json.loads(p.read_text())
+          assert obj["results"], "no cross-check results"
+          for r in obj["results"]:
+              assert r["overlap_rows"] >= 100
+              assert 0 <= r["share_close_within_0_10pct"] <= 1
+          print("cross-check artifact valid")
+          PY
+      - name: Commit summary
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/derived/stock_source_crosscheck.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Record independent stock data cross-check"
+          git push origin phase-2-data
