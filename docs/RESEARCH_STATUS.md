@@ -65,7 +65,7 @@ The 3.0 branch includes:
 The existing NIFTY P1 results remain exploratory C-grade evidence. The new stock cache opens an additional bootstrap lane, but it does not replace the requirement for PIT-clean primary/independent validation before final claims.
 
 ## Phase 4 — Strategy research
-**Engineering bootstrap complete; individual-stock strategy lane explicitly added; empirical gate depends on stock-data quality + forecast/cost gates.**
+**Phase 4.1 individual-stock TimesFM overlay tested; simple TimesFM-only and hybrid selection hypotheses rejected in the exploratory gate. Next: conditional/incremental stock information under regime/liquidity/event controls.**
 
 Individual stocks are first-class instruments. Current strategy hypotheses include:
 - single-stock forecast overlays;
@@ -158,3 +158,17 @@ Aggregate:
 
 The initial recent-origin result (+11.1 percentage points directional excess) therefore does not survive chronological broadening. The current Phase 3 inference is that TimesFM 3.0 has not demonstrated incremental stock-level directional skill against the persistence benchmark, and the earlier uncertainty-sizing hypothesis remains unproven.
 
+
+
+## Phase 4.1 synchronized result — 2026-09-20
+
+The completed Phase 4.1 individual-stock experiment is now synchronized into main. It used a predeclared 20-session cross-sectional momentum control, TimesFM 5-session forecast ranking and a standardized 50/50 hybrid across 30 stocks and 32 non-overlapping five-session rebalances.
+
+Cross-sectional diagnostics:
+- momentum mean rank IC: +0.0138;
+- TimesFM mean rank IC: -0.0237;
+- hybrid mean rank IC: -0.0151.
+
+At the lowest proportional cost stress, net total returns over the sparse test were approximately -15.2% momentum, -26.6% TimesFM-only, -21.8% hybrid and -7.3% equal-weight universe. These are exploratory results, not final Phase 7 evidence, but they are sufficient to reject the simple TimesFM stock-selection overlays for further promotion.
+
+The next stock research experiment should therefore test incremental TimesFM information only after regime, liquidity, event and market-state conditioning, with the same no-TimesFM control.
