@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Point-in-Time Feature Observation",
+  "type": "object",
+  "required": [
+    "feature_id",
+    "category",
+    "event_time",
+    "available_time",
+    "source_id",
+    "vintage_id",
+    "value"
+  ],
+  "properties": {
+    "feature_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "regime",
+        "volatility",
+        "breadth",
+        "fii_fpi_dii",
+        "global_equity",
+        "rates",
+        "fx",
+        "commodity",
+        "cross_market",
+        "options",
+        "corporate_action",
+        "news_sentiment",
+        "macro"
+      ]
+    },
+    "event_time": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "available_time": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "source_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "vintage_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "value": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "unit": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "is_future_known": {
+      "type": "boolean",
+      "default": false
+    },
+    "revision_number": {
+      "type": "integer",
+      "minimum": 0,
+      "default": 0
+    },
+    "quality": {
+      "type": "string",
+      "enum": [
+        "primary",
+        "licensed_vendor",
+        "secondary",
+        "derived"
+      ],
+      "default": "derived"
+    },
+    "market_session": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "expiry": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "notes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

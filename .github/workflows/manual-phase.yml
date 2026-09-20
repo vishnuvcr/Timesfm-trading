@@ -1,11 +1,22 @@
 name: Phase 6 regimes
 
 on:
+  pull_request:
+  push:
+    branches: [phase-6-regimes]
   workflow_dispatch:
 
 jobs:
-  research:
+  feature-contract-tests:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: echo "Manual run for research phase"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install test dependencies
+        run: python -m pip install --upgrade pip pytest
+      - name: Validate feature schema
+        run: python -m json.tool schemas/feature_observation.schema.json >/dev/null
+      - name: Run feature-contract tests
+        run: PYTHONPATH=. python -m pytest -q tests/test_feature_contract.py
