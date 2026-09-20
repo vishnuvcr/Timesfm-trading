@@ -62,3 +62,18 @@ At the lowest proportional cost scenario tested (0.125% one-way), net total retu
 Interpretation: this is a negative Phase 4.1 result for standalone TimesFM stock selection and for the tested simple hybrid overlay. The test is sparse and uses stress-cost assumptions rather than the final effective-date fee engine, so it is not a final economic verdict. It is sufficient to reject promotion of these two simple stock overlays into the next strategy gate.
 
 Next Phase 4 research question: test whether TimesFM can add **incremental conditional information** to a stronger, independently specified stock-selection signal only after regime/liquidity/event conditioning, rather than using the raw TimesFM forecast as the selector.
+
+
+## 2026-09-20 — Phase 4.2 nested regime-conditioned test launched
+
+The exploratory low-breadth residual idea was re-expressed as a strict nested walk-forward rule to remove hindsight:
+- 20-session cross-sectional breadth = fraction of stocks with positive 20-session return;
+- at each test fold, the low-breadth threshold is the median breadth observed only in prior folds;
+- TimesFM signal = standardized 5-session forecast;
+- independent control = standardized 20-session momentum;
+- incremental TimesFM signal = TimesFM rank minus momentum rank;
+- trade only when current breadth is below the training threshold;
+- select top six stocks;
+- evaluate on folds 2–4 under four explicit one-way cost scenarios.
+
+No test-fold parameter selection is permitted. This is the final conditional stock-overlay gate for this phase unless a material protocol change is documented.
