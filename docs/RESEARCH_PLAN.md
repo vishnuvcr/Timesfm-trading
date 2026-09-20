@@ -3,26 +3,45 @@
 ## Objective
 Build and validate a consistent TimesFM-enabled NSE research/trading pipeline across scalping, intraday, BTST, swing and options strategies.
 
+## Model policy
+**TimesFM 3.0 is the primary research model for this project.** TimesFM 2.5 is retained as a benchmark, ablation and fallback engineering lane.
+
+The project separates research/backtesting use of the 3.0 pretrained weights from production/live deployment. Under Google's current TimesFM Non-Commercial License v1.0, testing, evaluation and research are permitted when not tied to commercial gain, production deployment or revenue generation. Commercial or production use requires separate permission/license from Google.
+
+This is a licensing constraint, not a technical objection to TimesFM 3.0.
+
 ### Hypotheses
-- H1: TimesFM forecasts add statistically and economically useful information after realistic costs.
-- H2: Even when directional skill is weak, TimesFM uncertainty/volatility can improve sizing, regime filters or execution timing.
-- H3: Any deployable edge must survive point-in-time validation across regimes and cost assumptions.
+- H1: TimesFM 3.0 forecasts add statistically and economically useful information after realistic costs.
+- H2: Native multivariate and covariate support in 3.0 can improve conditional forecasting versus univariate input.
+- H3: Even when directional skill is weak, 3.0 uncertainty/volatility can improve sizing, regime filters or execution timing.
+- H4: Any deployable edge must survive point-in-time validation across regimes and cost assumptions.
+- H5: 2.5 and 3.0 should be compared on identical frozen datasets, horizons and forecast origins.
 
 ## Phase 0 — governance and reproducibility
 Create repo controls, plan, status model, logs, branch/workflow convention and citation ledger.
 
 ## Phase 1 — literature and evidence review
-Determine what is known about TimesFM in finance, base-rate traps, leakage, fine-tuning, frequency/context/covariates and realistic trading economics. Freeze the experimental protocol from evidence.
+Determine what is known about TimesFM 3.0 in finance, multivariate/covariate forecasting, base-rate traps, leakage, adaptation, frequency/context constraints and realistic trading economics. Freeze the experimental protocol from evidence.
 
 ## Phase 2 — NSE data lake
 Freeze cash OHLCV, corporate actions, index membership, futures, options chain/history, OI, IV/skew, India VIX, FII/FPI/DII, global benchmarks, rates/FX/commodities and timestamped news. Validate point-in-time integrity.
 
-## Phase 3 — TimesFM forecast gate
-Run TimesFM 2.5 first. Use TimesFM 3.0 only as an evaluation comparator while its current weight-license terms apply. Test multiple horizons and targets against persistence, drift and simple statistical/ML baselines. Measure forecast error, excess direction, rank IC, quantile coverage and economic value.
+## Phase 3 — TimesFM 3.0 forecast gate
+Run TimesFM 3.0 first and treat it as the primary model. Use identical-origin 2.5 runs as the benchmark.
+Test:
+- univariate vs native multivariate
+- past-only vs past-and-future covariates where causally available
+- multiple contexts and forecast horizons
+- price, return, range and volatility targets
+- quantile calibration
+
+Baselines: persistence, drift, simple technical/statistical models and a lightweight supervised model.
+
+Metrics: forecast error, excess direction, rank IC, quantile coverage, calibration, Diebold-Mariano comparisons and economic value after costs.
 
 ## Phase 4 — cash equity
 ### Scalping
-Test only liquid instruments/time windows with credible intraday data and fill assumptions. Use TimesFM return/range/uncertainty as a feature/veto, with VWAP, spread proxy, realized vol and order-flow proxies.
+Test only liquid instruments/time windows with credible intraday data and fill assumptions. Use 3.0 return/range/uncertainty as a feature/veto, with VWAP, spread proxy, realized vol and order-flow proxies.
 
 ### Intraday
 Test trend, mean-reversion, breakout, volatility expansion, opening-range and VWAP timing.
@@ -48,6 +67,8 @@ Use rolling/expanding walk-forward, nested tuning, realistic and stressed costs,
 
 ## Phase 8 — paper/live readiness
 Paper execution, audit trail, kill switches, model/data drift monitors, broker/API failure handling and reconciliation.
+
+**3.0 deployment gate:** no live/production use of Google's pretrained 3.0 weights until the licensing position is explicitly resolved. The research may finish with a 3.0-based strategy candidate and then either obtain permission/license or port the demonstrated method to appropriately licensed weights for production.
 
 ## Phase 9 — manuscript/release
 Complete manuscript with abstract, introduction, literature, questions, aims/objectives, scientific methodology, data, results, inference, discussion, strengths/limitations, conclusion, future research, figures, tables, appendices and supplements.
