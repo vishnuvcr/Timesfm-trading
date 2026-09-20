@@ -1,4 +1,5 @@
 name: Phase 3 TimesFM 3.0 gate
+# stock-p1 trigger marker
 
 on:
   pull_request:
