@@ -49,3 +49,6 @@ Phase 3 engineering is already bootstrapped and its unit/statistics CI is green.
 ## Canonical schema layer added
 
 Phase 2 now defines canonical schemas and invariant checks for equity bars, option quotes, derivative contracts and corporate actions. These checks explicitly reject impossible OHLC, negative volume/OI, crossed quotes, post-expiry quotes, invalid contract chronology and corporate-action dates that precede the announcement timestamp.
+
+
+Final acquisition retry recorded after correcting the public-P0 acquisition job dependency step.
