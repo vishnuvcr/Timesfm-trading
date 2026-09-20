@@ -64,3 +64,14 @@ For each alternate dataset, the repository records:
 8. role in the evidence hierarchy.
 
 A reachable source is not automatically upgraded to official P0 merely because it is accessible.
+
+
+## TejHQ adjusted prices and PIT liquidity universe
+
+The alternate lane now uses more than raw EOD values. The public TejHQ dataset also exposes a `prices_adjusted/` tree with cumulative adjustment factors and adjusted close, plus `symbol_history/` and `universe/nse_liquid.parquet` for point-in-time liquidity membership. The Phase 2 workflow filters these structures to the bootstrap stock set and caches the resulting adjusted series and PIT membership table.
+
+This is preferable to applying a simplistic split-only correction because dividends and other corporate actions can affect historical price continuity. The exact adjustment convention remains documented and must be frozen before final stock backtesting.
+
+## Independent cross-check
+
+The five-name Yahoo/yfinance-derived Hugging Face cross-check is executed by a separate manual/push workflow. It is a validation source, not the primary series. Absolute price-level differences can be material under different corporate-action conventions; the cross-check therefore reports both level divergence and daily return-path agreement. The first five-name run passed with >=99.7% of overlapping daily raw-close returns within 0.10 percentage points.
