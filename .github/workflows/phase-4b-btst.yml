@@ -1,0 +1,93 @@
+name: Phase 4B BTST overnight matrix
+
+on:
+  push:
+    branches: [phase-4b-btst-overnight]
+  workflow_dispatch:
+
+jobs:
+  btst-overnight:
+    if: github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[p4b-btst]')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Fetch tested TimesFM adapter and Phase 2 corporate actions
+        run: |
+          git fetch origin phase-3-timesfm-gate
+          git checkout origin/phase-3-timesfm-gate -- src/model requirements-research.txt
+          git fetch origin phase-2-data
+          git checkout origin/phase-2-data -- data/cache/equities/tejhq_nse
+
+      - name: Restore validated minute-source cache
+        id: minute-cache
+        uses: actions/cache@v4
+        with:
+          path: stocks_1m_csvs.zip
+          key: nse-fno-1m-v1.0.0-20024713c455cc16b5daae91e06991d57a1acfa6a30c77bb7d5a742ee1789ab2
+
+      - name: Download minute source on cache miss
+        if: steps.minute-cache.outputs.cache-hit != 'true'
+        run: |
+          curl -L --fail --retry 4 --retry-all-errors \
+            -o stocks_1m_csvs.zip \
+            https://github.com/voletiramu/nse-fno-1min-data/releases/download/v1.0.0/stocks_1m_csvs.zip
+
+      - name: Verify minute-source SHA-256
+        run: |
+          echo "20024713c455cc16b5daae91e06991d57a1acfa6a30c77bb7d5a742ee1789ab2  stocks_1m_csvs.zip" | sha256sum -c -
+
+      - name: Restore fixed external global source
+        id: global-cache
+        uses: actions/cache@v4
+        with:
+          path: external_global_source
+          key: hareeshkesavan-stock-market-dataset-aa60b746f089c3f54df6760bf021708c2d3ce1e8
+
+      - name: Checkout fixed external global-data commit on cache miss
+        if: steps.global-cache.outputs.cache-hit != 'true'
+        run: |
+          git init external_global_source
+          git -C external_global_source remote add origin https://github.com/Hareeshkesavan/Stock-Market-Dataset.git
+          git -C external_global_source fetch --depth 1 origin aa60b746f089c3f54df6760bf021708c2d3ce1e8
+          git -C external_global_source checkout --detach FETCH_HEAD
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: requirements-research.txt
+
+      - name: Cache TimesFM 3.0 model files
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: timesfm3-hf-3.0.2-\${{ runner.os }}
+
+      - name: Install pinned research environment
+        run: |
+          python -m pip install -r requirements-research.txt
+          python -m pip install openpyxl
+
+      - name: Syntax check
+        run: python -m py_compile scripts/phase4b_btst.py
+
+      - name: Run frozen BTST matrix
+        run: |
+          PYTHONPATH=. python scripts/phase4b_btst.py \
+            --zip stocks_1m_csvs.zip \
+            --global-dir external_global_source \
+            --actions-dir data/cache/equities/tejhq_nse \
+            --fii-dii "external_global_source/FII and DII.xlsx" \
+            --output p4b_btst_results
+
+      - name: Upload BTST results
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase4b-btst-overnight
+          path: p4b_btst_results/
