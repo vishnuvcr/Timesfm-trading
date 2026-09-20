@@ -19,3 +19,5 @@
 | 2026-09-20 | Phase 3 P1 inference | TimesFM 3.0 univariate quantiles were returned as shape `(5, 9)` rather than the multivariate `(series, horizon, 9)` shape assumed by the bootstrap. | Inference completed but result processing stopped before metrics were written. | Added explicit handling for both univariate `(horizon, 9)` and multivariate `(series, horizon, 9)` quantile layouts; next P1 run will verify. |
 
 | 2026-09-20 | Phase 3 P1 result | Corrected TimesFM 3.0 exploratory run 56 completed successfully on the secondary NIFTY 50 snapshot. | Pipeline now produces forecast metrics and artifacts; primary NSE evidence remains unavailable. | Recorded the result as C-grade exploratory evidence only; no strategy promotion. |
+
+| 2026-09-20 | Phase 3 P1 ablation | Added a five-series secondary-data ablation to test native multivariate and past-only covariate support under identical origins. | Exploratory H2/H3 evidence can be collected without using the blocked P0 dataset. | Same upstream commit, identical 128-context/5-horizon/80-origin design, no strategy promotion. |

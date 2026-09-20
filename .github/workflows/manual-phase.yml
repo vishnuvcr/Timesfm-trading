@@ -61,6 +61,50 @@ jobs:
           name: phase3-p1-bootstrap
           path: p1_results/
 
+  p1-multivariate-ablation:
+    if: github.event_name == 'push' && contains(github.event.head_commit.message, '[ablation-p1]')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+          cache-dependency-path: requirements-research.txt
+      - name: Cache TimesFM 3.0 model files
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: timesfm3-hf-${{ runner.os }}-3.0.2
+      - name: Cache secondary multivariate input
+        uses: actions/cache@v4
+        with:
+          path: .cache/p1_multivar
+          key: p1-multivar-nifty50-5series-c73de0e6c9acca1330a19cd41ee3d7dbd5100260
+      - name: Install pinned TimesFM 3 environment
+        run: python -m pip install -r requirements-research.txt
+      - name: Fetch secondary 5-series input when cache is cold
+        run: |
+          mkdir -p .cache/p1_multivar
+          base="https://raw.githubusercontent.com/Gajapathy-Selvaraj/Stock_Market_Datasets_NSE/c73de0e6c9acca1330a19cd41ee3d7dbd5100260"
+          curl --fail --location "${base}/NIFTY_50%28INDEX%29from2000.csv" -o ".cache/p1_multivar/NIFTY_50(INDEX)from2000.csv"
+          curl --fail --location "${base}/NSE_RELIANCE_from2000.csv" -o ".cache/p1_multivar/NSE_RELIANCE_from2000.csv"
+          curl --fail --location "${base}/NSE_TCS_from2000.csv" -o ".cache/p1_multivar/NSE_TCS_from2000.csv"
+          curl --fail --location "${base}/NSE_HDFCBANK_from2000.csv" -o ".cache/p1_multivar/NSE_HDFCBANK_from2000.csv"
+          curl --fail --location "${base}/NSE_HINDUNILVR_from2000.csv" -o ".cache/p1_multivar/NSE_HINDUNILVR_from2000.csv"
+      - name: Run 3.0 multivariate/covariate ablation
+        run: |
+          PYTHONPATH=. python scripts/bootstrap_timesfm3_p1_multivariate.py \
+            --data-dir .cache/p1_multivar \
+            --output p1_results/multivariate_ablation.json
+      - name: Upload ablation result
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase3-p1-multivariate-ablation
+          path: p1_results/multivariate_ablation.json
+
   model-smoke:
     if: github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
