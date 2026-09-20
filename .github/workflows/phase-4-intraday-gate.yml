@@ -1,8 +1,6 @@
 name: Phase 4 intraday data integrity gate
 
 on:
-  push:
-    branches: [phase-4-intraday-gate]
   workflow_dispatch:
 
 jobs:
