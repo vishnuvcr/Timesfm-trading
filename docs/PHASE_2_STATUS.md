@@ -3,7 +3,7 @@
 Updated: 2026-09-20 IST
 
 ## Status
-Validation green — source/schema architecture and CI validation complete; real P0 acquisition is next.
+Validation green — source/schema architecture and CI validation complete; official public NIFTY P0 acquisition is currently blocked.
 
 ## Completed
 - Point-in-time data policy.
@@ -32,10 +32,10 @@ A reproducible public-P0 acquisition workflow is now wired for the official NSE 
 
 The remaining P0 data families—NIFTY Bank, India VIX, full cash/F&O history, corporate actions, participant flows and authorized intraday/options data—remain separate gates.
 
-A second acquisition attempt is being triggered after hardening the NIFTY 50 fetcher with a browser-profiled Cloudflare session and historical-page warm-up.
+Official NIFTY 50 acquisition was attempted four times from GitHub Actions (runs 40, 43, 49 and 51). Each reached the NIFTY Indices application endpoint but received HTML with HTTP 200 instead of the expected JSON payload. Browser-profiled/cloudscraper session warm-up did not change this behavior. The retry loop is now stopped; see [issue #6](https://github.com/vishnuvcr/Timesfm-trading/issues/6).
 
 Next gate:
-Run the public P0 acquisition and then run:
+Obtain an authorized/official P0 delivery route or a different official endpoint. Once obtained, generate the real manifest and run:
 1. schema conformance,
 2. PIT leakage tests,
 3. calendar/session tests,
