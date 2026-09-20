@@ -267,6 +267,42 @@
       "storage": "tier_a_permitted_snapshot",
       "priority": "P0-alternate",
       "notes": "Adjusted-price and PIT-universe trees are consumed from the published parquet distribution; final evidence still requires independent validation and frozen universe rules."
+    },
+    {
+      "id": "community_tickertruth_nse_security_master",
+      "domain": "equity_security_master",
+      "source": "TickerTruth NSE India Security Master",
+      "url": "https://huggingface.co/datasets/tickertruth/nse-india-security-master",
+      "cadence": "nightly",
+      "pit_required": true,
+      "coverage_goal": "NSE equity symbol/ISIN/listing/active-delisted reference data",
+      "storage": "tier_a_permitted_snapshot",
+      "priority": "P1",
+      "notes": "CC BY 4.0; source states nightly NSE public equity-master normalization. Use as identifier cross-check, not as price truth."
+    },
+    {
+      "id": "community_india_stock_minute_2022_2026",
+      "domain": "equity_intraday",
+      "source": "xxparthparekhxx/indian-stock-market-minute-data",
+      "url": "https://huggingface.co/datasets/xxparthparekhxx/indian-stock-market-minute-data",
+      "cadence": "historical_snapshot",
+      "pit_required": true,
+      "coverage_goal": "NSE stock/index 1-minute OHLCV for intraday/scalping exploratory work",
+      "storage": "tier_b_reference_or_derived_only",
+      "priority": "P1",
+      "notes": "MIT dataset; approximately 713M minute rows covering 2022-01-03 onward and ~2,500 NSE stocks/indices. Provenance/adjustment/execution semantics must be independently reconciled before primary use."
+    },
+    {
+      "id": "community_nse_ohlcv_hourly",
+      "domain": "equity_intraday_crosscheck",
+      "source": "Dr-Kitz28/NSE-OHLCV-Data",
+      "url": "https://github.com/Dr-Kitz28/NSE-OHLCV-Data",
+      "cadence": "periodic",
+      "pit_required": true,
+      "coverage_goal": "NSE daily and hourly stock OHLCV from listing date to current snapshot",
+      "storage": "tier_b_reference_only",
+      "priority": "P2",
+      "notes": "Repository states academic/research use; license/provenance should be frozen before redistribution or primary inference."
     }
   ]
 }
