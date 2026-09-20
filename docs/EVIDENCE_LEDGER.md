@@ -112,3 +112,15 @@ Evidence grade: C — exploratory secondary-data result.
 Relevance: validates the end-to-end TimesFM 3.0 forecast, quantile and statistical pipeline and suggests level-error improvement can coexist with weak directional excess.
 
 Limitations: secondary dataset with no explicit upstream license file; historical window ends 2021-01-25; only one target/horizon/input family; post-hoc inference; no transaction-cost strategy test; not primary NSE P0 evidence; no promotion value.
+
+## E13 — TimesFM 3.0 secondary-data multivariate/covariate ablation
+
+Finding: On 4,015 aligned secondary NIFTY 50/RELIANCE/TCS/HDFCBANK/HINDUNILVR rows from 2004-08-25 to 2021-01-25, with 80 identical origins, context 128 and five-session horizon, univariate NIFTY 50 produced log MAE 0.01849, RMSE 0.02166 and 70.0% directional accuracy. Native five-series multivariate produced MAE 0.01858 (+0.51%), RMSE 0.02257 (+4.21%) and 72.5% directional accuracy. NIFTY 50 plus four past-only covariates produced the same recorded metrics as univariate in this run.
+
+Source: Phase 3 workflow run 64 and uploaded artifact; secondary Google Finance-derived GitHub snapshot, upstream commit c73de0e6c9acca1330a19cd41ee3d7dbd5100260.
+
+Evidence grade: C — exploratory secondary-data result.
+
+Relevance: provides direct exploratory evidence for H2/H3: cross-series inputs can change directional forecasts without improving point forecast error, while this particular past-only covariate configuration showed no recorded metric change.
+
+Limitations: one dataset snapshot, one horizon, 80 origins, historical window ending 2021-01-25, no primary NSE data, no economic strategy test, no multiple-testing correction across a full model matrix. Not a strategy-promotion result.

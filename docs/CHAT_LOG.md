@@ -47,3 +47,8 @@ A direct read of the official TimesFM 3.0 Non-Commercial License shows a stricte
 ## 2026-09-20 — first TimesFM 3.0 P1 forecast result
 
 **Observable outcome:** Corrected Phase 3 P1 workflow run 56 completed successfully on the fixed secondary NIFTY 50 snapshot. At 80 origins / 5-session horizon, TimesFM 3.0 reduced log-level MAE by 13.63% and RMSE by 15.66% versus persistence; five-day return MAE improved by 13.18%. Directional accuracy was 70.0% versus a 75.0% positive-return base rate, and q10-q90 coverage was 78.75%. The result is recorded as C-grade exploratory evidence only and cannot promote a trading strategy or substitute for primary NSE P0 data.
+
+
+## 2026-09-20 — multivariate/covariate P1 ablation result
+
+**Observable outcome:** Phase 3 run 64 completed successfully on 4,015 aligned secondary rows with 80 origins. Univariate NIFTY 50: MAE 0.01849, RMSE 0.02166, direction 70.0%; native 5-series multivariate: MAE 0.01858, RMSE 0.02257, direction 72.5%; past-only covariates: same recorded metrics as univariate. This is C-grade exploratory evidence only; the primary P0 gate remains blocked.

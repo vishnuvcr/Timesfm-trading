@@ -65,7 +65,7 @@ The phase-3 branch now includes:
 
 The official TimesFM README confirms the 3.0 evaluator supports univariate and multivariate forecasting, past-only and past-future covariates, and nine quantiles. citeturn341680search8turn341680search1
 
-CI verification is green: the statistics/adapter unit suite passes. The first corrected P1 TimesFM 3.0 bootstrap also completed successfully on the secondary snapshot. It showed lower point forecast error than persistence but directional accuracy below the positive-return base rate. This is exploratory C-grade evidence only; the primary forecast gate still requires P0 data.
+CI verification is green: the statistics/adapter unit suite passes. The P1 TimesFM 3.0 bootstrap completed successfully on secondary data and showed lower point forecast error than persistence but directional accuracy below the positive-return base rate. A second P1 ablation compared univariate, native multivariate and past-only covariate inputs: multivariate slightly worsened point error while raising direction to 72.5%, and the past-only covariate condition matched univariate metrics in that run. These are exploratory C-grade observations only; the primary forecast gate still requires P0 data.
 
 ## Frozen experiment design
 
