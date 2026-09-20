@@ -1,1 +1,60 @@
-name: Alternate NSE individual-stock acquisition\n\non:\n  push:\n    branches: [phase-2-data]\n  workflow_dispatch:\n    inputs:\n      symbols:\n        description: Comma-separated NSE symbols; blank = configured bootstrap universe\n        required: false\n        default: \"\"\n        type: string\n      refresh:\n        description: Re-download even if cached files exist\n        required: false\n        default: false\n        type: boolean\n\njobs:\n  acquire:\n    if: github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[acquire-tejhq-equities]')\n    runs-on: ubuntu-latest\n    permissions:\n      contents: write\n    steps:\n      - uses: actions/checkout@v4\n        with:\n          ref: phase-2-data\n          fetch-depth: 0\n      - uses: actions/setup-python@v5\n        with:\n          python-version: \"3.12\"\n      - name: Install dependencies\n        run: python -m pip install --upgrade pip requests\n      - name: Override symbol list when requested\n        if: ${{ github.event_name == 'workflow_dispatch' && inputs.symbols != '' }}\n        env:\n          SYMBOLS: ${{ inputs.symbols }}\n        run: |\n          python - <<'PY'\n          import json, os\n          from pathlib import Path\n          p = Path(\"configs/equity_research_universe.json\")\n          obj = json.loads(p.read_text())\n          obj[\"symbols\"] = [x.strip().upper() for x in os.environ[\"SYMBOLS\"].split(\",\") if x.strip()]\n          p.write_text(json.dumps(obj, indent=2) + \"\\n\")\n          PY\n      - name: Acquire cached EOD stock panel\n        env:\n          REFRESH: ${{ github.event_name == 'workflow_dispatch' && inputs.refresh || false }}\n        run: |\n          args=\"\"\n          if [ \"$REFRESH\" = \"true\" ]; then args=\"--refresh\"; fi\n          PYTHONPATH=. python scripts/acquire_tejhq_equities.py $args\n      - name: Validate stock panel\n        run: PYTHONPATH=. python src/data/validate_equity_panel.py\n      - name: Commit cache and manifest\n        run: |\n          git config user.name \"github-actions[bot]\"\n          git config user.email \"41898282+github-actions[bot]@users.noreply.github.com\"\n          git add configs/equity_research_universe.json data/cache/equities/tejhq_nse\n          if git diff --cached --quiet; then\n            echo \"No cache changes.\"\n            exit 0\n          fi\n          git commit -m \"Cache alternate NSE individual-stock EOD panel\"\n          git push origin phase-2-data\n
+name: Alternate NSE individual-stock acquisition
+
+on:
+  push:
+    branches: [phase-2-data]
+    paths:
+      - configs/equity_research_universe.json
+      - scripts/acquire_tejhq_equities.py
+      - src/data/validate_equity_panel.py
+      - .github/workflows/acquire-alternate-equities.yml
+  workflow_dispatch:
+    inputs:
+      symbols:
+        description: Comma-separated NSE symbols; blank = configured bootstrap universe
+        required: false
+        default: ""
+        type: string
+      refresh:
+        description: Re-download even if cached files exist
+        required: false
+        default: false
+        type: boolean
+
+jobs:
+  acquire:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: phase-2-data
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: python -m pip install --upgrade pip requests
+      - name: Acquire cached EOD stock panel
+        env:
+          SYMBOLS: ${{ inputs.symbols }}
+          REFRESH: ${{ inputs.refresh }}
+        run: |
+          args=()
+          if [ -n "$SYMBOLS" ]; then args+=(--symbols "$SYMBOLS"); fi
+          if [ "$REFRESH" = "true" ]; then args+=(--refresh); fi
+          PYTHONPATH=. python scripts/acquire_tejhq_equities.py "${args[@]}"
+      - name: Validate stock panel
+        run: PYTHONPATH=. python src/data/validate_equity_panel.py
+      - name: Commit cache and manifest
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+vishnuvcr[bot]@users.noreply.github.com"
+          git add data/cache/equities/tejhq_nse
+          if git diff --cached --quiet; then
+            echo "No cache changes."
+            exit 0
+          fi
+          git commit -m "Cache alternate NSE individual-stock EOD panel"
+          git push origin phase-2-data
