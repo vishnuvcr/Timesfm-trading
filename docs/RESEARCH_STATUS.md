@@ -5,36 +5,20 @@ Updated: 2026-09-20 IST
 ## Phase 0 — Governance
 **Complete for bootstrap.**
 
-Starting state:
-- public repository
-- default branch: main
-- repository was empty at initialization
-- no prior research files, code, workflows or datasets
-
-Completed controls:
-- research plan
-- project instructions
-- status log
-- error log
-- chat/decision log
-- phase branches 0–9
-- manual GitHub Actions entry point on each phase branch
-
 ## Phase 1 — Literature
-**In progress — protocol being frozen.**
+**In progress — model choice updated.**
 
-Evidence reviewed:
-- official TimesFM papers and current model documentation
-- TimesFM 2.5/3.0 licensing and fine-tuning documentation
-- 2025–2026 financial TSFM benchmarks
-- base-rate-honest TimesFM research
-- independent NSE-inclusive TimesFM benchmark
-- NSE market/derivatives/option-chain/corporate-action/FII-FPI-DII material
-- Paytm Money current and historical pricing/support material
-- recent Nifty options volatility-risk-premium research
+### Current model decision
+**TimesFM 3.0 is now the primary model for research.** TimesFM 2.5 is the benchmark/ablation model.
 
-Preliminary conclusion:
-Do not assume zero-shot TimesFM direction is alpha. The research will test direction, uncertainty, volatility, execution timing, regime conditioning and option-implied-versus-forecast-range signals separately.
+Reason:
+- 3.0 adds native multivariate forecasting.
+- 3.0 supports past-only and past-and-future covariates.
+- 3.0 is the model selected for this research.
+- Controlled research/backtesting is compatible with its current non-commercial/non-production license when it remains genuinely research/evaluation use.
+
+Restriction:
+The current pretrained 3.0 weights are not licensed for commercial or production use. Therefore the final live-deployment phase must either obtain a separate commercial license/permission from Google or use separately licensed weights for production. This does not prevent a 3.0 research/backtest program.
 
 ## Phase 2 — Data
 **Planned.**
