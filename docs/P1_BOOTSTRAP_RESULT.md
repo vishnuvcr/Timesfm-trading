@@ -14,6 +14,8 @@ TimesFM 3.0 completed an 80-origin, 5-day-horizon exploratory forecast run on a 
 
 An exploratory Newey-West-adjusted paired loss test on 80 origin-level five-day forecast blocks gave a mean loss difference of -0.00207, lag-4 HAC t = -2.10 and one-sided p ≈ 0.018. A moving-block bootstrap with block length 5 gave a 95% interval of approximately [-0.00416, -0.00029]. These inferential numbers are exploratory and were not part of the pre-registered primary P0 gate.
 
+The five-day q10–q90 interval width was also compared with subsequent absolute five-day movement. Spearman rank correlation was approximately 0.350. The highest forecast-width quartile had mean absolute movement approximately 0.03314 versus 0.01430 in the lowest quartile, a ratio of about 2.32×. This supports a research hypothesis that TimesFM uncertainty may contain information about movement magnitude, but it remains secondary-data exploratory evidence.
+
 ## Interpretation
 
 The result supports a narrow research observation: in this secondary historical snapshot, TimesFM 3.0 produced lower point forecast error than persistence for the tested five-day horizon. It does not support a directional-alpha conclusion; the directional forecast was below the contemporaneous positive-return base rate.
