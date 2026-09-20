@@ -32,6 +32,8 @@ A reproducible public-P0 acquisition workflow is now wired for the official NSE 
 
 The remaining P0 data families—NIFTY Bank, India VIX, full cash/F&O history, corporate actions, participant flows and authorized intraday/options data—remain separate gates.
 
+A second acquisition attempt is being triggered after hardening the NIFTY 50 fetcher with a browser-profiled Cloudflare session and historical-page warm-up.
+
 Next gate:
 Run the public P0 acquisition and then run:
 1. schema conformance,
