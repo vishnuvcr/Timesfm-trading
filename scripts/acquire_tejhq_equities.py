@@ -68,6 +68,7 @@ def write_csv(path: Path, rows: list[dict]) -> str:
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--symbols-file", type=Path, default=Path("configs/equity_research_universe.json"))
+    ap.add_argument("--symbols", default="", help="Comma-separated symbols overriding the configured universe")
     ap.add_argument("--out", type=Path, default=Path("data/cache/equities/tejhq_nse"))
     ap.add_argument("--start", default=DEFAULT_START)
     ap.add_argument("--end", default=DEFAULT_END)
@@ -76,7 +77,7 @@ def main() -> None:
     args = ap.parse_args()
 
     cfg = json.loads(args.symbols_file.read_text(encoding="utf-8"))
-    symbols = list(cfg["symbols"])
+    symbols = [x.strip().upper() for x in args.symbols.split(",") if x.strip()] if args.symbols else list(cfg["symbols"])
     manifest = {
         "dataset_id": "tejhq_nse_equity_eod_stock_bootstrap",
         "source_id": "community_tejhq_nse_bhavcopy",
