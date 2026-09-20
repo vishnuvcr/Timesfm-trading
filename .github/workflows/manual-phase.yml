@@ -1,0 +1,11 @@
+name: Phase 8 paper live
+
+on:
+  workflow_dispatch:
+
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "Manual run for Phase 8 paper live"
