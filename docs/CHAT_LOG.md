@@ -114,3 +114,12 @@ Artifacts: workflow 35525457869; swing artifact 10609348369; source-validation a
 **Decision:** do not declare a strategy validated. Treat 10-session TimesFM ranking as the single predeclared candidate for PIT validation using the existing Phase 2 point-in-time liquidity universe, followed by Phase 6/7 regime and cost-aware gates. Do not search other horizons/thresholds before that gate.
 
 **Source gate:** candidate minute source structural probe passed; this is source-integrity evidence only and does not establish execution/fill accuracy.
+
+
+## 2026-09-20 — PIT gate completed
+
+The 10-session raw TimesFM ranking candidate was rerun against the Phase 2 point-in-time liquidity intervals. All 30 cached symbols were eligible at all 32 rebalance dates, so eligibility did not change the portfolio.
+
+PIT net total returns were +20.21%, +14.70%, +9.43% and +4.39% across 0.125%, 0.25%, 0.375% and 0.50% one-way cost, versus +9.74%, +4.82%, +0.11% and -4.39% for the momentum control. Exact four-fold sign-flip p=0.3125 one-sided.
+
+Decision: advance only this single frozen 10-session candidate to the Phase 7 post-selection holdout. Do not search additional TimesFM variants.
