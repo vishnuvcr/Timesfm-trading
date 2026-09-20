@@ -90,6 +90,8 @@ The actual statistical gate is intentionally blocked until Phase 2 supplies a fr
 - [Phase 2 branch status](https://github.com/vishnuvcr/Timesfm-trading/blob/phase-2-data/docs/PHASE_2_STATUS.md)
 - [Phase 2 source registry](https://github.com/vishnuvcr/Timesfm-trading/blob/phase-2-data/configs/source_registry.json)
 - [Phase 3 branch status](https://github.com/vishnuvcr/Timesfm-trading/blob/phase-3-timesfm-gate/docs/PHASE_3_STATUS.md)
+- [Draft PR #1 — Phase 2](https://github.com/vishnuvcr/Timesfm-trading/pull/1)
+- [Draft PR #2 — Phase 3](https://github.com/vishnuvcr/Timesfm-trading/pull/2)
 
 ## Market data scope
 
