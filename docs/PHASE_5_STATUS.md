@@ -4,7 +4,7 @@ Updated: 2026-09-20 IST
 
 ## Status
 
-**Protocol/engineering bootstrap in progress.** Empirical options research is blocked until authorized historical option data and a frozen Phase 3 forecast dataset are available.
+**Protocol/engineering bootstrap complete; empirical options research is blocked on authorized historical option data.** Empirical options research is blocked until authorized historical option data and a frozen Phase 3 forecast dataset are available.
 
 ## Implemented
 
@@ -14,6 +14,7 @@ Updated: 2026-09-20 IST
 - Research primitives for IV-implied movement, TimesFM forecast movement, residual-vs-implied edge, and debit-spread bounded-risk accounting.
 - Unit tests for the options research primitives.
 - Manual GitHub Actions workflow for protocol/unit validation.
+- Corrected options CI run 38 passed.
 
 ## Research rule
 
