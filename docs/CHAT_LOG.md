@@ -32,3 +32,12 @@ The user explicitly selected TimesFM 3.0. The plan is changed to make 3.0 the pr
 - Workflow run 35522976491 completed successfully; artifact 10608372793 was uploaded.
 - Mean point-error metrics were worse than persistence across the bootstrap, while mean directional accuracy exceeded the mean positive-return base rate. The interval-width/magnitude relationship was negative and did not reproduce the earlier secondary NIFTY result.
 - Decision: do not promote either raw stock direction or TimesFM uncertainty sizing from this run. The next stock research gate must use broader chronological folds, PIT universe/identifier controls, an independent stock-selection baseline and the full cost/slippage model.
+
+
+## 2026-09-20 — multi-fold stock robustness outcome
+
+**Observable outcome:** The exploratory four-fold extension completed successfully (workflow 35523375234, artifact 10608933929), covering 30 stocks × 4 chronological folds × 40 origins = 4,800 stock-level forecast origins.
+
+**Result:** TimesFM 3.0 remained worse than persistence on point-error aggregates; mean directional excess became -2.90 percentage points rather than the +11.1 percentage points seen in the recent-origin bootstrap. Only 13/30 stocks had non-negative mean directional excess across folds, and no stock had a negative mean MAE difference across all four folds.
+
+**Decision:** The recent directional result is treated as a recency-window exploratory finding and is not promoted. The research focus returns to incremental information testing around an independent stock-selection baseline, with PIT controls, broader validation and full cost/slippage modeling.
