@@ -1,0 +1,87 @@
+{
+  "lane": "phase4_intraday_timesfm_vwap",
+  "workflow_run": 35532255630,
+  "artifact_id": 10612146229,
+  "source_release_sha256": "20024713c455cc16b5daae91e06991d57a1acfa6a30c77bb7d5a742ee1789ab2",
+  "symbols": [
+    "RELIANCE",
+    "TCS",
+    "HDFCBANK",
+    "INFY",
+    "ICICIBANK",
+    "SBIN",
+    "ITC",
+    "BHARTIARTL",
+    "LT",
+    "AXISBANK"
+  ],
+  "horizons_minutes": [
+    15,
+    30,
+    60
+  ],
+  "origins_per_fold": 40,
+  "folds": 4,
+  "primary_development_slippage": 0.001,
+  "development_block_p_one_sided": {
+    "15": 0.4381,
+    "30": 0.3043,
+    "60": 0.6125
+  },
+  "development_bh_q": {
+    "15": 0.6125,
+    "30": 0.6125,
+    "60": 0.6125
+  },
+  "development_candidates": [],
+  "forecast_summary": [
+    {
+      "horizon": 15,
+      "timesfm_mae": 0.00158607,
+      "persistence_mae": 0.00144398,
+      "directional_excess_pp": 8.7421,
+      "rank_ic": -0.00027
+    },
+    {
+      "horizon": 30,
+      "timesfm_mae": 0.00246098,
+      "persistence_mae": 0.00204742,
+      "directional_excess_pp": 4.3478,
+      "rank_ic": -0.02003
+    },
+    {
+      "horizon": 60,
+      "timesfm_mae": 0.00396807,
+      "persistence_mae": 0.00298073,
+      "directional_excess_pp": 0.8192,
+      "rank_ic": -0.00013
+    }
+  ],
+  "strategy_net_total_return_at_0_extra_slippage": {
+    "15_timesfm": -0.09311,
+    "15_vwap": -0.10095,
+    "30_timesfm": -0.09889,
+    "30_vwap": -0.11457,
+    "60_timesfm": -0.09403,
+    "60_vwap": -0.09787
+  },
+  "strategy_net_total_return_at_0.10pct_one_way": {
+    "15_timesfm": -0.34329,
+    "15_vwap": -0.34898,
+    "30_timesfm": -0.3475,
+    "30_vwap": -0.3589,
+    "60_timesfm": -0.34397,
+    "60_vwap": -0.34675
+  },
+  "strategy_net_total_return_at_0.20pct_one_way": {
+    "15_timesfm": -0.52528,
+    "15_vwap": -0.52941,
+    "30_timesfm": -0.52835,
+    "30_vwap": -0.53662,
+    "60_timesfm": -0.52579,
+    "60_vwap": -0.52779
+  },
+  "holdout_results": [],
+  "status": "closed_negative_development_gate",
+  "note": "No horizon reached the predeclared development rule; no fold-4 holdout was opened."
+}
