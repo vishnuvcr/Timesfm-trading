@@ -40,3 +40,5 @@
 
 | 2026-09-20 | Phase 9 release | Final manuscript creation initially hit a repository-write string-quoting error; no content was lost. | Release write stopped before GitHub commit. | Rewrote the manuscript artifact with plain-text path names and tilde-fenced diagrams; Phase 9 validation then passed. |
 | 2026-09-20 | Research stop | The predeclared stock strategy gates did not produce a promotable TimesFM 3.0 strategy. | Additional unlogged threshold/variant searching would violate the project stop rule. | Closed the current individual-stock empirical search and moved to final manuscript/release; future variants require a new preregistered branch and holdout. |
+
+| 2026-09-20 | Research-state supersession | Main contained an earlier Phase 9 final-stop statement that predated the subsequent Phase 4B multifrequency candidate. | Two repository layers could otherwise imply contradictory current conclusions. | Marked the earlier final conclusion as superseded, updated the plan/status/README, and froze the single Phase 4B 10-session candidate for Phase 7. |
