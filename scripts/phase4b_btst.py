@@ -272,7 +272,7 @@ def make_covariate_matrix(days, data_by_symbol, feature_maps, flow_map, use_flow
     for idx in range(max(0, signal_idx - CONTEXT + 1), signal_idx + 1):
         day = days[idx]
         close_return = data_by_symbol[symbol]["close_return"][idx]
-        breadth = float(data_by_symbol["breadth"][idx])
+        breadth = float(data_by_symbol[symbol]["breadth"][idx])
         rv20 = float(data_by_symbol["rv20"][idx])
         features = feature_row(feature_maps, day)
         row = [
