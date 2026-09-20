@@ -61,3 +61,17 @@ After the data gate, the first intraday mechanism will be a frozen 15/30/60-minu
 ## Execution marker — 2026-09-20
 
 The deep minute-source gate is now being executed on the five fixed diagnostic symbols. No strategy computation is attached to this workflow.
+
+
+## Independent release gate — started 2026-09-20
+
+The Hugging Face-filter path is no longer the automatic source gate because its query service returned repeated 422/500/timeouts on the 10.5 GB dataset. The independent GitHub release `voletiramu/nse-fno-1min-data` is now the primary candidate for this frequency gate.
+
+Release v1.0.0:
+- 214 NSE F&O underlying stocks;
+- 1-minute OHLCV;
+- 2024-04-01 to 2026-04-30;
+- compressed release asset SHA-256: `20024713c455cc16b5daae91e06991d57a1acfa6a30c77bb7d5a742ee1789ab2`;
+- stated source: Zerodha Kite API.
+
+The gate will selectively extract five fixed liquid symbols and compare full-session minute bars with the cached EOD series before any strategy work.
