@@ -69,3 +69,26 @@ Failure of the gate closes the current individual-stock TimesFM research lane. P
 The underlying price/PIT evidence is still the repository's 30-name bootstrap panel. TATAMOTORS has a known source-continuity end-date issue in the adjusted cache and is allowed to disappear only where the required origin/future observation is unavailable; the workflow records eligible-stock counts rather than silently forward-filling it.
 
 The research remains non-executing and research-only.
+
+
+## Holdout result and gate decision
+
+The frozen candidate failed the post-selection holdout.
+
+| Extra one-way slippage | TimesFM net return | Momentum net return | TimesFM max DD | TimesFM Sharpe |
+|---|---:|---:|---:|---:|
+| 0.00% | +3.72% | +67.97% | -25.13% | 0.144 |
+| 0.125% | -7.93% | +47.20% | -28.83% | -0.075 |
+| 0.25% | -18.30% | +28.96% | -32.35% | -0.295 |
+| 0.375% | -27.52% | +12.94% | -36.79% | -0.515 |
+| 0.50% | -35.72% | -1.12% | -41.46% | -0.736 |
+
+The TimesFM candidate was below the momentum control at all five stress levels, including the zero-extra-slippage scenario. The paired period difference was negative throughout; one-sided block-signflip p-values were 0.972–0.984.
+
+Capacity was not the limiting factor: maximum simulated participation was about 0.014% of trailing turnover.
+
+### Final Phase 7 decision
+
+**FAIL.** The single preselected 10-session TimesFM individual-stock candidate is closed. No further specification search is allowed on this completed stock holdout.
+
+The result does not prove that all possible TimesFM/market combinations fail. It establishes that this frozen individual-stock mechanism did not survive a post-selection 2023+ cost-aware holdout.
