@@ -114,3 +114,8 @@ The minute-source gate now uses fixed, source-level thresholds:
 - after excluding recorded corporate-action dates, median absolute daily log-return difference <=10 bps and 95th percentile <=100 bps versus the independent raw EOD source.
 
 Post-session rows are quarantined rather than used. These rules are fixed before the next execution and are not tuned to any strategy result.
+
+
+## Definitive gate execution marker — 2026-09-20
+
+Running the clean-session validator with the frozen acceptance rules above.
