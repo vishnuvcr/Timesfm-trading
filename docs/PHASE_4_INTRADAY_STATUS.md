@@ -56,3 +56,8 @@ Passing this gate does not establish fill accuracy. Execution-quality validation
 ## Next strategy step
 
 After the data gate, the first intraday mechanism will be a frozen 15/30/60-minute TimesFM target matrix with VWAP/persistence controls. BTST will require a separately validated next-session open path. Scalping will require a still stricter execution gate.
+
+
+## Execution marker — 2026-09-20
+
+The deep minute-source gate is now being executed on the five fixed diagnostic symbols. No strategy computation is attached to this workflow.
