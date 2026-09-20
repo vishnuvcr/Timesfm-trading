@@ -59,3 +59,26 @@ Phase 2 now defines canonical schemas and invariant checks for equity bars, opti
 
 
 Final acquisition retry recorded after correcting the public-P0 acquisition job dependency step.
+
+
+## Alternate stock-data results — 2026-09-20
+
+The alternate individual-stock lane is now green through adjustment/PIT preparation:
+
+- 30 selected NSE stocks have raw EOD OHLCV/turnover cached.
+- Separate corporate-action histories are cached and validated.
+- Back-adjusted price files were acquired from the public `prices_adjusted/` tree for the same bootstrap universe.
+- A point-in-time liquidity-universe snapshot was acquired from the public `universe/nse_liquid.parquet` tree and filtered to the bootstrap names.
+- Adjusted-panel workflow run 35522208459 passed acquisition, validation and cache commit.
+- Independent Yahoo/yfinance cross-check run 35522257203 passed for RELIANCE, TCS, HDFCBANK, INFY and SBIN.
+
+The five-symbol cross-check found approximately 3,738–4,110 overlapping trading dates per symbol. Raw price levels can differ materially across sources, but daily raw-close return paths agreed closely: at least 99.7% of overlapping daily returns differed by no more than 0.10 percentage points in this bootstrap sample. Therefore final stock research will compare return/adjustment paths, not reject a source merely because vendor price levels use different corporate-action conventions.
+
+## Remaining Phase 2 stock gate
+
+Before final holdout inference:
+1. freeze the point-in-time universe definition and rebalance calendar;
+2. reconcile ISIN/symbol continuity across name changes, mergers and delistings;
+3. freeze adjusted-price methodology;
+4. run the independent-source divergence audit on the final universe;
+5. keep intraday/high-frequency stock strategies separate until quote/trade-level execution data are available.
