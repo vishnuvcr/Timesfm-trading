@@ -33,3 +33,13 @@ These are protocol primitives, not empirical results.
 ## Gate
 
 No strategy is promoted until real P0 data, Phase 3 forecast results, cost assumptions and walk-forward tests are available.
+
+
+## 2026-09-20 — empirical Phase 4.1 stock overlay launched
+
+Phase 3's broader stock test did not support standalone TimesFM direction against persistence. Phase 4 therefore switches to an incremental-information design: an independently specified 20-session cross-sectional momentum control, a TimesFM 5-session forecast rank, a 50/50 standardized hybrid, and a momentum-gated TimesFM variant.
+
+The experiment uses the common history of the 30-name bootstrap, four chronological folds, eight non-overlapping rebalances per fold, top-six long-only selection, and four all-in one-way cost-stress scenarios. Cash equity is the trading instrument. Brokerage and delivery-sale DP references are included as explicit fixed-order costs, while proportional costs are stressed rather than treated as a historical-exact fee schedule.
+
+This is a research-only, non-executing TimesFM 3.0 simulation. It cannot promote a live strategy.
+
