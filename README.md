@@ -78,6 +78,7 @@ The actual statistical gate is intentionally blocked until Phase 2 supplies a fr
 - [Research plan](docs/RESEARCH_PLAN.md)
 - [Research status](docs/RESEARCH_STATUS.md)
 - [Experiment matrix](docs/EXPERIMENT_MATRIX.md)
+- [Trading pipeline specification](docs/TRADING_PIPELINE_SPEC.md)
 - [Methodology](docs/METHODOLOGY.md)
 - [Literature review](docs/LITERATURE_REVIEW.md)
 - [Data catalog](docs/DATA_CATALOG.md)
