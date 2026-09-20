@@ -143,3 +143,8 @@ The source-gate diagnostic universe is now fixed at ten liquid F&O underlyings:
 RELIANCE, TCS, HDFCBANK, INFY, ICICIBANK, SBIN, ITC, BHARTIARTL, LT, AXISBANK.
 
 The same acceptance rules apply unchanged. No result from the five-name pilot is being treated as final source validation.
+
+
+## Ten-stock definitive execution marker — 2026-09-20
+
+Running the unchanged source acceptance rules on the fixed ten-symbol diagnostic universe.
