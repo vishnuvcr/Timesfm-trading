@@ -18,3 +18,8 @@ Private chain-of-thought is not copied here; this log records observable decisio
 ## 2026-09-20 — model selection update
 
 The user explicitly selected TimesFM 3.0. The plan is changed to make 3.0 the primary research model and 2.5 the benchmark/ablation/fallback. Official sources confirm 3.0 supports native multivariate forecasting and flexible covariates. Its current pretrained-weight license permits qualifying research/evaluation but does not clear commercial or production use; live deployment therefore requires separate licensing/permission or an appropriately licensed production model.
+
+
+## 2026-09-20 — license boundary correction
+
+A direct read of the official TimesFM 3.0 Non-Commercial License shows a stricter boundary than earlier project notes: Non-Commercial Purpose excludes commercial gain, revenue generation and commercial decision-making, and the restrictions extend to model Outputs. The research plan is corrected so 3.0 remains the primary scientific/evaluation lane, while 3.0-derived trading decisions remain blocked until commercial rights are obtained. TimesFM 2.5 remains the current trading/production research lane.
