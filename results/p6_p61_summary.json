@@ -1,0 +1,41 @@
+{
+  "run_id": 35524645761,
+  "artifact_id": 10609451021,
+  "lane": "P6.1_exploratory_regime_conditional_incremental_timesfm",
+  "stocks": 30,
+  "folds": 4,
+  "rebalances": 32,
+  "top_k": 6,
+  "event_rule": "exclude names with an ex-date in the preceding 5 trading sessions",
+  "liquidity_rule": "top 20 of 30 by trailing 20-session turnover at origin",
+  "unconditional_residual_rank_ic": -0.002992084991891502,
+  "unconditional_residual_rank_ic_p": 0.935032483758121,
+  "risk_on_residual_rank_ic": -0.04541559005873818,
+  "risk_on_residual_rank_ic_p": 0.3963018490754623,
+  "breadth_low_residual_rank_ic": 0.060928055432699385,
+  "breadth_low_residual_rank_ic_p": 0.4387806096951524,
+  "trend_down_residual_rank_ic": 0.05514644454272937,
+  "trend_down_residual_rank_ic_p": 0.42478760619690153,
+  "fdr_adjusted_risk_on_q": 0.7794102948525737,
+  "strategy_total_returns": {
+    "zero_cost": {
+      "momentum": 0.35000068094978776,
+      "risk_on_residual_overlay": 0.35793737357658717,
+      "stress_residual_overlay": 0.35000068094978776,
+      "hybrid": 0.3451707443996803
+    },
+    "one_way_0.25pct": {
+      "momentum": 0.22245419836594116,
+      "risk_on_residual_overlay": 0.20931136802888006,
+      "stress_residual_overlay": 0.22245419836594116,
+      "hybrid": 0.20987370087473822
+    },
+    "one_way_0.50pct": {
+      "momentum": 0.10657257779201235,
+      "risk_on_residual_overlay": 0.076459851274578,
+      "stress_residual_overlay": 0.10657257779201235,
+      "hybrid": 0.08776672971362931
+    }
+  },
+  "interpretation": "No predeclared regime cell produced statistically supported incremental TimesFM residual information. The risk-on overlay was slightly better than momentum before costs but underperformed after 0.25% one-way cost stress. No stock strategy is promoted."
+}
