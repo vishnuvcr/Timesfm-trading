@@ -71,3 +71,12 @@ The apparent improvement from a low-breadth TimesFM-minus-momentum residual was 
 **Decision:** close the current daily individual-stock TimesFM overlay lane. No tested daily TimesFM stock-selection mechanism has demonstrated incremental value over the independent baseline.
 
 The next work should not search arbitrary TimesFM thresholds for a positive result. Future reopening requires a material protocol amendment, new authorized/PIT-clean data or a genuinely different economic mechanism.
+
+
+## 2026-09-20 — final empirical stop and manuscript release
+
+The individual-stock empirical sequence is complete under the project's declared stop rule: forecast bootstrap → chronological robustness → stock-selection control → regime-conditioned incremental test → cost gate.
+
+No TimesFM 3.0 stock strategy passed promotion. The final repository release therefore records a negative scientific conclusion rather than continuing specification search. Phase 9 manuscript and final-conclusion artifacts were validated by GitHub Actions and synchronized into main.
+
+No live/paper execution is enabled.
