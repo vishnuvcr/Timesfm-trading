@@ -59,6 +59,13 @@ No real forecast result has been reported yet.
 
 The primary experiment matrix is now frozen in [docs/EXPERIMENT_MATRIX.md](docs/EXPERIMENT_MATRIX.md), including targets, horizons, input families, baselines, primary metrics, multiple-testing controls and promotion gates.
 
+## Cross-phase architecture
+**Specified.**
+
+The common trading engine is documented in [docs/TRADING_PIPELINE_SPEC.md](docs/TRADING_PIPELINE_SPEC.md). All five strategy families use the same forecast, calibration, economic-edge, risk, execution and monitoring gates.
+
+The dated 2026 cost model is frozen in [docs/COST_MODEL.md](docs/COST_MODEL.md); current NSE STT and Paytm Money F&O/RMS assumptions are versioned by effective date.
+
 ## Phase 4 onward
 **Planned.**
 
