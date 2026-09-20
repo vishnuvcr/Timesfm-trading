@@ -12,7 +12,7 @@ Research program to evaluate Google TimesFM for a reproducible Indian-market tra
 | 1 | Literature + evidence review | **Complete / protocol frozen** |
 | 2 | NSE/BSE data lake + PIT controls | **Validation green; official NSE hosted-runner routes blocked; alternate individual-stock EOD lane green** |
 | 3 | TimesFM 3.0 forecast gates | **Engineering green; NIFTY P0 blocked; 30-stock recent-window bootstrap and four-fold robustness extension complete; no stock alpha promoted** |
-| 4 | Individual-stock + index strategy research | **Engineering bootstrap complete; empirical gate open only after stock data-quality/forecast/cost gates** |
+| 4 | Individual-stock + index strategy research | **Phase 4.1 stock overlay tested; simple TimesFM-only/hybrid selection rejected; conditional stock-signal research next** |
 | 5 | Options + IV/OI/Greeks | **Protocol/engineering bootstrap complete; empirical gate blocked by authorized historical option data** |
 | 6 | Regimes/cross-market/news/corporate actions | **Engineering track active; empirical promotion downstream of data gates** |
 | 7 | Cost/slippage/tax-aware walk-forward | **Engineering track active** |
@@ -99,7 +99,7 @@ Paytm Money remains the reference brokerage/RMS source for simulation. Models mu
 
 The alternate stock lane is now green through raw prices, corporate actions, adjusted prices and PIT liquidity metadata. The independent source check found large level differences in some names, but those differences were consistent with adjustment conventions; overlapping daily raw-close return paths were extremely close in the five-name bootstrap, with at least 99.7% of daily return differences within 0.10 percentage points.
 
-The current next stock-level gate is to freeze the PIT universe/identifier rules and test incremental TimesFM information around an independently specified stock-selection baseline. The exploratory TimesFM-only direction hypothesis did not survive chronological robustness, so no direction/uncertainty strategy is promoted. High-frequency claims remain gated on intraday-source and execution-quality validation.
+The current stock-level gate is now incremental-information research: TimesFM must add value to an independently specified stock-selection signal after regime/liquidity/event conditioning. The standalone and simple hybrid stock overlays have failed the exploratory gate. High-frequency claims remain gated on intraday-source and execution-quality validation.
 
 
 ## Latest stock research result — 2026-09-20
@@ -107,3 +107,10 @@ The current next stock-level gate is to freeze the PIT universe/identifier rules
 The repaired 30-stock TimesFM 3.0 bootstrap completed successfully, followed by a four-fold chronological robustness extension covering 4,800 stock-level forecast origins. The recent-window bootstrap showed +11.1 percentage points mean directional excess, but the broader four-fold test reversed this to -2.9 percentage points. TimesFM was worse than persistence on point-error aggregates in both tests, and no stock had a negative mean MAE difference across all four folds.
 
 This is now treated as a **negative result for standalone stock TimesFM forecasting against persistence on the bootstrap**. The next empirical question is incremental value around an independent stock-selection/market-structure signal, with PIT controls and full cost/slippage modeling.
+
+
+## Phase 4.1 stock-selection checkpoint
+
+The first explicit individual-stock strategy experiment is complete and synchronized into main. Across 30 bootstrap stocks and 32 non-overlapping five-session rebalances, the independent 20-session momentum control had mean rank IC +0.0138, TimesFM had -0.0237, and the 50/50 hybrid had -0.0151. Under the lowest tested proportional-cost stress, TimesFM-only net total return was about -26.6%, versus -15.2% for momentum and -21.8% for the hybrid.
+
+This is an exploratory negative result, not the final Phase 7 walk-forward verdict. The research now tests only whether TimesFM contributes incremental conditional information after regime, liquidity, event and market-state controls.
