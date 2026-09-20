@@ -55,3 +55,10 @@ Private chain-of-thought is not copied here; this log records observable decisio
 **Observable outcome:** The TejHQ adjusted-price and point-in-time universe workflow completed successfully. The repository now has adjusted individual-stock series and a monthly PIT liquidity universe for the 30-name bootstrap, in addition to raw prices and corporate actions.
 
 **Next gate:** freeze final PIT universe rules and identifier continuity, then extend the TimesFM forecast matrix from indices to individual stocks before economic strategy promotion.
+
+
+## 2026-09-20 — Phase 4.1 result synchronized to main
+
+Phase 4.1 tested whether TimesFM adds value to individual-stock selection beyond a predeclared 20-session momentum control. Across 32 five-session rebalances, TimesFM mean rank IC was -0.0237 versus +0.0138 for momentum; the 50/50 hybrid was -0.0151. At the lowest cost stress, TimesFM-only net total return was -26.6%, hybrid -21.8%, momentum -15.2%, and equal-weight universe -7.3%. Higher cost stress worsened results.
+
+Decision: reject the simple TimesFM-only and simple hybrid stock-selection hypotheses. The next empirical step is regime/liquidity/event-conditioned incremental-value testing.
