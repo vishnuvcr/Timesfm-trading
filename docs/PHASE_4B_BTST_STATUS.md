@@ -60,3 +60,8 @@ Before rerun, the global covariate builder was corrected to emit TimesFM 3.0's d
 ## Final corrected BTST execution marker — 2026-09-21
 
 Running the same frozen BTST matrix after fixing per-symbol covariate access and enforcing the documented TimesFM 3.0 covariate shape contract.
+
+
+## Corrected global-only execution marker — 2026-09-21
+
+The previous canonical run's univariate cell is retained as valid. The global-covariate cell is being rerun separately with TimesFM 3.0 covariates enabled through the documented non-univariate path.
