@@ -1,0 +1,33 @@
+{
+  "source_repository": "Hareeshkesavan/Stock-Market-Dataset",
+  "upstream_commit": "aa60b746f089c3f54df6760bf021708c2d3ce1e8",
+  "license_file_found": false,
+  "redistribution_policy": "Do not commit upstream raw files; use fixed-commit external download plus GitHub Actions cache and preserve source metadata/hashes.",
+  "files": {
+    "nifty": "Nifty 50 Historical Data.csv",
+    "nikkei": "Nikkei 225 Historical Data.csv",
+    "hang_seng": "Hang Seng Historical Data.csv",
+    "sp500": "S&P 500 Historical Data.csv",
+    "dax": "DAX Historical Data.csv",
+    "brent": "Brent Oil Futures Historical Data.csv",
+    "gold": "Gold Futures Historical Data.csv",
+    "dxy": "US Dollar Index Historical Data.csv",
+    "fii_dii": "FII and DII.xlsx"
+  },
+  "timestamp_policy": {
+    "nifty": "same-day close at Indian signal close",
+    "nikkei": "same-day close; Asia session completes before Indian 15:30",
+    "hang_seng": "same-day close; Hong Kong session completes before Indian 15:30",
+    "sp500": "previous source-day return only",
+    "dax": "previous source-day return only",
+    "brent": "previous source-day return only",
+    "gold": "previous source-day return only",
+    "dxy": "previous source-day return only",
+    "fii_dii": "previous source-day flow only unless publication-time validation proves same-day availability"
+  },
+  "stock_source": {
+    "repository": "voletiramu/nse-fno-1min-data",
+    "release": "v1.0.0",
+    "sha256": "20024713c455cc16b5daae91e06991d57a1acfa6a30c77bb7d5a742ee1789ab2"
+  }
+}
