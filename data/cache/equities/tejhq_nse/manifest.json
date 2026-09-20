@@ -1,0 +1,282 @@
+{
+  "dataset_id": "tejhq_nse_equity_eod_stock_bootstrap",
+  "source_id": "community_tejhq_nse_bhavcopy",
+  "source_url": "https://api.tejhq.dev/v1/ohlcv/nse/{symbol}",
+  "source_lineage": "TejHQ states that the dataset is built from NSE official EOD bhavcopy and corporate-action feeds.",
+  "retrieved_utc": "2026-09-20T16:07:30Z",
+  "start": "2010-01-04",
+  "end": "2026-09-18",
+  "symbols": {
+    "RELIANCE": {
+      "path": "data/cache/equities/tejhq_nse/RELIANCE.csv",
+      "sha256": "ae87dd167ad6974960d7d756ddb4e5c4193225a25a486e1c500e67575dc1e192",
+      "rows": 4117,
+      "first_date": "2010-01-04",
+      "last_date": "2026-09-18",
+      "cached": false,
+      "url": "https://api.tejhq.dev/v1/ohlcv/nse/RELIANCE?from=2010-01-04&to=2026-09-18"
+    },
+    "TCS": {
+      "path": "data/cache/equities/tejhq_nse/TCS.csv",
+      "sha256": "1c47e280f11fcf82ba7369630a336879c046489a9aab118f3eb14fa8d209ef1b",
+      "rows": 4117,
+      "first_date": "2010-01-04",
+      "last_date": "2026-09-18",
+      "cached": false,
+      "url": "https://api.tejhq.dev/v1/ohlcv/nse/TCS?from=2010-01-04&to=2026-09-18"
+    },
+    "HDFCBANK": {
+      "path": "data/cache/equities/tejhq_nse/HDFCBANK.csv",
+      "sha256": "cf09601995ee02145ed9911957cc68119b7afe0845e47820a36f8c3a4e3f42c8",
+      "rows": 4117,
+      "first_date": "2010-01-04",
+      "last_date": "2026-09-18",
+      "cached": false,
+      "url": "https://api.tejhq.dev/v1/ohlcv/nse/HDFCBANK?from=2010-01-04&to=2026-09-18"
+    },
+    "INFY": {
+      "path": "data/cache/equities/tejhq_nse/INFY.csv",
+      "sha256": "de3b73962d582959a073e5c9cbe6c515602f2d43ee9a08d411a92f3fc0d9d947",
+      "rows": 3744,
+      "first_date": "2011-06-29",
+      "last_date": "2026-09-18",
+      "cached": false,
+      "url": "https://api.tejhq.dev/v1/ohlcv/nse/INFY?from=2010-01-04&to=2026-09-18"
+    },
+    "ICICIBANK": {
+      "path": "data/cache/equities/tejhq_nse/ICICIBANK.csv",
+      "sha256": "bdc7406abaa796aa22df4da99d1f654d60dc170e20bab47d103d1ececedac30b",
+      "rows": 4117,
+      "first_date": "2010-01-04",
+      "last_date": "2026-09-18",
+      "cached": false,
+      "url": "https://api.tejhq.dev/v1/ohlcv/nse/ICICIBANK?from=2010-01-04&to=2026-09-18"
+    },
+    "SBIN": {
+      "path": "data/cache/equities/tejhq_nse/SBIN.csv",
+      "sha256": "4e1d1d4e3ffde27b032020e8b8d6d5a0a6c21950a6102bad5eb785629b202226",
+      "rows": 4117,
+      "first_date": "2010-01-04",
+      "last_date": "2026-09-18",
+      "cached": false,
+      "url": "https://api.tejhq.dev/v1/ohlcv/nse/SBIN?from=2010-01-04&to=2026-09-18"
+    },
+    "ITC": {
+      "path": "data/cache/equities/tejhq_nse/ITC.csv",
+      "sha256": "6250eb2335df7c2122223d9cc6cef5a8d7c0bb7280d6c276019692d522a1cee0",
+      "rows": 4117,
+      "first_date": "2010-01-04",
+      "last_date": "2026-09-18",
+      "cached": false,
+      "url": "https://api.tejhq.dev/v1/ohlcv/nse/ITC?from=2010-01-04&to=2026-09-18"
+    },
+    "BHARTIARTL": {
+      "path": "data/cache/equities/tejhq_nse/BHARTIARTL.csv",
+      "sha256": "91b82e7256de0f65cf04f7dae6ae0c83b8cdf1730d34e8b675b0d256d671badf",
+      "rows": 4117,
+      "first_date": "2010-01-04",
+      "last_date": "2026-09-18",
+      "cached": false,
+      "url": "https://api.tejhq.dev/v1/ohlcv/nse/BHARTIARTL?from=2010-01-04&to=2026-09-18"
+    },
+    "LT": {
+      "path": "data/cache/equities/tejhq_nse/LT.csv",
+      "sha256": "959face00222d355188e2ce6d1adeb9d2b3140da2b5b821d3d1dd257c4717cfc",
+      "rows": 4117,
+      "first_date": "2010-01-04",
+      "last_date": "2026-09-18",
+      "cached": false,
+      "url": "https://api.tejhq.dev/v1/ohlcv/nse/LT?from=2010-01-04&to=2026-09-18"
+    },
+    "AXISBANK": {
+      "path": "data/cache/equities/tejhq_nse/AXISBANK.csv",
+      "sha256": "bbb136591c6b938bc2d6b7f4dce9c3555e74b8d53ee1b27a74d459acc880e574",
+      "rows": 4117,
+      "first_date": "2010-01-04",
+      "last_date": "2026-09-18",
+      "cached": false,
+      "url": "https://api.tejhq.dev/v1/ohlcv/nse/AXISBANK?from=2010-01-04&to=2026-09-18"
+    },
+    "KOTAKBANK": {
+      "path": "data/cache/equities/tejhq_nse/KOTAKBANK.csv",
+      "sha256": "f6bd6d40b5a4a2ca7a95f282d1a4716aacf538c8447827b36597856feb4bb254",
+      "rows": 4117,
+      "first_date": "2010-01-04",
+      "last_date": "2026-09-18",
+      "cached": false,
+      "url": "https://api.tejhq.dev/v1/ohlcv/nse/KOTAKBANK?from=2010-01-04&to=2026-09-18"
+    },
+    "HINDUNILVR": {
+      "path": "data/cache/equities/tejhq_nse/HINDUNILVR.csv",
+      "sha256": "c1eebda79ee5ff39192e2775b6ef75a6db57695126795fe2adaddf886b66381c",
+      "rows": 4117,
+      "first_date": "2010-01-04",
+      "last_date": "2026-09-18",
+      "cached": false,
+      "url": "https://api.tejhq.dev/v1/ohlcv/nse/HINDUNILVR?from=2010-01-04&to=2026-09-18"
+    },
+    "MARUTI": {
+      "path": "data/cache/equities/tejhq_nse/MARUTI.csv",
+      "sha256": "a1b6842c1efacee471e743cb0e523eaf415961884d37f09f1ba2e12b9414343e",
+      "rows": 4117,
+      "first_date": "2010-01-04",
+      "last_date": "2026-09-18",
+      "cached": false,
+      "url": "https://api.tejhq.dev/v1/ohlcv/nse/MARUTI?from=2010-01-04&to=2026-09-18"
+    },
+    "SUNPHARMA": {
+      "path": "data/cache/equities/tejhq_nse/SUNPHARMA.csv",
+      "sha256": "2606ab390b4bc7c942ccc8d9c9756888399b7a9b1180876d0c2c76b7f432d9bc",
+      "rows": 4117,
+      "first_date": "2010-01-04",
+      "last_date": "2026-09-18",
+      "cached": false,
+      "url": "https://api.tejhq.dev/v1/ohlcv/nse/SUNPHARMA?from=2010-01-04&to=2026-09-18"
+    },
+    "BAJFINANCE": {
+      "path": "data/cache/equities/tejhq_nse/BAJFINANCE.csv",
+      "sha256": "757416f54e2c4565c4e794c225627f1fd96fb0a273ea9dde5a3abff72ecdcac4",
+      "rows": 3932,
+      "first_date": "2010-09-29",
+      "last_date": "2026-09-18",
+      "cached": false,
+      "url": "https://api.tejhq.dev/v1/ohlcv/nse/BAJFINANCE?from=2010-01-04&to=2026-09-18"
+    },
+    "ASIANPAINT": {
+      "path": "data/cache/equities/tejhq_nse/ASIANPAINT.csv",
+      "sha256": "498a5341452cbec52b25d6eaf2824f15059411093421dc2f0937e038cc9f6c9e",
+      "rows": 4117,
+      "first_date": "2010-01-04",
+      "last_date": "2026-09-18",
+      "cached": false,
+      "url": "https://api.tejhq.dev/v1/ohlcv/nse/ASIANPAINT?from=2010-01-04&to=2026-09-18"
+    },
+    "TITAN": {
+      "path": "data/cache/equities/tejhq_nse/TITAN.csv",
+      "sha256": "4007693bf090676179c53070af5ef0f70f68576115b51c0a77e77706ea828ff6",
+      "rows": 4117,
+      "first_date": "2010-01-04",
+      "last_date": "2026-09-18",
+      "cached": false,
+      "url": "https://api.tejhq.dev/v1/ohlcv/nse/TITAN?from=2010-01-04&to=2026-09-18"
+    },
+    "HCLTECH": {
+      "path": "data/cache/equities/tejhq_nse/HCLTECH.csv",
+      "sha256": "112ef21d107a35a9ac89eaf6793bfc81f50e334a465d8f5b8d1da48206ce1601",
+      "rows": 4117,
+      "first_date": "2010-01-04",
+      "last_date": "2026-09-18",
+      "cached": false,
+      "url": "https://api.tejhq.dev/v1/ohlcv/nse/HCLTECH?from=2010-01-04&to=2026-09-18"
+    },
+    "WIPRO": {
+      "path": "data/cache/equities/tejhq_nse/WIPRO.csv",
+      "sha256": "2cf7da1e2ce3435737d393c0d3bbb9fbba38eec7c5f0232284ba54321dd51636",
+      "rows": 4117,
+      "first_date": "2010-01-04",
+      "last_date": "2026-09-18",
+      "cached": false,
+      "url": "https://api.tejhq.dev/v1/ohlcv/nse/WIPRO?from=2010-01-04&to=2026-09-18"
+    },
+    "ULTRACEMCO": {
+      "path": "data/cache/equities/tejhq_nse/ULTRACEMCO.csv",
+      "sha256": "f6f48edf8a733f9f460c25f77f2188a62c1a73e30de6fdfd56871d03257ab3a7",
+      "rows": 4117,
+      "first_date": "2010-01-04",
+      "last_date": "2026-09-18",
+      "cached": false,
+      "url": "https://api.tejhq.dev/v1/ohlcv/nse/ULTRACEMCO?from=2010-01-04&to=2026-09-18"
+    },
+    "NESTLEIND": {
+      "path": "data/cache/equities/tejhq_nse/NESTLEIND.csv",
+      "sha256": "13ad5c583dcef3d9624de207d98806bd389d9705854bfaa2cae9b3912c5163a0",
+      "rows": 4113,
+      "first_date": "2010-01-08",
+      "last_date": "2026-09-18",
+      "cached": false,
+      "url": "https://api.tejhq.dev/v1/ohlcv/nse/NESTLEIND?from=2010-01-04&to=2026-09-18"
+    },
+    "M&M": {
+      "path": "data/cache/equities/tejhq_nse/M&M.csv",
+      "sha256": "506b45111c1650e03d9f176ae6c823ea923762496e8d7d8c98bd95b8e56cdb57",
+      "rows": 4117,
+      "first_date": "2010-01-04",
+      "last_date": "2026-09-18",
+      "cached": false,
+      "url": "https://api.tejhq.dev/v1/ohlcv/nse/M%26M?from=2010-01-04&to=2026-09-18"
+    },
+    "NTPC": {
+      "path": "data/cache/equities/tejhq_nse/NTPC.csv",
+      "sha256": "f0470c4bbd5366a33c7451313fd868deb9e48d458b8a6650eb8a0dd9e17c774e",
+      "rows": 4117,
+      "first_date": "2010-01-04",
+      "last_date": "2026-09-18",
+      "cached": false,
+      "url": "https://api.tejhq.dev/v1/ohlcv/nse/NTPC?from=2010-01-04&to=2026-09-18"
+    },
+    "ONGC": {
+      "path": "data/cache/equities/tejhq_nse/ONGC.csv",
+      "sha256": "fd998db0316eb93f03fa2686a4d77503a769ead9e82bcc7b6523a8e77cb5eaa3",
+      "rows": 4117,
+      "first_date": "2010-01-04",
+      "last_date": "2026-09-18",
+      "cached": false,
+      "url": "https://api.tejhq.dev/v1/ohlcv/nse/ONGC?from=2010-01-04&to=2026-09-18"
+    },
+    "POWERGRID": {
+      "path": "data/cache/equities/tejhq_nse/POWERGRID.csv",
+      "sha256": "5797cf051c858d9b59866b77ae791aa8ae4367a606da85e7622212af55210ae8",
+      "rows": 4117,
+      "first_date": "2010-01-04",
+      "last_date": "2026-09-18",
+      "cached": false,
+      "url": "https://api.tejhq.dev/v1/ohlcv/nse/POWERGRID?from=2010-01-04&to=2026-09-18"
+    },
+    "TATAMOTORS": {
+      "path": "data/cache/equities/tejhq_nse/TATAMOTORS.csv",
+      "sha256": "d9270fa4482947c30b50d891c26d2ae1432be6c639a1bdd8d4e1f77e967387bc",
+      "rows": 3898,
+      "first_date": "2010-01-04",
+      "last_date": "2025-10-23",
+      "cached": false,
+      "url": "https://api.tejhq.dev/v1/ohlcv/nse/TATAMOTORS?from=2010-01-04&to=2026-09-18"
+    },
+    "TATASTEEL": {
+      "path": "data/cache/equities/tejhq_nse/TATASTEEL.csv",
+      "sha256": "13c56fc9ae01d5c928446814da5bf7c7bd17d60635bed8b3827e8fa1eeee7818",
+      "rows": 4117,
+      "first_date": "2010-01-04",
+      "last_date": "2026-09-18",
+      "cached": false,
+      "url": "https://api.tejhq.dev/v1/ohlcv/nse/TATASTEEL?from=2010-01-04&to=2026-09-18"
+    },
+    "ADANIENT": {
+      "path": "data/cache/equities/tejhq_nse/ADANIENT.csv",
+      "sha256": "bae4d59d02b593c88d0a2408530cf4c1656d4af98ee42bd85fac97eec7420a32",
+      "rows": 4117,
+      "first_date": "2010-01-04",
+      "last_date": "2026-09-18",
+      "cached": false,
+      "url": "https://api.tejhq.dev/v1/ohlcv/nse/ADANIENT?from=2010-01-04&to=2026-09-18"
+    },
+    "CIPLA": {
+      "path": "data/cache/equities/tejhq_nse/CIPLA.csv",
+      "sha256": "910f0d61cf50c1151d781fc6ce88962c3d8e9d7910df401e8e42495578fadde7",
+      "rows": 4117,
+      "first_date": "2010-01-04",
+      "last_date": "2026-09-18",
+      "cached": false,
+      "url": "https://api.tejhq.dev/v1/ohlcv/nse/CIPLA?from=2010-01-04&to=2026-09-18"
+    },
+    "DRREDDY": {
+      "path": "data/cache/equities/tejhq_nse/DRREDDY.csv",
+      "sha256": "c06f7a5ad8711065b2aa290b73fcff3c1997229eb59aedadf29c29dee7ff2c0b",
+      "rows": 4117,
+      "first_date": "2010-01-04",
+      "last_date": "2026-09-18",
+      "cached": false,
+      "url": "https://api.tejhq.dev/v1/ohlcv/nse/DRREDDY?from=2010-01-04&to=2026-09-18"
+    }
+  },
+  "pit_status": "bootstrap_fixed_universe_not_final_evidence"
+}
