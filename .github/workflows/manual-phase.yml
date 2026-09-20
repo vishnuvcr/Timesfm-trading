@@ -1,6 +1,7 @@
 name: Phase 2 data
 
 on:
+  pull_request:
   push:
     branches: [phase-2-data]
   workflow_dispatch:
