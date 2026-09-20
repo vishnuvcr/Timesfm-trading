@@ -229,3 +229,21 @@ The earlier Phase 9 stock stop was superseded by a predeclared multifrequency co
 The 10-session raw TimesFM cross-sectional ranking was the only candidate that remained ahead of the 20-session momentum control across all four Phase 4B proportional-cost stresses. A PIT timestamp rerun left all 30 cached symbols eligible at the 32 tested dates, so the result did not change.
 
 This is **candidate evidence only**. The exact four-fold sign-flip p-value is 0.3125 one-sided, and the bootstrap remains a 30-name panel rather than a final universe-scale PIT dataset. The candidate is frozen for a post-selection Phase 7 holdout; no additional TimesFM search is permitted before that result.
+
+
+## Phase 7 resolution — 2026-09-20
+
+The earlier Phase 4B 10-session candidate has now been resolved by the final post-selection holdout.
+
+The 2023+ holdout used 91 ten-session rebalances with a mean of 29.76 PIT-eligible bootstrap names per origin, dated cash-equity statutory/broker/DP costs, position drift, final liquidation and five additional slippage stresses.
+
+TimesFM net total return versus the 20-session momentum control:
+- 0.00% extra slippage: +3.72% vs +67.97%;
+- 0.125%: -7.93% vs +47.20%;
+- 0.25%: -18.30% vs +28.96%;
+- 0.375%: -27.52% vs +12.94%;
+- 0.50%: -35.72% vs -1.12%.
+
+The candidate was below momentum at every stress. One-sided block-signflip p-values ranged from 0.972 to 0.984. Maximum simulated participation was about 0.014% of trailing turnover.
+
+**Final inference:** the Phase 4B candidate failed the Phase 7 promotion gate. The current individual-stock TimesFM EOD strategy search is closed. The project proceeds to final manuscript/release and preserves options/intraday work as separately data-gated future research.
