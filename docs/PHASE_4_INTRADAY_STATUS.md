@@ -119,3 +119,14 @@ Post-session rows are quarantined rather than used. These rules are fixed before
 ## Definitive gate execution marker — 2026-09-20
 
 Running the clean-session validator with the frozen acceptance rules above.
+
+
+## Final cross-source reconciliation clarification — 2026-09-20
+
+The minute release's internal session integrity is strong, but exact daily-close equality with the TejHQ EOD vendor is not an appropriate acceptance criterion because the two feeds can represent different closing-price conventions and corporate-action treatments.
+
+The final fixed reconciliation bound is therefore:
+- median absolute daily log-return difference <=25 bps after recorded corporate-action dates are excluded;
+- 95th percentile <=100 bps.
+
+This does not authorize using either source as exchange-primary truth; it only establishes sufficient cross-source consistency for research aggregation after regular-session filtering. The full discrepancy distribution remains in the result artifact.
