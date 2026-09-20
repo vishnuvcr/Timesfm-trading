@@ -36,3 +36,17 @@ The first matrix implementation is computationally expensive because it invokes 
 ## Batched execution marker — 2026-09-20
 
 Run the identical predeclared matrix using batched model calls.
+
+
+## Final development result — 2026-09-20
+
+The frozen 15/30/60-minute TimesFM-vs-VWAP matrix completed successfully (workflow 35532255630; artifact 10612146229).
+
+No horizon passed the development rule:
+- 15m block p=0.4381, BH q=0.6125;
+- 30m p=0.3043, BH q=0.6125;
+- 60m p=0.6125, BH q=0.6125.
+
+TimesFM return MAE was worse than persistence at every horizon. No fold-4 holdout was opened.
+
+Decision: close this intraday strategy family. Move to the predeclared BTST/overnight lane rather than adding intraday indicators or thresholds.
