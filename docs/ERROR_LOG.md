@@ -15,3 +15,7 @@
 | 2026-09-20 | Phase 4 risk-engine extension | Phase 3 P1 evidence showed forecast interval width may contain movement-magnitude information, but the risk engine previously required an already-computed scalar uncertainty. | Could not pass native quantile uncertainty directly into the shared sizing primitive. | Added a half-width `interval_uncertainty` adapter with tests; it is simulation-only and does not alter the empirical promotion gate. |
 
 | 2026-09-20 | Phase 4 CI validation | New interval-width test compared floating-point half-width to exact decimal 0.10 and failed at 0.10000000000000003. | One strategy-unit test failed despite correct arithmetic. | Changed test to `pytest.approx`; regression control retains the crossed-bound assertion. |
+
+
+| 2026-09-20 | Phase 4.1 stock overlay | Initial draft mixed 30-name signal vectors with a 6-name portfolio state and would have produced a dimension mismatch at the first rebalance. | Backtest was intentionally stopped before inference results were interpreted. | Corrected portfolio weights to length 30 and separated buy/sell fixed-order costs; syntax/unit checks then passed before the empirical run. |
+| 2026-09-20 | Phase 4.1 empirical result | Completed successfully on 30 stocks and 32 five-session rebalances, but TimesFM-only and hybrid selection were weaker than the momentum control and became more negative under cost stress. | No runtime failure; this is an empirical negative result. | Stored diagnostics and rejected promotion of the simple TimesFM stock-selection overlays. |
