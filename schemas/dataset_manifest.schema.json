@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TimesFM NSE dataset manifest",
+  "type": "object",
+  "required": ["dataset_id", "source_id", "retrieved_at", "sha256", "schema_version", "storage_class"],
+  "properties": {
+    "dataset_id": {"type": "string"},
+    "source_id": {"type": "string"},
+    "retrieved_at": {"type": "string", "format": "date-time"},
+    "effective_from": {"type": ["string", "null"], "format": "date-time"},
+    "effective_to": {"type": ["string", "null"], "format": "date-time"},
+    "availability_timestamp": {"type": ["string", "null"], "format": "date-time"},
+    "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "row_count": {"type": ["integer", "null"], "minimum": 0},
+    "schema_version": {"type": "string"},
+    "storage_class": {"type": "string", "enum": ["tier_a_public", "tier_b_artifact", "tier_c_private_licensed"]},
+    "revision": {"type": ["string", "null"]},
+    "source_url": {"type": "string"},
+    "pit_validated": {"type": "boolean"},
+    "notes": {"type": ["string", "null"]}
+  }
+}
