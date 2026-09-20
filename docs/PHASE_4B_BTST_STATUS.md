@@ -45,3 +45,8 @@ Running the predeclared close-to-next-open BTST matrix on the validated ten-stoc
 ## Rerun marker after implementation fix — 2026-09-21
 
 The first execution failed only in the global-covariate breadth lookup. The research protocol, data source, dates, costs and promotion rules remain unchanged; rerunning the same frozen matrix after correcting the stock-level breadth reference.
+
+
+## Corrected execution marker — 2026-09-21
+
+Run the same frozen BTST matrix after the breadth-index implementation fix.
