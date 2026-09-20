@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Canonical corporate action",
+  "type": "object",
+  "required": ["instrument_id","announcement_timestamp","action_type","source_id"],
+  "properties": {
+    "instrument_id":{"type":"string"},
+    "announcement_timestamp":{"type":"string","format":"date-time"},
+    "ex_date":{"type":["string","null"],"format":"date"},
+    "record_date":{"type":["string","null"],"format":"date"},
+    "action_type":{"enum":["DIVIDEND","SPLIT","BONUS","RIGHTS","MERGER","DEMERGER","BUYBACK","OTHER"]},
+    "ratio_text":{"type":["string","null"]},
+    "cash_amount":{"type":["number","null"]},
+    "source_id":{"type":"string"},
+    "source_revision":{"type":["string","null"]}
+  }
+}
