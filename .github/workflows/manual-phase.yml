@@ -4,6 +4,12 @@ on:
   push:
     branches: [phase-2-data]
   workflow_dispatch:
+    inputs:
+      acquire_fo_date:
+        description: Optional NSE F&O trade date, YYYY-MM-DD
+        required: false
+        default: ""
+        type: string
 
 jobs:
   data-validation:
@@ -21,3 +27,48 @@ jobs:
         run: PYTHONPATH=. python src/data/validate_manifest.py
       - name: Run data-layer tests
         run: PYTHONPATH=. python -m pytest -q
+
+  acquire-nse-fo-sample:
+    if: github.event_name == 'workflow_dispatch' && inputs.acquire_fo_date != ''
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Download one NSE F&O archive
+        env:
+          FO_DATE: ${{ inputs.acquire_fo_date }}
+        run: |
+          mkdir -p private_data/fo
+          PYTHONPATH=. python - <<'PY'
+          import os
+          from datetime import date
+          from pathlib import Path
+          from src.data.nse_fo_archives import download_archive
+          d = date.fromisoformat(os.environ["FO_DATE"])
+          p = download_archive(d, Path("private_data/fo"))
+          print("saved:", p)
+          PY
+      - name: Hash archive
+        env:
+          FO_DATE: ${{ inputs.acquire_fo_date }}
+        run: |
+          python - <<'PY'
+          import os, hashlib, json
+          from datetime import date
+          from pathlib import Path
+          from src.data.nse_fo_archives import plan_for_date
+          d=date.fromisoformat(os.environ["FO_DATE"])
+          plan=plan_for_date(d)
+          p=next(Path("private_data/fo").rglob(plan.filename))
+          h=hashlib.sha256(p.read_bytes()).hexdigest()
+          out={"trade_date":os.environ["FO_DATE"],"filename":plan.filename,"sha256":h,"format":plan.format}
+          Path("private_data/fo_manifest.json").write_text(json.dumps(out,indent=2))
+          print(json.dumps(out))
+          PY
+      - name: Upload private acquisition artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: nse-fo-sample-${{ inputs.acquire_fo_date }}
+          path: private_data/
