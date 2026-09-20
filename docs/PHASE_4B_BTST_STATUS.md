@@ -50,3 +50,8 @@ The first execution failed only in the global-covariate breadth lookup. The rese
 ## Corrected execution marker — 2026-09-21
 
 Run the same frozen BTST matrix after the breadth-index implementation fix.
+
+
+## Covariate-contract correction marker — 2026-09-21
+
+Before rerun, the global covariate builder was corrected to emit TimesFM 3.0's documented (covariates, context) orientation. The experiment matrix, dates, costs, universe and promotion rules remain unchanged.
