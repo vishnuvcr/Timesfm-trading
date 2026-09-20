@@ -26,3 +26,8 @@ Run the 15/30/60-minute development/holdout experiment exactly as defined. If a 
 ## Matrix execution marker — 2026-09-20
 
 Running the predeclared 15/30/60-minute TimesFM-vs-VWAP experiment with the validated ten-stock minute release.
+
+
+## Inference optimization — 2026-09-20
+
+The first matrix implementation is computationally expensive because it invokes TimesFM once per origin. A second workflow batches eight origins (up to 80 stock contexts) per model call while keeping the exact same horizon, origin, fold, baseline, cost and promotion protocol. This is an engineering optimization only.
