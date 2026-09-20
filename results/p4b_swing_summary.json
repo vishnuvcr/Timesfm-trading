@@ -1,0 +1,300 @@
+{
+  "phase": "4B",
+  "lane": "individual_stock_swing_bootstrap",
+  "status": "candidate_10d_timesfm_advances_to_downstream_validation_but_is_not_promoted",
+  "model": "TimesFM 3.0",
+  "checkpoint": "google/timesfm-3.0-pytorch",
+  "context": 128,
+  "stocks": 30,
+  "horizons": [
+    2,
+    5,
+    10,
+    20
+  ],
+  "folds": 4,
+  "origins_per_fold": 8,
+  "stock_forecast_origins": 3840,
+  "rebalances_per_horizon": 32,
+  "top_k": 6,
+  "costs_one_way": [
+    0.00125,
+    0.0025,
+    0.00375,
+    0.005
+  ],
+  "source_gate": {
+    "dataset": "xxparthparekhxx/indian-stock-market-minute-data",
+    "status": "pass",
+    "probe_symbol": "20MICRONS",
+    "rows_validated": 200,
+    "duplicate_timestamps": 0,
+    "invalid_ohlc_rows": 0,
+    "zero_volume_rows": 21,
+    "first_ist": "2022-01-03T09:15:00+05:30",
+    "last_ist": "2022-01-03T12:36:00+05:30",
+    "interpretation": "structural source gate only; not exchange-primary or fill-accuracy evidence"
+  },
+  "forecast_metrics": [
+    {
+      "horizon": 2,
+      "origins": 960,
+      "timesfm_mae": 0.020474,
+      "persistence_mae": 0.019254,
+      "mae_diff": 0.001219,
+      "directional_accuracy": 0.479167,
+      "positive_return_base_rate": 0.503125,
+      "directional_excess_pp": -2.395833,
+      "rank_ic": -0.066843,
+      "width_abs_move_rho": 0.151998
+    },
+    {
+      "horizon": 5,
+      "origins": 960,
+      "timesfm_mae": 0.035607,
+      "persistence_mae": 0.033388,
+      "mae_diff": 0.002218,
+      "directional_accuracy": 0.472917,
+      "positive_return_base_rate": 0.51875,
+      "directional_excess_pp": -4.583333,
+      "rank_ic": -0.039249,
+      "width_abs_move_rho": 0.205504
+    },
+    {
+      "horizon": 10,
+      "origins": 960,
+      "timesfm_mae": 0.046599,
+      "persistence_mae": 0.042405,
+      "mae_diff": 0.004194,
+      "directional_accuracy": 0.498958,
+      "positive_return_base_rate": 0.548958,
+      "directional_excess_pp": -5,
+      "rank_ic": -0.020446,
+      "width_abs_move_rho": 0.158022
+    },
+    {
+      "horizon": 20,
+      "origins": 960,
+      "timesfm_mae": 0.063672,
+      "persistence_mae": 0.058139,
+      "mae_diff": 0.005533,
+      "directional_accuracy": 0.5,
+      "positive_return_base_rate": 0.511458,
+      "directional_excess_pp": -1.145833,
+      "rank_ic": 0.02349,
+      "width_abs_move_rho": 0.107143
+    }
+  ],
+  "net_total_return_by_horizon_and_cost": [
+    {
+      "horizon": 2,
+      "costs": {
+        "0.00125": {
+          "momentum": -0.104196,
+          "timesfm": -0.155822,
+          "scaled": -0.116173
+        },
+        "0.0025": {
+          "momentum": -0.128967,
+          "timesfm": -0.190574,
+          "scaled": -0.143219
+        },
+        "0.00375": {
+          "momentum": -0.153082,
+          "timesfm": -0.223947,
+          "scaled": -0.16947
+        },
+        "0.005": {
+          "momentum": -0.176556,
+          "timesfm": -0.255995,
+          "scaled": -0.194947
+        }
+      }
+    },
+    {
+      "horizon": 5,
+      "costs": {
+        "0.00125": {
+          "momentum": -0.183355,
+          "timesfm": -0.299778,
+          "scaled": -0.12033
+        },
+        "0.0025": {
+          "momentum": -0.212445,
+          "timesfm": -0.329637,
+          "scaled": -0.149848
+        },
+        "0.00375": {
+          "momentum": -0.240536,
+          "timesfm": -0.358269,
+          "scaled": -0.178414
+        },
+        "0.005": {
+          "momentum": -0.267663,
+          "timesfm": -0.385724,
+          "scaled": -0.206056
+        }
+      }
+    },
+    {
+      "horizon": 10,
+      "costs": {
+        "0.00125": {
+          "momentum": 0.09579,
+          "timesfm": 0.198688,
+          "scaled": 0.002853
+        },
+        "0.0025": {
+          "momentum": 0.04569,
+          "timesfm": 0.14122,
+          "scaled": -0.044315
+        },
+        "0.00375": {
+          "momentum": -0.002198,
+          "timesfm": 0.086412,
+          "scaled": -0.08934
+        },
+        "0.005": {
+          "momentum": -0.047967,
+          "timesfm": 0.034146,
+          "scaled": -0.132314
+        }
+      }
+    },
+    {
+      "horizon": 20,
+      "costs": {
+        "0.00125": {
+          "momentum": -0.175542,
+          "timesfm": -0.180718,
+          "scaled": 0.078015
+        },
+        "0.0025": {
+          "momentum": -0.227122,
+          "timesfm": -0.220318,
+          "scaled": 0.012662
+        },
+        "0.00375": {
+          "momentum": -0.275585,
+          "timesfm": -0.258071,
+          "scaled": -0.048859
+        },
+        "0.005": {
+          "momentum": -0.321112,
+          "timesfm": -0.29406,
+          "scaled": -0.106767
+        }
+      }
+    }
+  ],
+  "ten_day_fold_net_return_0_125": [
+    {
+      "fold": 1,
+      "momentum": -0.085753,
+      "timesfm": -0.129793,
+      "scaled": -0.039334
+    },
+    {
+      "fold": 2,
+      "momentum": 0.002768,
+      "timesfm": 0.024085,
+      "scaled": -0.02815
+    },
+    {
+      "fold": 3,
+      "momentum": 0.011993,
+      "timesfm": 0.118976,
+      "scaled": -0.013568
+    },
+    {
+      "fold": 4,
+      "momentum": 0.181098,
+      "timesfm": 0.202061,
+      "scaled": 0.088925
+    }
+  ],
+  "multiple_testing_at_0_125_reference": {
+    "method": "exact four-fold sign-flip test; Benjamini-Hochberg across 8 predeclared cells",
+    "cells": [
+      {
+        "horizon": 2,
+        "comparison": "timesfm_minus_momentum",
+        "mean_fold_diff": -0.013886,
+        "p": 0.625,
+        "bh_q": 0.833333
+      },
+      {
+        "horizon": 5,
+        "comparison": "timesfm_minus_momentum",
+        "mean_fold_diff": -0.035678,
+        "p": 0.125,
+        "bh_q": 0.5
+      },
+      {
+        "horizon": 10,
+        "comparison": "timesfm_minus_momentum",
+        "mean_fold_diff": 0.026306,
+        "p": 0.625,
+        "bh_q": 0.833333
+      },
+      {
+        "horizon": 20,
+        "comparison": "timesfm_minus_momentum",
+        "mean_fold_diff": 0.003881,
+        "p": 1,
+        "bh_q": 1
+      },
+      {
+        "horizon": 2,
+        "comparison": "scaled_minus_momentum",
+        "mean_fold_diff": -0.003229,
+        "p": 0.875,
+        "bh_q": 1
+      },
+      {
+        "horizon": 5,
+        "comparison": "scaled_minus_momentum",
+        "mean_fold_diff": 0.017734,
+        "p": 0.125,
+        "bh_q": 0.5
+      },
+      {
+        "horizon": 10,
+        "comparison": "scaled_minus_momentum",
+        "mean_fold_diff": -0.025558,
+        "p": 0.5,
+        "bh_q": 0.833333
+      },
+      {
+        "horizon": 20,
+        "comparison": "scaled_minus_momentum",
+        "mean_fold_diff": 0.064601,
+        "p": 0.25,
+        "bh_q": 0.666667
+      }
+    ]
+  },
+  "ten_day_timesfm_concentration": {
+    "selection_hhi": 0.037869,
+    "top5_selection_share": 0.255208,
+    "top5_absolute_gross_contribution_share": 0.328245,
+    "min_selection_count": 1,
+    "median_selection_count": 7,
+    "max_selection_count": 11
+  },
+  "artifact": {
+    "workflow_run": 35525457869,
+    "swing_artifact_id": 10609348369,
+    "source_artifact_id": 10610350345,
+    "results_sha256": "e24f56318fc1efebb9608a86748860713b63b1e525183d1cf5f4824dd19c5bfa",
+    "signal_rows_sha256": "37f118f0d76f9f275bb2d25d1844873b1c064efc8699de850c6972f276e038da",
+    "source_validation_sha256": "173db26c99e3a0c6d6523a59a21d10bcbeb797f47760f01ee403c60c2583b051"
+  },
+  "decision": [
+    "Do not promote 2-session or 5-session TimesFM ranking.",
+    "Do not promote 20-session TimesFM ranking.",
+    "Do not promote the uncertainty-scaled momentum mechanism as robust.",
+    "Retain 10-session TimesFM ranking as a downstream exploratory candidate only.",
+    "The 10-session candidate must next face point-in-time universe reconciliation, regime/external-information conditioning, and the Phase 7 walk-forward gate."
+  ]
+}
