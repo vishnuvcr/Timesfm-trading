@@ -37,3 +37,8 @@ A direct read of the official TimesFM 3.0 Non-Commercial License shows a stricte
 - Phase 4 added non-executing research primitives for cost hurdles, uncertainty-adjusted sizing, volatility-targeted exposure and a simulation-aware model/license gate; CI passed.
 - Phase 5 added implied-movement benchmarking, residual-vs-cost gating and defined-risk debit-spread accounting. The first CI run found a floating-point fixture assertion; it was changed to approximate comparison and the corrected CI run is being verified.
 - Draft PR #5 was opened for the Phase 5 engineering bootstrap.
+
+
+## 2026-09-20 — official P0 acquisition blocker
+
+**Observable outcome:** Four GitHub Actions attempts to retrieve the official NIFTY 50 historical endpoint all received the NIFTY Indices HTML application page with HTTP 200 rather than the expected JSON response. Cloudflare/browser-profiled session warm-up did not resolve it. The retry loop was closed and issue #6 opened. A fixed secondary Google Finance-derived NIFTY 50 snapshot is being used only for P1 TimesFM 3.0 pipeline validation; it is not primary evidence and is not redistributed because the upstream repo has no explicit license file.

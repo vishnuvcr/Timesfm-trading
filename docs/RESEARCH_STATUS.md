@@ -29,7 +29,7 @@ New options evidence:
 A September 2026 pre-registered SPY implied-volatility study found TimesFM-3 forecast-loss advantages that narrowed after recalibration; the market's own forward-variance forecast beat the model at ATM nodes, while a residual wing signal survived statistical controls. The study stopped before economic/fill testing. This strengthens the Phase 5 requirement to compare TimesFM against market-implied forecasts and execute a full option P&L backtest before any conclusion.
 
 ## Phase 2 — Data
-**Validation green; real P0 acquisition remains.**
+**Validation green; official public P0 acquisition blocked; authorized/alternate official delivery required.**
 
 Completed on branch `phase-2-data`:
 - point-in-time data policy;
@@ -49,7 +49,7 @@ Validation:
 - direct container clone could not run because github.com DNS was unavailable; logged as environment limitation.
 
 Current Phase 2 gate:
-Acquire/connect real P0 datasets and produce first real frozen manifests. Then validate the real datasets with the already-green schema, PIT, calendar, corporate-action, derivatives lifecycle and option-quote integrity tests.
+The public NIFTY Indices route has been attempted four times from GitHub Actions and consistently returns the NIFTY Indices HTML page with HTTP 200 rather than JSON. The retry loop is closed and tracked in [issue #6](https://github.com/vishnuvcr/Timesfm-trading/issues/6). An authorized/alternate official data-delivery route is now required for the primary P0 dataset.
 
 ## Phase 3 — TimesFM 3.0
 **Engineering/unit-test gate green; statistical forecast gate blocked by real P0 acquisition.**
@@ -65,7 +65,7 @@ The phase-3 branch now includes:
 
 The official TimesFM README confirms the 3.0 evaluator supports univariate and multivariate forecasting, past-only and past-future covariates, and nine quantiles. citeturn341680search8turn341680search1
 
-CI verification is green: pull-request run 29 (`35517423864`) passed the statistics/adapter unit suite. No real forecast result has been reported yet.
+CI verification is green: the statistics/adapter unit suite passes. The P1 bootstrap is intentionally secondary and non-promotional; the primary forecast gate still requires P0 data.
 
 ## Frozen experiment design
 

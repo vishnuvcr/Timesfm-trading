@@ -11,7 +11,7 @@ Research program to evaluate Google TimesFM for a reproducible NSE trading pipel
 |---|---|---|
 | 0 | Governance, reproducibility, repo bootstrap | **Complete** |
 | 1 | Literature + evidence review | **Complete / protocol frozen** |
-| 2 | NSE data lake and point-in-time controls | **In progress** |
+| 2 | NSE data lake and point-in-time controls | **Validation green; official public P0 acquisition blocked** |
 | 3 | TimesFM 3.0 baseline/gate by horizon | **Engineering + unit-test gate green; real forecast blocked by P0 data acquisition** |
 | 4 | Strategy research: scalping/intraday/BTST/swing | **Engineering bootstrap complete; empirical gate blocked by P0/Phase 3** |
 | 5 | Options research + IV/OI/Greeks | **Protocol/engineering bootstrap complete; empirical gate blocked by authorized options data** |
@@ -100,6 +100,7 @@ Phase 3 unit/statistics CI is green; the actual statistical forecast gate remain
 - [Draft PR #2 — Phase 3](https://github.com/vishnuvcr/Timesfm-trading/pull/2)
 - [Draft PR #3 — Phase 4](https://github.com/vishnuvcr/Timesfm-trading/pull/3)
 - [Draft PR #5 — Phase 5](https://github.com/vishnuvcr/Timesfm-trading/pull/5)
+- [Issue #6 — Official NIFTY P0 acquisition blocker](https://github.com/vishnuvcr/Timesfm-trading/issues/6)
 
 ## Market data scope
 
