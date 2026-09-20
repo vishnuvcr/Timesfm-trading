@@ -1,0 +1,33 @@
+{
+  "run_id": 35522976491,
+  "artifact_id": 10608372793,
+  "lane": "P1_exploratory_individual_stock_bootstrap",
+  "model": "timesfm-3.0-pytorch",
+  "universe": "30-name bootstrap from Phase 2 TejHQ adjusted-price cache",
+  "horizon": 5,
+  "context": 128,
+  "origins_per_stock": 40,
+  "aggregate_mean_log_mae_timesfm": 0.018674557050069176,
+  "aggregate_mean_log_mae_persistence": 0.01762883973121643,
+  "aggregate_mean_log_rmse_timesfm": 0.027242086407020187,
+  "aggregate_mean_log_rmse_persistence": 0.025726283956616303,
+  "stocks_better_mae_than_persistence": 3,
+  "stocks_better_rmse_than_persistence": 3,
+  "aggregate_mean_directional_accuracy": 0.5083333333333333,
+  "aggregate_mean_directional_base_rate": 0.39749999999999996,
+  "aggregate_mean_directional_excess": 0.11083333333333333,
+  "stocks_positive_directional_excess": 25,
+  "stocks_negative_directional_excess": 5,
+  "stocks_better_five_day_return_mae": 5,
+  "aggregate_mean_interval_width_spearman_vs_abs_move": -0.12095059412132585,
+  "stocks_positive_interval_rho": 9,
+  "stocks_negative_interval_rho": 21,
+  "cluster_bootstrap_95ci": {
+    "log_mae_diff_timesfm_minus_persistence": [0.0005659592787424721, 0.0015698830723762508],
+    "log_rmse_diff_timesfm_minus_persistence": [0.0007367658492706628, 0.0023922448783784017],
+    "five_day_return_mae_diff_timesfm_minus_persistence": [0.0007578172683715825, 0.002861419101556141],
+    "directional_excess": [0.06833333333333333, 0.15249999999999997],
+    "interval_width_spearman": [-0.1990245465916197, -0.042463570981863694]
+  },
+  "interpretation": "Exploratory only. The fixed 30-name panel is not final PIT evidence. Average point forecast error is worse than persistence; directional excess is an exploratory lead requiring independent baseline comparison, broader chronological folds, multiple-testing control and cost-aware strategy validation. The interval-width relationship is negative in this stock sample and does not reproduce the earlier secondary NIFTY result."
+}
