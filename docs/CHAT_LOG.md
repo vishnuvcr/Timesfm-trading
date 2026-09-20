@@ -104,3 +104,13 @@ Strategy result: the 10-session TimesFM ranking beat the 20-session momentum con
 Decision: do not call this validated alpha. Retain the 10-session TimesFM ranking as a downstream exploratory candidate for regime/external-information and Phase 7 walk-forward validation; reject the other TimesFM horizon cells for promotion.
 
 Artifacts: workflow 35525457869; swing artifact 10609348369; source-validation artifact 10610350345. Compact results and hashes are committed under results/.
+
+## 2026-09-20 — Phase 4B first swing result
+
+**Observable result:** Corrected Phase 4B run 35525457869 completed successfully after fixing the TimesFM quantile-shape implementation error.
+
+**10-session bootstrap candidate:** TimesFM top-six ranking produced net total returns of +19.87%, +14.12%, +8.64% and +3.41% as one-way proportional cost increased from 0.125% to 0.50%, versus momentum +9.58%, +4.57%, -0.22% and -4.80%. TimesFM led momentum in three of four chronological folds. The exact four-fold sign-flip p-value for the fold-level return difference is 0.3125 one-sided.
+
+**Decision:** do not declare a strategy validated. Treat 10-session TimesFM ranking as the single predeclared candidate for PIT validation using the existing Phase 2 point-in-time liquidity universe, followed by Phase 6/7 regime and cost-aware gates. Do not search other horizons/thresholds before that gate.
+
+**Source gate:** candidate minute source structural probe passed; this is source-integrity evidence only and does not establish execution/fill accuracy.
