@@ -1,0 +1,58 @@
+# Phase 4 intraday/BTST/scalping data gate
+
+Updated: 2026-09-20 IST
+
+## Status
+
+**Data-integrity validation active. No intraday/BTST/scalping strategy is being tested until the minute source passes this gate.**
+
+## Source
+
+Candidate source: `xxparthparekhxx/indian-stock-market-minute-data`.
+
+Published metadata reports:
+- 1-minute intraday candles from 2022–2026;
+- 2,500+ NSE stocks/indices;
+- UTC timestamps;
+- OHLCV + OI fields;
+- MIT license;
+- symbol/timestamp ordering within shards.
+
+NSE documents the regular equity session as 09:15–15:30, with pre-open separately defined. citeturn752108search0turn752108search1
+
+## Deep validation matrix
+
+The gate tests:
+1. schema/type consistency;
+2. UTC→IST conversion;
+3. regular-session membership;
+4. expected 375 one-minute bars for a complete 09:15–15:29 session;
+5. duplicate timestamps;
+6. missing minute gaps;
+7. invalid OHLC relations;
+8. zero-volume prevalence;
+9. non-positive prices;
+10. chronological monotonicity;
+11. daily OHLC aggregation;
+12. close-to-close return agreement with the Phase 2 raw EOD cache;
+13. timestamp coverage across early/mid/recent sample regions;
+14. reproducible API query metadata.
+
+Symbols are restricted to a fixed diagnostic set (RELIANCE, TCS, HDFCBANK, INFY, SBIN) for the gate. This is a source-integrity test, not a strategy universe selection.
+
+## Promotion rule
+
+The source is eligible for intraday strategy experiments only if:
+- sampled complete sessions show no unexplained missing-minute/gap pattern;
+- invalid OHLC is zero;
+- duplicate timestamps are zero;
+- zero-volume behavior is quantified and operationally handled;
+- session mapping is correct;
+- aggregated daily return paths are consistent with the independent EOD source within a predeclared tolerance;
+- query failures and partial-result behavior are fully logged.
+
+Passing this gate does not establish fill accuracy. Execution-quality validation remains a separate step requiring spread/impact assumptions and, where possible, trade/quote data.
+
+## Next strategy step
+
+After the data gate, the first intraday mechanism will be a frozen 15/30/60-minute TimesFM target matrix with VWAP/persistence controls. BTST will require a separately validated next-session open path. Scalping will require a still stricter execution gate.
