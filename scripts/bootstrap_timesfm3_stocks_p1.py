@@ -133,8 +133,7 @@ def main() -> None:
 
     out = Path(args.output)
     out.mkdir(parents=True, exist_ok=True)
-    (out / "per_stock.json").write_text(json.dumps(rows, indent=2) + "
-", encoding="utf-8")
+    (out / "per_stock.json").write_text(json.dumps(rows, indent=2) + "\\n", encoding="utf-8")
 
     summary = {
         "lane": "P1_exploratory_individual_stock_bootstrap",
@@ -155,8 +154,7 @@ def main() -> None:
         "aggregate_mean_interval_return_abs_move_spearman": float(np.nanmean([r["q10_q90_width_h5_spearman_vs_abs_move"] for r in rows])),
         "note": "Exploratory stock-level forecast gate only. Bootstrap fixed universe; no strategy promotion, economic claim or final PIT inference.",
     }
-    (out / "summary.json").write_text(json.dumps(summary, indent=2) + "
-", encoding="utf-8")
+    (out / "summary.json").write_text(json.dumps(summary, indent=2) + "\\n", encoding="utf-8")
     print(json.dumps(summary, indent=2))
 
 
