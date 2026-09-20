@@ -2,6 +2,9 @@
 
 Updated: 2026-09-20 IST
 
+## Scope confirmation
+TimesFM 3.0 is the primary model for the full project. Phase 3 results are restricted to non-commercial research/evaluation and may feed simulated strategy research, but no broker execution or commercial decision-making is permitted.
+
 ## Status
 Engineering bootstrap only. Statistical forecast gate has not started.
 
@@ -61,4 +64,4 @@ These are reusable research primitives, not results. The workflow runs their uni
 
 ## CI verification history
 
-Pull-request CI run 21 failed on an incorrect MAE fixture expectation; corrected to 0.5. Pull-request CI run 25 then exposed an incorrect RMSE fixture expectation; corrected to sqrt(1.25/3). A third CI run is expected from the latest commit before this phase can be called green.
+Pull-request CI run 21 failed on an incorrect MAE fixture expectation; corrected to 0.5. Pull-request CI run 25 then exposed an incorrect RMSE fixture expectation; corrected to sqrt(1.25/3). CI verification is now green: pull-request run 29 (`35517423864`) completed successfully; the `unit-tests` job passed and the model-smoke job was skipped because it is manual-only. The two prior fixture failures were corrected and the statistical/adapter unit suite now passes.
