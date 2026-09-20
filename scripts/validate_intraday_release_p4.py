@@ -100,6 +100,7 @@ def analyze(symbol: str, rows: list[dict], eod: dict[str, float], action_dates: 
     complete_days = []
     gap_days = []
     outside_rows = 0
+    outside_bad_rows = 0
     daily = {}
     for day, vals in sorted(by_day.items()):
         ts = [t for t, _ in vals]
