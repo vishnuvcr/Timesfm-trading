@@ -63,7 +63,6 @@ The four input families will be evaluated on identical forecast origins and froz
 
 No strategy is promoted from Phase 3 on raw forecast accuracy alone. P1 bootstrap output is retained as pipeline validation, not as a primary empirical finding.
 
-
 ## Statistical infrastructure added
 
 The phase now contains deterministic NumPy-only implementations for:
@@ -77,13 +76,14 @@ The phase now contains deterministic NumPy-only implementations for:
 
 These are reusable research primitives, not results. The workflow runs their unit tests before the model smoke test.
 
-
 ## CI verification history
 
 Pull-request CI run 21 failed on an incorrect MAE fixture expectation; corrected to 0.5. Pull-request CI run 25 then exposed an incorrect RMSE fixture expectation; corrected to sqrt(1.25/3). CI verification is now green: pull-request run 29 (`35517423864`) completed successfully; the `unit-tests` job passed and the model-smoke job was skipped because it is manual-only. The two prior fixture failures were corrected and the statistical/adapter unit suite now passes.
-
 
 ## Individual-stock bootstrap engineering
 A 30-stock exploratory TimesFM 3.0 lane is now wired to consume the Phase 2 TejHQ adjusted-price cache directly from the `phase-2-data` branch. It uses adjusted close, a 128-session context, a five-session horizon and 40 chronological origins per stock. The lane reports per-stock MAE/RMSE versus persistence, five-session return MAE, base-rate-honest direction and interval-width/risk correlation.
 
 The first execution attempt failed before forecasting because of a Python string-literal syntax error in the new stock script. The error was corrected and a syntax-check step was added before the model run. The rerun is the active exploratory gate. No strategy promotion is attached to this job.
+
+## 2026-09-20 — repaired stock bootstrap rerun requested
+A new push commit containing the marker `[stock-p1]` is being used to execute the repaired 30-stock bootstrap. The workflow will first fetch the Phase 2 adjusted cache, run `py_compile`, then execute the frozen 128-session/5-session/40-origin stock evaluation and upload its per-stock and aggregate results. Any failure is to be logged before the next phase transition.
