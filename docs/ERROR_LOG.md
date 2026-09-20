@@ -13,3 +13,5 @@
 | 2026-09-20 | Literature audit | An external TimesFM Alpha Gate README describes no 3.0 directional skill in US and Indian equities, but its displayed table only reports a 3.0 US result and a 2.5 India result. | Treating prose as a measured Indian 3.0 result would overstate evidence. | Evidence ledger now requires exact table/result provenance; unreported 3.0 India figures are not used as measurements. |
 
 | 2026-09-20 | Phase 4 risk-engine extension | Phase 3 P1 evidence showed forecast interval width may contain movement-magnitude information, but the risk engine previously required an already-computed scalar uncertainty. | Could not pass native quantile uncertainty directly into the shared sizing primitive. | Added a half-width `interval_uncertainty` adapter with tests; it is simulation-only and does not alter the empirical promotion gate. |
+
+| 2026-09-20 | Phase 4 CI validation | New interval-width test compared floating-point half-width to exact decimal 0.10 and failed at 0.10000000000000003. | One strategy-unit test failed despite correct arithmetic. | Changed test to `pytest.approx`; regression control retains the crossed-bound assertion. |

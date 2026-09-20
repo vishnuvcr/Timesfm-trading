@@ -1,3 +1,5 @@
+import pytest
+
 from src.trading.risk import (
     interval_uncertainty,
     passes_edge_gate,
@@ -32,5 +34,5 @@ def test_timesfm25_can_be_used_as_research_benchmark() -> None:
 
 
 def test_interval_uncertainty_is_half_width_and_rejects_crossed_bounds() -> None:
-    assert interval_uncertainty(0.90, 1.10) == 0.10
+    assert interval_uncertainty(0.90, 1.10) == pytest.approx(0.10)
     assert interval_uncertainty(1.10, 0.90) == 0.0
