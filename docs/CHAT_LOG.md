@@ -62,3 +62,12 @@ Private chain-of-thought is not copied here; this log records observable decisio
 Phase 4.1 tested whether TimesFM adds value to individual-stock selection beyond a predeclared 20-session momentum control. Across 32 five-session rebalances, TimesFM mean rank IC was -0.0237 versus +0.0138 for momentum; the 50/50 hybrid was -0.0151. At the lowest cost stress, TimesFM-only net total return was -26.6%, hybrid -21.8%, momentum -15.2%, and equal-weight universe -7.3%. Higher cost stress worsened results.
 
 Decision: reject the simple TimesFM-only and simple hybrid stock-selection hypotheses. The next empirical step is regime/liquidity/event-conditioned incremental-value testing.
+
+
+## 2026-09-20 — Phase 4.2 nested regime-conditioned conclusion
+
+The apparent improvement from a low-breadth TimesFM-minus-momentum residual was re-tested with strict nested walk-forward thresholds learned only from prior folds. The residual lost to momentum at every tested cost level from 0.125% to 0.50% one-way.
+
+**Decision:** close the current daily individual-stock TimesFM overlay lane. No tested daily TimesFM stock-selection mechanism has demonstrated incremental value over the independent baseline.
+
+The next work should not search arbitrary TimesFM thresholds for a positive result. Future reopening requires a material protocol amendment, new authorized/PIT-clean data or a genuinely different economic mechanism.
