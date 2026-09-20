@@ -105,3 +105,18 @@ The 10-session TimesFM strategy exceeded momentum in 3 of 4 chronological folds 
 The uncertainty-scaled momentum mechanism did not provide the same improvement and is not the candidate for promotion.
 
 Interpretation: 10-session TimesFM ranking is a **candidate mechanism for the next PIT/cost-aware gate**, not a validated or final trading strategy. The point forecast itself is still worse than persistence on return MAE and direction; the observed economic difference is cross-sectional and requires stronger PIT and multiple-testing validation.
+
+
+## PIT 10-session validation result — 2026-09-20
+
+The single frozen 10-session TimesFM ranking candidate was rerun with the Phase 2 point-in-time liquidity table (workflow 35527120722; artifact 10609469293).
+
+All 30 cached bootstrap symbols were PIT-eligible at all 32 rebalances, so the PIT filter did not alter the portfolio. Net total return remained positive for TimesFM at all tested proportional costs:
+- 0.125% one-way: +20.21% TimesFM vs +9.74% momentum;
+- 0.250%: +14.70% vs +4.82%;
+- 0.375%: +9.43% vs +0.11%;
+- 0.500%: +4.39% vs -4.39%.
+
+The fold-level TimesFM-minus-momentum differences were positive in three of four chronological folds at every cost level. Exact four-fold sign-flip p=0.3125 one-sided.
+
+**Gate result:** pass as a *candidate for Phase 7 holdout*, not as a final validated strategy. The PIT exercise is limited by the 30-stock bootstrap universe because all 30 names are present in the cached panel.
